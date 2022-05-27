@@ -8,4 +8,4 @@ Foi desenvolvido por:
 * Diogo Oliveira Uema
 * Manuel Sobrinho
 * Matheus Dos Santos Santana
-* Rodrigo da Silva Sousa(https://github.com/Rodrigo-Sousa)
+* [Rodrigo da Silva Sousa](https://github.com/Rodrigo-Sousa)
