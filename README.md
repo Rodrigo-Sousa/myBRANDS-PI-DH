@@ -5,7 +5,8 @@ O presente repositório contém o nosso projeto integrador que foi desenvolvido 
 Foi desenvolvido por: 
 
 * [Ana Carolina de Souza Fonseca](https://github.com/anacsff)
-* Diogo Oliveira Uema
-* Manuel Sobrinho
-* Matheus Dos Santos Santana
+* [Diogo Oliveira Uema](https://github.com/Diogouema)
+* [Lucas Rocha](https://github.com/llucrocha)
+* [Manuel Sobrinho](https://github.com/determinedalways)
+* [Matheus Dos Santos Santana](https://github.com/matheusstn)
 * [Rodrigo da Silva Sousa](https://github.com/Rodrigo-Sousa)
