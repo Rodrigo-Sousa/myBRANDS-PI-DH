@@ -10,3 +10,6 @@ Foi desenvolvido por:
 * [Manuel Sobrinho](https://github.com/determinedalways)
 * [Matheus Dos Santos Santana](https://github.com/matheusstn)
 * [Rodrigo da Silva Sousa](https://github.com/Rodrigo-Sousa)
+
+- Inpirtações: [Terabyte](https://www.terabyteshop.com.br/)
+- [Level UP](https://levelupgames.com.br/levelup/)
