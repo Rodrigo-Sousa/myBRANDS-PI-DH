@@ -134,14 +134,14 @@ header {
 }
 
 footer {
-    padding: 20px 0 20px 120px;
+    padding: 30px 0 20px 120px;
     color: #fff;
     text-align: center;
     width: 100%;
     background: #121212;
-    z-index: -9999999;
-    bottom: 0;
-    left: 0;
+    position: fixed;
+    flex-shrink: 0;
+    
 }
 
 #logoFooter {
