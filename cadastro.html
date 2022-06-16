@@ -3,26 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <meta name="viewport"ref="style.css">
     <link rel="stylesheet" href="folha.css">
+
+    <title>Cadastro</title>
 </head>
 <body>
-    
-<main>
-    <section>
-    <form action="cadastro.html" method="post" class="formulary">
-        <div class="cadastro">
-        <h3>Cadastro</h3>
-        </div>
-        <div class="container-input">
-            <input type="text" placeholder="Nome Completo" required>
-        </div>
-       
+    <main>  
+    <section id="container-login">
+        <img src="login.png" alt="ícone do usuário" id="imagem-login">
+        <h2 class="h2-cadastro">Cadastro</h2>
+        <hr>
+<form action = "cadastro.html" method="POST" class="formulario">
+    <div class="container-input">
+    <input id="nomecompleto" class="input_field" type="text" name= "nomecompleto" placeholder="Nome Completo" required/>
+</div>
+<div>
+    <input id="usuario" class="input_field" type="text" name= "usuario" placeholder="Nome do usuário" required/>
 
-    </section>
-    </form>
+</div>
+<div class="container-input">
+    <input type="e-mail" name="e-mail" id="e-mail" placeholder="Email" required>
+</div>
+
+    <input  id="senha"class="input_field" type="password" name="senha" placeholder="Senha" required/>
+</div>
+
+<div class="checkbox-container">
+<input  id="checkbox" name="checkbox" type="checkbox" class="checkbox" required>
+<label id="lembrar"for="checkbox">Concordo com os  <a href=""> termos de uso</a></label> 
+</div>
+<div><p>Se preferir, entre com sua rede social</p></div>
+<img src="facebook-logotipo.png" alt="facebook">
+<div class="botão">
+<input type="submit" name="cadastra-se" id="cadastra-se" placeholder="Cadastra-se" required>
+</div>
+</form>
+</section>
 </main>
+
     
 </body>
 </html>
