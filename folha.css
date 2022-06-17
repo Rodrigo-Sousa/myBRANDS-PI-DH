@@ -16,13 +16,17 @@
   #container-login {
     width: 450px;
     height: 600px;
-    background-color: #ef4b4c;
+    background-color: #e43131;
     border-radius: 30px;
     padding: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    position: relative;
+    top: 30px; 
+    left: 800px;
+  
   }
   
   #container-login h2,
@@ -139,5 +143,13 @@ right: 80px;
     width: 60vh;
     position: relative;
     left: 150px;
-    bottom: 29px;
+    bottom: 29px; }
+
+ .mybrands {
+        
+        width: 20vh;
+        position: absolute;
+        top: 200px;
+        opacity: 50%;
+        left: 80px;
 }

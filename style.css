@@ -26,7 +26,8 @@ main {
   align-items: center;
   justify-content: space-evenly;
   position: relative;
-  top: 30px;
+  top: 30px; 
+  left: 800px;
 
 }
 
@@ -133,5 +134,14 @@ hr {
 input {
   height: 30px;
   padding: 10px;
-  margin: 10px;
-}
+  margin: 10px; }
+
+  
+  .mybrands {
+    height: 20vh;
+    width: 20vh;
+    position: absolute;
+    right: 1x;
+    top: 200px;
+    opacity: 50%;
+  }
