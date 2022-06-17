@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: #425068}; 
+
 
 main {
   width: 100%;
@@ -22,12 +25,15 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  position: relative;
+  top: 30px;
+
 }
 
 #container-login h2,
 #container-signup h2 {
   font-size: 2em;
-  color: rgb(10, 10, 110)
+  color: #3e619b
 }
 
 #container-login form,
@@ -51,15 +57,15 @@ main {
 }
 
 .container-input {
-  color: rgb(9, 12, 1);
+  color: black;
   font-weight: bolder;
   cursor: pointer;
 }
 .link {
-  color: #e43131;
+  color: #ef4b4c;
 }
 .link:hover {
-  color: #f1d4d4;
+  color: #e9e9eb;
 }
 
 
@@ -76,7 +82,7 @@ main {
 
 .formulario {
   width: 70%;
-  background-color: rgb(15, 15, 126);
+  background-color: #3e619b;
   position: relative;
   top: 5px;
   left: 10px;
@@ -86,7 +92,7 @@ main {
 
 #imagem-login {
   height: 20%;
-  background-color: #e43131;
+  background-color: #ef4b4c;
   width: 30%;
   position: relative;
   bottom: 20px;
