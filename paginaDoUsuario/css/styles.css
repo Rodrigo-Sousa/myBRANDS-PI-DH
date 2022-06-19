@@ -133,15 +133,14 @@ header {
 }
 
 footer {
-    padding: 20px 0 20px 120px;
+    padding: 30px 0 20px 120px;
     color: #fff;
     text-align: center;
     width: 100%;
     background: #121212;
-    z-index: -9999999;
-    bottom: 0;
-    left: 0;
-    position: fixed;
+    z-index: -9999;
+    position: relative;
+    
 }
 
 #logoFooter {
@@ -165,7 +164,11 @@ footer .informacaoAtendimento {
 
 
     /* Página do Usuário */
-    
+    #body1{
+        width: 100%;
+        height: 1000px;
+    }
+
     .itemMenu img{
         width: 150px;
         height: 150px;
