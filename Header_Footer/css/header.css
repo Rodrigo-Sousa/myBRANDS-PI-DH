@@ -1,15 +1,10 @@
-/* Reset */
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 body{
-    position: relative;
+    max-width: 98.9%;
 }
+/* Estilizado o cabeçalho */
 header {
     float: left;
-    width: 100%;
+    width: 98.9%;
     height: 60px;
     position: fixed;
     z-index: 99999;
@@ -20,7 +15,7 @@ header {
     padding: 0 5px;
 }
 .logoPequeno {
-    width: 100%;
+    width: 100vw;
     background-color: #333;
     height: 60px;
     margin: 0;
@@ -34,6 +29,10 @@ header {
 #logoMyBrand {
     width: 120px;
     height: 50;
+}
+.tituloPagina {
+    color: #fff;
+    margin-right: 140px;
 }
 .inputPesquisar {
     float: left;
@@ -125,38 +124,19 @@ header {
     display:block;
     width:150px;
 }
-
-.linhaContainer{
-    margin-right: -15px;
-    margin-left: -15px;
-}
-
-footer {
-    padding: 30px 0 20px 120px;
-    color: #fff;
-    text-align: center;
+.listaDepartamentos:hover {
+    background-color: #000;
     width: 100%;
-    background: #121212;
-    z-index: -9999999;
-    bottom: 0;
-    left: 0;
-    position: fixed;
+}
+/* Responsividade */
+@media (min-width: 769px) and (max-width: 1024px){
+
 }
 
-#logoFooter {
-    width: 254px;
-    height: 100px;
-}
-footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    line-height: normal;
-}
-.corCinza{
-    color: #8b8b8b;
+@media (max-width: 768px){
+    
 }
 
-footer .informacaoAtendimento {
-    padding: 10px 0;
+@media (max-width: 320px){
+    
 }
