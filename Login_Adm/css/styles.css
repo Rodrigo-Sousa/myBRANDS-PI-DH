@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500;600;700;800&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Noto Sans', sans-serif;
+    position: relative;
+    background-color: #333;
+}
+header {
+    float: left;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+    /* border-top: 1px solid #000; */
+}
+.logoPequeno {
+    width: 100%;
+    background-color: #333;
+    height: 60px;
+    margin: 0;
+    border-bottom: 2px solid #000;
+}
+
+#logoMyBrand {
+    margin: 5px 0 0 120px;
+}
+
+#logoMyBrand {
+    width: 120px;
+    height: 50;
+}
+.inputPesquisar {
+    float: left;
+    top: 0;
+    left: 60px;
+    bottom: 0;
+    border: 0;
+    padding: 0;
+    margin: 0 1px;
+    text-indent: 15px;
+    font-size: 12px;
+    height: 36px;
+    z-index: 2;
+    outline: 0;
+    color: #000;
+    font-size: 16px;
+    background-color: #fff;
+    border-radius: 5px 0 0 5px;
+}
+.botaoPesquisar {
+    top: 0px;
+    /* margin: 10px 0px; */
+    bottom: 0px;
+    width: 60px;
+    height: 36px;
+    /* line-height: 30px; */
+    cursor: pointer;
+    color: #fff;
+    z-index: 1000;
+    background-color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+}
+.comprasDepartamento::after {
+    right: 17px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.comprasDepartamento::before {
+    right: 10px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg)
+}
+
+.comprasDepartamento::after, 
+.comprasDepartamento::before {
+    border: 1px solid #fff;
+    content: "";
+    position: absolute;
+    top: 58%;
+    transition: .1s ease all;
+    -webkit-transition: .1s ease all;
+    width: 10px;
+}
+
+.menuNavegacao {
+    list-style: none;
+    /* border: 1px solid #f00; */
+    float: right;
+    margin-top: 15px;
+}
+.menuNavegacao li{
+    position: relative;
+    float: left;
+    /* border-right: 1px solid #f00; */
+}
+.menuNavegacao a{
+    color:#fff; 
+    text-decoration:none; 
+    padding:5px 10px; 
+    display:block;
+    margin: 0 20px;
+}
+.menuNavegacao li ul {
+    position:absolute;
+    top:25px;
+    left:0;
+    background-color:#333;
+    display:none;
+    border-radius: 5px;
+    border: 2px solid #000;
+}
+.menuNavegacao li:hover ul, .menuNavegacao li.over ul{
+    display: block;
+}
+.menuNavegacao li ul li {
+    /* border:1px solid #f00; */
+    display:block;
+    width:150px;
+}
+
+
+
+.meuPC {
+    margin: -12px 0 20px 20px;
+}
+.linhaContainer{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.main-login{
+    width: 100vw;
+    height: 100vh;
+    background-color: #42506B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title-1{
+    color: #EF4B4C;
+    font-size: 3vw;
+}
+.left-login-img{
+    width: 25vw;
+}
+.title-2{
+    color:#EF4B4C;
+    font-weight: 800;
+    margin: 0;
+}
+.right-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-login{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background-color: #3E619B;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+.textfield{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+.input-1,
+.input-2{
+width: 100%;
+border: none;
+border-radius: 10px;
+padding: 15px;
+background-color: #365381;
+color: #E9E9EB;
+font-size: 12pt;
+box-shadow: 0px 10px 40px #00000056;
+box-sizing: border-box;
+font-size: 12pt;
+outline: none;
+}
+.label-1,
+.label-2{
+    color: #E9E9EB;
+    margin-bottom: 10px;
+    font-size: 14pt;
+}
+.input-1::placeholder,
+.input-2::placeholder{
+color: #e9e9eb60;
+font-size: 10pt;
+}
+.button-login{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #3E619B;
+    background-color: #EF4B4C;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #EF4B4C;
+}
+footer {
+    padding: 30px 0px 20px 120px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    background: #333;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    top: 100%;
+    position: absolute;
+    border-top: 2px solid #000;
+}
+
+#logoFooter {
+    width: 254px;
+    height: 100px;
+}
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: normal;
+}
+.corCinza{
+    color: #8b8b8b;
+}
+
+footer .informacaoAtendimento {
+    padding: 10px 0;
+}
+@media only screen and (max-width: 950px){
+    .card-login{
+        width: 85%;
+    }
+   
+}
+@media only screen and (max-width:600px){
+    .main-login{
+        flex-direction: column;
+    }
+    .title-1{
+        display: none;
+    }
+    .left-login{
+        width: 100%;
+        height: auto;
+    }
+    .right-login{
+        width: 100%;
+        height: auto;
+    }
+    .left-login-img{
+        width: 50vw;
+    }
+    .card-login{
+        width: 90%;
+    }
+    
+}
