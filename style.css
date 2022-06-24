@@ -16,7 +16,8 @@ main {
 }
 
 #container-login {
-  width: 450px;
+  width: 45%;
+  ;
   height: 600px;
   background-color: #e43131;
   border-radius: 30px;
@@ -25,9 +26,10 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  position: relative;
-  top: 30px; 
-  left: 800px;
+  position: absolute;
+  top: 30px;
+  right: 100px;
+}
 
 }
 
@@ -137,11 +139,38 @@ input {
   margin: 10px; }
 
   
+  .mybrands img { width: 100%;
+
+  }
   .mybrands {
-    height: 20vh;
-    width: 20vh;
+  
+    width: 30%;
     position: absolute;
-    right: 1x;
-    top: 200px;
+    top: 50px;
     opacity: 50%;
+    left: 150px;
+  
+  
+  }
+  
+  
+  @media only screen and (min-width: 600px) {
+  
+    .mybrands {
+      width: 60%;
+  
+  
+  
+    }
+  }
+  
+  
+  @media only screen and (min-width: 1000px) {
+  
+    .mybrands {
+      width: 100%;
+  
+  
+  
+    }
   }
