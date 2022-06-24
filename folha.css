@@ -1,170 +1,197 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    background-color: #42506b;
-  }
+body {
+  background-color: #42506b;
+}
 
-  main {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-  }
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
 
-  #container-login {
-    width: 450px;
-    height: 600px;
-    background-color: #e43131;
-    border-radius: 30px;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    position: absolute;
-    top: 30px; 
-    right: 100px;
-  }
-  
+#container-login {
+  width: 45%;
+  ;
+  height: 600px;
+  background-color: #e43131;
+  border-radius: 30px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 30px;
+  right: 100px;
+}
 
 
-  
-  #container-login h2,
-  #container-signup h2 {
-    font-size: 2em;
-    color: #42506b
-  }
-  
-  #container-login form,
-  #container-signup form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .container-input {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  
-  }
-  
-  
-  #container-signup input.input_field {
-    width: 100%;
-    padding: 0 10px;
-    margin: 10px 0;
-  }
-  
-  .container-input {
-    color: #42506b;
-    font-weight: bolder;
-    cursor: pointer;
-  }
-  .link {
-    color: #ef4b4c;
-   
-  }
-  .link:hover {
-    color: #e9e9eb;
-    
-  }
-  
-  
-  .checkbox input {
-    height: 100%
-  }
-  
-  .checkbox-container {
-    display: flex;
-    
-  }
-  
-  
-  
-  .formulario {
-    width: 70%;
-    background-color: #3e619b;
-    position: relative;
-    top: 5px;
-    left: 10px;
-    height: 65%;
-  }
-  
-  
-  
-  #imagem-login {
-    height: 20%;
-    background-color: #ef4b4c;
-    width: 30%;
-    position: relative;
-    bottom: 20px;
-    left: 5px;
-  }
-  
-  #lembrar {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    top: 20px;
-    bottom: 5px;
-  }
-  
-  
-  hr {
-    width: 100%;
-    position: relative;
-    bottom: 4px;
-    color: #42506b;
-    top: 2px;
-  
-  }
-  
-  .h2-cadastro {
-    font-family: cursive;
-    padding: 10px 60px;
-  
-  }
-  
-  input {
-    height: 30px;
-    padding: 10px;
-    margin: 10px;
-  }
 
-  img {
-    height: 10%;
-    position: relative;
-top: 10px;
-right: 80px;
-  }
+
+#container-login h2,
+#container-signup h2 {
+  font-size: 2em;
+  color: #42506b
+}
+
+#container-login form,
+#container-signup form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+
+#container-signup input.input_field {
+  width: 100%;
+  padding: 0 10px;
+  margin: 10px 0;
+}
+
+.container-input {
+  color: #42506b;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.link {
+  color: #ef4b4c;
+
+}
+
+.link:hover {
+  color: #e9e9eb;
+
+}
+
+
+.checkbox input {
+  height: 100%
+}
+
+.checkbox-container {
+  display: flex;
+
+}
+
+@media only screen and (min-width: 300px) {
+  .formulario
+  { width: 30%;}
+} 
+
+.formulario {
+  width: 70%;
+  background-color: #3e619b;
+  position: relative;
+  top: 5px;
+  left: 10px;
+  height: 65%;
+}
+
+
+
+
+
+
+
+#imagem-login {
+  height: 20%;
+  background-color: #ef4b4c;
+  width: 30%;
+  position: relative;
+  bottom: 20px;
+  left: 5px;
+}
+
+#lembrar {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 20px;
+  bottom: 5px;
+}
+
+
+hr {
+  width: 100%;
+  position: relative;
+  bottom: 4px;
+  color: #42506b;
+  top: 2px;
+
+}
+
+.h2-cadastro {
+  font-family: cursive;
+  padding: 10px 60px;
+
+}
+
+input {
+  height: 30px;
+  padding: 10px;
+  margin: 10px;
+}
+
+img {
+  height: 10%;
+  position: relative;
+  top: 10px;
+  right: 80px;
+}
 
 .botão {
-    width: 60vh;
-    position: relative;
-    left: 150px;
-    bottom: 29px; }
+  width: 60vh;
+  position: relative;
+  left: 150px;
+  bottom: 29px;
+}
+.mybrands img { width: 100%;
 
-    @media only screen and (max-width: 450px) { 
+}
+.mybrands {
 
- .mybrands {
-        height: 1500;
-        width: 200px;
-        position: absolute;
-        top: 50px;
-        opacity: 50%;
-        left: 150px;
-        
-        
-}}
-
-  
-  
+  width: 30%;
+  position: absolute;
+  top: 50px;
+  opacity: 50%;
+  left: 150px;
 
 
+}
 
+
+@media only screen and (min-width: 600px) {
+
+  .mybrands {
+    width: 60%;
+
+
+
+  }
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+  .mybrands {
+    width: 100%;
+
+
+
+  }
+}
