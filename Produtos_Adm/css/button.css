@@ -1,0 +1,34 @@
+.button{
+    border-style: none;
+    height: 40px;
+    padding: 6px 12px;
+    background-color: #42506B;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: box-shadow .6s ease;
+}
+.button.new{
+    background-color: #4169e1;
+}
+.button.green{
+    background-color: #13CE66;
+}
+.button.red{
+    background-color: #ff4949;
+}
+.button.view{
+    background-color: #00A2D1;
+}
+.button.new:hover{
+    box-shadow: inset 200px 0 0 #325ea7;
+}
+.button.red:hover{
+    box-shadow: inset 200px 0 0 #8b0000;
+}
+.button.green:hover{
+    box-shadow: inset 200px 0 0 #006400;
+}
+.button.view:hover{
+    box-shadow: inset 200px 0 0 #02637e;
+}

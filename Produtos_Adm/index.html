@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/button.css">
+    <link rel="stylesheet" href="./css/records.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <title>Cadastro de Produtos</title>
+</head>
+<body>
+    <header>
+        <div class="logoPequeno">
+            <nav>
+                <a href="#">
+                    <img id="logoMyBrand" src="./img/myBrands-logov3.png" alt="MyBrand's Logo">
+                </a>
+
+                <ul class="menuNavegacao">
+                    <li>
+                        <a class="comprasDepartamento" href="#">Compras por departamento</a>
+                        <!-- lista para os departamentos -->
+                        <ul>
+                            <li><a href="#">Amd</a></li>
+
+                            <li><a href="#">Hyper</a></li>
+
+                            <li><a href="#">Reddragon</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <input class="inputPesquisar" type="text" id="pesquiseSeuProduto"
+                            placeholder="Pesquise o seu produto">
+                        <button class="botaoPesquisar" type="submit">
+                            <img src="./img/lupa3.png" alt="" width="18" height="16">
+                        </button>
+                    </li>
+                    <li>
+                        <a href="#">Login</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div><h1 class="header-title">Cadastro de Produtos</h1></div>
+        <div id="div-search">
+            <input type="text" id="txt-search" placeholder="Buscar Produto..."/>
+          </div>
+          <div>
+            <label for="result-page" id="txt-result-page">Resultado por Página</label>
+            <select name="result-page" id="result-page">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            </select>
+          </div>
+        <button type="button" class="button new">Novo Produto</button>
+        <table class="records">
+            <thead>
+                <tr>
+                    <th>Categoria</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Estoque</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Headset Gamer</td>
+                    <td>HyperX</td>
+                    <td>Cloud Stinger, Drivers 50mm, Múltiplas Plataformas, P2 e P3</td>
+                    <td>30</td>
+                    <td>
+                    <button type="button" class="button view">Visualizar</button>
+                    <button type="button" class="button green">Editar</button>
+                    <button type="button" class="button red">Excluir</button>
+                    </td>
+            </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>Placa de Vídeo</td>
+                    <td>Duex </td>
+                    <td>AMD Radeon RX 550, 4GB, Preto</td>
+                    <td>12</td>
+                    <td>
+                        <button type="button" class="button view">Visualizar</button>
+                        <button type="button" class="button green">Editar</button>
+                        <button type="button" class="button red">Excluir</button>
+                    </td>
+            </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>Mouse Gamer</td>
+                    <td>Redragon</td>
+                    <td>Redragon Cobra, Chroma RGB, 12400DPI, 7 Botões, Preto</td>
+                    <td>21</td>
+                    <td>
+                        <button type="button" class="button view">Visualizar</button>
+                        <button type="button" class="button green">Editar</button>
+                        <button type="button" class="button red">Excluir</button>
+                    </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="popup-new-product">
+            <div class="popup-info-product">
+                <header>
+                    <h2 class="popup-title">Novo Produto</h2>
+                    <span class="popup-close">&#10006;</span>
+                </header>
+                <form class="popup-form">
+                    <input type="text" class="popup-field" placeholder="Categoria do Produto">
+                    <input type="text" class="popup-field" placeholder="Marca do Produto">
+                    <input type="text" class="popup-field" placeholder="Modelo do Produto">
+                    <input type="text" class="popup-field" placeholder="Estoque do Produto">
+                </form>
+                <footer class="popup-footer">
+                    <button class="button green">Salvar</button>
+                    <button class="button red">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+        <div class="container">
+
+            <div class="linhaContainer">
+                <ul>
+                    <li>
+                        <img id="logoFooter" src="./img/myBrands-logov3.png" alt="mybrands-logo" class="logo-img">
+                    </li>
+                    <li class="corCinza">MyBrand's Atacado e Varejo de Produtos de Informática Ltda</li>
+                    <li class="corCinza">CNPJ: 00.000.000/0001-00 | Salvador-BA</li>
+                </ul>
+
+                <ul class="informacaoAtendimento">
+                    <li>
+                        <p class="corCinza">Atendimento: De segunda a sexta das 8:30 às 12H / 13H às 18H</p>
+                    </li>
+                    <li class="corCinza">SOMOS E-COMMERCE - NÃO TEMOS ATENDIMENTO LOCAL</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+</html>
