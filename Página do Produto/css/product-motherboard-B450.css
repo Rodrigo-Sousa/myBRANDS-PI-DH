@@ -55,3 +55,16 @@ body{
     border-radius: 5px;
     padding: 5px;
 }
+/* Estilizando title-suggestions */
+#title-suggestions {
+    margin: 12px;
+}
+
+.suggestions{
+    margin-bottom: 20px;
+}
+/* Estilizando a classe de cad-suggestions */
+.cad-suggestions{
+    padding: 10px;
+    margin: 20px;
+}
