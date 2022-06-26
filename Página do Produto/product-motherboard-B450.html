@@ -81,7 +81,8 @@
     <div class="container">
         <!-- Nav, contendo a trilha de em qual página está sendo acessada. -->
         <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
+            <!-- Caminho de navegação -->
+            <ol class="breadcrumb navigation-path">
                 <!-- página de hardware -->
                 <li class="breadcrumb-item"><a href="#">Hardware</a></li>
                 <!-- página de placas mães -->
@@ -102,12 +103,12 @@
                 </figure>
 
                 <!-- Sessões do nosso artigo. Aqui, a nossa coluna irá ocupar 5 -->
-                <section class="col-md-5">
+                <section class="col-md-5 product-detail">
                     <!-- Artigo que iremos separar o preço, maiores detalhes, etc -->
                     <article class="content-product">
                         <!-- Título do produto -->
                         <h1>Placa Mãe Gigabyte B450 AORUS M, Chipset B450, AMD AM4, mATX, DDR4</h1>
-                        <p>CÓD: B450 AORUS M - Rev 1.0</p>
+                        <p id="code-product">CÓD: B450 AORUS M - Rev 1.0</p>
                     </article>
                     <!-- Artigo com o preço do produto -->
                     <article class="price-product">
@@ -139,6 +140,208 @@
             </article>
             <!-- Fim da classe wrap-produto -->
         </div>
+
+        <!-- Características do produto - detalhes -->
+        <div class="product-features">
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                Características Gerais
+                            </button>
+                        </h5>
+                    </div>
+                    <!-- Div responsável aparecer ao ser clicado -->
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <!-- Conteúdo do corpo do card -->
+                            <div class="card-group">
+                                <div class="card col-md-6 card-white">
+                                    <div class="card-body">
+                                        <h5 class="card-title">PLACA MÃE GIGABYTE B450 AORUS M, CHIPSET B450, AMD AM4,
+                                            MATX, DDR4</h5>
+                                        <p class="card-text">A série GIGABYTE 400 maximiza o potencial do seu PC com a
+                                            tecnologia AMD StoreMI. O StoreMI acelera os dispositivos de armazenamento
+                                            tradicionais para reduzir o tempo de inicialização e aprimorar a experiência
+                                            geral do usuário.</p>
+                                    </div>
+                                </div>
+                                <!-- Inserindo imagem no card-group -->
+                                <div class="card col-md-6 card-white">
+                                    <img class="card-img-top"
+                                        src="../img/01-placaMaeAourusB550M/04-gigabyteB450AorusM01.jpg"
+                                        alt="Imagem da placa mãe Aourus">
+                                </div>
+                                <!-- Fechamento da div card-group -->
+                            </div>
+
+                            <!-- Conteúdo do corpo do card-black -->
+                            <div class="card-group">
+                                <!-- Inserindo imagem no card-group -->
+                                <div class="card col-md-6 card-black">
+                                    <img class="card-img-top"
+                                        src="../img/01-placaMaeAourusB550M/05-GigabyteB450AorusM02.jpg"
+                                        alt="Imagem dos componentes da placa mãe">
+                                </div>
+                                <div class="card col-md-6 card-black">
+                                    <div class="card-body">
+                                        <h5 class="card-title">DESEMPENHO AORUS</h5>
+                                        <p class="card-text">As placas-mãe da série AORUS 400 usam o design de
+                                            MOSFETs Hybrid Digital PWM + RDS mais baixo (on) para oferecer suporte
+                                            aos processadores AMD Ryzen, oferecendo incrível precisão na
+                                            distribuição de energia nos componentes que são mais sensíveis à
+                                            energia.</p>
+                                    </div>
+                                </div>
+                                <!-- Fechamento da tag card-group -->
+                            </div>
+
+                            <!-- Card-White -->
+                            <!-- Conteúdo do corpo do card -->
+                            <div class="card-group">
+                                <div class="card col-md-6 card-white">
+                                    <div class="card-body">
+                                        <h5 class="card-title">ARMAZENAMENTO</h5>
+                                        <p class="card-text">A solução M.2 da GIGABYTE oferece desempenho de
+                                            armazenamento consideravelmente mais rápido e suporte para interfaces
+                                            PCIe e SATA para dispositivos SSD M.2.</p>
+                                    </div>
+                                </div>
+                                <!-- Inserindo imagem no card-group -->
+                                <div class="card col-md-6 card-white">
+                                    <img class="card-img-top"
+                                        src="../img/01-placaMaeAourusB550M/06-GigabyteB450AorusM03.jpg"
+                                        alt="Imagem da placa mãe na parte de armazenamento">
+                                </div>
+                                <!-- Fechamento da div card-group - card-white -->
+                            </div>
+
+                            <!-- Conteúdo do corpo do card-black -->
+                            <div class="card-group">
+                                <!-- Inserindo imagem no card-group -->
+                                <div class="card col-md-6 card-black">
+                                    <img class="card-img-top"
+                                        src="../img/01-placaMaeAourusB550M/07-GigabyteB450AorusM-04.jpg"
+                                        alt="Imagem da placa mãe em conectividade">
+                                </div>
+                                <div class="card col-md-6 card-black">
+                                    <div class="card-body">
+                                        <h5 class="card-title">CONECTIVIDADE</h5>
+                                        <p class="card-text">O chipset da série AMD 400 fornece portas USB 3.1 Gen2
+                                            nativas com velocidades de até 10 Gbps. Disponível através do conector
+                                            USB Tipo A, o USB3.1 Gen2 é muito melhorado com o dobro da largura de
+                                            banda em comparação com a geração anterior.</p>
+                                    </div>
+                                </div>
+                                <!-- Fechamento da tag card-group -->
+                            </div>
+
+                            <!-- Card-White -->
+                            <!-- Conteúdo do corpo do card -->
+                            <div class="card-group">
+                                <div class="card col-md-6 card-white">
+                                    <div class="card-body">
+                                        <h5 class="card-title">SMART FAN 5</h5>
+                                        <p class="card-text">Com o Smart Fan 5, os utilizadores podem garantir que o
+                                            seu PC de jogos pode manter o seu desempenho. O Smart Fan 5 permite que
+                                            os usuários troquem seus conectores para refletir diferentes sensores
+                                            térmicos em diferentes locais da placa-mãe.</p>
+                                    </div>
+                                </div>
+                                <!-- Inserindo imagem no card-group -->
+                                <div class="card col-md-6 card-white">
+                                    <img class="card-img-top"
+                                        src="../img/01-placaMaeAourusB550M/08-GigabyteB450AorusM05.jpg"
+                                        alt="Imagem do smart FAN">
+                                </div>
+                                <!-- Fechamento da div - card-group - card-white -->
+                            </div>
+
+                            <!-- Conteúdo do corpo do card-black -->
+                            <div class="card-group">
+                                <!-- Inserindo imagem no card-group -->
+                                <div class="card col-md-6 card-black">
+                                    <img class="card-img-top"
+                                        src="../img/01-placaMaeAourusB550M/09-GigabyteB450AorusM06.jpg"
+                                        alt="Imagem da placa mãe mostrando os áudios.">
+                                </div>
+                                <div class="card col-md-6 card-black">
+                                    <div class="card-body">
+                                        <h5 class="card-title">ÁUDIO DE ALTA QUALIDADE</h5>
+                                        <p class="card-text">Oferece resolução e expansão de som de alta qualidade para
+                                            criar os efeitos
+                                            sonoros
+                                            mais realistas para jogadores profissionais.</p>
+                                    </div>
+                                </div>
+                                <!-- Fechamento da tag card-group -->
+                            </div>
+                            <!-- Fim da div card-body -->
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Especificações Técnicas
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                            richardson ad
+                            squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
+                            quinoa
+                            nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it
+                            squid
+                            single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+                            craft
+                            beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+                            butcher
+                            vice
+                            lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+                            you
+                            probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Avaliações dos Clientes
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                            richardson ad
+                            squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
+                            quinoa
+                            nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it
+                            squid
+                            single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+                            craft
+                            beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+                            butcher
+                            vice
+                            lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+                            you
+                            probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fechamento Características do produto - detalhes -->
+        </div>
         <!-- Fim da div container -->
     </div>
     <!-- Rodapé da página -->
@@ -162,15 +365,18 @@
         <div id="social-media-footer">
             <p>Continue nos acompanhando nas mídias sociais</p>
             <ul class="midias-sociais">
-                <li><a href="https://www.facebook.com/MyBrands" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.facebook.com/MyBrands" target="_blank"><i class="fa fa-facebook"></i></a>
+                </li>
                 <li><a href="https://www.linkedin.com/company/MyBrands" target="_blank"><i
                             class="fa fa-linkedin"></i></a></li>
-                <li><a href="https://instagram.com/my_brands/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://instagram.com/my_brands/" target="_blank"><i class="fa fa-instagram"></i></a>
+                </li>
                 <li><a href="https://www.youtube.com/user/MyBrandsOficial" target="_blank"><i
                             class="fa fa-youtube"></i></a></li>
                 <li><a href="https://br.pinterest.com/my_brands" target="_blank"><i class="fa fa-pinterest"></i></a>
                 </li>
-                <li><a href="https://www.tiktok.com/@my_brands" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                <li><a href="https://www.tiktok.com/@my_brands" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </li>
             </ul>
             <p> &copy; 2022 - myBrand's</p>
         </div>
