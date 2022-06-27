@@ -1,0 +1,61 @@
+body{
+    background-color: #e9e9e9;
+}
+/* Estilizando a tag do cabeçalho do conteúdo */
+.header-content {
+    min-height: 40px;
+    padding: 10px;
+    overflow: hidden;
+}
+.header-content p {
+    color: #3e619b;
+    text-transform: uppercase;
+    font: 800 11px "Open Sans",Arial,Helvetica,sans-serif;
+    display: inline-block;
+    vertical-align: top;
+}
+.header-content h1 {
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: -12px;
+    color: #6c757d;
+}
+#search-product {
+    padding-top: 10px;
+    color: #3e619b;
+    text-transform: uppercase;
+    word-break: break-all;
+    display: block;
+    font-size: 14px;
+}
+.filter-order-by{
+    background-color: #fff;
+    padding: 10px;
+    font: bold 14px "Open Sans",Arial,Helvetica,sans-serif;
+    white-space: nowrap;
+    border-radius: 4px;
+}
+#button-orderBy {
+    background: #fff;
+    color: #383838;
+    border: none;
+    font-size: 14px;
+    margin: 0 5px 0 0;
+    padding: 5px 10px;
+    border: 1px solid #eee;
+}
+#order-by{
+    background-color: #42506b;
+    text-align: center;
+}
+#order-by li:hover, .filter-orderBy a:hover{
+    background-color: #fff;
+    color: #42506b;
+    text-align: center;
+}
+.filter-orderBy{
+    color: #000;
+    border: 0;
+    text-transform: uppercase;
+    font: 11px/30px "Open Sans",Arial,Helvetica,sans-serif;
+}
