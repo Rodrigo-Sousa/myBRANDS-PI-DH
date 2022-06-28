@@ -1,18 +1,19 @@
-/* Reset */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 body{
+    font-family: 'Noto Sans', sans-serif;
     position: relative;
+    /* background-color: #333; */
 }
 header {
     float: left;
     width: 100%;
     height: 60px;
     position: fixed;
-    z-index: 99999;
+    z-index: 10;
     top: 0px;
     /* border-top: 1px solid #000; */
 }
@@ -124,6 +125,7 @@ header {
 }
 
 
+
 .meuPC {
     margin: -12px 0 20px 20px;
 }
@@ -131,17 +133,109 @@ header {
     margin-right: -15px;
     margin-left: -15px;
 }
-
+.main-login{
+    width: 100vw;
+    height: 100vh;
+    background-color: #42506B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title-1{
+    color: #EF4B4C;
+    font-size: 3vw;
+}
+.left-login-img{
+    width: 25vw;
+}
+.title-2{
+    color:#EF4B4C;
+    font-weight: 800;
+    margin: 0;
+}
+.right-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-login{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background-color: #3E619B;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+.textfield{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+.input-1,
+.input-2{
+width: 100%;
+border: none;
+border-radius: 10px;
+padding: 15px;
+background-color: #365381;
+color: #E9E9EB;
+font-size: 12pt;
+box-shadow: 0px 10px 40px #00000056;
+box-sizing: border-box;
+font-size: 12pt;
+outline: none;
+}
+.label-1,
+.label-2{
+    color: #E9E9EB;
+    margin-bottom: 10px;
+    font-size: 14pt;
+}
+.input-1::placeholder,
+.input-2::placeholder{
+color: #e9e9eb60;
+font-size: 10pt;
+}
+.button-login{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #3E619B;
+    background-color: #EF4B4C;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #EF4B4C;
+}
 footer {
     padding: 20px 0 20px 120px;
     color: #fff;
     text-align: center;
     width: 100%;
-    background: #121212;
+    background: #333;
     z-index: -9999999;
     bottom: 0;
     left: 0;
-    position: fixed;
 }
 
 #logoFooter {
@@ -164,67 +258,279 @@ footer .informacaoAtendimento {
 
 
 
-    /* Página do Usuário */
+
+
+/* Menu lateral */
+#painelUsuario{
+    display: flex;
+    justify-content: center;
+}
+
+#bemVindo{
+    background-color: #3f5fa3;
+    position: absolute;
+    width: 191px;
+    height: 100px;
+    margin: 15px;
+    top: 115px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 0 0.5em #0f172e;
+}
+#bemVindo p{
+    display: block;
+    position: relative;
+    bottom: 80px;
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+    background-color: #375382;
+    border-radius: 10px;
+}
+
+#bemVindo .foto{
+    position: relative;
+    bottom: 80px;
+    left: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    margin-top: 20px;
+    border: 10px solid #3f5fa3;
+}
+
+.menu{
+    display: flex;
+    width: 80%;
+    margin-top: 100px;
+    position: relative;
+}
+#painelUsuario .itemMenu{
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+    position: relative;
+    top: 230px;
+    /* left: 15px; */
+    list-style: none;
+    background-color: #3f5fa3;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 0.5em #0f172e;
+}
+
+#painelUsuario .itemMenu a{
+    text-decoration: none;
+    color: white;
+}
+#painelUsuario .itemMenu:hover{
+    background-color: #ef4b4c;
+    cursor: pointer;
+}
+
+/* Conteudo Cadastro Usuario */
+#conteudoUsuario{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 80%;
+    justify-content: space-evenly;
+  
+}
+#conteudoUsuario .container{ 
+    align-self: center;
+    position: relative;
+    left: 30px;
+    background-color: white;
+    margin: 15px;
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 1em #0f172e;
+    display: flex;
+    justify-content: center;
     
-    .itemMenu img{
-        width: 150px;
-        height: 150px;
-        margin: auto;
-        display: block;
-        padding-top: 10px;
-    }
+}
+
+.tituloConteudo{
+    background-color: #375382;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.conteudoCadastro, .container-tabela{
+    background-color: #3f5fa3;
+    width: 95%;
+    height: 200px;
+    position: absolute;
+    top: 41px;
+    left: 30px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.2rem;
     
-    .itemMenu p{
-        color: white;
-        font-size: 22px;
-        text-align: center;
-        margin-top: 5px;
-    }
-    .teste{
-        /* background-color: gray; */
-        display:flex;
-        top: 90px;
-        margin-left: auto;
-        margin-right: auto;
-        position: relative;
-        min-height: 300px;
-        width: 80%;
-        
-        
-        
-    }
+}
+
+#cadastro .conteudoCadastro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#cadastro .conteudoCadastro .container-input{
+    width: 50%;
+    align-items: center;
+
+}
+
+#cadastro .conteudoCadastro .container-input1{
+    display: inline-flex;
+    width: 40%;
+}
+
+#cadastro .conteudoCadastro .botaoSalvar{
+    align-items: center;
+    width: 20%;
     
-    .menuLateral{
-        
-        height: 500px;
-        width: 80%;
-        margin-top: 10px;
-        margin-bottom: 60px;
-        margin-left: auto;
-        margin-right: auto;
+}
+
+#cadastro .conteudoCadastro .botaoSalvar button{
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    border: 2px solid #ef4b4c;
+    cursor: pointer;
+    font-size: 1.05rem;
+
+}
+#cadastro .conteudoCadastro .botaoSalvar button:hover{
+    background-color: #ef4b4c;
+    color: white;
     
-        
-        
-    }
-    .itens{
-        display: flex;
-        flex-wrap: wrap;
+}
+
+/* Alterar foto do perfil */
+
+#conteudoUsuario .containerFoto{
+    align-self: center;
+    position: relative;
+    left: 30px;
+    background-color: white;
+    margin: 15px;
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 0 1em #0f172e;
+    display: flex;
+    justify-content: center;
+}
+
+#fotoPerfil .conteudoFoto{
+    background-color: #3f5fa3;
+    width: 95%;
+    height: 50px;
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fotoPerfil .conteudoFoto .container-input{
+    width: 50%;
+    align-items: center;
+
+}
+
+#fotoPerfil .conteudoFoto .botaoSalvar{
+    position: relative;
+    right: 550px;
+    width: 10%;
     
-        justify-content: space-around;
-        margin: 0 auto;
-        width: 80%;
-               
+}
+
+
+#fotoPerfil .conteudoFoto .botaoSalvar button{
+    width: 50%;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid #ef4b4c;
+    cursor: pointer;
+    font-size: 1.05rem;
+
+}
+
+#fotoPerfil .conteudoFoto .botaoSalvar button:hover{
+    background-color: #ef4b4c;
+    color: white;
     
-        
-    }
-    .itemMenu{
-        cursor: pointer;
-        background-color: rgba(255,84,0, 0.8);
-        border-radius: 10px;
-        display: block;
-        height: 200px;
-        width: 215px;
-        margin: 30px;
+}
+
+/* Histórico de pedidos */
+
+#conteudoUsuario form input {
+    width: 70%;
+    height: 25px;
+    padding: 0 10px;
+}
+#conteudoUsuario .container .container-tabela{
+    height: 150px;
     
+}
+.container-tabela{
+    background-color: #3f5fa3;
+    width: 95%;
+    /* height: 280px; */
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#pedidos .tabelaPedidos{
+    width: 90%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Meus endereços */
+
+#endereco .tabelaEndereco{
+  width: 90%;
+  cursor: pointer;
     
-    }
+}
+.tabelaPedidos table, th, td{
+    /* width: 50%; */
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+tr{
+    background-color: white;
+    color: #375382;
+    height: 20px;
+
+}
+tr:hover{
+    background-color: #3f5fa3;
+    color: white;
+}
+
