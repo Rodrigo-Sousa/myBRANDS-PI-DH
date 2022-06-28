@@ -46,12 +46,12 @@
             </nav>
         </div>
     </header>
-    <main>
-        <div><h1 class="header-title">Cadastro de Produtos</h1></div>
-        <div id="div-search">
+    <div class="div-title"><h1>Cadastro de Produtos</h1></div>
+    <div class="div-top">
+        <div class="div-search">
             <input type="text" id="txt-search" placeholder="Buscar Produto..."/>
-          </div>
-          <div>
+        </div>
+        <div class="div-result-page">
             <label for="result-page" id="txt-result-page">Resultado por Página</label>
             <select name="result-page" id="result-page">
             <option value="5">5</option>
@@ -59,26 +59,28 @@
             <option value="25">25</option>
             <option value="50">50</option>
             </select>
-          </div>
+        </div>
+    </div>
+    <main>
         <button type="button" class="button new">Novo Produto</button>
         <table class="records">
             <thead>
                 <tr>
-                    <th>Categoria</th>
-                    <th>Marca</th>
                     <th>Modelo</th>
+                    <th>Marca</th>
+                    <th>Categoria</th>
                     <th>Estoque</th>
                     <th>Ação</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Headset Gamer</td>
-                    <td>HyperX</td>
                     <td>Cloud Stinger, Drivers 50mm, Múltiplas Plataformas, P2 e P3</td>
+                    <td>HyperX</td>
+                    <td>Headset Gamer</td>
                     <td>30</td>
                     <td>
-                    <button type="button" class="button view">Visualizar</button>
+                    <!-- <button type="button" class="button view">Visualizar</button> -->
                     <button type="button" class="button green">Editar</button>
                     <button type="button" class="button red">Excluir</button>
                     </td>
@@ -86,12 +88,12 @@
             </tbody>
             <tbody>
                 <tr>
-                    <td>Placa de Vídeo</td>
-                    <td>Duex </td>
                     <td>AMD Radeon RX 550, 4GB, Preto</td>
+                    <td>Duex </td>
+                    <td>Placa de Vídeo</td>
                     <td>12</td>
                     <td>
-                        <button type="button" class="button view">Visualizar</button>
+                        <!-- <button type="button" class="button view">Visualizar</button> -->
                         <button type="button" class="button green">Editar</button>
                         <button type="button" class="button red">Excluir</button>
                     </td>
@@ -99,12 +101,12 @@
             </tbody>
             <tbody>
                 <tr>
-                    <td>Mouse Gamer</td>
-                    <td>Redragon</td>
                     <td>Redragon Cobra, Chroma RGB, 12400DPI, 7 Botões, Preto</td>
+                    <td>Redragon</td>
+                    <td>Mouse Gamer</td>
                     <td>21</td>
                     <td>
-                        <button type="button" class="button view">Visualizar</button>
+                        <!-- <button type="button" class="button view">Visualizar</button> -->
                         <button type="button" class="button green">Editar</button>
                         <button type="button" class="button red">Excluir</button>
                     </td>
@@ -118,14 +120,18 @@
                     <span class="popup-close">&#10006;</span>
                 </header>
                 <form class="popup-form">
+                    <label for="category"></label>
                     <input type="text" class="popup-field" placeholder="Categoria do Produto">
+                    <label for="brand"></label>
                     <input type="text" class="popup-field" placeholder="Marca do Produto">
+                    <label for="model"></label>
                     <input type="text" class="popup-field" placeholder="Modelo do Produto">
+                    <label for="inventory"></label>
                     <input type="text" class="popup-field" placeholder="Estoque do Produto">
                 </form>
                 <footer class="popup-footer">
-                    <button class="button green">Salvar</button>
                     <button class="button red">Cancelar</button>
+                    <button class="button green">Salvar</button>
                 </footer>
             </div>
         </div>
