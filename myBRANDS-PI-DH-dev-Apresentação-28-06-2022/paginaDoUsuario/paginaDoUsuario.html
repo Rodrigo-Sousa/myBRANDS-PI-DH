@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página do Usuário</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../novaEstruturaPastas/headerFooter/css/reset.css">
+    <link rel="stylesheet" href="../novaEstruturaPastas/headerFooter/css/header.css">
+    <link rel="stylesheet" href="../novaEstruturaPastas/headerFooter/css/footer.css">
+    <!--Fonte Awesome-->
+    <script src="https://kit.fontawesome.com/12f6c26e59.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- Cabeçalho da página -->
+    <header id="headerFull">
+        <!-- Tag de navegação -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <!-- link para voltar para a página home do site -->
+            <a class="navbar-brand" href="../../HomePage/homepage.html">
+                <!-- Imagem de logo do site -->
+                <img src="../novaEstruturaPastas/headerFooter/img/myBrands-logo.png" width="130" height="50"
+                    alt="MyBrand's Logo">
+            </a>
+            <!-- Botão com menu hambúrger (responsividade) -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+                aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                <!-- Traços do botão -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Div do menu de navegação -->
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                <!-- Lista não ordenada - contendo os itens do menu -->
+                <ul class="navbar-nav mr-auto">
+                    <!-- Menu dropdown - Comprar por departamento -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Compre por departamento
+                        </a>
+                        <div class="dropdown-menu dropdown-departament" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item item-departamento" href="#">Ação</a>
+                            <a class="dropdown-item item-departamento" href="#">Outra ação</a>
+                            <a class="dropdown-item item-departamento" href="#">Algo mais aqui</a>
+                        </div>
+                    </li>
+                    <!-- Menu dropdown - Páginas do site -->
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Páginas Desenvolvidas
+                        </a>
+                        <div class="dropdown-menu dropdown-departament" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item item-departamento"
+                                href="../novaEstruturaPastas/productPage/html/product-motherboard-B450.html">Produto do
+                                Produto</a>
+                            <a class="dropdown-item item-departamento"
+                                href="../novaEstruturaPastas/productListing/html/productListing.html">Lista de
+                                Produtos</a>
+                            <a class="dropdown-item item-departamento"
+                                href="../novaEstruturaPastas/cartShopping/html/cartShopping.html">Carrinho de
+                                Compras</a>
+                            <a class="dropdown-item item-departamento" href="../Login_Adm/index.html">Login ADM</a>
+                            <a class="dropdown-item item-departamento active" href="#">Página do usuário</a>
+                            <a class="dropdown-item item-departamento" href="../../../Produtos_Adm/index.html">Cadastro de
+                                Produtos</a>
+                        </div>
+                    </li>
+                    <!-- formulário para incluir a busca na página -->
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Pesquise o seu produto"
+                            aria-label="Pesquisar">
+                        <button class="btn btn-outline-success my-2 my-sm-0 btn-search" type="submit">Pesquisar</button>
+                    </form>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="painelUsuario">
+
+
+        <section class="menu">
+            <div id="bemVindo">
+                <img class="foto" src="./img/generico.png" alt="Sua foto de perfil">
+                <p>Seja bem vindo(a), ${usuario}!</p>
+            </div>
+            <ul>
+                <li class="itemMenu"><a href="#cadastro">Meu Cadastro</a></li>
+                <li class="itemMenu"><a href="#fotoPerfil">Alterar foto do perfil</a></li>
+                <li class="itemMenu"><a href="#pedidos">Histórico de Pedidos</a></li>
+                <li class="itemMenu"><a href="#endereco">Meus endereços</a></li>
+                <li class="itemMenu">Sair</li>
+            </ul>
+            <div id="conteudoUsuario">
+                <div id="cadastro" class="container">
+                    <div class="tituloConteudo">
+                        <p> Meu Cadastro </p>
+                    </div>
+                    <form action="/dadosCadastrais" method="post" class="conteudoCadastro">
+                        <div class="container-input">
+                            <label for="nomeCompleto">Nome Completo: </label>
+                            <input type="text" name="nomeCompleto" id="nomeCompleto" placeholder="Seu nome completo">
+                        </div>
+                        <div class="container-input">
+                            <label for="email">E-mail: </label>
+                            <input type="email" name="email" id="email" placeholder="seuemailaqui@email.com">
+                        </div>
+                        <div class="container-input">
+                            <label for="cpf">CPF: </label>
+                            <input type="number" name="cpf" id="cpf" placeholder="000.XXX.XXX-XX" disabled>
+                        </div>
+                        <div class="container-input">
+                            <label for="rg">RG: </label>
+                            <input type="number" name="rg" id="rg" placeholder="00.XXX.XXX-X">
+                        </div>
+                        <div class="container-input1">
+                            <p>Sexo: </p>
+                            <input type="radio" name="sexo" id="masc" value="masculino">
+                            <label for="masc">Masculino</label>
+                            <input type="radio" name="sexo" id="fem" value="feminino">
+                            <label for="fem">Feminino</label>
+                            <input type="radio" name="sexo" id="naoInf">
+                            <label for="naoInf">Outro</label>
+                        </div>
+
+
+                        <div class="container-input">
+                            <label for="telefone">Telefone Celular: </label>
+                            <input type="tel" name="telefone" id="telefone" placeholder="(XX)XXXXX-XXXX">
+                        </div>
+                        <div class="botaoSalvar">
+                            <button type="submit" name="salvar">Salvar</button>
+                        </div>
+
+
+                    </form>
+                </div>
+                <div id="fotoPerfil" class="containerFoto">
+                    <div class="tituloConteudo">
+                        <p> Alterar foto de perfil </p>
+                    </div>
+                    <div class="container-input">
+                        <form action="/fotoDePerfil" method="post" class="conteudoFoto">
+                            <label for="avatar">Escolha sua foto de perfil: </label>
+                            <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+                            <div class="botaoSalvar">
+                                <button type="submit" name="salvar">Salvar</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div id="pedidos" class="container">
+                    <div class="tituloConteudo">
+                        <p> Histórico de Pedidos </p>
+                    </div>
+                    <div class="container-tabela">
+                        <table class="tabelaPedidos">
+                            <tr>
+                                <th>Número do Pedido</th>
+                                <th>Data</th>
+                                <th>Pagamento</th>
+                                <th>Status</th>
+                            </tr>
+                            <tr>
+                                <td>000000</td>
+                                <td>21/06/2022</td>
+                                <td>Cartão de Crédito</td>
+                                <td>Entregue</td>
+                            </tr>
+                            <tr>
+                                <td>000001</td>
+                                <td>28/06/2022</td>
+                                <td>Boleto</td>
+                                <td>Em separação</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div id="endereco" class="container">
+                    <div class="tituloConteudo">
+                        <p> Meus endereços </p>
+                    </div>
+                    <div class="container-tabela">
+                        <table class="tabelaEndereco">
+                            <tr>
+                                <th>Responsável</th>
+                                <th>Endereço</th>
+                                <th>Bairro</th>
+                                <th>Cidade</th>
+                                <th>CEP</th>
+                            </tr>
+                            <tr>
+                                <td>Henrique</td>
+                                <td>Rua Bahia, 300</td>
+                                <td>PIPIPI</td>
+                                <td>POPOPO</td>
+                                <td>00000-001</td>
+                            </tr>
+                            <tr>
+                                <td>Paula</td>
+                                <td>Avenida Nelo, 123</td>
+                                <td>PIRIRI</td>
+                                <td>PORORO</td>
+                                <td>00000-002</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <div class="linhaContainer">
+            <ul>
+                <li>
+                    <img id="logo-footer" src="./img/myBrands-logov3.png" alt="">
+                </li>
+                <li class="footer-color">MyBrand's Atacado e Varejo de Produtos de Informática Ltda</li>
+                <li class="footer-color">CNPJ: 00.000.000/0001-00 | Salvador-BA</li>
+            </ul>
+
+            <ul class="services-information">
+                <li>
+                    <p>Atendimento: De segunda a sexta das 8:30 às 12H / 13H às 18H</p>
+                </li>
+                <li class="footer-color">SOMOS E-COMMERCE - NÃO TEMOS ATENDIMENTO LOCAL</li>
+            </ul>
+        </div>
+        <div id="social-media-footer">
+            <p>Continue nos acompanhando nas mídias sociais</p>
+            <ul class="midias-sociais">
+                <li><a href="https://www.facebook.com/MyBrands" target="_blank"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li><a href="https://www.linkedin.com/company/MyBrands" target="_blank"><i
+                            class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://instagram.com/my_brands/" target="_blank"><i class="fa fa-instagram"></i></a>
+                </li>
+                <li><a href="https://www.youtube.com/user/MyBrandsOficial" target="_blank"><i
+                            class="fa fa-youtube"></i></a></li>
+                <li><a href="https://br.pinterest.com/my_brands" target="_blank"><i class="fa fa-pinterest"></i></a>
+                </li>
+                <li><a href="https://www.tiktok.com/@my_brands" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </li>
+            </ul>
+            <p> &copy; 2022 - myBrand's</p>
+        </div>
+    </footer>
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

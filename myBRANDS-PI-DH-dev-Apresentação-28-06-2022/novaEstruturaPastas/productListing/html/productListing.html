@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Produto</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Icon na aba da página -->
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../headerFooter/css/reset.css">
+    <link rel="stylesheet" href="../../headerFooter/css/header.css">
+    <link rel="stylesheet" href="../../headerFooter/css/footer.css">
+    <link rel="stylesheet" href="../css/productListing.css">
+    <!--Fonte Awesome-->
+    <script src="https://kit.fontawesome.com/12f6c26e59.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Cabeçalho da página -->
+    <header id="headerFull">
+        <!-- Tag de navegação -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <!-- link para voltar para a página home do site -->
+            <a class="navbar-brand" href="../../../HomePage/homepage.html">
+                <!-- Imagem de logo do site -->
+                <img src="../img/myBrands-logo.png" width="130" height="50" alt="MyBrand's Logo">
+            </a>
+            <!-- Botão com menu hambúrger (responsividade) -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+                aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                <!-- Traços do botão -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Div do menu de navegação -->
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                <!-- Lista não ordenada - contendo os itens do menu -->
+                <ul class="navbar-nav mr-auto">
+                    <!-- Menu dropdown - Comprar por departamento -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Compre por departamento
+                        </a>
+                        <div class="dropdown-menu dropdown-departament" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item item-departamento" href="#">Ação</a>
+                            <a class="dropdown-item item-departamento" href="#">Outra ação</a>
+                            <a class="dropdown-item item-departamento" href="#">Algo mais aqui</a>
+                        </div>
+                    </li>
+                    <!-- Menu dropdown - Páginas do site -->
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Páginas Desenvolvidas
+                        </a>
+                        <div class="dropdown-menu dropdown-departament" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item item-departamento"
+                                href="../../productPage/html/product-motherboard-B450.html">Página do Produto</a>
+                            <a class="dropdown-item item-departamento active" href="#">Lista de Produtos <span
+                                    class="sr-only">(página atual)</span></a>
+                            <a class="dropdown-item item-departamento"
+                                href="../../cartShopping/html/cartShopping.html">Carrinho de Compra</a>
+                            <a class="dropdown-item item-departamento" href="../../../Login_Adm/index.html">Login ADM</a>
+                            <a class="dropdown-item item-departamento" href="../../../paginaDoUsuario/paginaDoUsuario.html">Página do usuário</a>
+                            <a class="dropdown-item item-departamento" href="../../../Produtos_Adm/index.html">Cadastro de
+                                Produtos</a>
+                        </div>
+                    </li>
+                    <!-- formulário para incluir a busca na página -->
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Pesquise o seu produto"
+                            aria-label="Pesquisar">
+                        <button class="btn btn-outline-success my-2 my-sm-0 btn-search" type="submit">Pesquisar</button>
+                    </form>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Div container, detalhando o produto a ser apresentado -->
+    <div class="container">
+        <!-- Div com o cabeçalho do conteúdo da pesquisa -->
+        <div class="header-content">
+            <!-- Lista ordenada -->
+            <ol class="col-xs-12 col-sm-12 col-md-12">
+                <p>Busca</p>
+                <h1>Resultado da busca por
+                    <span id="search-product">placa mãe</span>
+                </h1>
+            </ol>
+            <!-- Fechamento da div header-content -->
+        </div>
+
+        <!-- Div, contendo a opção de Ordernar por preço (Menor/Maior preço) . -->
+        <div class="filter-order-by col-xs-12 col-sm-12 col-md-12">
+            <!-- Botão para ordenar os preços, abrindo uma lista não ordenada -->
+            <button id="button-orderBy" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <!-- Ícone -->
+                <span class="fa fa-exchange fa-rotate-90" aria-hidden="true"></span> Ordenar por
+                <span class="caret"></span>
+            </button>
+            <!-- Lista não ordenada -->
+            <ul id="order-by" class="dropdown-menu" role="menu" aria-labelledby="order-by">
+                <li>
+                    <a class="filter-orderBy" href="#" data-pg="1" data-order="preco_asc" data-manufacturer="0">Menor
+                        Preço</a>
+                </li>
+                <li>
+                    <a class="filter-orderBy" href="#" data-pg="1" data-order="preco_desc" data-manufacturer="0">Maior
+                        Preço</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- Conteúdo de área dos produtos -->
+        <div class="area-product col-xs-12 col-sm-12 col-md-12">
+            <!-- Div responsável pelos card-deck dos produtos -->
+            <div class="card-deck">
+                <!-- Dividindo o conteúdo em 3 colunas -->
+                <div class="product-card  col-xs-12 col-sm-6 col-md-3">
+                    <div class="card">
+                        <img class="card-img-top product-image"
+                            src="../img/01-placaMaeGigabyteB450AorusMDdr4CrossfireAm458797.jpb.webp"
+                            alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <h5 class="card-title">Placa Mãe Gigabyte B450 AORUS M, Chipset B450, AMD AM4, mATX, DDR4
+                            </h5>
+                            <p class="card-text">
+                                <span class="sale-price">R$ 209,90</span>
+                                <small class="form-payment">à vista no boleto</small>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Fechamento da tag col-sm-6 col-md-3 -->
+                </div>
+
+                <!-- Dividindo o conteúdo em 3 colunas -->
+                <div class="product-card  col-xs-12 col-sm-6 col-md-3">
+                    <div class="card">
+                        <img class="card-img-top product-image" src="../img/02-upgrade1277142961.jpg"
+                            alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <h5 class="card-title">Kit Upgrade AMD Ryzen 5 4600G + Placa Mãe B450 + 8GB DDR4</h5>
+                            <p class="card-text">
+                                <span class="sale-price">R$ 1.590,90</span>
+                                <small class="form-payment">à vista no boleto</small>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Fechamento da tag col-sm-6 col-md-3 -->
+                </div>
+
+                <!-- Dividindo o conteúdo em 3 colunas -->
+                <div class="product-card  col-xs-12 col-sm-6 col-md-3">
+                    <div class="card">
+                        <img class="card-img-top product-image"
+                            src="../img/03-placaMaeAsrockB450mSteelLegendChipsetB450AmdAm4MatxDdr4127135.jpeg"
+                            alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <h5 class="card-title">Placa Mãe ASRock B450M Steel Legend, Chipset B450, AMD AM4, mATX,
+                                DDR4
+                            </h5>
+                            <p class="card-text">
+                                <span class="sale-price">R$ 714,90</span>
+                                <small class="form-payment">à vista no boleto</small>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Fechamento da tag col-sm-6 col-md-3 -->
+                </div>
+
+                <!-- Dividindo o conteúdo em 3 colunas -->
+                <div class="product-card  col-xs-12 col-sm-6 col-md-3">
+                    <div class="card">
+                        <img class="card-img-top product-image" src="../img/04-upgrade1039138732.jpg"
+                            alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <h5 class="card-title">Kit Upgrade AMD Ryzen 5 5600G + Placa Mãe B450</h5>
+                            <p class="card-text">
+                                <span class="sale-price">R$ 1.769,00</span>
+                                <small class="form-payment">à vista no boleto</small>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Fechamento da tag col-sm-6 col-md-3 -->
+                </div>
+
+
+                <!-- Dividindo o conteúdo em 3 colunas -->
+                <div class="product-card  col-xs-12 col-sm-6 col-md-3">
+                    <div class="card">
+                        <img class="card-img-top product-image" src="../img/04-upgrade1039138732.jpg"
+                            alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <h5 class="card-title">Kit Upgrade AMD Ryzen 5 5600G + Placa Mãe B450</h5>
+                            <p class="card-text">
+                                <span class="sale-price">R$ 1.769,00</span>
+                                <small class="form-payment">à vista no boleto</small>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Fechamento da tag col-sm-6 col-md-3 -->
+                </div>
+
+
+                <!-- Dividindo o conteúdo em 3 colunas -->
+                <div class="product-card  col-xs-12 col-sm-6 col-md-3">
+                    <div class="card">
+                        <img class="card-img-top product-image" src="../img/04-upgrade1039138732.jpg"
+                            alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <h5 class="card-title">Kit Upgrade AMD Ryzen 5 5600G + Placa Mãe B450</h5>
+                            <p class="card-text">
+                                <span class="sale-price">R$ 1.769,00</span>
+                                <small class="form-payment">à vista no boleto</small>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Fechamento da tag col-sm-6 col-md-3 -->
+                </div>
+
+
+                <!-- Dividindo o conteúdo em 3 colunas -->
+                <div class="product-card  col-xs-12 col-sm-6 col-md-3">
+                    <div class="card">
+                        <img class="card-img-top product-image" src="../img/04-upgrade1039138732.jpg"
+                            alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <h5 class="card-title">Kit Upgrade AMD Ryzen 5 5600G + Placa Mãe B450</h5>
+                            <p class="card-text">
+                                <span class="sale-price">R$ 1.769,00</span>
+                                <small class="form-payment">à vista no boleto</small>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Fechamento da tag col-sm-6 col-md-3 -->
+                </div>
+
+
+                <!-- Dividindo o conteúdo em 3 colunas -->
+                <div class="product-card  col-xs-12 col-sm-6 col-md-3">
+                    <div class="card">
+                        <img class="card-img-top product-image" src="../img/04-upgrade1039138732.jpg"
+                            alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <h5 class="card-title">Kit Upgrade AMD Ryzen 5 5600G + Placa Mãe B450</h5>
+                            <p class="card-text">
+                                <span class="sale-price">R$ 1.769,00</span>
+                                <small class="form-payment">à vista no boleto</small>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Fechamento da tag col-sm-6 col-md-3 -->
+                </div>
+                <!-- Fechamento da div responsável pelos card-deck dos produtos -->
+            </div>
+            <!-- Fechamento da div area-product -->
+        </div>
+
+        <!-- Fechamento da tag container -->
+    </div>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <div class="linhaContainer">
+            <ul>
+                <li>
+                    <img id="logo-footer" src="../img/myBrands-logo.png" alt="">
+                </li>
+                <li class="footer-color">MyBrand's Atacado e Varejo de Produtos de Informática Ltda</li>
+                <li class="footer-color">CNPJ: 00.000.000/0001-00 | Salvador-BA</li>
+            </ul>
+
+            <ul class="services-information">
+                <li>
+                    <p>Atendimento: De segunda a sexta das 8:30 às 12H / 13H às 18H</p>
+                </li>
+                <li class="footer-color">SOMOS E-COMMERCE - NÃO TEMOS ATENDIMENTO LOCAL</li>
+            </ul>
+        </div>
+        <div id="social-media-footer">
+            <p>Continue nos acompanhando nas mídias sociais</p>
+            <ul class="midias-sociais">
+                <li><a href="https://www.facebook.com/MyBrands" target="_blank"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li><a href="https://www.linkedin.com/company/MyBrands" target="_blank"><i
+                            class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://instagram.com/my_brands/" target="_blank"><i class="fa fa-instagram"></i></a>
+                </li>
+                <li><a href="https://www.youtube.com/user/MyBrandsOficial" target="_blank"><i
+                            class="fa fa-youtube"></i></a></li>
+                <li><a href="https://br.pinterest.com/my_brands" target="_blank"><i class="fa fa-pinterest"></i></a>
+                </li>
+                <li><a href="https://www.tiktok.com/@my_brands" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </li>
+            </ul>
+            <p> &copy; 2022 - myBrand's</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
