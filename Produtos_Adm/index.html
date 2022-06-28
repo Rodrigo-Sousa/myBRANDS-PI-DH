@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/button.css">
     <link rel="stylesheet" href="./css/records.css">
     <link rel="stylesheet" href="css/popup.css">
+    <script src="main.js" defer></script>
     <title>Cadastro de Produtos</title>
 </head>
 <body>
@@ -62,7 +63,7 @@
         </div>
     </div>
     <main>
-        <button type="button" class="button new">Novo Produto</button>
+        <button type="button" class="button new" id="buttonNew">Novo Produto</button>
         <table class="records">
             <thead>
                 <tr>
@@ -113,11 +114,11 @@
             </tr>
             </tbody>
         </table>
-        <div class="popup-new-product">
+        <div class="popup" id="popup">
             <div class="popup-info-product">
                 <header>
                     <h2 class="popup-title">Novo Produto</h2>
-                    <span class="popup-close">&#10006;</span>
+                    <span class="popup-close" id="closePopup">&#10006;</span>
                 </header>
                 <form class="popup-form">
                     <label for="category"></label>
