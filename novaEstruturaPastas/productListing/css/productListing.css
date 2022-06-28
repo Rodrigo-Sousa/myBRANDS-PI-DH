@@ -59,3 +59,24 @@ body{
     text-transform: uppercase;
     font: 11px/30px "Open Sans",Arial,Helvetica,sans-serif;
 }
+.product-card {
+    margin: 20px 0px 40px 0px;
+}
+.card-img-top{
+    width: 90%;
+}
+.product-image {
+    margin: 10px;
+    padding: 2px;
+    border-radius: 5px;
+    border: 2px solid #3e619b;
+}
+.sale-price {
+    color: #00a000;
+    font: 800 20px/16px "Open Sans",Arial,Helvetica,sans-serif;
+    letter-spacing: -1px;
+}
+.form-payment {
+    color: #00a000;
+    font-size: 12px;
+}
