@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500;600;700;800&display=swap');
 
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+
 body {
   background-color: #42506b;
-  font-family:'noto sans', sans-serif;
-}
+  font-family:'noto sans', sans-serif; }
 
-header {
+  header {
     float: left;
     width: 100%;
     height: 60px;
@@ -165,7 +166,9 @@ footer ul {
 }
 
 footer .informacaoAtendimento {
-    padding: 10px 0; }
+    padding: 10px 0;
+}
+
 
 main {
   width: 100%;
@@ -197,7 +200,7 @@ main {
 #container-login h2,
 #container-signup h2 {
   font-size: 2em;
-  color: #42506b
+  color: #3e619b
 }
 
 #container-login form,
@@ -254,7 +257,7 @@ main {
 
 .formulario {
   width: 70%;
-  background-color: #425068;
+  background-color: #42506b;
   position: relative;
   top: 5px;
   left: 10px;
