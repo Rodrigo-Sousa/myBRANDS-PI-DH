@@ -181,7 +181,7 @@ main {
   ;
   height: 600px;
   background-color: #ef4b4c;
-  border-radius: 30px;
+  border-radius: 60px;
   padding: 25px;
   display: flex;
   flex-direction: column;
@@ -266,6 +266,7 @@ label {
   position: relative;
   top: 5px;
   left: 10px;
+  border-radius: 30px;
 }
 
 
@@ -307,6 +308,7 @@ hr {
 .h2-login {
   font-family: cursive;
   padding: 10px 60px;
+  font-size: 2em;
 
 }
 
@@ -314,6 +316,7 @@ input {
   height: 30px;
   padding: 10px;
   margin: 10px;
+  border-radius: 20px;
  }
 
 

@@ -180,7 +180,7 @@ main {
   ;
   height: 600px;
   background-color: #ef4b4c;
-  border-radius: 30px;
+  border-radius: 60px;
   padding: 25px;
   display: flex;
   flex-direction: column;
@@ -237,6 +237,9 @@ main {
 
 }
 
+input { 
+    border-radius: 20px;
+}
 
 .checkbox input {
   height: 100%
@@ -244,6 +247,8 @@ main {
 
 .checkbox-container {
   display: flex;
+  font-size: 17px;
+
 
 }
 
@@ -259,6 +264,7 @@ main {
   top: 5px;
   left: 10px;
   height: 65%;
+  border-radius: 30px;
 }
 
 .iconeDoUsuario {
@@ -300,6 +306,7 @@ hr {
 .h2-cadastro {
   font-family: cursive;
   padding: 10px 60px;
+  font-size: 19px;
 
 }
 
