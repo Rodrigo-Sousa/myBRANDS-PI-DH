@@ -209,7 +209,19 @@ main {
 
 .container-input {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+}
+
+#input-email {
+  position: relative;
+  left: 4px;
+}
+
+label {
+  padding-left: 10px;
 }
 
 
@@ -240,6 +252,10 @@ main {
 .checkbox-container {
   display: flex;
   
+}
+
+.iconeDoUsuario {
+  padding-top: 10px;
 }
 
 
@@ -297,7 +313,10 @@ hr {
 input {
   height: 30px;
   padding: 10px;
-  margin: 10px; }
+  margin: 10px;
+ }
+
+
 
   
   .mybrands img { width: 100%;

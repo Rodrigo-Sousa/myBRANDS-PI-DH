@@ -261,7 +261,10 @@ main {
   height: 65%;
 }
 
-
+.iconeDoUsuario {
+    position: relative;
+    padding-top: 10px;
+}
 
 
 
