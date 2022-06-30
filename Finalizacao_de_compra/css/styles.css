@@ -133,17 +133,18 @@ header {
     margin-left: -15px;
 }
 
-    footer {
-        padding: 30px 0 20px 120px;
-        color: #fff;
-        text-align: center;
-        width: 100%;
-        background: #121212;
-        z-index: -9999999;
-        position: relative;
-        
-    }
+footer {
+    padding: 30px 0 20px 120px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    background: #121212;
+    z-index: -9999999;
+    position: relative;
     
+}
+
+
 
 #logoFooter {
     width: 254px;
@@ -163,141 +164,40 @@ footer .informacaoAtendimento {
     padding: 10px 0;
 }
 
-  main{
-    width: 100%;
-    height: 100%;
-    font-family: arial;
-    font-size: 12px;
-    background-color:  black;
-    color: white;
-  }
 
-#banner{
-  margin: 0% 3% 3% 3%;
-  justify-content: space-between;
-  display: flex;
-}
- .amd{
-  height: 500px;
-  width: 30%;
-  transition: all 0.3s ease-in 0.5s;
-  position: relative;
-}
 
- .hyperx{
-  height: 500px;
-  width: 30%;
-  transition: all 0.3s ease-in 0.5s;
-  position: relative;
+main{
+    font-size: 13px;
+    font-family: Arial;
+    color: black
 }
-
- .red{
-  height: 500px;
-  width: 30%;
-  transition: all 0.3s ease-in 0.5s;
-  position: relative;
-}
-
-.red:hover{
-  height: 550px;
-  width: 550px;
-  cursor: pointer;
-}
-
-.amd:hover{
-  height: 550px;
-  width: 550px;
-  cursor: pointer;
-}
-
-.hyperx:hover{
-  height: 550px;
-  width: 550px;
-  cursor: pointer;
-}
-
-#containerHome{
-    background-color: #3e619b;
+#principal{
+    position: relative;
+    margin-top: 60px;
     width: 100%;
     height: 1000px;
-    display: flex;
-    padding-left: 3%;
-    padding-right: 3%;
+    background-color:#e9e9eb;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
 }
-
-.branco{
-    background-color: #e9e9eb;
+.pedido{
     width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 5px;
-    justify-content: space-between;
-    color: black;
-    font-size: 14px;
-    padding-left: 5%;
-    padding-top: 3%;
-
+    font-size: 24px;
 }
-.produtos{
-    width: 350px;
-    height: 400px;
-    margin-bottom: 5%;
-    padding-left: 1%;
-    padding-right: 1%;
-    list-style-type: none;
-    background-color: white;
-    
+.f1{
+    color: #3e619b;
 }
 
-.topo{
+.f2{
+    color: #000;
+    position: relative;
+    font-size: 13px;
+}
+table{
     width: 100%;
-    height: 40px;
-    display: flex;
+}
+td{
     align-items: center;
-
-}
-.interno{
-    width: 100%;
-    height: 200px;
-    border-top: 1px solid #ef4b4c;
-    border-bottom: 1px solid #ef4b4c;
-
-}
-.desconto{
-    font-weight: bold;
-    color: #3e619b;
-    font-size: 24px;
-
-}
-.off{
-    position: relative;
-}
-.b550{
-    width: 100%;
-    height: 100%;
-}
-.texto{
-width: 100%;
-height: 80px;
-}
-.preco{
-    font-size: 12px;
-}
-.valorTotal{
-    font-weight: bold;
-    color: #3e619b;
-    font-size: 24px;
-}
-.pg1{
-    font-weight: bold;
-    color: #3e619b;
-    font-size: 14px;
-    position: relative;
-    bottom: 20px;
-    left: 108px;
-}
-.pg2{
-    font-size: 15px;
+    justify-self: center;
 }

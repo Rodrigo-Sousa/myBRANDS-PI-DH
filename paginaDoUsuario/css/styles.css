@@ -4,7 +4,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+body{
+    position: relative;
+}
 header {
     float: left;
     width: 100%;
@@ -121,9 +123,6 @@ header {
     width:150px;
 }
 
-.container {
-    max-width: 1100px;
-}
 
 .meuPC {
     margin: -12px 0 20px 20px;
@@ -133,17 +132,16 @@ header {
     margin-left: -15px;
 }
 
-    footer {
-        padding: 30px 0 20px 120px;
-        color: #fff;
-        text-align: center;
-        width: 100%;
-        background: #121212;
-        z-index: -9999999;
-        position: relative;
-        
-    }
+footer {
+    padding: 30px 0 20px 120px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    background: #121212;
+    z-index: -9999;
+    position: relative;
     
+}
 
 #logoFooter {
     width: 254px;
@@ -163,141 +161,73 @@ footer .informacaoAtendimento {
     padding: 10px 0;
 }
 
-  main{
-    width: 100%;
-    height: 100%;
-    font-family: arial;
-    font-size: 12px;
-    background-color:  black;
-    color: white;
-  }
 
-#banner{
-  margin: 0% 3% 3% 3%;
-  justify-content: space-between;
-  display: flex;
-}
- .amd{
-  height: 500px;
-  width: 30%;
-  transition: all 0.3s ease-in 0.5s;
-  position: relative;
-}
 
- .hyperx{
-  height: 500px;
-  width: 30%;
-  transition: all 0.3s ease-in 0.5s;
-  position: relative;
-}
+    /* Página do Usuário */
+    #body1{
+        width: 100%;
+        height: 1000px;
+    }
 
- .red{
-  height: 500px;
-  width: 30%;
-  transition: all 0.3s ease-in 0.5s;
-  position: relative;
-}
-
-.red:hover{
-  height: 550px;
-  width: 550px;
-  cursor: pointer;
-}
-
-.amd:hover{
-  height: 550px;
-  width: 550px;
-  cursor: pointer;
-}
-
-.hyperx:hover{
-  height: 550px;
-  width: 550px;
-  cursor: pointer;
-}
-
-#containerHome{
-    background-color: #3e619b;
-    width: 100%;
-    height: 1000px;
-    display: flex;
-    padding-left: 3%;
-    padding-right: 3%;
-}
-
-.branco{
-    background-color: #e9e9eb;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 5px;
-    justify-content: space-between;
-    color: black;
-    font-size: 14px;
-    padding-left: 5%;
-    padding-top: 3%;
-
-}
-.produtos{
-    width: 350px;
-    height: 400px;
-    margin-bottom: 5%;
-    padding-left: 1%;
-    padding-right: 1%;
-    list-style-type: none;
-    background-color: white;
+    .itemMenu img{
+        width: 150px;
+        height: 150px;
+        margin: auto;
+        display: block;
+        padding-top: 10px;
+    }
     
-}
-
-.topo{
-    width: 100%;
-    height: 40px;
-    display: flex;
-    align-items: center;
-
-}
-.interno{
-    width: 100%;
-    height: 200px;
-    border-top: 1px solid #ef4b4c;
-    border-bottom: 1px solid #ef4b4c;
-
-}
-.desconto{
-    font-weight: bold;
-    color: #3e619b;
-    font-size: 24px;
-
-}
-.off{
-    position: relative;
-}
-.b550{
-    width: 100%;
-    height: 100%;
-}
-.texto{
-width: 100%;
-height: 80px;
-}
-.preco{
-    font-size: 12px;
-}
-.valorTotal{
-    font-weight: bold;
-    color: #3e619b;
-    font-size: 24px;
-}
-.pg1{
-    font-weight: bold;
-    color: #3e619b;
-    font-size: 14px;
-    position: relative;
-    bottom: 20px;
-    left: 108px;
-}
-.pg2{
-    font-size: 15px;
-}
+    .itemMenu p{
+        color: white;
+        font-size: 22px;
+        text-align: center;
+        margin-top: 5px;
+    }
+    .teste{
+        /* background-color: gray; */
+        display:flex;
+        top: 90px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        min-height: 300px;
+        width: 80%;
+        
+        
+        
+    }
+    
+    .menuLateral{
+        
+        height: 500px;
+        width: 80%;
+        margin-top: 10px;
+        margin-bottom: 60px;
+        margin-left: auto;
+        margin-right: auto;
+    
+        
+        
+    }
+    .itens{
+        display: flex;
+        flex-wrap: wrap;
+    
+        justify-content: space-around;
+        margin: 0 auto;
+        width: 80%;
+               
+    
+        
+    }
+    .itemMenu{
+        cursor: pointer;
+        background-color: rgba(255,84,0, 0.8);
+        border-radius: 10px;
+        display: block;
+        height: 200px;
+        width: 215px;
+        margin: 30px;
+    
+    
+    }
