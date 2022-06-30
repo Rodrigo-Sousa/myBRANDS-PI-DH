@@ -133,16 +133,17 @@ header {
     margin-left: -15px;
 }
 
-footer {
-    padding: 30px 0 20px 120px;
-    color: #fff;
-    text-align: center;
-    width: 100%;
-    background: #121212;
-    position: fixed;
-    flex-shrink: 0;
+    footer {
+        padding: 30px 0 20px 120px;
+        color: #fff;
+        text-align: center;
+        width: 100%;
+        background: #121212;
+        z-index: -9999999;
+        position: relative;
+        
+    }
     
-}
 
 #logoFooter {
     width: 254px;
@@ -172,26 +173,26 @@ footer .informacaoAtendimento {
   }
 
 #banner{
-  margin: 5% 3% 3% 3%;
+  margin: 0% 3% 3% 3%;
   justify-content: space-between;
   display: flex;
 }
  .amd{
-  height: 100%;
-  width: 25.5%;
+  height: 500px;
+  width: 30%;
   transition: all 0.3s ease-in 0.5s;
   position: relative;
 }
 
  .hyperx{
-  height: 100%;
+  height: 500px;
   width: 30%;
   transition: all 0.3s ease-in 0.5s;
   position: relative;
 }
 
  .red{
-  height: 100%;
+  height: 500px;
   width: 30%;
   transition: all 0.3s ease-in 0.5s;
   position: relative;
@@ -213,4 +214,90 @@ footer .informacaoAtendimento {
   height: 550px;
   width: 550px;
   cursor: pointer;
+}
+
+#containerHome{
+    background-color: #3e619b;
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.branco{
+    background-color: #e9e9eb;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    justify-content: space-between;
+    color: black;
+    font-size: 14px;
+    padding-left: 5%;
+    padding-top: 3%;
+
+}
+.produtos{
+    width: 350px;
+    height: 400px;
+    margin-bottom: 5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    list-style-type: none;
+    background-color: white;
+    
+}
+
+.topo{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+
+}
+.interno{
+    width: 100%;
+    height: 200px;
+    border-top: 1px solid #ef4b4c;
+    border-bottom: 1px solid #ef4b4c;
+
+}
+.desconto{
+    font-weight: bold;
+    color: #3e619b;
+    font-size: 24px;
+
+}
+.off{
+    position: relative;
+}
+.b550{
+    width: 100%;
+    height: 100%;
+}
+.texto{
+width: 100%;
+height: 80px;
+}
+.preco{
+    font-size: 12px;
+}
+.valorTotal{
+    font-weight: bold;
+    color: #3e619b;
+    font-size: 24px;
+}
+.pg1{
+    font-weight: bold;
+    color: #3e619b;
+    font-size: 14px;
+    position: relative;
+    bottom: 20px;
+    left: 108px;
+}
+.pg2{
+    font-size: 15px;
 }
