@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500;600;700;800&display=swap');
 
 
@@ -179,7 +180,7 @@ main {
 #container-login {
   width: 45%;
   ;
-  height: 600px;
+  height: 500px;
   background-color: #ef4b4c;
   border-radius: 60px;
   padding: 25px;
@@ -188,7 +189,7 @@ main {
   align-items: center;
   justify-content: space-evenly;
   position: absolute;
-  top: 30px;
+  top: 90px;
   right: 100px;
 }
 
