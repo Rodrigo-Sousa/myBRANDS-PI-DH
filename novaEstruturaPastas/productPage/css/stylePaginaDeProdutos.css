@@ -1,0 +1,76 @@
+.container{
+    padding-top: 20px;
+    margin: 50px;
+}
+/* Estilizado o título do cabeçalho */
+.tituloProduto {
+    margin-top: 5px;
+    display: inline-flex;
+    font-size: 200%;
+    color: #000000;
+    
+}
+/* Estilizado os hr (traços) no cabeçalho */
+.marcacaoLinha {
+    width: 30px;
+    border: 2px solid;
+    margin: 6px 40px;
+    color: #000000;
+}
+/* Estilizando a sessão do produto príncipal */
+#colEsquerda {
+    display: inline-flex;
+    padding: 20px;
+    margin: 10px;
+}
+/* Estilizando classe .informacaoProduto */
+.informacaoProduto {
+    font-weight:900;
+}
+/* Estilizando a classe .linhaDivisora */
+.linhaDivisora {
+    margin: 5px;
+}
+.sobreItem{
+    list-style: none;
+}
+/* Estilizando o ID colCentral */
+#colCentral {
+    margin-left: 15px;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 8px;
+}
+/* Estilizando a classe .tabelaInformacaoProduto */
+.tabelaInformacaoProduto {
+    text-align: left;
+}
+/* Estilizando a classe .detalhesProdutos */
+.detalhesProdutos {
+    padding: 20px;
+    text-align: justify;
+}
+/* Estilizando classe .tituloDetalhesProduto */
+.tituloDetalhesProduto{
+    border-bottom: 2px solid #333;
+    margin-bottom: 20px;
+}
+.tabelaProduto{
+    width: 100%;
+}
+.cabecalhoDetalhesProdutos{
+    background-color: #f3f3f3;
+    padding: 5px;
+    border-top: 1px solid #333;
+    color: #333;
+    font-weight: 400;
+    /* border-radius: 4px; */
+}
+.conteudoDetalhesProdutos{
+    padding-left: 10px;
+}
+.linhaContainer{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+

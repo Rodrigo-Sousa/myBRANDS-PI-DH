@@ -1,0 +1,27 @@
+.records{
+    width: 100%;
+    user-select: none;
+    text-align: left;
+}
+.records th{
+    height: 50px;
+    background-color: #3E619B;
+    color: white;
+    padding-left: 20px;
+    font-size: 1rem;
+    /* text-align: center; */
+}
+.records td{
+    height: 50px;
+    padding-left: 20px;
+}
+.records th:last-child,
+.records td:last-child{
+    min-width: 140px;
+    padding: 0;
+    text-align: center;
+}
+.records tr:hover{
+    background-color: #42506B;
+    color: white;
+}

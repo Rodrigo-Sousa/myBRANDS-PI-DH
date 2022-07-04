@@ -228,21 +228,14 @@ font-size: 10pt;
     box-shadow: 0px 10px 40px -12px #EF4B4C;
 }
 footer {
-    padding: 30px 0 20px 120px;
+    padding: 20px 0 20px 120px;
     color: #fff;
     text-align: center;
     width: 100%;
-<<<<<<< HEAD
-    background: #121212;
-    z-index: -9999;
-    position: relative;
-    
-=======
     background: #333;
     z-index: -9999999;
     bottom: 0;
     left: 0;
->>>>>>> 42165aa7a1306ee67d9326ccb2b8ada78cf2a4b1
 }
 
 #logoFooter {
@@ -265,21 +258,6 @@ footer .informacaoAtendimento {
 
 
 
-<<<<<<< HEAD
-    /* Página do Usuário */
-    #body1{
-        width: 100%;
-        height: 1000px;
-    }
-
-    .itemMenu img{
-        width: 150px;
-        height: 150px;
-        margin: auto;
-        display: block;
-        padding-top: 10px;
-    }
-=======
 
 
 /* Menu lateral */
@@ -398,7 +376,6 @@ footer .informacaoAtendimento {
     border-radius: 10px;
     color: white;
     font-size: 1.2rem;
->>>>>>> 42165aa7a1306ee67d9326ccb2b8ada78cf2a4b1
     
 }
 
