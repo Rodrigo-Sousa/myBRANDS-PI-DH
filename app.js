@@ -3,7 +3,7 @@ const app = express();
 const port = 3000;
 //const methodOverride = require("method-override");
 
-/* Route */
+//Routes aplication
 const homePageRoute = require("./src/routes/homePageRoute");
 const cadastroRoute = require("./src/routes/cadastroRoute");
 const cartShoppingRoute = require("./src/routes/cartShoppingRoute");
@@ -29,7 +29,7 @@ app.use(express.json());
 // Converte requisição para formado que o json aceita
 app.use(express.urlencoded({ extended: false }));
 
-/* Use Route */
+//Routes aplication
 app.use("/", homePageRoute);
 app.use("/cadastro", cadastroRoute);
 app.use("/cartShopping", cartShoppingRoute);
@@ -40,6 +40,10 @@ app.use("/productMotherboard", productMotherboardRoute);
 app.use("/users", usersRoute);
 app.use("/loginUser", loginUserRoute);
 
+// Error not found
+app.use( (req, res) => {
+    return res.status(404).render('notFound');
+});
 
 app.listen(port, ()=>{
     console.log("Estamos rodando na porta" + port)
