@@ -2,8 +2,6 @@
 
 O presente repositório contém o nosso projeto integrador que foi desenvolvido um e-commerce de _hardwares_ contendo as mais diversas marcas e seus respectivos produtos. Aplicando os conhecimentos de front-end (HTML, CSS, JavaScript, Responsividade, etc.), juntamente com os conehcimento back-end (NodeJs, MySQL, etc.) com a metodologia Ágil Scrum. 
 
-Branch defautl
-
 Foi desenvolvido por: 
 
 * [Ana Carolina de Souza Fonseca](https://github.com/anacsff)
@@ -12,3 +10,11 @@ Foi desenvolvido por:
 * [Manuel Sobrinho](https://github.com/determinedalways)
 * [Matheus Dos Santos Santana](https://github.com/matheusstn)
 * [Rodrigo da Silva Sousa](https://github.com/Rodrigo-Sousa)
+
+---
+
+- Falar sobre: Páginas Desenvolvidas (header classe **active**).
+- Página Home, precisa aplicar atualizações.
+
+- Verificar os css que estão dentro da mesma pasta **product**
+
