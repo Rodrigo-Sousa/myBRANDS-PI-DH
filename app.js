@@ -46,5 +46,5 @@ app.use( (req, res) => {
 });
 
 app.listen(port, ()=>{
-    console.log("Estamos rodando na porta" + port)
+    console.log("Estamos rodando na porta " + port)
 });
