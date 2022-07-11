@@ -1,0 +1,374 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500;600;700;800&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #425068;
+  font-family:'noto sans', sans-serif; } 
+
+  header {
+    float: left;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 99999;
+    top: 0px;
+    /* border-top: 1px solid #000; */
+}
+.logoPequeno {
+    width: 100%;
+    background-color: #333;
+    height: 60px;
+    margin: 0;
+    border-bottom: 2px solid #000;
+}
+
+#logoMyBrand {
+    margin: 5px 0 0 120px;
+}
+
+#logoMyBrand {
+    width: 120px;
+    height: 50;
+}
+.inputPesquisar {
+    float: left;
+    top: 0;
+    left: 60px;
+    bottom: 0;
+    border: 0;
+    padding: 0;
+    margin: 0 1px;
+    text-indent: 15px;
+    font-size: 12px;
+    height: 36px;
+    z-index: 2;
+    outline: 0;
+    color: #000;
+    font-size: 16px;
+    background-color: #fff;
+    border-radius: 5px 0 0 5px;
+}
+.botaoPesquisar {
+    top: 0px;
+    /* margin: 10px 0px; */
+    bottom: 0px;
+    width: 60px;
+    height: 36px;
+    /* line-height: 30px; */
+    cursor: pointer;
+    color: #fff;
+    z-index: 1000;
+    background-color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+}
+.comprasDepartamento::after {
+    right: 17px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.comprasDepartamento::before {
+    right: 10px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg)
+}
+
+.comprasDepartamento::after, 
+.comprasDepartamento::before {
+    border: 1px solid #fff;
+    content: "";
+    position: absolute;
+    top: 58%;
+    transition: .1s ease all;
+    -webkit-transition: .1s ease all;
+    width: 10px;
+}
+
+.menuNavegacao {
+    list-style: none;
+    /* border: 1px solid #f00; */
+    float: right;
+    margin-top: 15px;
+}
+.menuNavegacao li{
+    position: relative;
+    float: left;
+    /* border-right: 1px solid #f00; */
+}
+.menuNavegacao a{
+    color:#fff; 
+    text-decoration:none; 
+    padding:5px 10px; 
+    display:block;
+    margin: 0 20px;
+}
+.menuNavegacao li ul {
+    position:absolute;
+    top:25px;
+    left:0;
+    background-color:#333;
+    display:none;
+    border-radius: 5px;
+    border: 2px solid #000;
+}
+.menuNavegacao li:hover ul, .menuNavegacao li.over ul{
+    display: block;
+}
+.menuNavegacao li ul li {
+    /* border:1px solid #f00; */
+    display:block;
+    width:150px;
+}
+
+.container {
+    max-width: 1100px;
+}
+
+.meuPC {
+    margin: -12px 0 20px 20px;
+}
+.linhaContainer{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+footer {
+    padding: 30px 0 20px 120px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    background: #121212;
+    z-index: -9999999;
+    bottom: 0;
+    left: 0;
+}
+
+#logoFooter {
+    width: 254px;
+    height: 100px;
+}
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: normal;
+}
+.corCinza{
+    color: #8b8b8b;
+}
+
+footer .informacaoAtendimento {
+    padding: 10px 0;
+}
+
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+#container-login {
+  width: 45%;
+  ;
+  height: 500px;
+  background-color: #3E619B;
+  border-radius: 60px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 90px;
+  right: 100px;
+}
+
+
+
+#container-login h2,
+#container-signup h2 {
+  font-size: 2em;
+  color: #EF4B4C
+}
+
+.label-senha {
+  color: #E9E9EB;
+  margin-bottom: 10px;
+  font-size: 14pt;
+
+
+}
+
+
+.label-email{
+color: #E9E9EB;
+    margin-bottom: 10px;
+    font-size: 14pt; }
+
+#container-login form,
+#container-signup form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#input-email {
+  position: relative;
+  left: 4px;
+}
+
+label {
+  padding-left: 10px;
+}
+
+
+#container-signup input.input_field {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  margin: 10px 0;
+}
+
+.container-input {
+  color: black;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.link {
+  color: #ef4b4c;
+}
+.link:hover {
+  color: #e9e9eb;
+}
+
+
+.checkbox input {
+  height: 100%
+}
+
+.checkbox-container {
+  display: flex;
+  
+}
+
+.iconeDoUsuario {
+  padding-top: 10px;
+}
+
+
+
+.formulario {
+  width: 70%;
+  background-color: #3E619B;
+  position: relative;
+  top: 5px;
+  left: 10px;
+  border-radius: 30px;
+}
+
+
+
+#imagem-login {
+  height: 20%;
+  background-color: #ef4b4c;
+  width: 30%;
+  position: relative;
+  bottom: 20px;
+}
+
+#lembrar {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 20px;
+  bottom: 5px;
+}
+
+
+#senha {
+  position: relative;
+  left: 5px;
+
+
+
+}
+
+hr {
+  width: 100%;
+  position: relative;
+  bottom: 4px;
+  color: black;
+  top: 2px;
+
+}
+
+.h2-login {
+  font-family: cursive;
+  padding: 10px 60px;
+  font-size: 2em;
+
+}
+
+input {
+  height: 30px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+ }
+
+
+
+  
+  .mybrands img { width: 100%;
+
+  }
+  .mybrands {
+  
+    width: 30%;
+    position: absolute;
+    top: 50px;
+    opacity: 50%;
+    left: 150px;
+  
+  
+  }
+  
+  
+  @media only screen and (min-width: 600px) {
+  
+    .mybrands {
+      width: 60%;
+  
+  
+  
+    }
+  }
+  
+  
+  @media only screen and (min-width: 1000px) {
+  
+    .mybrands {
+      width: 100%;
+  
+  
+  
+    }
+  }
