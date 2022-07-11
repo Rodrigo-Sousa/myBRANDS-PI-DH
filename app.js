@@ -3,16 +3,11 @@ const app = express();
 const port = 3000;
 //const methodOverride = require("method-override");
 
-//Routes aplication
+// aplicação de rotas
 const homePageRoute = require("./src/routes/homePageRoute");
-const cadastroRoute = require("./src/routes/cadastroRoute");
-const cartShoppingRoute = require("./src/routes/cartShoppingRoute");
-const loginRoute = require("./src/routes/loginRoute");
-const productAdmRoute = require("./src/routes/productAdmRoute");
-const productListingRoute = require("./src/routes/productListingRoute");
-const productMotherboardRoute = require("./src/routes/productMotherboardRoute.js");
-const usersRoute = require("./src/routes/usersRoute");
-const loginUserRoute = require("./src/routes/loginUserRoute");
+const admRoute = require("./src/routes/admRoute");
+const userRoute = require("./src/routes/userRoute");
+const productRoute = require("./src/routes/productRoute");
 
 
 app.use(express.static(__dirname + "/public"));
@@ -29,16 +24,11 @@ app.use(express.json());
 // Converte requisição para formado que o json aceita
 app.use(express.urlencoded({ extended: false }));
 
-//Routes aplication
+// aplicação de rotas
 app.use("/", homePageRoute);
-app.use("/cadastro", cadastroRoute);
-app.use("/cartShopping", cartShoppingRoute);
-app.use("/login", loginRoute);
-app.use("/productAdm", productAdmRoute);
-app.use("/productListing", productListingRoute);
-app.use("/productMotherboard", productMotherboardRoute);
-app.use("/users", usersRoute);
-app.use("/loginUser", loginUserRoute);
+app.use("/", admRoute);
+app.use("/", userRoute);
+app.use("/", productRoute);
 
 // Error not found
 app.use( (req, res) => {
