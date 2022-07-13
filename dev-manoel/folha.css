@@ -288,7 +288,7 @@ input {
   margin-bottom: 10px;
   font-size: 14pt;
    position: absolute;
-  bottom: 240px;
+  bottom: 235px;
   margin: 10px ;
   display: flex;
   align-items: baseline;
@@ -304,7 +304,7 @@ input {
     display:flex;
     
     position: absolute;
-    bottom: 170px;
+    bottom: 165px;
     left: 55px;
     margin: 10px;
     
@@ -315,7 +315,7 @@ input {
     margin-bottom: 10px;
     font-size: 14pt;
      position: absolute;
-    bottom: 100px;
+    bottom: 95px;
     left: 55px;
     margin: 10px;
     
