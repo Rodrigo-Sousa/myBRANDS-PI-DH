@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500;600;700;800&display=swap');
 
 
@@ -179,16 +180,16 @@ main {
 #container-login {
   width: 45%;
   ;
-  height: 600px;
-  background-color: #ef4b4c;
-  border-radius: 30px;
+  height: 500px;
+  background-color: #3E619B;
+  border-radius: 60px;
   padding: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   position: absolute;
-  top: 30px;
+  top: 90px;
   right: 100px;
 }
 
@@ -197,8 +198,22 @@ main {
 #container-login h2,
 #container-signup h2 {
   font-size: 2em;
-  color: #3e619b
+  color: #EF4B4C
 }
+
+.label-senha {
+  color: #E9E9EB;
+  margin-bottom: 10px;
+  font-size: 14pt;
+
+
+}
+
+
+.label-email{
+color: #E9E9EB;
+    margin-bottom: 10px;
+    font-size: 14pt; }
 
 #container-login form,
 #container-signup form {
@@ -209,7 +224,19 @@ main {
 
 .container-input {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+}
+
+#input-email {
+  position: relative;
+  left: 4px;
+}
+
+label {
+  padding-left: 10px;
 }
 
 
@@ -242,21 +269,26 @@ main {
   
 }
 
+.iconeDoUsuario {
+  padding-top: 10px;
+}
+
 
 
 .formulario {
   width: 70%;
-  background-color: #425068;
+  background-color: #3E619B;
   position: relative;
   top: 5px;
   left: 10px;
+  border-radius: 30px;
 }
 
 
 
 #imagem-login {
   height: 20%;
-  background-color: #ef4b4c;
+  background-color: #3E619B;
   width: 30%;
   position: relative;
   bottom: 20px;
@@ -291,13 +323,18 @@ hr {
 .h2-login {
   font-family: cursive;
   padding: 10px 60px;
+  font-size: 2em;
 
 }
 
 input {
   height: 30px;
   padding: 10px;
-  margin: 10px; }
+  margin: 10px;
+  border-radius: 20px;
+ }
+
+
 
   
   .mybrands img { width: 100%;
