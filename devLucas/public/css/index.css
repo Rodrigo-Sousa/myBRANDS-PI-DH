@@ -1,0 +1,34 @@
+/* CADASTRO */
+@import "./cadastro/styles.css";
+
+/* HEADER-FOOTER */
+@import "./header-footer/footer.css";
+@import "./header-footer/header.css";
+@import "./header-footer/reset.css";
+
+/* HOME-PAGE */
+@import "./home-page/styles.css";
+
+/* LOGIN */
+@import "./login/style.css";
+
+/* LOGIN-ADM */
+@import "./login-adm/styles.css";
+
+/* PAGINA-DO-USUARIO */
+@import "./pagina-do-usuario/styles.css";
+
+/* PRODUTO */
+@import "./produto/productListing/productListing.css";
+@import "./produto/productPage/footer-v2.css";
+@import "./produto/productPage/header-v2.css";
+@import "./produto/productPage/product-motherboard-B450.css";
+
+/* PRODUTOS-ADM */
+@import "./produtos-adm/button.css";
+@import "./produtos-adm/main.css";
+@import "./produtos-adm/popup.css";
+@import "./produtos-adm/records.css";
+
+/* NOT FOUND */
+/*@import "./not-found/styles.css"*/

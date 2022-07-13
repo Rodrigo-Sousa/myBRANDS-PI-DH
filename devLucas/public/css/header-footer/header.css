@@ -1,0 +1,32 @@
+/* Estilizando o logo do header */
+.logo-image {
+    height: 0%;
+    position: relative;
+    top: 0px;
+    right: 0px;
+    margin-top: -10px;
+}
+
+/* Estilizando o cabeçalho total da página */
+#headerFull{
+    background-color: #42506b;
+}
+.dropdown-departament{
+    background-color: #42506b;
+}
+.item-departamento {
+    color: #fff;
+}
+/* estilizando o botão de buscar produto */
+.btn-search{
+    color: #ffffff80;
+    background-color: transparent;
+    background-image: none;
+    border-color: #3E619B;
+}
+.btn-search:hover{
+    color: #fff;
+    background-color: #3E619B;
+    background-image: none;
+    border-color: #3E619B;
+}
