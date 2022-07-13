@@ -338,7 +338,9 @@ input {
     font-size: 14pt;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
+  margin-right: 10px;
+  
 
   }
 
