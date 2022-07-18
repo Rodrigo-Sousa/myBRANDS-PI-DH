@@ -1,0 +1,36 @@
+/* Estilizando o logo do header */
+.brand-logo {
+    height: 0%;
+    top: 0px;
+    right: 0px;
+    margin-top: -10px;
+}
+
+/* Estilizando o cabeçalho total da página */
+#headerFull{
+    background-color: #42506b;
+    border-bottom: 2px solid #fff;
+}
+.dropdown-departament{
+    background-color: #42506b;
+}
+.item-departamento {
+    color: #fff;
+}
+/* estilizando o botão de buscar produto */
+.btn-search{
+    color: #ffffff80;
+    background-color: transparent;
+    background-image: none;
+    border-color: #3E619B;
+}
+.btn-search:hover{
+    color: #fff;
+    background-color: #3E619B;
+    background-image: none;
+    border-color: #3E619B;
+}
+.header-login {
+
+    padding-top: 12px;
+}

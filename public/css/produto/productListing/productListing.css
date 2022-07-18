@@ -1,0 +1,91 @@
+body{
+    background-color: #e9e9e9;
+}
+/* Estilizando a tag do cabeçalho do conteúdo */
+.header-content {
+    min-height: 40px;
+    padding: 10px;
+    overflow: hidden;
+}
+.header-content p {
+    color: #3e619b;
+    text-transform: uppercase;
+    font: 800 11px "Open Sans",Arial,Helvetica,sans-serif;
+    display: inline-block;
+    vertical-align: top;
+}
+.header-content h1 {
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: -12px;
+    color: #6c757d;
+}
+#search-product {
+    padding-top: 10px;
+    color: #3e619b;
+    text-transform: uppercase;
+    word-break: break-all;
+    display: block;
+    font-size: 14px;
+}
+.filter-order-by-listing,
+.filter-order-by{
+    background-color: #fff;
+    padding: 10px;
+    font: bold 14px "Open Sans",Arial,Helvetica,sans-serif;
+    white-space: nowrap;
+    border-radius: 4px;
+}
+#button-orderBy-listing,
+#button-orderBy {
+    background: #fff;
+    color: #383838;
+    border: none;
+    font-size: 14px;
+    margin: 0 5px 0 0;
+    padding: 5px 10px;
+    border: 1px solid #eee;
+}
+#order-by-listing{
+    background-color: #42506b;
+    text-align: center;
+}
+.orderBy-item-listing:hover, .orderBy-item-listing a:hover{
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+.filter-orderBy{
+    color: #fff;
+    border: 0;
+    text-transform: uppercase;
+    font: 11px/30px "Open Sans",Arial,Helvetica,sans-serif;
+}
+.product-card-listing {
+    margin: 20px 0px 40px 0px;
+    min-width: 25%;
+}
+.card{
+    min-height: 100%;
+    border-radius: 15px;
+}
+.card-img-top-listing{
+    width: 90%;
+}
+.product-image-listing {
+    margin: 10px 10px 10px 90px;
+    padding: 2px;
+    border-radius: 5px;
+    border: 2px solid #ef4b4c;
+}
+.sale-price {
+    color: #00a000;
+    font: 800 20px/16px "Open Sans",Arial,Helvetica,sans-serif;
+    letter-spacing: -1px;
+}
+.form-payment {
+    color: #00a000;
+    font-size: 12px;
+}

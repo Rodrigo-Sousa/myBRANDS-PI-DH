@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500;600;700;800&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main-user-login{
+    background-color: #42506B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-user-login {
+  margin-left: 20%;
+}
+.title-1{
+    color: #EF4B4C;
+    font-size: 3vw;
+}
+.left-user-login-img{
+    width: 25vw;
+}
+.title-2{
+    color:#EF4B4C;
+    font-weight: 800;
+    margin: 0;
+}
+.right-user-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-user-login{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background-color: #3E619B;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+.textfield{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+.input-1,
+.input-2{
+width: 100%;
+border: none;
+border-radius: 10px;
+padding: 15px;
+background-color: #365381;
+color: #E9E9EB;
+font-size: 12pt;
+box-shadow: 0px 10px 40px #00000056;
+box-sizing: border-box;
+font-size: 12pt;
+outline: none;
+}
+.label-1,
+.label-2{
+    color: #E9E9EB;
+    margin-bottom: 10px;
+    font-size: 14pt;
+}
+.input-1::placeholder,
+.input-2::placeholder{
+color: #e9e9eb60;
+font-size: 10pt;
+}
+.button-user-login{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #3E619B;
+    background-color: #EF4B4C;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #EF4B4C;
+}
+@media only screen and (max-width: 950px){
+    .card-user-login{
+        width: 85%;
+    }
+   
+}
+@media only screen and (max-width:600px){
+    .main-user-login{
+        flex-direction: column;
+    }
+    .title-1{
+        display: none;
+    }
+    .left-user-login{
+        width: 100%;
+        height: auto;
+    }
+    .right-user-login{
+        width: 100%;
+        height: auto;
+    }
+    .left-user-login-img{
+        width: 50vw;
+    }
+    .card-user-login{
+        width: 90%;
+    }
+    
+}
