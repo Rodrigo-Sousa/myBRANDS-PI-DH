@@ -1,6 +1,12 @@
 const UserController = {
-    index: (req, res) => {
-        return res.render("users", {title: "Users"});
+    registration: (req, res) => {
+        return res.render("registration", {title: "Cadastro"});
+    },
+    login: (req, res) => {
+        return res.render("login", {title: "Login"});
+    },
+    personal: (req, res) => {
+        return res.render("userData", {title: "Info usuário"});
     },
 };
 
