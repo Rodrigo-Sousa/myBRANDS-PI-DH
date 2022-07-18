@@ -11,10 +11,10 @@
 .button.new{
     background-color: #4169e1;
 }
-.button.green{
+.button.green-productAdm{
     background-color: #13CE66;
 }
-.button.red{
+.button.red-productAdm{
     background-color: #ff4949;
 }
 .button.view{
@@ -23,10 +23,10 @@
 .button.new:hover{
     box-shadow: inset 200px 0 0 #325ea7;
 }
-.button.red:hover{
+.button.red-productAdm:hover{
     box-shadow: inset 200px 0 0 #8b0000;
 }
-.button.green:hover{
+.button.green-productAdm:hover{
     box-shadow: inset 200px 0 0 #006400;
 }
 .button.view:hover{
