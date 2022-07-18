@@ -28,14 +28,16 @@ body{
     display: block;
     font-size: 14px;
 }
-.filter-order-by-listing{
+.filter-order-by-listing,
+.filter-order-by{
     background-color: #fff;
     padding: 10px;
     font: bold 14px "Open Sans",Arial,Helvetica,sans-serif;
     white-space: nowrap;
     border-radius: 4px;
 }
-#button-orderBy-listing {
+#button-orderBy-listing,
+#button-orderBy {
     background: #fff;
     color: #383838;
     border: none;

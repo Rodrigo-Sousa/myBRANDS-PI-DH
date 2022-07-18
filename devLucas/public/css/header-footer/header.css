@@ -1,7 +1,6 @@
 /* Estilizando o logo do header */
-.logo-image {
+.brand-logo {
     height: 0%;
-    position: relative;
     top: 0px;
     right: 0px;
     margin-top: -10px;
@@ -10,6 +9,7 @@
 /* Estilizando o cabeçalho total da página */
 #headerFull{
     background-color: #42506b;
+    border-bottom: 2px solid #fff;
 }
 .dropdown-departament{
     background-color: #42506b;
@@ -29,4 +29,8 @@
     background-color: #3E619B;
     background-image: none;
     border-color: #3E619B;
+}
+.header-login {
+
+    padding-top: 12px;
 }

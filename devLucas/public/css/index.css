@@ -11,6 +11,7 @@
 
 /* LOGIN */
 @import "./login/style.css";
+@import "./login/registration.css";
 
 /* LOGIN-ADM */
 @import "./login-adm/styles.css";
@@ -20,8 +21,8 @@
 
 /* PRODUTO */
 @import "./produto/productListing/productListing.css";
-@import "./produto/productPage/footer-v2.css";
-@import "./produto/productPage/header-v2.css";
+/* @import "./produto/productPage/footer-v2.css";
+@import "./produto/productPage/header-v2.css"; */
 @import "./produto/productPage/product-motherboard-B450.css";
 
 /* PRODUTOS-ADM */
@@ -30,5 +31,7 @@
 @import "./produtos-adm/popup.css";
 @import "./produtos-adm/records.css";
 
+/* CART-SHOPPING */
+@import "./cart-shopping/cartShopping.css";
 /* NOT FOUND */
 /*@import "./not-found/styles.css"*/

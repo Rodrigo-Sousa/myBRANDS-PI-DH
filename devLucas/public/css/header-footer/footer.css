@@ -5,13 +5,14 @@ footer {
     text-align: center;
     width: 100%;
     background: #42506b;
-    z-index: -9999999;
     bottom: 0;
     left: 0;
+    border-top: 2px solid #fff;
 }
 #logo-footer {
     width: 254px;
     height: 100px;
+    margin-bottom: 15px;
 }
 footer ul {
     list-style: none;

@@ -1,175 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500;600;700;800&display=swap');
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-body {
-  background-color: #425068}; 
-
-
-main {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: left;
+.main-user-login{
+    background-color: #42506B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-#container-login {
-  width: 45%;
-  ;
-  height: 600px;
-  background-color: #e43131;
-  border-radius: 30px;
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  position: absolute;
-  top: 30px;
-  right: 100px;
+.logo-user-login {
+  margin-left: 20%;
 }
-
-
-#container-login h2,
-#container-signup h2 {
-  font-size: 2em;
-  color: #3e619b
+.title-1{
+    color: #EF4B4C;
+    font-size: 3vw;
 }
-
-#container-login form,
-#container-signup form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.left-user-login-img{
+    width: 25vw;
 }
-
-.container-input {
-  width: 100%;
-
+.title-2{
+    color:#EF4B4C;
+    font-weight: 800;
+    margin: 0;
 }
-
-
-#container-signup input.input_field {
-  width: 100%;
-  height: 40px;
-  padding: 0 10px;
-  margin: 10px 0;
+.right-user-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.container-input {
-  color: black;
-  font-weight: bolder;
-  cursor: pointer;
+.card-user-login{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background-color: #3E619B;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
 }
-.link {
-  color: #ef4b4c;
+.textfield{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
 }
-.link:hover {
-  color: #e9e9eb;
+.input-1,
+.input-2{
+width: 100%;
+border: none;
+border-radius: 10px;
+padding: 15px;
+background-color: #365381;
+color: #E9E9EB;
+font-size: 12pt;
+box-shadow: 0px 10px 40px #00000056;
+box-sizing: border-box;
+font-size: 12pt;
+outline: none;
 }
-
-
-.checkbox input {
-  height: 100%
+.label-1,
+.label-2{
+    color: #E9E9EB;
+    margin-bottom: 10px;
+    font-size: 14pt;
 }
-
-.checkbox-container {
-  display: flex;
-  
+.input-1::placeholder,
+.input-2::placeholder{
+color: #e9e9eb60;
+font-size: 10pt;
 }
-
-
-
-.formulario {
-  width: 70%;
-  background-color: #3e619b;
-  position: relative;
-  top: 5px;
-  left: 10px;
+.button-user-login{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #3E619B;
+    background-color: #EF4B4C;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #EF4B4C;
 }
-
-
-
-#imagem-login {
-  height: 20%;
-  background-color: #ef4b4c;
-  width: 30%;
-  position: relative;
-  bottom: 20px;
-}
-
-#lembrar {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  top: 20px;
-  bottom: 5px;
-}
-
-
-#senha {
-  position: relative;
-  left: 5px;
-
-
-
-}
-
-hr {
-  width: 100%;
-  position: relative;
-  bottom: 4px;
-  color: black;
-  top: 2px;
-
-}
-
-.h2-login {
-  font-family: cursive;
-  padding: 10px 60px;
-
-}
-
-input {
-  height: 30px;
-  padding: 10px;
-  margin: 10px; }
-
-  
-  .mybrands img { width: 100%;
-
-  }
-  .mybrands {
-  
-    width: 30%;
-    position: absolute;
-    top: 50px;
-    opacity: 50%;
-    left: 150px;
-  
-  
-  }
-  
-  
-  @media only screen and (min-width: 600px) {
-  
-    .mybrands {
-      width: 60%;
-  
-  
-  
+@media only screen and (max-width: 950px){
+    .card-user-login{
+        width: 85%;
     }
-  }
-  
-  
-  @media only screen and (min-width: 1000px) {
-  
-    .mybrands {
-      width: 100%;
-  
-  
-  
+   
+}
+@media only screen and (max-width:600px){
+    .main-user-login{
+        flex-direction: column;
     }
-  }
+    .title-1{
+        display: none;
+    }
+    .left-user-login{
+        width: 100%;
+        height: auto;
+    }
+    .right-user-login{
+        width: 100%;
+        height: auto;
+    }
+    .left-user-login-img{
+        width: 50vw;
+    }
+    .card-user-login{
+        width: 90%;
+    }
+    
+}

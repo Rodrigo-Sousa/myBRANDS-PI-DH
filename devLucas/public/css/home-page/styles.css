@@ -1,3 +1,126 @@
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    float: left;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 99999;
+    top: 0px;
+    /* border-top: 1px solid #000; */
+}
+.logoPequeno {
+    width: 100%;
+    background-color: #333;
+    height: 60px;
+    margin: 0;
+    border-bottom: 2px solid #000;
+}
+
+#logoMyBrand {
+    margin: 5px 0 0 120px;
+}
+
+#logoMyBrand {
+    width: 120px;
+    height: 50;
+}
+.inputPesquisar {
+    float: left;
+    top: 0;
+    left: 60px;
+    bottom: 0;
+    border: 0;
+    padding: 0;
+    margin: 0 1px;
+    text-indent: 15px;
+    font-size: 12px;
+    height: 36px;
+    z-index: 2;
+    outline: 0;
+    color: #000;
+    font-size: 16px;
+    background-color: #fff;
+    border-radius: 5px 0 0 5px;
+}
+.botaoPesquisar {
+    top: 0px;
+    /* margin: 10px 0px; */
+    bottom: 0px;
+    width: 60px;
+    height: 36px;
+    /* line-height: 30px; */
+    cursor: pointer;
+    color: #fff;
+    z-index: 1000;
+    background-color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+}
+.comprasDepartamento::after {
+    right: 17px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.comprasDepartamento::before {
+    right: 10px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg)
+}
+
+.comprasDepartamento::after, 
+.comprasDepartamento::before {
+    border: 1px solid #fff;
+    content: "";
+    position: absolute;
+    top: 58%;
+    transition: .1s ease all;
+    -webkit-transition: .1s ease all;
+    width: 10px;
+}
+
+.menuNavegacao {
+    list-style: none;
+    /* border: 1px solid #f00; */
+    float: right;
+    margin-top: 15px;
+}
+.menuNavegacao li{
+    position: relative;
+    float: left;
+    /* border-right: 1px solid #f00; */
+}
+.menuNavegacao a{
+    color:#fff; 
+    text-decoration:none; 
+    padding:5px 10px; 
+    display:block;
+    margin: 0 20px;
+}
+.menuNavegacao li ul {
+    position:absolute;
+    top:25px;
+    left:0;
+    background-color:#333;
+    display:none;
+    border-radius: 5px;
+    border: 2px solid #000;
+}
+.menuNavegacao li:hover ul, .menuNavegacao li.over ul{
+    display: block;
+}
+.menuNavegacao li ul li {
+    /* border:1px solid #f00; */
+    display:block;
+    width:150px;
+}
+
 .container {
     max-width: 1100px;
 }
@@ -5,153 +128,60 @@
 .meuPC {
     margin: -12px 0 20px 20px;
 }
-.main-banner {
+.linhaContainer{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+main{
     width: 100%;
     height: 100%;
     font-family: arial;
     font-size: 12px;
-    background-color: black;
+    background-color:  black;
     color: white;
+  }
+
+#banner{
+  margin: 5% 3% 3% 3%;
+  justify-content: space-between;
+  display: flex;
+}
+ .amd{
+  height: 100%;
+  width: 25.5%;
+  transition: all 0.3s ease-in 0.5s;
+  position: relative;
 }
 
-#banner {
-    margin: 0% 3% 3% 3%;
-    justify-content: space-between;
-    display: flex;
-    margin-left: 100px ;
+ .hyperx{
+  height: 100%;
+  width: 30%;
+  transition: all 0.3s ease-in 0.5s;
+  position: relative;
 }
 
-.amd {
-    height: 500px;
-    width: 30%;
-    transition: all 0.3s ease-in 0.5s;
-    position: relative;
+ .red{
+  height: 100%;
+  width: 30%;
+  transition: all 0.3s ease-in 0.5s;
+  position: relative;
 }
 
-.hyperx {
-    height: 500px;
-    width: 30%;
-    transition: all 0.3s ease-in 0.5s;
-    position: relative;
+.red:hover{
+  height: 550px;
+  width: 550px;
+  cursor: pointer;
 }
 
-.red {
-    height: 500px;
-    width: 30%;
-    transition: all 0.3s ease-in 0.5s;
-    position: relative;
+.amd:hover{
+  height: 550px;
+  width: 550px;
+  cursor: pointer;
 }
 
-.red:hover {
-    height: 550px;
-    width: 550px;
-    cursor: pointer;
-}
-
-.amd:hover {
-    height: 550px;
-    width: 550px;
-    cursor: pointer;
-}
-
-.hyperx:hover {
-    height: 550px;
-    width: 550px;
-    cursor: pointer;
-}
-
-#containerHome {
-    background-color: #3e619b;
-    width: 100%;
-    height: 1000px;
-    display: flex;
-    padding-left: 3%;
-    padding-right: 3%;
-}
-
-.branco {
-    background-color: #e9e9eb;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 5px;
-    justify-content: space-between;
-    color: black;
-    font-size: 14px;
-    padding-left: 5%;
-    padding-top: 3%;
-
-}
-
-.produtos {
-    width: 350px;
-    height: 400px;
-    margin-bottom: 5%;
-    padding-left: 1%;
-    padding-right: 1%;
-    list-style-type: none;
-    background-color: white;
-
-}
-
-.topo {
-    width: 100%;
-    height: 40px;
-    display: flex;
-    align-items: center;
-
-}
-
-.interno {
-    width: 100%;
-    height: 200px;
-    border-top: 1px solid #ef4b4c;
-    border-bottom: 1px solid #ef4b4c;
-
-}
-
-.desconto {
-    font-weight: bold;
-    color: #3e619b;
-    font-size: 24px;
-
-}
-
-.off {
-    position: relative;
-}
-
-.b550 {
-    width: 100%;
-    height: 100%;
-}
-
-.texto {
-    width: 100%;
-    height: 80px;
-}
-
-.preco {
-    font-size: 12px;
-}
-
-.valorTotal {
-    font-weight: bold;
-    color: #3e619b;
-    font-size: 24px;
-}
-
-.pg1 {
-    font-weight: bold;
-    color: #3e619b;
-    font-size: 14px;
-    position: relative;
-    bottom: 20px;
-    left: 108px;
-}
-
-.pg2 {
-    font-size: 15px;
+.hyperx:hover{
+  height: 550px;
+  width: 550px;
+  cursor: pointer;
 }
