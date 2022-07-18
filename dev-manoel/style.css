@@ -227,7 +227,12 @@ color: #E9E9EB;
   display: flex;
   align-items: center;
   justify-content: center;
+  
 
+}
+
+input {
+  background-color: #425068
 }
 
 #input-email {
