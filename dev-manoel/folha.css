@@ -12,11 +12,21 @@ body {
 }
 
 p {
-  /* position: absolute;
-  bottom: 2px;
-  left:5px; */
+ display: flex;
+ flex-direction: row;
+ flex-wrap: nowrap;
+ white-space: nowrap;
+position: relative;
+bottom: 20px;
+
+}
 
 
+
+  a {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap
 }
 
 header {
@@ -258,6 +268,8 @@ input {
 
 .checkbox-container {
   display: flex;
+  height: min-content;
+  flex-direction: wrap;
   font-size: 17px;
 
 
@@ -360,9 +372,11 @@ input {
 #lembrar {
   display: flex;
   flex-direction: row;
-  position: relative;
-  top: 20px;
-  bottom: 5px;
+  white-space: nowrap;
+  margin:0%;
+  padding: 0%;
+  align-items: center;
+ 
 }
 
 
