@@ -250,6 +250,7 @@ label {
   height: 40px;
   padding: 0 10px;
   margin: 10px 0;
+  background-color: #42506b;
 }
 
 .container-input {
@@ -329,7 +330,12 @@ hr {
   font-family: cursive;
   padding: 10px 60px;
   font-size: 2em;
+  
 
+}
+
+input > #enter {
+  background-color:#42506b
 }
 
 input {
