@@ -337,6 +337,10 @@ input {
   #cadastre-se {
     background-color: #EF4B4C;
     color: white;
+    height: 60px;
+    position: relative;
+    bottom: 20px;
+
   }
 
   #nomecompleto {
