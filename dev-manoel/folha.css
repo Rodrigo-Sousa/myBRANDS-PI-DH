@@ -334,13 +334,22 @@ input {
 
   }
 
+  #cadastre-se {
+    background-color: #EF4B4C;
+    color: white;
+  }
+
   #nomecompleto {
     /* position: relative;
     left: 40px;
     bottom:10px */
     display: flex;
-    align-items: center;
+    align-items: left;
+    text-align: center;
     margin-left: 50px;
+    margin-right: 50px;
+    position: relative;
+
     
     
   }
@@ -354,9 +363,17 @@ input {
   display: flex;
   flex-direction: column;
   text-align: left;
-  width:75%;
+
   
 
+  }
+
+  @media only screen and (max-width:1000px) {
+    .label-nome-completo
+    { text-align: center;}
+    #nomecompleto {
+      text-align: center;
+    }
   }
 
 
