@@ -340,19 +340,21 @@ input {
     bottom:10px */
     display: flex;
     align-items: center;
-    padding-right: 40px
+    margin-left: 50px;
+    
     
   }
+
 
   .label-nome-completo {
 
     color: #E9E9EB;
-    margin-bottom: 10px;
+   
     font-size: 14pt;
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin-right: 10px;
+  width:75%;
   
 
   }
