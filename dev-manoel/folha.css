@@ -367,7 +367,7 @@ input {
     bottom:10px */
     display: flex;
     align-items: left;
-    text-align: center;
+    text-align: left;
     margin-left: 50px;
     margin-right: 50px;
     position: relative;
