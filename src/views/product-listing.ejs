@@ -1,139 +1,54 @@
 <%- include("./partials/head") %>
     <%- include("./partials/header") %>
+
+        <!-- Div container, detalhando o produto a ser apresentado -->
         <div class="container">
-            <main class="main-banner">
-                <section id="banner">
-                    <img class="amd" src="./img/amd.png" />
-                    <img class="hyperx" src="./img/marca 1.png" />
-                    <img class="red" src="./img/Wallpaper Redragon - BL Grey.png" />
-                </section>
+            <!-- Div com o cabeçalho do conteúdo da pesquisa -->
+            <div class="header-content">
+                <!-- Lista ordenada -->
+                <ol class="col-xs-12 col-sm-12 col-md-12">
+                    <p>Busca</p>
+                    <h1>Resultado da busca por
+                        <span id="search-product">placa mãe</span>
+                    </h1>
+                </ol>
+                <!-- Fechamento da div header-content -->
+            </div>
 
-                <!-- <section id="containerHome">
-                
-                <ul class="branco">
-
-                    <li class="produtos">
-                        <div class="topo">
-                            <p class="desconto">28%</p>
-                            <p class="off">OFF</p>
-                        </div>
-                        <div class="interno">
-                            <img class="b550" src="./img/01-placaMaeGigabyteB450AorusMDdr4CrossfireAm458797.jpg" />
-                        </div>
-                        <div class="texto">Placa Mãe Gigabyte B550M H, Chipset B550, AMD AM4, mATX, DDR4</div>
-                        <div class="preco">
-                            <p>De R$1000,00 por:</p>
-
-                            <p class="valorTotal">R$720,00</p>
-                            <p class="pg1">à vista</p>
-                            <p class="pg2">12x de R$ 60,00 sem juros</p>
-                        </div>
+            <!-- Div, contendo a opção de Ordernar por preço (Menor/Maior preço) . -->
+            <div class="filter-order-by-listing col-xs-12 col-sm-12 col-md-12">
+                <!-- Botão para ordenar os preços, abrindo uma lista não ordenada -->
+                <button id="button-orderBy-listing" type="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <!-- Ícone -->
+                    <span class="fa fa-exchange fa-rotate-90" aria-hidden="true"></span> Ordenar por
+                    <span class="caret"></span>
+                </button>
+                <!-- Lista não ordenada -->
+                <ul id="order-by-listing" class="dropdown-menu" role="menu" aria-labelledby="order-by-listing">
+                    <li class="orderBy-item-listing">
+                        <a class="filter-orderBy" href="#" data-pg="1" data-order="preco_asc"
+                            data-manufacturer="0">Menor Preço</a>
                     </li>
-
-                    <li class="produtos">
-                        <div class="topo">
-                            <p class="desconto">28%</p>
-                            <p class="off">OFF</p>
-                        </div>
-                        <div class="interno">
-                            <img class="b550" src="./img/01-placaMaeGigabyteB450AorusMDdr4CrossfireAm458797.jpg" />
-                        </div>
-                        <div class="texto">Placa Mãe Gigabyte B550M H, Chipset B550, AMD AM4, mATX, DDR4</div>
-                        <div class="preco">
-                            <p>De R$1000,00 por:</p>
-
-                            <p class="valorTotal">R$720,00</p>
-                            <p class="pg1">à vista</p>
-                            <p class="pg2">12x de R$ 60,00 sem juros</p>
-                        </div>
+                    <li class="orderBy-item-listing">
+                        <a class="filter-orderBy" href="#" data-pg="1" data-order="preco_desc"
+                            data-manufacturer="0">Maior Preço</a>
                     </li>
-
-                    <li class="produtos">
-                        <div class="topo">
-                            <p class="desconto">28%</p>
-                            <p class="off">OFF</p>
-                        </div>
-                        <div class="interno">
-                            <img class="b550" src="./img/01-placaMaeGigabyteB450AorusMDdr4CrossfireAm458797.jpg" />
-                        </div>
-                        <div class="texto">Placa Mãe Gigabyte B550M H, Chipset B550, AMD AM4, mATX, DDR4</div>
-                        <div class="preco">
-                            <p>De R$1000,00 por:</p>
-
-                            <p class="valorTotal">R$720,00</p>
-                            <p class="pg1">à vista</p>
-                            <p class="pg2">12x de R$ 60,00 sem juros</p>
-                        </div>
-                    </li>
-
-                    <li class="produtos">
-                        <div class="topo">
-                            <p class="desconto">28%</p>
-                            <p class="off">OFF</p>
-                        </div>
-                        <div class="interno">
-                            <img class="b550" src="./img/01-placaMaeGigabyteB450AorusMDdr4CrossfireAm458797.jpg" />
-                        </div>
-                        <div class="texto">Placa Mãe Gigabyte B550M H, Chipset B550, AMD AM4, mATX, DDR4</div>
-                        <div class="preco">
-                            <p>De R$1000,00 por:</p>
-
-                            <p class="valorTotal">R$720,00</p>
-                            <p class="pg1">à vista</p>
-                            <p class="pg2">12x de R$ 60,00 sem juros</p>
-                        </div>
-                    </li>
-
-                    <li class="produtos">
-                        <div class="topo">
-                            <p class="desconto">28%</p>
-                            <p class="off">OFF</p>
-                        </div>
-                        <div class="interno">
-                            <img class="b550" src="./img/01-placaMaeGigabyteB450AorusMDdr4CrossfireAm458797.jpg" />
-                        </div>
-                        <div class="texto">Placa Mãe Gigabyte B550M H, Chipset B550, AMD AM4, mATX, DDR4</div>
-                        <div class="preco">
-                            <p>De R$1000,00 por:</p>
-
-                            <p class="valorTotal">R$720,00</p>
-                            <p class="pg1">à vista</p>
-                            <p class="pg2">12x de R$ 60,00 sem juros</p>
-                        </div>
-                    </li>
-
-                    <li class="produtos">
-                        <div class="topo">
-                            <p class="desconto">28%</p>
-                            <p class="off">OFF</p>
-                        </div>
-                        <div class="interno">
-                            <img class="b550" src="./img/01-placaMaeGigabyteB450AorusMDdr4CrossfireAm458797.jpg" />
-                        </div>
-                        <div class="texto">Placa Mãe Gigabyte B550M H, Chipset B550, AMD AM4, mATX, DDR4</div>
-                        <div class="preco">
-                            <p>De R$1000,00 por:</p>
-
-                            <p class="valorTotal">R$720,00</p>
-                            <p class="pg1">à vista</p>
-                            <p class="pg2">12x de R$ 60,00 sem juros</p>
-                        </div>
-                    </li>
-
                 </ul>
-            </section> -->
-            </main>
+            </div>
+
+
             <!-- Conteúdo de área dos produtos -->
-            <div class="area-product-home col-xs-12 col-sm-12 col-md-12">
+            <div class="area-product col-xs-12 col-sm-12 col-md-12">
                 <!-- Div responsável pelos card-deck dos produtos -->
                 <div class="card-deck">
                     <!-- Dividindo o conteúdo em 3 colunas -->
                     <div class="product-card-listing col-xs-12 col-sm-6 col-md-3">
                         <div class="card">
-                            <a href="./productDetail">
+                            <a href="./product-detail">
                                 <img class="card-img-top-listing product-image-listing"
-                                    src="../img/01-placaMaeGigabyteB450AorusMDdr4CrossfireAm458797.jpg"
-                                    alt="Imagem de capa do card">
+                                src="../img/01-placaMaeGigabyteB450AorusMDdr4CrossfireAm458797.jpg"
+                                alt="Imagem de capa do card">
                             </a>
                             <div class="card-body">
                                 <h5 class="card-title">Placa Mãe Gigabyte B450 AORUS M, Chipset B450, AMD AM4, mATX,
@@ -154,8 +69,7 @@
                             <img class="card-img-top-listing product-image-listing"
                                 src="../img/02-upgrade1277142961.jpg" alt="Imagem de capa do card">
                             <div class="card-body">
-                                <h5 class="card-title">Kit Upgrade AMD Ryzen 5 4600G + Placa Mãe B450 + 8GB DDR4
-                                </h5>
+                                <h5 class="card-title">Kit Upgrade AMD Ryzen 5 4600G + Placa Mãe B450 + 8GB DDR4</h5>
                                 <p class="card-text">
                                     <span class="sale-price">R$ 1.590,90</span>
                                     <small class="form-payment">à vista no boleto</small>
@@ -172,8 +86,7 @@
                                 src="../img/03-placaMaeAsrockB450mSteelLegendChipsetB450AmdAm4MatxDdr4127135.jpeg"
                                 alt="Imagem de capa do card">
                             <div class="card-body">
-                                <h5 class="card-title">Placa Mãe ASRock B450M Steel Legend, Chipset B450, AMD AM4,
-                                    mATX,
+                                <h5 class="card-title">Placa Mãe ASRock B450M Steel Legend, Chipset B450, AMD AM4, mATX,
                                     DDR4
                                 </h5>
                                 <p class="card-text">
@@ -272,5 +185,8 @@
                 </div>
                 <!-- Fechamento da div area-product -->
             </div>
+
+            <!-- Fechamento da tag container -->
         </div>
+
         <%- include("./partials/footer") %>
