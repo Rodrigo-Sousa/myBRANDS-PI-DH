@@ -1,4 +1,5 @@
 
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500;600;700;800&display=swap');
 
 
@@ -6,6 +7,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+hr {
+  width: 100%;
+  position: relative;
+  bottom: 4px;
+  border: 1px solid black;
+  top: 2px;
+
 }
 body {
   background-color: #425068;
@@ -333,14 +342,7 @@ label {
 
 }
 
-hr {
-  width: 100%;
-  position: relative;
-  bottom: 4px;
-  color: black;
-  top: 2px;
 
-}
 
 .h2-login {
   font-family: cursive;
@@ -397,3 +399,4 @@ input {
   
     }
   }
+

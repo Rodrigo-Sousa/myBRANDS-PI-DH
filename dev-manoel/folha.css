@@ -5,6 +5,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+hr {
+  
+  width: 100%;
+  position: relative;
+  bottom: 4px;
+  top: 2px;
+  border: solid 1px black
+
+}
 
 body {
   background-color: #42506b;
@@ -404,14 +413,7 @@ input {
 }
 
 
-hr {
-  width: 100%;
-  position: relative;
-  bottom: 4px;
-  color: #42506b;
-  top: 2px;
 
-}
 
 .h2-cadastro {
   font-family: cursive;
