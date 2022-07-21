@@ -282,6 +282,7 @@ color: #E9E9EB;
   background-color: #EF4B4C;
   color: white;
   height: 60px;
+  cursor: pointer;
 }
 
 #input-email {
