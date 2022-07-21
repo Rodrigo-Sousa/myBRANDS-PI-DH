@@ -409,6 +409,7 @@ input {
   position: relative;
   bottom: 20px;
   left: 5px;
+  border-radius: 500px;
 }
 
 #lembrar {

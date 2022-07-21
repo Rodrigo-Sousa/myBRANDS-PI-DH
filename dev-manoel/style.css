@@ -333,6 +333,7 @@ label {
   width: 30%;
   position: relative;
   bottom: 20px;
+  border-radius: 500px;
 }
 
 #lembrar {
