@@ -140,48 +140,55 @@ main{
     font-size: 12px;
     background-color:  black;
     color: white;
+
   }
 
+  .main-banner{
+    width: 92%;
+  }
 #banner{
-  margin: 5% 3% 3% 3%;
+    width: 100%;
+    margin: 2% 0% 0% 10%;
+  padding: 2% 5% 2% 3%;
+  align-items: center;
   justify-content: space-between;
   display: flex;
 }
  .amd{
-  height: 100%;
-  width: 25.5%;
+  height: 400px;
+  width: 30%;
   transition: all 0.3s ease-in 0.5s;
   position: relative;
 }
 
  .hyperx{
-  height: 100%;
+  height: 400px;
   width: 30%;
   transition: all 0.3s ease-in 0.5s;
   position: relative;
 }
 
  .red{
-  height: 100%;
+  height: 400px;
   width: 30%;
   transition: all 0.3s ease-in 0.5s;
   position: relative;
 }
 
 .red:hover{
-  height: 550px;
-  width: 550px;
+  height: 450px;
+  width: 450px;
   cursor: pointer;
 }
 
 .amd:hover{
-  height: 550px;
-  width: 550px;
+    height: 450px;
+    width: 450px;
   cursor: pointer;
 }
 
 .hyperx:hover{
-  height: 550px;
-  width: 550px;
+  height: 450px;
+  width: 450px;
   cursor: pointer;
 }
