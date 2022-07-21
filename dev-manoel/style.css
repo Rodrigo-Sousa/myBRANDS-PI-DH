@@ -254,6 +254,14 @@ color: #E9E9EB;
   background-color: #425068;
 }
 
+@media only screen and (max-width:800px) {
+  #senha {
+   margin-right: 25px;
+  }
+}
+
+
+
 #enter {
   background-color: #EF4B4C;
   color: white;
