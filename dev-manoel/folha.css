@@ -206,7 +206,11 @@ main {
 }
 
   
-
+.facebook {
+  height: 50px;
+  cursor: pointer;
+ 
+}
 
 #container-login {
   width: 45%;
@@ -223,6 +227,7 @@ main {
   top: 30px;
   right: 100px;
 }
+
 
 @media only screen and (max-width:750px) {
   #container-login{
@@ -292,6 +297,7 @@ main {
 
 }
 
+
 @media only screen and (max-width: 600px) {
   .formulario
   { width: 45%;}
@@ -346,8 +352,11 @@ main {
     background-color: #ef4b4c;
     color: white;
     height: 60px;
-    position: relative;
-    bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+   position: relative;
+   bottom: 35px;
     cursor: pointer
 
   }
@@ -399,9 +408,7 @@ main {
   height: 20%;
   background-color: #3E619B;
   width: 30%;
-  position: relative;
-  bottom: 20px;
-  left: 5px;
+ margin-left: 150px;
   border-radius: 500px;
 }
 
@@ -458,6 +465,9 @@ img {
   position: relative;
   left: 150px;
   bottom: 29px;
+  margin-right: 200px;
+  cursor: pointer;
+  
 }
 .mybrands img { width: 100%;
 
