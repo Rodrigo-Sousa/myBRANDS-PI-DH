@@ -177,8 +177,8 @@ footer {
     width: 100%;
     background: #121212;
     z-index: -9999999;
-    bottom: 0;
-    left: 0;
+    display: flex;
+    align-items: baseline;
 }
 
 @media only screen and (max-width:700px) {
@@ -482,10 +482,9 @@ img {
 }
 .mybrands {
 
-  width: 50%;
+  width: 5%;
   position: absolute;
   top: 50px;  
-  left: 80px;
 opacity: 50%;
   
 
