@@ -32,7 +32,7 @@ app.use("/", productRoute);
 
 // Error not found
 app.use( (req, res) => {
-    return res.status(404).render('notFound');
+    return res.status(404).render('not-found');
 });
 
 app.listen(port, ()=>{
