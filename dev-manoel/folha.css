@@ -482,9 +482,10 @@ img {
 }
 .mybrands {
 
-  width: 5%;
+  width: 50%;
   position: absolute;
   top: 50px;  
+  left: 80px;
 opacity: 50%;
   
 
