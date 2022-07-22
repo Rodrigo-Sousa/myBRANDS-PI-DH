@@ -252,7 +252,8 @@ color: #E9E9EB;
 
 @media only screen and (max-width:800px) {
   #e-mail {
-   padding-right: 25px
+   padding-right: 15px;
+   ;
   }
 }
 
@@ -286,10 +287,11 @@ color: #E9E9EB;
 }
 
 #input-email {
-  position: relative;
-  left: 4px;
+  margin-left: 10px;
   text-align: left;
 }
+
+
 
 label {
   padding-left: 10px;
