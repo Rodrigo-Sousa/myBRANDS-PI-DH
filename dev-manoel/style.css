@@ -18,7 +18,8 @@ hr {
 }
 body {
   background-color: #425068;
-  font-family:'noto sans', sans-serif; } 
+  font-family:'noto sans', sans-serif;
+overflow-x: hidden; } 
 
   header {
     float: left;

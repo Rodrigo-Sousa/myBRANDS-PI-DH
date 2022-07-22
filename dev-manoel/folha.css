@@ -21,6 +21,7 @@ body {
   background-color: #42506b;
   font-family:'noto sans', sans-serif;
   width: 100%;
+  overflow-x: hidden;
 }
 
 p {
