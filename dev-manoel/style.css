@@ -339,7 +339,7 @@ label {
   background-color: #3E619B;
   position: relative;
   top: 5px;
-  left: 10px;
+  
   border-radius: 30px;
 }
 
@@ -364,13 +364,14 @@ label {
 
 
 #senha {
-  position: relative;
-  left: 5px;
-
-
-
+margin-left: 25px;
 }
 
+@media only screen and (max-width:800px){
+  #senha {
+    margin-right: 30px;
+  }
+}
 
 
 .h2-login {
