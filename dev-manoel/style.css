@@ -198,7 +198,7 @@ main {
   align-items: center;
   justify-content: space-evenly;
   position: absolute;
-  top: 90px;
+ top: 60px;
   right: 100px;
 }
 
@@ -222,6 +222,7 @@ main {
 .label-email{
 color: #E9E9EB;
     margin-bottom: 10px;
+    margin-right: 25px;
     font-size: 14pt; }
 
 #container-login form,
@@ -245,6 +246,7 @@ color: #E9E9EB;
   background-color: #425068;
  text-align: left;
   padding-right: 10px;
+  margin-right: 30px;
 
   
 
