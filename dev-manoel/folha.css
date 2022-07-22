@@ -20,6 +20,7 @@ hr {
 body {
   background-color: #42506b;
   font-family:'noto sans', sans-serif;
+  width: 100%;
 }
 
 p {
@@ -352,9 +353,6 @@ main {
   }
 
   #nomecompleto {
-    /* position: relative;
-    left: 40px;
-    bottom:10px */
     display: flex;
     align-items: left;
     text-align: left;
@@ -370,13 +368,15 @@ main {
 
 
   .label-nome-completo {
-
+    margin-top: 10px;
     color: #E9E9EB;
-   
     font-size: 14pt;
   display: flex;
   flex-direction: column;
   text-align: left;
+  align-items: baseline;
+  justify-content: baseline;
+
 
   
 
@@ -463,11 +463,12 @@ img {
 }
 .mybrands {
 
-  width: 30%;
+  width: 5%;
   position: absolute;
-  top: 50px;
-  opacity: 50%;
-  left: 150px;
+  top: 50px;  
+opacity: 50%;
+  
+
 
 
 }
