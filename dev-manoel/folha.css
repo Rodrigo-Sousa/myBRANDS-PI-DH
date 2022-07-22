@@ -384,7 +384,8 @@ main {
 
   @media only screen and (max-width:1000px) {
     .label-nome-completo
-    { text-align: left;}
+    { text-align: left;
+    margin-left: 15x;}
     #nomecompleto {
       text-align: center;
     }
