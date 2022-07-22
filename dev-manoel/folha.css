@@ -276,9 +276,6 @@ main {
 
 }
 
-input { 
-    border-radius: 20px;
-}
 
 .checkbox input {
   height: 100%
@@ -303,28 +300,21 @@ input {
 .formulario {
   width: 70%;
   background-color: #3E619B;
-  position: relative;
-  top: 5px;
-  left: 10px;
+  
   height: 65%;
   border-radius: 30px;
 }
 
 .iconeDoUsuario {
-    position: relative;
     padding-top: 10px;
 }
 
 .label-flex {
   color: #E9E9EB;
   margin-bottom: 10px;
-  font-size: 14pt;
-   position: absolute;
-  bottom: 235px;
-  margin: 10px ;
+  font-size: 14pt;;
   display: flex;
   align-items: baseline;
- position: absolute;
  left: 50px;
  
 }
@@ -334,11 +324,10 @@ input {
     margin-bottom: 10px;
     font-size: 14pt;
     display:flex;
-    
-    position: absolute;
-    bottom: 165px;
-    left: 55px;
+
+
     margin: 10px;
+    ;
     
   }
 
@@ -346,9 +335,6 @@ input {
     color: #E9E9EB;
     margin-bottom: 10px;
     font-size: 14pt;
-     position: absolute;
-    bottom: 95px;
-    left: 55px;
     margin: 10px;
     
 
@@ -373,7 +359,9 @@ input {
     text-align: left;
     margin-left: 50px;
     margin-right: 50px;
-    position: relative;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    
 
     
     
@@ -436,11 +424,13 @@ input {
 }
 
 input {
-  height: 30px;
   padding: 10px;
   margin: 20px;
   background-color:#42506b; 
-}
+    height: 40px;
+    border-radius: 5px;
+    color: white;
+   }
 
 img {
   height: 10%;
