@@ -1,18 +1,18 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport"ref="style.css">
+    <meta name="viewport" ref="style.css">
     <link rel="stylesheet" href="style.css">
 
     <title>login</title>
 </head>
+
 <body>
 
-    
+
     <header>
         <div class="logoPequeno">
             <nav>
@@ -54,6 +54,35 @@
 
     </main>
 
+    
+    <main>
+        <div class="mybrands">
+            <img src="img/myBrands-logov3.png" alt="logo oficial">
+        </div>
+        <section id="container-login">
+            <img class="iconeDoUsuario" src="login.png" alt="ícone do usuário" id="imagem-login">
+            <h2 class="h2-login">Login</h2>
+            <hr>
+            <form action="arquiv.html" method="POST" class="formulario">
+                <div class="container-input" id="input-email">
+                    <label class="label-email" for="e-mail"> E-mail</label>
+                    <input id="e-mail" class="input_field" type="email" name="e-mail" placeholder="Digite seu e-mail!"
+                        required />
+                </div>
+                <div class="container-input">
+                    <label class="label-senha" for="senha"> Senha </label>
+                    <input id="senha" class="input_field" type="password" name="senha" placeholder="Digite sua senha!"
+                        required />
+                </div>
+                <input id="enter" class="input_field" type="submit" value="LOGIN" />
+                <a class=link href=cadastro.html>Precisa de uma conta? Cadastre-se!</a>
+                <div class="checkbox-container">
+                    <input id="checkbox" name="checkbox" type="checkbox" class="checkbox">
+                    <label id="lembrar" for="checkbox">Lembrar-me</label>
+                </div>
+            </form>
+        </section>
+    </main>
     <footer>
 
         <div class="container">
@@ -78,33 +107,9 @@
         </div>
 
     </footer>
-    <main>  
-        <div class = "mybrands">
-        <img src="img/myBrands-logov3.png" alt="logo oficial">
-    </div>
-    <section id="container-login">
-        <img class="iconeDoUsuario"  src="login.png" alt="ícone do usuário" id="imagem-login">
-        <h2 class="h2-login">Login</h2>
-        <hr>
-<form action = "arquiv.html" method="POST" class="formulario">
-    <div class="container-input" id="input-email" >
-    <label class="label-email"for="e-mail"> E-mail</label>
-    <input id="e-mail" class="input_field" type="email" name= "e-mail" placeholder="Digite seu e-mail!" required/>
-</div>
-<div class="container-input">
-    <label class="label-senha"for="senha"> Senha </label>
-    <input  id="senha"class="input_field" type="password" name="senha" placeholder="Digite sua senha!" required/>
-</div>
-<input id="enter"class="input_field" type="submit" value="LOGIN"/>
-<a class= link href=cadastro.html>Precisa de uma conta? Cadastre-se!</a>
-<div class="checkbox-container">
-<input  id="checkbox" name="checkbox" type="checkbox" class="checkbox">
-<label id="lembrar"for="checkbox">Lembrar-me</label> 
-</div>
-</form>
-</section>
-</main>
 
-    
+
 </body>
+
+
 </html>
