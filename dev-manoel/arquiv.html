@@ -1,428 +1,110 @@
 
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500;600;700;800&display=swap');
-
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-hr {
-  width: 100%;
-  position: relative;
-  bottom: 4px;
-  border: 1px solid black;
-  top: 2px;
-
-}
-body {
-  background-color: #425068;
-  font-family:'noto sans', sans-serif; } 
-
-  header {
-    float: left;
-    width: 100%;
-    height: 60px;
-    position: fixed;
-    z-index: 99999;
-    top: 0px;
-    /* border-top: 1px solid #000; */
-}
-.logoPequeno {
-    width: 100%;
-    background-color: #333;
-    height: 60px;
-    margin: 0;
-    border-bottom: 2px solid #000;
-}
-
-#logoMyBrand {
-    margin: 5px 0 0 120px;
-}
-
-#logoMyBrand {
-    width: 120px;
-    height: 50;
-}
-.inputPesquisar {
-    float: left;
-    top: 0;
-    left: 60px;
-    bottom: 0;
-    border: 0;
-    padding: 0;
-    margin: 0 1px;
-    text-indent: 15px;
-    font-size: 12px;
-    height: 36px;
-    z-index: 2;
-    outline: 0;
-    color: #000;
-    font-size: 16px;
-    background-color: #fff;
-    border-radius: 5px 0 0 5px;
-}
-.botaoPesquisar {
-    top: 0px;
-    /* margin: 10px 0px; */
-    bottom: 0px;
-    width: 60px;
-    height: 36px;
-    /* line-height: 30px; */
-    cursor: pointer;
-    color: #fff;
-    z-index: 1000;
-    background-color: #fff;
-    border: none;
-    border-radius: 0 5px 5px 0;
-}
-.comprasDepartamento::after {
-    right: 17px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-}
-
-.comprasDepartamento::before {
-    right: 10px;
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg)
-}
-
-.comprasDepartamento::after, 
-.comprasDepartamento::before {
-    border: 1px solid #fff;
-    content: "";
-    position: absolute;
-    top: 58%;
-    transition: .1s ease all;
-    -webkit-transition: .1s ease all;
-    width: 10px;
-}
-
-.menuNavegacao {
-    list-style: none;
-    /* border: 1px solid #f00; */
-    float: right;
-    margin-top: 15px;
-}
-.menuNavegacao li{
-    position: relative;
-    float: left;
-    /* border-right: 1px solid #f00; */
-}
-.menuNavegacao a{
-    color:#fff; 
-    text-decoration:none; 
-    padding:5px 10px; 
-    display:block;
-    margin: 0 20px;
-}
-.menuNavegacao li ul {
-    position:absolute;
-    top:25px;
-    left:0;
-    background-color:#333;
-    display:none;
-    border-radius: 5px;
-    border: 2px solid #000;
-}
-.menuNavegacao li:hover ul, .menuNavegacao li.over ul{
-    display: block;
-}
-.menuNavegacao li ul li {
-    /* border:1px solid #f00; */
-    display:block;
-    width:150px;
-}
-
-.container {
-    max-width: 1100px;
-}
-
-.meuPC {
-    margin: -12px 0 20px 20px;
-}
-.linhaContainer{
-    margin-right: -15px;
-    margin-left: -15px;
-}
-
-footer {
-    padding: 30px 0 20px 120px;
-    color: #fff;
-    text-align: center;
-    width: 100%;
-    background: #121212;
-    z-index: -9999999;
-    bottom: 0;
-    left: 0;
-}
-
-#logoFooter {
-    width: 254px;
-    height: 100px;
-}
-footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    line-height: normal;
-}
-.corCinza{
-    color: #8b8b8b;
-}
-
-footer .informacaoAtendimento {
-    padding: 10px 0;
-}
-
-
-main {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-}
-
-#container-login {
-  width: 45%;
-  ;
-  height: 500px;
-  background-color: #3E619B;
-  border-radius: 60px;
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  position: absolute;
-  top: 90px;
-  right: 100px;
-}
-
-
-
-#container-login h2,
-#container-signup h2 {
-  font-size: 2em;
-  color: #EF4B4C
-}
-
-.label-senha {
-  color: #E9E9EB;
-  margin-bottom: 10px;
-  font-size: 14pt;
-
-
-}
-
-
-.label-email{
-color: #E9E9EB;
-    margin-bottom: 10px;
-    font-size: 14pt; }
-
-#container-login form,
-#container-signup form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.container-input {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-
-}
-
-
-#e-mail{
-  background-color: #425068;
- text-align: left;
-  padding-right: 10px;
-
-  
-
-}
-
-@media only screen and (max-width:800px) {
-  #e-mail {
-   padding-right: 25px
-  }
-}
-
-#senha {
-  background-color: #425068;
-  text-align: left;
-
-}
-
-@media only screen and (min-width:500px) {
-  #senha {
-    margin-right: 15px
-  }
-
-}
-@media only screen and (min-width:320px) {
-  #senha {
-   margin-right: 10x;
-   text-align: left;
-  
-  }
-}
-
-
-
-#enter {
-  background-color: #EF4B4C;
-  color: white;
-  height: 60px;
-  cursor: pointer;
-}
-
-#input-email {
-  position: relative;
-  left: 4px;
-  text-align: left;
-}
-
-label {
-  padding-left: 10px;
-}
-
-
-#container-signup input.input_field {
-  width: 100%;
-  height: 40px;
-  padding: 0 10px;
-  margin: 10px 0;
-  background-color: #42506b;
-}
-
-.container-input {
-  color: black;
-  font-weight: bolder;
-  cursor: pointer;
-}
-.link {
-  color: #ef4b4c;
-}
-.link:hover {
-  color: #e9e9eb;
-}
-
-
-.checkbox input {
-  height: 100%
-}
-
-.checkbox-container {
-  display: flex;
-  
-}
-
-.iconeDoUsuario {
-  padding-top: 10px;
-}
-
-
-
-.formulario {
-  width: 70%;
-  background-color: #3E619B;
-  position: relative;
-  top: 5px;
-  left: 10px;
-  border-radius: 30px;
-}
-
-
-
-#imagem-login {
-  height: 20%;
-  background-color: #3E619B;
-  width: 30%;
-  position: relative;
-  bottom: 20px;
-  border-radius: 500px;
-}
-
-#lembrar {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  top: 20px;
-  bottom: 5px;
-}
-
-
-#senha {
-  position: relative;
-  left: 5px;
-
-
-
-}
-
-
-
-.h2-login {
-  font-family: cursive;
-  padding: 10px 60px;
-  font-size: 2em;
-  
-
-}
-
-
-
-input {
-  height: 30px;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 20px;
- }
-
-
-
-  
-  .mybrands img { width: 100%;
-
-  }
-  .mybrands {
-  
-    width: 30%;
-    position: absolute;
-    top: 50px;
-    opacity: 50%;
-    left: 150px;
-  
-  
-  }
-  
-  
-  @media only screen and (min-width: 600px) {
-  
-    .mybrands {
-      width: 60%;
-  
-  
-  
-    }
-  }
-  
-  
-  @media only screen and (min-width: 1000px) {
-  
-    .mybrands {
-      width: 100%;
-  
-  
-  
-    }
-  }
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"ref="style.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>login</title>
+</head>
+<body>
+
+    
+    <header>
+        <div class="logoPequeno">
+            <nav>
+                <a href="#">
+                    <img id="logoMyBrand" src="./img/myBrands-logov3.png" alt="MyBrand's Logo">
+                </a>
+
+                <ul class="menuNavegacao">
+                    <li>
+                        <a class="comprasDepartamento" href="#">Compras por departamento</a>
+                        <!-- lista para os departamentos -->
+                        <ul>
+                            <li><a href="#">Amd</a></li>
+
+                            <li><a href="#">Hyper</a></li>
+
+                            <li><a href="#">Reddragon</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <input class="inputPesquisar" type="text" id="pesquiseSeuProduto"
+                            placeholder="Pesquise o seu produto">
+                        <button class="botaoPesquisar" type="submit">
+                            <img src="./img/lupa3.png" alt="" width="18" height="16">
+                        </button>
+                    </li>
+                    <li>
+                        <a href="#">Login</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <main>
+
+    </main>
+
+    <footer>
+
+        <div class="container">
+
+            <div class="linhaContainer">
+                <ul>
+                    <li>
+                        <img id="logoFooter" src="./img/myBrands-logov3.png" alt="logo footer">
+                    </li>
+                    <li class="corCinza">MyBrand's Atacado e Varejo de Produtos de Informática Ltda</li>
+                    <li class="corCinza">CNPJ: 00.000.000/0001-00 | Salvador-BA</li>
+                </ul>
+
+                <ul class="informacaoAtendimento">
+                    <li>
+                        <p>Atendimento: De segunda a sexta das 8:30 às 12H / 13H às 18H</p>
+                    </li>
+                    <li class="corCinza">SOMOS E-COMMERCE - NÃO TEMOS ATENDIMENTO LOCAL</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </footer>
+    <main>  
+        <div class = "mybrands">
+        <img src="img/myBrands-logov3.png" alt="logo oficial">
+    </div>
+    <section id="container-login">
+        <img class="iconeDoUsuario"  src="login.png" alt="ícone do usuário" id="imagem-login">
+        <h2 class="h2-login">Login</h2>
+        <hr>
+<form action = "arquiv.html" method="POST" class="formulario">
+    <div class="container-input" id="input-email" >
+    <label class="label-email"for="e-mail"> E-mail</label>
+    <input id="e-mail" class="input_field" type="email" name= "e-mail" placeholder="Digite seu e-mail!" required/>
+</div>
+<div class="container-input">
+    <label class="label-senha"for="senha"> Senha </label>
+    <input  id="senha"class="input_field" type="password" name="senha" placeholder="Digite sua senha!" required/>
+</div>
+<input id="enter"class="input_field" type="submit" value="LOGIN"/>
+<a class= link href=cadastro.html>Precisa de uma conta? Cadastre-se!</a>
+<div class="checkbox-container">
+<input  id="checkbox" name="checkbox" type="checkbox" class="checkbox">
+<label id="lembrar"for="checkbox">Lembrar-me</label> 
+</div>
+</form>
+</section>
+</main>
+
+    
+</body>
+</html>
