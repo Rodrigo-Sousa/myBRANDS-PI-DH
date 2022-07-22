@@ -277,6 +277,7 @@ main {
 }
 
 
+
 .checkbox input {
   height: 100%
 }
@@ -357,10 +358,10 @@ main {
     display: flex;
     align-items: left;
     text-align: left;
-    margin-left: 50px;
+    margin-left: 120px;
     margin-right: 50px;
     flex-wrap: nowrap;
-    flex-direction: row;
+    flex-direction: column-reverse;
     
 
     
@@ -383,7 +384,7 @@ main {
 
   @media only screen and (max-width:1000px) {
     .label-nome-completo
-    { text-align: center;}
+    { text-align: left;}
     #nomecompleto {
       text-align: center;
     }
@@ -410,7 +411,19 @@ main {
   margin:0%;
   padding: 0%;
   align-items: center;
+  color: white;
  
+}
+a {
+  color: #ef4b4c;
+  margin-left: 10px
+}
+
+a:hover {
+  color: white;
+}
+p {
+  color: white;
 }
 
 
