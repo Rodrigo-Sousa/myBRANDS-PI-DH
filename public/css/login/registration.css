@@ -49,6 +49,17 @@
     justify-content: center;
     margin: 10px 0px;
 }
+
+input {
+    text-align: center;
+    color: white;
+
+}
+
+
+
+
+
 .input-1,
 .input-2{
 width: 100%;
