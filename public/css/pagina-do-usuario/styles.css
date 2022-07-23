@@ -322,7 +322,7 @@ font-size: 10pt;
     
 }
 
-.tituloConteudo{
+.tituloConteudo {
     background-color: #375382;
     font-size: 1.5rem;
     color: white;
@@ -331,12 +331,14 @@ font-size: 10pt;
     height: 35px;
     border-radius: 10px;
     padding: 5px;
+    margin-bottom: 20px;
+    margin-left: 20px;
 }
 
 .conteudoCadastro, .container-tabela{
     background-color: #3f5fa3;
     width: 95%;
-    height: 400px;
+    height: 300px;
     position: absolute;
     top: 41px;
     left: 30px;
@@ -350,7 +352,8 @@ font-size: 10pt;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    overflow-y: scroll;
 }
 
 #cadastro .conteudoCadastro .container-input{
@@ -362,6 +365,7 @@ font-size: 10pt;
 #cadastro .conteudoCadastro .container-input1{
     display: inline-flex;
     width: 40%;
+    margin-right: 50px;
 }
 
 #cadastro .conteudoCadastro .botaoSalvar{
@@ -461,7 +465,8 @@ label {
 }
 @media only screen and (min-width:800px) { 
 .botaoSalvar button {
-    margin-left: 300px
+    margin-top: 70px;
+    
 }
 }
 
@@ -477,6 +482,14 @@ label {
 }
 
 /* Histórico de pedidos */
+
+#pedidos div{
+    margin-top: 20px;
+}
+
+.container div {
+    margin-top: 10px;
+}
 
 #conteudoUsuario form input {
     width: 70%;
