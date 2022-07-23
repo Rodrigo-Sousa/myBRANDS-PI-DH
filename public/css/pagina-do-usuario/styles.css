@@ -336,7 +336,7 @@ font-size: 10pt;
 .conteudoCadastro, .container-tabela{
     background-color: #3f5fa3;
     width: 95%;
-    height: 200px;
+    height: 400px;
     position: absolute;
     top: 41px;
     left: 30px;
@@ -439,9 +439,13 @@ font-size: 10pt;
     
 }
 
+label {
+    color: white;
+}
+
 
 #fotoPerfil .conteudoFoto .botaoSalvar button{
-    width: 100%;
+    width: 100px;
     height: 30px;
     border-radius: 10px;
     border: 2px solid #ef4b4c;
@@ -449,8 +453,15 @@ font-size: 10pt;
     font-size: 1.05rem;
     background-color:#ef4b4c;
     margin-top: 90px;
-    margin-left: 60px;
+    margin-left: 120px;
+    content: center;
+    align-items: center;
 
+}
+@media only screen and (min-width:800px) { 
+.botaoSalvar button {
+    margin-left: 300px
+}
 }
 
 #fotoPerfil .conteudoFoto .botaoSalvar button:hover{
