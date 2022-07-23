@@ -416,6 +416,16 @@ font-size: 10pt;
     align-items: center;
 }
 
+#email {
+    margin-right: 25px;
+    padding-right: 20px;
+    padding-left: 30px;
+}
+
+#cpf {
+    padding: 0 0;
+}
+
 #fotoPerfil .conteudoFoto .container-input{
     width: 50%;
     align-items: center;
@@ -431,12 +441,15 @@ font-size: 10pt;
 
 
 #fotoPerfil .conteudoFoto .botaoSalvar button{
-    width: 50%;
+    width: 100%;
     height: 30px;
     border-radius: 10px;
     border: 2px solid #ef4b4c;
     cursor: pointer;
     font-size: 1.05rem;
+    background-color:#ef4b4c;
+    margin-top: 90px;
+    margin-left: 60px;
 
 }
 
