@@ -80,6 +80,12 @@ outline: none;
     margin-bottom: 10px;
     font-size: 14pt;
 }
+
+.checkbox {
+   padding-top: 60px
+   ;
+   height: 10px;
+}
 .input-1::placeholder,
 .input-2::placeholder{
 color: #e9e9eb60;
