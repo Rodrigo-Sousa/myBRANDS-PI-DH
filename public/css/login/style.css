@@ -4,8 +4,10 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+
 .main-user-login{
-    background-color: #42506B;
+    background-color: #3E619B;
     display: flex;
     justify-content: center;
     align-items: center;
