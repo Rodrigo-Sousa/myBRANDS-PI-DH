@@ -426,6 +426,7 @@ font-size: 10pt;
     padding: 0 0;
 }
 
+
 #fotoPerfil .conteudoFoto .container-input{
     width: 50%;
     align-items: center;
@@ -468,6 +469,11 @@ label {
     background-color: #ef4b4c;
     color: white;
     
+}
+
+.container-input #nomeCompleto {
+    margin-right: 15px;
+    width: 100%;
 }
 
 /* Histórico de pedidos */
