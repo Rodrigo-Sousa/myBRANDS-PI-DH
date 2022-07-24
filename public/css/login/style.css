@@ -87,12 +87,18 @@ outline: none;
     margin-bottom: 10px;
     font-size: 14pt;
 }
+
+button {
+    display: flex;
+    justify-content: center;
+}
 .input-1::placeholder,
 .input-2::placeholder{
 color: #e9e9eb60;
 font-size: 10pt;
 }
 .button-user-login{
+    text-align: center;
     width: 100%;
     padding: 16px 0px;
     margin: 25px 40px 25px 15px;;
