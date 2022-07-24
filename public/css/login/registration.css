@@ -126,6 +126,7 @@ font-size: 10pt;
     .termos {
         margin-left: 8px;
         font-weight: bold;
+        color: #EF4B4C;
     }
 
 @media only screen and (max-width: 950px){
