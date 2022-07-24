@@ -53,6 +53,21 @@
     justify-content: center;
     margin: 10px 0px;
 }
+ #checkbox  { 
+    height: 50px;
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    flex-wrap: nowrap;
+ }
+
+
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    height: 60px;
+    padding: 0;
+}
 .input-1,
 .input-2{
 width: 100%;
