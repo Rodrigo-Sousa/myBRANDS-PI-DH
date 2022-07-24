@@ -89,6 +89,7 @@ outline: none;
 }
 
 button {
+    
     display: flex;
     justify-content: center;
 }
