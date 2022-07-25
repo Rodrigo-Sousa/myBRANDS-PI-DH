@@ -486,8 +486,11 @@ input {
 }
 
 .container-input {
-  box-shadow: 10px 2px black;
   text-align: center;
+}
+
+.input_field {
+  box-shadow: 10px 2px black;
 }
 
 @media only screen and (max-width:1200px) and (min-width:320px) {

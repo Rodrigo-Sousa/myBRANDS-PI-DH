@@ -238,7 +238,7 @@ color: #E9E9EB;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 10px 2px black;
+
   
 
 }
@@ -328,6 +328,9 @@ label {
   flex-direction: row;
 }
 
+.input_field {
+  box-shadow: 10px 2px black;
+}
 
 
 
