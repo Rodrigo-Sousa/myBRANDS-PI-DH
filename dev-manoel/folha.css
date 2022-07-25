@@ -85,9 +85,13 @@ header {
     background-color: #fff;
     border-radius: 5px 0 0 5px;
 }
+
+#cadastre-se:hover {
+  transition: 1s;
+  background-color: #42506b;
+}
 .botaoPesquisar {
     top: 0px;
-    /* margin: 10px 0px; */
     bottom: 0px;
     width: 60px;
     height: 36px;

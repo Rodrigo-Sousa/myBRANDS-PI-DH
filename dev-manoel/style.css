@@ -297,13 +297,16 @@ display: flex;}
   }
 }
 
-
-
+#enter:hover {
+  transition: 1s;
+  background-color: #42506b;
+}
 #enter {
   background-color: #EF4B4C;
   color: white;
   height: 60px;
   cursor: pointer;
+  
 }
 
 #input-email {
