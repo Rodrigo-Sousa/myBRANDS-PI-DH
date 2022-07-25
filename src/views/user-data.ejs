@@ -1,142 +1,50 @@
-<%- include("./partials/head")  %> 
-<%- include("./partials/header") %>
+<%- include("./partials/head") %>
+    <%- include("./partials/header") %>
 
-    <main id="painelUsuario">
-
-
-        <section class="menu">
-            <div id="bemVindo">
-                <img class="foto" src="/img/generico.png" alt="Sua foto de perfil">
-                <p>Seja bem vindo(a), ${usuario}!</p>
-            </div>
-            <ul>
-                <li class="itemMenu"><a href="#cadastro">Meu Cadastro</a></li>
-                <li class="itemMenu"><a href="#fotoPerfil">Alterar foto do perfil</a></li>
-                <li class="itemMenu"><a href="#pedidos">Histórico de Pedidos</a></li>
-                <li class="itemMenu"><a href="#endereco">Meus endereços</a></li>
-                <li class="itemMenu">Sair</li>
-            </ul>
-            <div id="conteudoUsuario">
-                <div id="cadastro" class="container">
-                    <div class="tituloConteudo">
-                        <p> Meu Cadastro </p>
-                    </div>
-                    <form action="/dadosCadastrais" method="post" class="conteudoCadastro">
-                        <div class="container-input">
-                            <label for="nomeCompleto">Nome Completo: </label>
-                            <input type="text" name="nomeCompleto" id="nomeCompleto" placeholder="Seu nome completo">
+        <body id="user-data">
+            <div class="container user-data-container">
+                <div class="container rounded bg-white mt-5 mb-5">
+                    <div class="row">
+                        <div class="col-md-4 border-right">
+                            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5"
+                                    width="150px" src="https://i.pravatar.cc/300?img=49"><span class="font-weight-bold">Maria
+                                    Eduarda</span><span class="text-black-50">maria.eduaroda@email.com.br</span><span>
+                                </span></div>
                         </div>
-                        <div class="container-input">
-                            <label for="email">E-mail: </label>
-                            <input type="email" name="email" id="email" placeholder="seuemailaqui@email.com">
-                        </div>
-                        <div class="container-input">
-                            <label for="cpf">CPF: </label>
-                            <input type="number" name="cpf" id="cpf" placeholder="000.XXX.XXX-XX" disabled>
-                        </div>
-                        <div class="container-input">
-                            <label for="rg">RG: </label>
-                            <input type="number" name="rg" id="rg" placeholder="00.XXX.XXX-X">
-                        </div>
-                        <div class="container-input1">
-                            <p>Sexo: </p>
-                            <input type="radio" name="sexo" id="masc" value="masculino">
-                            <label for="masc">Masculino</label>
-                            <input type="radio" name="sexo" id="fem" value="feminino">
-                            <label for="fem">Feminino</label>
-                            <input type="radio" name="sexo" id="naoInf">
-                            <label for="naoInf">Outro</label>
-                        </div>
-
-
-                        <div class="container-input">
-                            <label for="telefone">Telefone Celular: </label>
-                            <input type="tel" name="telefone" id="telefone" placeholder="(XX)XXXXX-XXXX">
-                        </div>
-                        <div class="botaoSalvar">
-                            <button type="submit" name="salvar">Salvar</button>
-                        </div>
-
-
-                    </form>
-                </div>
-                <div id="fotoPerfil" class="containerFoto">
-                    <div class="tituloConteudo">
-                        <p> Alterar foto de perfil </p>
-                    </div>
-                    <div class="container-input">
-                        <form action="/fotoDePerfil" method="post" class="conteudoFoto">
-                            <label for="avatar">Escolha sua foto de perfil: </label>
-                            <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
-                            <div class="botaoSalvar">
-                                <button type="submit" name="salvar">Salvar</button>
+                        <div class="col-md-8 border-right">
+                            <div class="p-3 py-5">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4 class="text-right">Configurações do Perfil</h4>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-md-6"><label class="labels">Nome</label><input type="text" class="form-control"
+                                            placeholder="Nome" value=""></div>
+                                    <div class="col-md-6"><label class="labels">Sobrenome</label><input type="text" class="form-control"
+                                            value="" placeholder="Sobrenome"></div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-12"><label class="labels">Número do celular</label><input type="number"
+                                            class="form-control" placeholder="Seu número de celular" value=""></div>
+                                    <div class="col-md-12"><label class="labels">Endereço</label><input type="text" class="form-control"
+                                            placeholder="Informe o seu endereço" value=""></div>
+                                    <div class="col-md-12"><label class="labels">Código Postal</label><input type="number"
+                                            class="form-control" placeholder="CEP" value=""></div>
+                                    <div class="col-md-12"><label class="labels">Estado</label><input type="text" class="form-control"
+                                            placeholder="Ex. Salvador-BA" value=""></div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-6"><label class="labels">Cidade</label><input type="text" class="form-control"
+                                            placeholder="Capim Grosso" value=""></div>
+                                    <div class="col-md-6"><label class="labels">Estado/Região</label><input type="text"
+                                            class="form-control" value="" placeholder="Bahia"></div>
+                                </div>
+                                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Salvar
+                                        Perfil</button></div>
                             </div>
-                        </form>
-                    </div>
-
-                </div>
-                <div id="pedidos" class="container">
-                    <div class="tituloConteudo">
-                        <p> Histórico de Pedidos </p>
-                    </div>
-                    <div class="container-tabela">
-                        <table class="tabelaPedidos">
-                            <tr>
-                                <th>Número do Pedido</th>
-                                <th>Data</th>
-                                <th>Pagamento</th>
-                                <th>Status</th>
-                            </tr>
-                            <tr>
-                                <td>000000</td>
-                                <td>21/06/2022</td>
-                                <td>Cartão de Crédito</td>
-                                <td>Entregue</td>
-                            </tr>
-                            <tr>
-                                <td>000001</td>
-                                <td>28/06/2022</td>
-                                <td>Boleto</td>
-                                <td>Em separação</td>
-                            </tr>
-                        </table>
+                        </div>
                     </div>
                 </div>
-                <div id="endereco" class="container">
-                    <div class="tituloConteudo">
-                        <p> Meus endereços </p>
-                    </div>
-                    <div class="container-tabela">
-                        <table class="tabelaEndereco">
-                            <tr>
-                                <th>Responsável</th>
-                                <th>Endereço</th>
-                                <th>Bairro</th>
-                                <th>Cidade</th>
-                                <th>CEP</th>
-                            </tr>
-                            <tr>
-                                <td>Henrique</td>
-                                <td>Rua Bahia, 300</td>
-                                <td>PIPIPI</td>
-                                <td>POPOPO</td>
-                                <td>00000-001</td>
-                            </tr>
-                            <tr>
-                                <td>Paula</td>
-                                <td>Avenida Nelo, 123</td>
-                                <td>PIRIRI</td>
-                                <td>PORORO</td>
-                                <td>00000-002</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-
-
             </div>
-        </section>
+        </body>
 
-    </main>
-
-<%- include("./partials/footer") %>
+        <%- include("./partials/footer") %>
