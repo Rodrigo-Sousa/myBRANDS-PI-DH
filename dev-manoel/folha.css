@@ -372,7 +372,7 @@ main {
   #nomecompleto {
     display: flex;
     align-items: left;
-    text-align: left;
+    text-align: center;
     margin-left: 120px;
     margin-right: 50px;
     flex-wrap: nowrap;
@@ -479,6 +479,23 @@ img {
 }
 .mybrands img { width: 100%;
 
+} 
+
+input {
+  text-align: center;
+}
+
+.container-input {
+  box-shadow: 10px 2px black;
+  text-align: center;
+}
+
+@media only screen and (max-width:1200px) and (min-width:320px) {
+  .container-input {
+ 
+    text-align: center;
+    margin-right: 120px
+  }
 }
 .mybrands {
 
