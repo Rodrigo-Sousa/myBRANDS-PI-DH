@@ -390,7 +390,7 @@ label {
   position: relative;
   bottom: 20px;
   border-radius: 500px;
-  transform: scale3d(10);
+  transform: rotate(10deg)
 }
 
 #lembrar {

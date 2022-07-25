@@ -422,7 +422,7 @@ main {
   width: 30%;
  margin-left: 150px;
   border-radius: 500px;
-  transform: scale3d(10);
+  transform: rotate(10deg)
 }
 
 #lembrar {
