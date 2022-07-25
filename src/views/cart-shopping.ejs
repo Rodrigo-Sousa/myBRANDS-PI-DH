@@ -1,0 +1,98 @@
+<%- include("./partials/head") %>
+    <%- include("./partials/header") %>
+
+        <!-- Div container, detalhando o produto a ser apresentado -->
+        <div class="container">
+            <div class="cart-shopping">
+                <h1 class="title-cart-shopping">Meu carrinho</h1>
+                <!-- Fechamento da div cart-shopping -->
+            </div>
+            <button type="button" class="btn keep-buying">Continuar Comprando</button>
+            <!-- Criando a tabela com a lista dos produtos -->
+            <table class="table table-hover table-cart">
+                <thead>
+                    <tr class="table-th-cart">
+                        <th scope="col">#</th>
+                        <th scope="col">Código</th>
+                        <th scope="col">Qtde</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">Valor Total</th>
+                        <th scope="col">Remover</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>B450 AORUS M</td>
+                        <td>
+                            <select name="quantidade" id="primeiro">
+                                <option value="1">1</option>
+                                <option value="2" selected>2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </td>
+                        <!-- <td>2</td> -->
+                        <td>R$ 649,00</td>
+                        <td>R$ 1.298,00</td>
+                        <td class="title-remove">
+                            <a href="#" class="remove">
+                                <span aria-hidden="true">&times;</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Upgrade1277</td>
+                        <td>
+                            <select name="quantidade" id="primeiro">
+                                <option value="1" selected>1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </td>
+                        <!-- <td>1</td> -->
+                        <td>R$ 1.590,90</td>
+                        <td>R$ 1.590,90</td>
+                        <td class="title-remove">
+                            <a href="#" class="remove">
+                                <span aria-hidden="true">&times;</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>B450M Steel</td>
+                        <td>
+                            <select name="quantidade" id="primeiro">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3" selected>3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </td>
+                        <!-- <td>3</td> -->
+                        <td>R$ 714,90</td>
+                        <td>R$ 2.144,70</td>
+                        <td class="title-remove">
+                            <a href="#" class="remove">
+                                <span aria-hidden="true">&times;</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="table-total">
+                        <th class="total-th-cart-shopping">Total à pagar:</th>
+                        <td class="total-td-cart-shopping" colspan="5">R$ 5.033,60</td>
+                    </tr>
+                    <tr class="buying">
+                        <td colspan="6" class="finished-buying">
+                           <a href="#">Finalizar Compra</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Fechamento div container -->
+        </div>
+
+        <%- include("./partials/footer") %>
