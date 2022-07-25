@@ -413,7 +413,17 @@ main {
   }
 
 
-
+  @keyframes login {
+    from {
+      transform: translateX(30px);
+    }
+    35% {
+      opacity: 0.5%;
+    }
+    to {
+      
+    }
+  }
 
 
 #imagem-login {
@@ -422,7 +432,8 @@ main {
   width: 30%;
  margin-left: 150px;
   border-radius: 500px;
-  transform: rotate(10deg)
+  transform: rotate(10deg);
+  animation: login 3s;
 }
 
 #lembrar {
