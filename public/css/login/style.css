@@ -4,8 +4,10 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+
 .main-user-login{
-    background-color: #42506B;
+    background-color: #3E619B;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,6 +53,20 @@
     justify-content: center;
     margin: 10px 0px;
 }
+ #checkbox  { 
+    height: 50px;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: nowrap;
+ }
+
+
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    height: 60px;
+    padding: 0;
+}
 .input-1,
 .input-2{
 width: 100%;
@@ -71,15 +87,22 @@ outline: none;
     margin-bottom: 10px;
     font-size: 14pt;
 }
+
+button {
+    
+    display: flex;
+    justify-content: center;
+}
 .input-1::placeholder,
 .input-2::placeholder{
 color: #e9e9eb60;
 font-size: 10pt;
 }
 .button-user-login{
+    text-align: center;
     width: 100%;
     padding: 16px 0px;
-    margin: 25px;
+    margin: 25px 40px 25px 15px;;
     border: none;
     border-radius: 8px;
     outline: none;

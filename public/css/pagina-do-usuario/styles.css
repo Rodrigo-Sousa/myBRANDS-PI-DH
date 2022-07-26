@@ -6,6 +6,7 @@
 body{
     font-family: 'Noto Sans', sans-serif;
     position: relative;
+    overflow-x: hidden;
     /* background-color: #333; */
 }
 header {
@@ -16,6 +17,11 @@ header {
     z-index: 10;
     top: 0px;
     /* border-top: 1px solid #000; */
+}
+
+label {
+    display: flex;
+    flex-wrap: wrap-reverse;
 }
 .logoPequeno {
     width: 100%;
@@ -322,7 +328,7 @@ font-size: 10pt;
     
 }
 
-.tituloConteudo{
+.tituloConteudo {
     background-color: #375382;
     font-size: 1.5rem;
     color: white;
@@ -331,12 +337,14 @@ font-size: 10pt;
     height: 35px;
     border-radius: 10px;
     padding: 5px;
+    margin-bottom: 20px;
+    margin-left: 20px;
 }
 
 .conteudoCadastro, .container-tabela{
     background-color: #3f5fa3;
     width: 95%;
-    height: 200px;
+    height: 300px;
     position: absolute;
     top: 41px;
     left: 30px;
@@ -350,7 +358,7 @@ font-size: 10pt;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
 }
 
 #cadastro .conteudoCadastro .container-input{
@@ -362,6 +370,7 @@ font-size: 10pt;
 #cadastro .conteudoCadastro .container-input1{
     display: inline-flex;
     width: 40%;
+    margin-right: 50px;
 }
 
 #cadastro .conteudoCadastro .botaoSalvar{
@@ -416,6 +425,17 @@ font-size: 10pt;
     align-items: center;
 }
 
+#email {
+    margin-right: 25px;
+    padding-right: 20px;
+    padding-left: 30px;
+}
+
+#cpf {
+    padding: 0 0;
+}
+
+
 #fotoPerfil .conteudoFoto .container-input{
     width: 50%;
     align-items: center;
@@ -429,15 +449,30 @@ font-size: 10pt;
     
 }
 
+label {
+    color: white;
+}
+
 
 #fotoPerfil .conteudoFoto .botaoSalvar button{
-    width: 50%;
+    width: 100px;
     height: 30px;
     border-radius: 10px;
     border: 2px solid #ef4b4c;
     cursor: pointer;
     font-size: 1.05rem;
+    background-color:#ef4b4c;
+    margin-top: 90px;
+    margin-left: 120px;
+    content: center;
+    align-items: center;
 
+}
+@media only screen and (min-width:800px) { 
+.botaoSalvar button {
+    margin-top: 70px;
+    
+}
 }
 
 #fotoPerfil .conteudoFoto .botaoSalvar button:hover{
@@ -446,7 +481,20 @@ font-size: 10pt;
     
 }
 
+.container-input #nomeCompleto {
+    margin-right: 25px;
+    width: 100%;
+}
+
 /* Histórico de pedidos */
+
+#pedidos div{
+    margin-top: 20px;
+}
+
+.container div {
+    margin-top: 10px;
+}
 
 #conteudoUsuario form input {
     width: 70%;
