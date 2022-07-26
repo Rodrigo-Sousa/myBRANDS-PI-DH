@@ -67,13 +67,20 @@ body{
     margin: 20px 0px 40px 0px;
     min-width: 25%;
 }
-.card{
+.card-title {
+    font-size: 16px;
+}
+.card-product{
+    min-height: 100%;
+    border-radius: 15px;
+}
+.card-banner{
     min-height: 100%;
     border-radius: 15px;
     border-radius: 15px;
     background: transparent;
     border: none;
-    margin-top: 70px
+    margin-top: 70px;
 }
 .card-img-top-listing{
     width: 90%;
