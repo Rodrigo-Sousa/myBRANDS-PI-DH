@@ -8,6 +8,7 @@ footer {
     bottom: 0;
     left: 0;
     border-top: 2px solid #fff;
+    overflow: hidden;
 }
 #logo-footer {
     width: 254px;
