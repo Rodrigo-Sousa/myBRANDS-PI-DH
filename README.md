@@ -11,4 +11,4 @@ Foi desenvolvido por:
 * [Matheus Dos Santos Santana](https://github.com/matheusstn)
 * [Rodrigo da Silva Sousa](https://github.com/Rodrigo-Sousa)
 
-- Inpirtações: [Terabyte](https://www.terabyteshop.com.br/) | [Level UP](https://levelupgames.com.br/levelup/)
+- Inspirações: [Terabyte](https://www.terabyteshop.com.br/) | [Level UP](https://levelupgames.com.br/levelup/)

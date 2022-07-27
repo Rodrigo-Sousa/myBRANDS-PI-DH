@@ -6,7 +6,7 @@ const UserController = {
         return res.render("login", {title: "Login"});
     },
     personal: (req, res) => {
-        return res.render("userData", {title: "Info usuário"});
+        return res.render("user-data", {title: "Info usuário"});
     },
 };
 
