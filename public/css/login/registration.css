@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500;600;700;800&display=swap');
-* {
+/* * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
+} */
 .main-user-registration{
-    background-color: #42506B;
+    background-color: #42506bd9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +35,7 @@
     align-items: center;
     flex-direction: column;
     padding: 30px 35px;
-    margin-top: 55px;
+    margin-top: 65px;
     margin-left: 20%;
     background-color: #3E619B;
     border-radius: 20px;

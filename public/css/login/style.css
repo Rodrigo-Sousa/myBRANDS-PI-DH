@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 .main-user-login{
-    background-color: #42506B;
+    background-color: #42506bd9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,6 +42,7 @@
     background-color: #3E619B;
     border-radius: 20px;
     box-shadow: 0px 10px 40px #00000056;
+    margin-top: 60px;
 }
 .textfield{
     width: 100%;
