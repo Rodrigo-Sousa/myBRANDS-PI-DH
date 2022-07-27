@@ -1,0 +1,142 @@
+<%- include("./partials/head")  %> 
+<%- include("./partials/header") %>
+
+    <main id="painelUsuario">
+
+
+        <section class="menu">
+            <div id="bemVindo">
+                <img class="foto" src="/img/generico.png" alt="Sua foto de perfil">
+                <p>Seja bem vindo(a), ${usuario}!</p>
+            </div>
+            <ul>
+                <li class="itemMenu"><a href="#cadastro">Meu Cadastro</a></li>
+                <li class="itemMenu"><a href="#fotoPerfil">Alterar foto do perfil</a></li>
+                <li class="itemMenu"><a href="#pedidos">Histórico de Pedidos</a></li>
+                <li class="itemMenu"><a href="#endereco">Meus endereços</a></li>
+                <li class="itemMenu">Sair</li>
+            </ul>
+            <div id="conteudoUsuario">
+                <div id="cadastro" class="container">
+                    <div class="tituloConteudo">
+                        <p> Meu Cadastro </p>
+                    </div>
+                    <form action="/dadosCadastrais" method="post" class="conteudoCadastro">
+                        <div class="container-input">
+                            <label for="nomeCompleto">Nome Completo: </label>
+                            <input type="text" name="nomeCompleto" id="nomeCompleto" placeholder="Seu nome completo">
+                        </div>
+                        <div class="container-input">
+                            <label for="email">E-mail: </label>
+                            <input type="email" name="email" id="email" placeholder="seuemailaqui@email.com">
+                        </div>
+                        <div class="container-input">
+                            <label for="cpf">CPF: </label>
+                            <input type="number" name="cpf" id="cpf" placeholder="000.XXX.XXX-XX" disabled>
+                        </div>
+                        <div class="container-input">
+                            <label for="rg">RG: </label>
+                            <input type="number" name="rg" id="rg" placeholder="00.XXX.XXX-X">
+                        </div>
+                        <div class="container-input1">
+                            <p>Sexo: </p>
+                            <input type="radio" name="sexo" id="masc" value="masculino">
+                            <label for="masc">Masculino</label>
+                            <input type="radio" name="sexo" id="fem" value="feminino">
+                            <label for="fem">Feminino</label>
+                            <input type="radio" name="sexo" id="naoInf">
+                            <label for="naoInf">Outro</label>
+                        </div>
+
+
+                        <div class="container-input">
+                            <label for="telefone">Telefone Celular: </label>
+                            <input type="tel" name="telefone" id="telefone" placeholder="(XX)XXXXX-XXXX">
+                        </div>
+                        <div class="botaoSalvar">
+                            <button type="submit" name="salvar">Salvar</button>
+                        </div>
+
+
+                    </form>
+                </div>
+                <div id="fotoPerfil" class="containerFoto">
+                    <div class="tituloConteudo">
+                        <p> Alterar foto de perfil </p>
+                    </div>
+                    <div class="container-input">
+                        <form action="/fotoDePerfil" method="post" class="conteudoFoto">
+                            <label for="avatar">Escolha sua foto de perfil: </label>
+                            <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+                            <div class="botaoSalvar">
+                                <button type="submit" name="salvar">Salvar</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div id="pedidos" class="container">
+                    <div class="tituloConteudo">
+                        <p> Histórico de Pedidos </p>
+                    </div>
+                    <div class="container-tabela">
+                        <table class="tabelaPedidos">
+                            <tr>
+                                <th>Número do Pedido</th>
+                                <th>Data</th>
+                                <th>Pagamento</th>
+                                <th>Status</th>
+                            </tr>
+                            <tr>
+                                <td>000000</td>
+                                <td>21/06/2022</td>
+                                <td>Cartão de Crédito</td>
+                                <td>Entregue</td>
+                            </tr>
+                            <tr>
+                                <td>000001</td>
+                                <td>28/06/2022</td>
+                                <td>Boleto</td>
+                                <td>Em separação</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div id="endereco" class="container">
+                    <div class="tituloConteudo">
+                        <p> Meus endereços </p>
+                    </div>
+                    <div class="container-tabela">
+                        <table class="tabelaEndereco">
+                            <tr>
+                                <th>Responsável</th>
+                                <th>Endereço</th>
+                                <th>Bairro</th>
+                                <th>Cidade</th>
+                                <th>CEP</th>
+                            </tr>
+                            <tr>
+                                <td>Henrique</td>
+                                <td>Rua Bahia, 300</td>
+                                <td>PIPIPI</td>
+                                <td>POPOPO</td>
+                                <td>00000-001</td>
+                            </tr>
+                            <tr>
+                                <td>Paula</td>
+                                <td>Avenida Nelo, 123</td>
+                                <td>PIRIRI</td>
+                                <td>PORORO</td>
+                                <td>00000-002</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+    </main>
+
+<%- include("./partials/footer") %>

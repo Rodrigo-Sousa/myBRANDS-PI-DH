@@ -1,19 +1,19 @@
 /* Reset */
-* {
+/* * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
+} */
 
-header {
-    float: left;
+/*header {
+ float: left;
     width: 100%;
     height: 60px;
     position: fixed;
     z-index: 99999;
     top: 0px;
-    /* border-top: 1px solid #000; */
-}
+    border-top: 1px solid #000; 
+}*/
 .logoPequeno {
     width: 100%;
     background-color: #333;
@@ -30,6 +30,7 @@ header {
     width: 120px;
     height: 50;
 }
+
 .inputPesquisar {
     float: left;
     top: 0;
@@ -48,6 +49,7 @@ header {
     background-color: #fff;
     border-radius: 5px 0 0 5px;
 }
+
 .botaoPesquisar {
     top: 0px;
     /* margin: 10px 0px; */
@@ -62,6 +64,7 @@ header {
     border: none;
     border-radius: 0 5px 5px 0;
 }
+
 .comprasDepartamento::after {
     right: 17px;
     transform: rotate(45deg);
@@ -74,7 +77,7 @@ header {
     -webkit-transform: rotate(-45deg)
 }
 
-.comprasDepartamento::after, 
+.comprasDepartamento::after,
 .comprasDepartamento::before {
     border: 1px solid #fff;
     content: "";
@@ -91,34 +94,40 @@ header {
     float: right;
     margin-top: 15px;
 }
-.menuNavegacao li{
+
+.menuNavegacao li {
     position: relative;
     float: left;
     /* border-right: 1px solid #f00; */
 }
-.menuNavegacao a{
-    color:#fff; 
-    text-decoration:none; 
-    padding:5px 10px; 
-    display:block;
+
+.menuNavegacao a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
     margin: 0 20px;
 }
+
 .menuNavegacao li ul {
-    position:absolute;
-    top:25px;
-    left:0;
-    background-color:#333;
-    display:none;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    background-color: #333;
+    display: none;
     border-radius: 5px;
     border: 2px solid #000;
 }
-.menuNavegacao li:hover ul, .menuNavegacao li.over ul{
+
+.menuNavegacao li:hover ul,
+.menuNavegacao li.over ul {
     display: block;
 }
+
 .menuNavegacao li ul li {
     /* border:1px solid #f00; */
-    display:block;
-    width:150px;
+    display: block;
+    width: 150px;
 }
 
 .container {
@@ -128,60 +137,67 @@ header {
 .meuPC {
     margin: -12px 0 20px 20px;
 }
-.linhaContainer{
+
+.linhaContainer {
     margin-right: -15px;
     margin-left: -15px;
 }
 
-main{
+.main-banner {
     width: 100%;
     height: 100%;
     font-family: arial;
     font-size: 12px;
-    background-color:  black;
+    background-color: black;
     color: white;
-  }
-
-#banner{
-  margin: 5% 3% 3% 3%;
-  justify-content: space-between;
-  display: flex;
-}
- .amd{
-  height: 100%;
-  width: 25.5%;
-  transition: all 0.3s ease-in 0.5s;
-  position: relative;
 }
 
- .hyperx{
-  height: 100%;
-  width: 30%;
-  transition: all 0.3s ease-in 0.5s;
-  position: relative;
+#banner {
+    margin: 5% 3% 3% 3%;
+    justify-content: space-between;
+    display: flex;
 }
 
- .red{
-  height: 100%;
-  width: 30%;
-  transition: all 0.3s ease-in 0.5s;
-  position: relative;
+.amd {
+    height: 100%;
+    width: 25.5%;
+    transition: all 0.3s ease-in 0.5s;
+    position: relative;
 }
 
-.red:hover{
-  height: 550px;
-  width: 550px;
-  cursor: pointer;
+.hyperx {
+    height: 100%;
+    width: 30%;
+    transition: all 0.3s ease-in 0.5s;
+    position: relative;
 }
 
-.amd:hover{
-  height: 550px;
-  width: 550px;
-  cursor: pointer;
+.red {
+    height: 100%;
+    width: 30%;
+    transition: all 0.3s ease-in 0.5s;
+    position: relative;
 }
 
-.hyperx:hover{
-  height: 550px;
-  width: 550px;
-  cursor: pointer;
+.red:hover {
+    height: 550px;
+    width: 550px;
+    cursor: pointer;
+}
+
+.amd:hover {
+    height: 550px;
+    width: 550px;
+    cursor: pointer;
+}
+
+.hyperx:hover {
+    height: 550px;
+    width: 550px;
+    cursor: pointer;
+}
+
+.card-home {
+    min-height: 100%;
+    border-radius: 15px;
 }

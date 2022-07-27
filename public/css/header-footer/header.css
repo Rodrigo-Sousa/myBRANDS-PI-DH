@@ -1,3 +1,10 @@
+/* Estilizando o cabeçalho total da página */
+#headerFull{
+    background-color: #42506b;
+    position: fixed;
+    min-width: 100%;
+    z-index: 9999;
+}
 /* Estilizando o logo do header */
 .brand-logo {
     height: 0%;
@@ -5,11 +12,9 @@
     right: 0px;
     margin-top: -10px;
 }
-
-/* Estilizando o cabeçalho total da página */
-#headerFull{
-    background-color: #42506b;
-    border-bottom: 2px solid #fff;
+.table-header{
+    align-items: center;
+    margin-left: auto;
 }
 .dropdown-departament{
     background-color: #42506b;
@@ -29,8 +34,4 @@
     background-color: #3E619B;
     background-image: none;
     border-color: #3E619B;
-}
-.header-login {
-
-    padding-top: 12px;
 }
