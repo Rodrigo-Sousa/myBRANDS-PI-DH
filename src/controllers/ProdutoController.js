@@ -8,6 +8,9 @@ const ProdutoController = {
     detail: (req, res) => {
         return res.render("product-detail", {title: "Detalhe do produto"});
     },
+    detailAmd: (req,res) => {
+        return res.render("brand-detail-amd", {title: "AMD | MyBrand's"})
+    }
 };
 
 module.exports = ProdutoController;
