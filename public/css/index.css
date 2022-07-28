@@ -21,9 +21,8 @@
 
 /* PRODUTO */
 @import "./produto/productListing/productListing.css";
-/* @import "./produto/productPage/footer-v2.css";
-@import "./produto/productPage/header-v2.css"; */
 @import "./produto/productPage/product-motherboard-B450.css";
+@import "./produto/brandDetails/brand-detail-amd.css";
 
 /* PRODUTOS-ADM */
 @import "./produtos-adm/button.css";

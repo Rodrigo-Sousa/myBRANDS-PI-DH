@@ -151,7 +151,23 @@
     background-color: black;
     color: white;
 }
-
+.title-buy-brand{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.image-banner{
+    position:static;
+}
+.img-buy-brand, .img-car-buy-brand{
+    border-radius: 8px;
+    max-width: 235px;
+    max-height: 141px;
+    margin-bottom: 15px;
+}
+.img-car-buy-brand:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
 #banner {
     margin: 5% 3% 3% 3%;
     justify-content: space-between;
