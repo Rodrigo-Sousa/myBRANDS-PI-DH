@@ -13,6 +13,12 @@ const ProdutoController = {
     },
     detailAsus: (req,res) => {
         return res.render("brand-detail-asus", {title: "ASUS | MyBrand's"})
+    },
+    detailGeil: (req,res) => {
+        return res.render("brand-detail-geil", {title: "GEIL | MyBrand's"})
+    },
+    detailIntel: (req,res) => {
+        return res.render("brand-detail-intel", {title: "Intel | MyBrand's"})
     }
 };
 

@@ -24,6 +24,8 @@
 @import "./produto/productPage/product-motherboard-B450.css";
 @import "./produto/brandDetails/brand-detail-amd.css";
 @import "./produto/brandDetails/brand-detail-asus.css";
+@import "./produto/brandDetails/brand-detail-geil.css";
+@import "./produto/brandDetails/brand-detail-intel.css";
 
 /* PRODUTOS-ADM */
 @import "./produtos-adm/button.css";
