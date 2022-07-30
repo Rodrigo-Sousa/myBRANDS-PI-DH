@@ -1,0 +1,38 @@
+<%- include("./partials/head") %>
+<%- include("./partials/header") %>
+<main id="user-list">
+  <h1>Lista de usuários</h1>
+  <% if(users.length > 0){ %>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>E-mail</th>
+            <th>Idade</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(let user of users) { %>
+          <tr>
+            <td><%= user.nome %></td>
+            <td><%= user.sobrenome %></td>
+            <td><%= user.email %></td>
+            <td><%= user.idade %></td>
+            <td class="table-actions">
+              <a href="/user/<%= user.id %>" class="table-link-show">Visualizar</a>
+              <a href="/user/edit/<%= user.id %>" class="table-link-edit">Editar</a>
+              <a href="/user/delete/<%= user.id %>" class="table-link-delete">Excluir</a>
+            </td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+  <% } else { %>
+    <h2 class="error-alert">Nenhum usuário encontrado</h2>
+  <%} %>
+</main>
+<%- include("./partials/footer") %>
