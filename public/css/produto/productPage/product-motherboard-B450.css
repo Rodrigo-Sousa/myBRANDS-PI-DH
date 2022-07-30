@@ -8,7 +8,7 @@ body{
 }
 .card-image {
     margin-top: -10px;
-    margin-left: 6%;
+    position: relative;
 }
 /* Caminho da navegação */
 .navigation-path{
