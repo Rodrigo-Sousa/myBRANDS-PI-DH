@@ -1,8 +1,7 @@
 const users = [
     {
       id: 1,
-      nome: "Roberto",
-      sobrenome: "Silva",
+      nome_completo: "Roberto Silva",
       email: "robertinho123@email.com",
       idade: 27,
       avatar: "user1.jpeg",
