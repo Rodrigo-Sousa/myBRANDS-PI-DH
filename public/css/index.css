@@ -35,3 +35,6 @@
 @import "./cart-shopping/cartShopping.css";
 /* NOT FOUND */
 /*@import "./not-found/styles.css"*/
+
+/* AUTENTIFICACAO */
+@import "./autentificacao/users.css"

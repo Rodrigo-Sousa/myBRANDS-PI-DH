@@ -1,0 +1,28 @@
+.table-link-show {
+    background-color: green;
+    border-radius: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.table-link-edit {
+    background-color: blue;
+    border-radius: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-weight: bolder;
+    cursor: pointer;
+
+}
+
+.table-link-delete {
+    background-color: red;
+    border-radius: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-weight: bolder;
+    cursor: pointer;
+
+}
