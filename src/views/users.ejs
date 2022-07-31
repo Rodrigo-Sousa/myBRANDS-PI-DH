@@ -7,8 +7,8 @@
       <table>
         <thead>
           <tr>
-            <th>Nome</th>
-            <th>Sobrenome</th>
+            <th>Nome Completo</th>
+            <th>Usuario</th>
             <th>E-mail</th>
             <th>Idade</th>
             <th>Ação</th>
@@ -17,8 +17,8 @@
         <tbody>
           <% for(let user of users) { %>
           <tr>
-            <td><%= user.nome %></td>
-            <td><%= user.sobrenome %></td>
+            <td><%= user.nome_completo %></td>
+            <td><%= user.usuario %></td>
             <td><%= user.email %></td>
             <td><%= user.idade %></td>
             <td class="table-actions">
