@@ -9,11 +9,12 @@
     color: white;
     padding-left: 20px;
     font-size: 1rem;
-    /* text-align: center; */
+    text-align: center; 
 }
 .records td{
     height: 50px;
     padding-left: 20px;
+    text-align: center;
 }
 .records th:last-child,
 .records td:last-child{

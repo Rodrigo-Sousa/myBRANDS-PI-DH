@@ -35,5 +35,9 @@
 
 /* CART-SHOPPING */
 @import "./cart-shopping/cartShopping.css";
+
 /* NOT FOUND */
-/*@import "./not-found/styles.css"*/
+/*@import "./not-found/styles.css";*/
+
+/* HOME-ADM */
+@import "./home-adm/stlyes.css";

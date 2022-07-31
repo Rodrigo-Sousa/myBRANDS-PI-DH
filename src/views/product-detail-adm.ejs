@@ -1,0 +1,19 @@
+<%- include("./partials/head")  %> 
+<%- include("./partials/header-adm") %>
+
+<main>
+  <h1>Visualizar Produto</h1>
+  <% if(locals.product) { %> 
+    <div>
+      <img src="" alt="imagem do produto"><br>
+      <span>Modelo: <%= product.modelo %> </span><br>
+      <span>Marca: <%= product.marca %> </span><br>
+      <span>Categoria: <%= product.categoria %> </span><br>
+      <span>Estoque: <%= product.estoque %> </span>
+    </div>
+  <% } else { %>
+    <h2>Produto não encontrado</h2>
+  <% } %>  
+</main>
+
+<%- include("./partials/footer") %>

@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const port = 3000;
-//const methodOverride = require("method-override");
+const methodOverride = require("method-override");
 
 // aplicação de rotas
 const homePageRoute = require("./src/routes/homePageRoute");
@@ -17,7 +17,7 @@ app.set("view engine", "ejs");
 app.set("views", __dirname + "/src/views");
 
 // Configura o methodOverride no express
-//app.use(methodOverride("_method"));
+app.use(methodOverride("_method"));
 
 app.use(express.json());
 

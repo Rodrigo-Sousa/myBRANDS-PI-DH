@@ -1,5 +1,5 @@
 <%- include("./partials/head")  %>
-<%- include("./partials/header") %>
+<%- include("./partials/header-adm")  %> 
 
     <div class="div-title">
         <h1 class="title-productAdm">Cadastro de Produtos</h1>
@@ -20,56 +20,39 @@
     </div>
     <main class="main-productAdm">
         <button type="button" class="button new" id="buttonNew">Novo Produto</button>
-        <table class="records">
-            <thead>
-                <tr>
-                    <th>Modelo</th>
-                    <th>Marca</th>
-                    <th>Categoria</th>
-                    <th>Estoque</th>
-                    <th>Ação</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Cloud Stinger, Drivers 50mm, Múltiplas Plataformas, P2 e P3</td>
-                    <td>HyperX</td>
-                    <td>Headset Gamer</td>
-                    <td>30</td>
-                    <td>
-                        <!-- <button type="button" class="button view">Visualizar</button> -->
-                        <button type="button" class="button green-productAdm">Editar</button>
-                        <button type="button" class="button red-productAdm">Excluir</button>
-                    </td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <td>AMD Radeon RX 550, 4GB, Preto</td>
-                    <td>Duex </td>
-                    <td>Placa de Vídeo</td>
-                    <td>12</td>
-                    <td>
-                        <!-- <button type="button" class="button view">Visualizar</button> -->
-                        <button type="button" class="button green-productAdm">Editar</button>
-                        <button type="button" class="button red-productAdm">Excluir</button>
-                    </td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <td>Redragon Cobra, Chroma RGB, 12400DPI, 7 Botões, Preto</td>
-                    <td>Redragon</td>
-                    <td>Mouse Gamer</td>
-                    <td>21</td>
-                    <td>
-                        <!-- <button type="button" class="button view">Visualizar</button> -->
-                        <button type="button" class="button green-productAdm">Editar</button>
-                        <button type="button" class="button red-productAdm">Excluir</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <% if (products.length > 0) { %>
+            <table class="records">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Modelo</th>
+                        <th>Marca</th>
+                        <th>Categoria</th>
+                        <th>Estoque</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for( let product of products) { %>
+                        <tr>
+                            <td><%= product.id %> </td>
+                            <td><%= product.modelo %> </td>
+                            <td><%= product.marca %> </td>
+                            <td><%= product.categoria %> </td>
+                            <td><%= product.estoque %> </td>
+                            <td>
+                                <!-- <button type="button" class="button view">Visualizar</button> -->
+                                <button type="button" class="button orange-productAdm"><a href="/product-adm/<%= product.id %> "> Visualizar</a></button>
+                                <button type="button" class="button green-productAdm"><a href="/product-adm/edit/<%= product.id %> "> Editar</a></button>
+                                <button type="button" class="button red-productAdm"><a href="/product-adm/delete/<%= product.id %> "> Excluir</a></button>
+                            </td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <h2>Nenhum produto encontrado</h2>
+        <% } %> 
         <div class="popup" id="popup">
             <div class="popup-info-product">
                 <header>
