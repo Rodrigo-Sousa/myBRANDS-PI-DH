@@ -43,6 +43,15 @@ const AdmController = {
     createProduct: (req, res) => {
         return res.render("product-create", { title: "Cadastrar produto" });
     },
+    store: (req, res) => {
+        const { modelo, marca, categoria, estoque } = req.body;
+        if(!modelo || !marca || !categoria || !estoque) {
+            return res.render("product-create", { title: "Cadastrar produto", error: { message: "Preencha todos os campos!" } });
+        }
+        const newProduct = { id: products.length + 1, modelo, marca, categoria, estoque, };
+        products.push(newProduct)
+        return res.render("success", { title: "Sucesso!", message: "Produto criado com sucesso!" });
+    },
 };
 
 module.exports = AdmController;
