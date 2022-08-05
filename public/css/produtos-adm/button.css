@@ -11,6 +11,9 @@
 .button.new{
     background-color: #4169e1;
 }
+.button.orange-productAdm{
+    background-color: #ffa500;
+}
 .button.green-productAdm{
     background-color: #13CE66;
 }
@@ -22,6 +25,9 @@
 }
 .button.new:hover{
     box-shadow: inset 200px 0 0 #325ea7;
+}
+.button.orange-productAdm:hover{
+    box-shadow: inset 200px 0 0 #a06800;
 }
 .button.red-productAdm:hover{
     box-shadow: inset 200px 0 0 #8b0000;
