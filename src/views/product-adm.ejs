@@ -1,80 +1,94 @@
-<%- include("./partials/head")  %>
-<%- include("./partials/header-adm")  %> 
+<%- include("./partials/head") %>
+  <%- include("./partials/header-adm") %>
 
     <div class="div-title">
-        <h1 class="title-productAdm">Cadastro de Produtos</h1>
+      <h1 class="title-productAdm">Cadastro de Produtos</h1>
     </div>
     <div class="div-top">
-        <div class="div-search">
-            <input type="text" id="txt-search" placeholder="Buscar Produto..." />
-        </div>
-        <div class="div-result-page">
-            <label for="result-page" id="txt-result-page">Resultado por Página</label>
-            <select name="result-page" id="result-page">
-                <option value="5">5</option>
-                <option value="10">10</option>
-                <option value="25">25</option>
-                <option value="50">50</option>
-            </select>
-        </div>
+      <div class="div-search">
+        <input type="text" id="txt-search" placeholder="Buscar Produto..." />
+      </div>
+      <div class="div-result-page">
+        <label for="result-page" id="txt-result-page">Resultado por Página</label>
+        <select name="result-page" id="result-page">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+        </select>
+      </div>
     </div>
     <main class="main-productAdm">
-        <button type="button" class="button new" id="buttonNew"><a href="/product-adm/product-create">Novo Produto</a></button>
-        <% if (products.length > 0) { %>
-            <table class="records">
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Modelo</th>
-                        <th>Marca</th>
-                        <th>Categoria</th>
-                        <th>Estoque</th>
-                        <th>Ação</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <% for( let product of products) { %>
-                        <tr>
-                            <td><%= product.id %> </td>
-                            <td><%= product.modelo %> </td>
-                            <td><%= product.marca %> </td>
-                            <td><%= product.categoria %> </td>
-                            <td><%= product.estoque %> </td>
-                            <td>
-                                <!-- <button type="button" class="button view">Visualizar</button> -->
-                                <button type="button" class="button orange-productAdm"><a href="/product-adm/<%= product.id %> "> Visualizar</a></button>
-                                <button type="button" class="button green-productAdm"><a href="/product-adm/edit/<%= product.id %> "> Editar</a></button>
-                                <button type="button" class="button red-productAdm"><a href="/product-adm/delete/<%= product.id %> "> Excluir</a></button>
-                            </td>
-                        </tr>
-                    <% } %>
-                </tbody>
-            </table>
+      <button type="button" class="button new" id="buttonNew"><a href="/product-adm/product-create">Novo
+          Produto</a></button>
+      <% if (products.length> 0) { %>
+        <table class="records">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Modelo</th>
+              <th>Marca</th>
+              <th>Categoria</th>
+              <th>Estoque</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for( let product of products) { %>
+              <tr>
+                <td>
+                  <%= product.id %>
+                </td>
+                <td>
+                  <%= product.modelo %>
+                </td>
+                <td>
+                  <%= product.marca %>
+                </td>
+                <td>
+                  <%= product.categoria %>
+                </td>
+                <td>
+                  <%= product.estoque %>
+                </td>
+                <td>
+                  <!-- <button type="button" class="button view">Visualizar</button> -->
+                  <button type="button" class="button orange-productAdm"><a
+                      href="/product-adm/<%= product.id %> ">Visualizar</a></button>
+                  <button type="button" class="button green-productAdm"><a
+                      href="/product-adm/product-edit/<%= product.id %> ">Editar</a></button>
+                  <button type="button" class="button red-productAdm"><a
+                      href="/product-adm/product-delete/<%= product.id %> ">Excluir</a></button>
+                </td>
+              </tr>
+              <% } %>
+          </tbody>
+        </table>
         <% } else { %>
-            <h2>Nenhum produto encontrado</h2>
-        <% } %> 
-        <div class="popup" id="popup">
-            <div class="popup-info-product">
+          <h2>Nenhum produto encontrado</h2>
+          <% } %>
+            <div class="popup" id="popup">
+              <div class="popup-info-product">
                 <header>
-                    <h2 class="popup-title">Novo Produto</h2>
-                    <span class="popup-close" id="closePopup">&#10006;</span>
+                  <h2 class="popup-title">Novo Produto</h2>
+                  <span class="popup-close" id="closePopup">&#10006;</span>
                 </header>
                 <form class="popup-form">
-                    <label for="category"></label>
-                    <input type="text" class="popup-field" placeholder="Categoria do Produto">
-                    <label for="brand"></label>
-                    <input type="text" class="popup-field" placeholder="Marca do Produto">
-                    <label for="model"></label>
-                    <input type="text" class="popup-field" placeholder="Modelo do Produto">
-                    <label for="inventory"></label>
-                    <input type="text" class="popup-field" placeholder="Estoque do Produto">
+                  <label for="category"></label>
+                  <input type="text" class="popup-field" placeholder="Categoria do Produto">
+                  <label for="brand"></label>
+                  <input type="text" class="popup-field" placeholder="Marca do Produto">
+                  <label for="model"></label>
+                  <input type="text" class="popup-field" placeholder="Modelo do Produto">
+                  <label for="inventory"></label>
+                  <input type="text" class="popup-field" placeholder="Estoque do Produto">
                 </form>
                 <footer class="popup-footer">
-                    <button class="button red-productAdm">Cancelar</button>
-                    <button class="button green-productAdm">Salvar</button>
+                  <button class="button red-productAdm">Cancelar</button>
+                  <button class="button green-productAdm">Salvar</button>
                 </footer>
+              </div>
             </div>
-        </div>
     </main>
 
 <%- include("./partials/footer") %>
