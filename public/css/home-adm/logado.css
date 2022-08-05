@@ -1,0 +1,24 @@
+.image-user-adm {
+    max-width: 50px;
+    min-height: 50px;
+    top: 0px;
+    right: 0px;
+    margin-top: -10px;
+    border-radius: 15px;
+}
+#headerAdm{
+    background-color: #42506b;
+    position: fixed;
+    min-width: 100%;
+    z-index: 9999;
+}
+.containerAdm {
+    margin-top: 8%;
+}
+.link-adm{
+    color: #fff;
+}
+.link-adm:hover {
+    color: #d4d3d3;
+    text-decoration: none;
+}

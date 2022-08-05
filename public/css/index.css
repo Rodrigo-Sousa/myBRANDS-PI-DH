@@ -40,4 +40,5 @@
 /*@import "./not-found/styles.css";*/
 
 /* HOME-ADM */
-@import "./home-adm/stlyes.css";
+/* @import "./home-adm/stlyes.css"; */
+@import "./home-adm/logado.css";
