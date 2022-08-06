@@ -16,7 +16,7 @@ body{
 .title-productAdm {
     margin-top: 60px;
 }
-.main-productAdm {
+.mainProductAdm {
     background-color: #fff;
 }
 .div-title{
@@ -75,11 +75,11 @@ body{
 main{
     display: flex;
     flex-direction:column;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     flex-grow: 1;
     width: 90%;
     height: 70%;
-    margin: 5vh auto;
+    margin: 8% auto !important;
     padding: 30px;
     box-shadow: 2px 2px 10px;
     gap: 20px;
