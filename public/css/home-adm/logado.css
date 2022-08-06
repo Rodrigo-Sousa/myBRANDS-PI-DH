@@ -13,7 +13,11 @@
     z-index: 9999;
 }
 .containerAdm {
-    margin-top: 8%;
+    margin-top: 8% !important;
+}
+.title-welcome-home-adm{    
+    margin-top: 12%;
+    margin-left: 25%;
 }
 .link-adm{
     color: #fff;

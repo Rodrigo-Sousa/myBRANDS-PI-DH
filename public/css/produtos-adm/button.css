@@ -1,4 +1,4 @@
-.button{
+/* .button{
     border-style: none;
     height: 40px;
     padding: 6px 12px;
@@ -37,4 +37,16 @@
 }
 .button.view:hover{
     box-shadow: inset 200px 0 0 #02637e;
+} */
+
+.new-product-adm{
+    color: #fff;
+}
+
+.new-product-adm:hover{
+    color: #fff;
+    text-decoration: none;
+}
+.link-product-adm{
+    color: #fff !important;
 }

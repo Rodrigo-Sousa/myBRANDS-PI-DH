@@ -1,24 +1,28 @@
 <%- include("./partials/head")  %> 
 <%- include("./partials/header-adm") %>
 
-<main>
-  <h1>Deletar Produto</h1>
-  <% if(locals.product) { %> 
-    <div>
-      <img src="" alt="imagem do produto"><br>
-      <span>Modelo: <%= product.modelo %> </span><br>
-      <span>Marca: <%= product.marca %> </span><br>
-      <span>Categoria: <%= product.categoria %> </span><br>
-      <span>Estoque: <%= product.estoque %> </span>
+<main id="main-product-adm-delete">
+  <div class="container">
+    <div class="margin-left-product-adm">
+      <h1 class="title-delete-product-adm">Deletar Produto</h1>
+      <% if(locals.product) { %> 
+        <div>
+          <img src="../../img/03-details-product/01-gigabyte-radeon-rx-550-gaming-oc-2g244383_1_Normal_Extra-.jpg" alt="imagem do produto"><br>
+          <span>Modelo: <%= product.modelo %> </span><br>
+          <span>Marca: <%= product.marca %> </span><br>
+          <span>Categoria: <%= product.categoria %> </span><br>
+          <span>Estoque: <%= product.estoque %> </span>
+        </div>
+        <form action="/product-adm/product-delete/<%= product.id %>?_method=delete" method="post">
+          <h2 class="question-delete-product-adm">Deseja deletar esse produto?</h2>
+          <a href="/product-adm"><button type="button" class="btn btn-danger">Não</button></a>
+          <button type="submit" class="btn btn-success">Sim</button>
+        </form>
+      <% } else { %>
+        <h2>Produto não encontrado</h2>
+      <% } %>
     </div>
-    <form action="/product-adm/product-delete/<%= product.id %>?_method=delete" method="post">
-      <h2>Deseja deletar esse produto?</h2>
-      <a href="/product-adm"><button type="button">Não</button></a>
-      <button type="submit">Sim</button>
-    </form>
-  <% } else { %>
-    <h2>Produto não encontrado</h2>
-  <% } %>
+  </div>
 </main>
 
 <%- include("./partials/footer") %>
