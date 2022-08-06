@@ -1,18 +1,23 @@
 <%- include("./partials/head") %>
 <%- include("./partials/header-adm") %>
 
-<main>
-  <h1>Atualizar produto</h1>
+<main id="main-product-adm-edit">
+
+  <div class="container">
+
+    <h1 class="update-title-product-adm">Atualizar produto</h1>
   <% if(locals.error) { %>
     <h2><%= error.message %> </h2>
   <% } %>
-  <form action="/product-adm/product-edit/<%= product.id %>?_method=put" method="POST">
-    <input value="<%= product.modelo %>" type="text" name="modelo" placeholder="Modelo">
-    <input value="<%= product.marca %>" type="text" name="marca" placeholder="Marca">
-    <input value="<%= product.categoria %>" type="text" name="categoria" placeholder="Categoria">
-    <input value="<%= product.estoque %>" type="number" name="estoque" placeholder="Estoque">
-    <button type="submit">Atualizar</button>
-  </form>
+    <form action="/product-adm/product-edit/<%= product.id %>?_method=put" method="POST">
+      <input value="<%= product.modelo %>" class="form-control" type="text" name="modelo" placeholder="Modelo">
+      <input value="<%= product.marca %>" class="form-control" type="text" name="marca" placeholder="Marca">
+      <input value="<%= product.categoria %>" class="form-control" type="text" name="categoria" placeholder="Categoria">
+      <input value="<%= product.estoque %>" class="form-control" type="number" name="estoque" placeholder="Estoque">
+      <button type="submit" class="btn btn-success button-update-product-adm">Atualizar</button>
+    </form>
+
+  </div>
 </main>
  
 <%- include("./partials/footer") %>

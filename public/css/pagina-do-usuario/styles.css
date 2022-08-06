@@ -8,6 +8,10 @@
     box-shadow: none;
     border-color: #3E619B
 }
+.background-container-user-data{
+    background-color: #355085d9;
+    border: 1px solid #fff;
+}
 .rounded-circle {
     margin-bottom: 15px;
 }
@@ -38,4 +42,12 @@
 
 .labels {
     font-size: 11px
+}
+.color-gray {
+    color: #ffffff80;
+}
+.email-user-data{
+    text-decoration: underline;
+    color: #1e1ea9 !important;
+    cursor: pointer;
 }

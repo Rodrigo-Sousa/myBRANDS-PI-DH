@@ -1,19 +1,26 @@
 <%- include("./partials/head")  %> 
 <%- include("./partials/header-adm") %>
 
-<main>
-  <h1>Visualizar Produto</h1>
-  <% if(locals.product) { %> 
-    <div>
-      <img src="" alt="imagem do produto"><br>
-      <span>Modelo: <%= product.modelo %> </span><br>
-      <span>Marca: <%= product.marca %> </span><br>
-      <span>Categoria: <%= product.categoria %> </span><br>
-      <span>Estoque: <%= product.estoque %> </span>
-    </div>
-  <% } else { %>
-    <h2>Produto não encontrado</h2>
-  <% } %>  
+<main id="main-product-adm-detail">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1 class="detail-product-adm">Visualizar Produto</h1>
+      </div>
+      <% if(locals.product) { %> 
+      <div class="col">
+          <img src="../img/03-details-product/01-gigabyte-radeon-rx-550-gaming-oc-2g244383_1_Normal_Extra-.jpg" alt="imagem do produto"><br>
+          <span>Modelo: <%= product.modelo %> </span><br>
+          <span>Marca: <%= product.marca %> </span><br>
+          <span>Categoria: <%= product.categoria %> </span><br>
+          <span>Estoque: <%= product.estoque %> </span>
+        </div>
+      <% } else { %>
+        <h2>Produto não encontrado</h2>
+      <% } %>  
+      </div>
+      
+  </div>
 </main>
 
 <%- include("./partials/footer") %>
