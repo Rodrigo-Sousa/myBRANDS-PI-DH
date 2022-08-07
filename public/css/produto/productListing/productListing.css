@@ -84,19 +84,23 @@ body{
 }
 .card-img-top-listing{
     width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
 }
 .product-image-listing {
-    margin: 10px 10px 10px 90px;
-    padding: 2px;
     border-radius: 5px;
+    padding: 6px;
     border: 2px solid #ef4b4c;
 }
 .sale-price {
+    padding-left: 40%;
     color: #00a000;
     font: 800 20px/16px "Open Sans",Arial,Helvetica,sans-serif;
     letter-spacing: -1px;
 }
 .form-payment {
+    padding-left: 40%;
+    padding-bottom: 20px;
     color: #00a000;
     font-size: 12px;
 }

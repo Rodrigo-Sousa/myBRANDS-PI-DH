@@ -1,17 +1,85 @@
 <%- include("./partials/head") %>
     <%- include("./partials/header") %>
+        <!-- Banner/carousel -->
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100 image-banner" src="./img/banner-carousel/01-amd.jpg" alt="Primeiro Slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100 image-banner" src="./img/banner-carousel/02-hyperx.jpg"
+                        alt="Segundo Slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100 image-banner" src="./img/banner-carousel/03-redragon.jpg"
+                        alt="Terceiro Slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+
         <div class="container">
-            <main class="main-banner">
-                <section id="banner">
-                    <img class="amd" src="./img/amd.png" />
-                    <img class="hyperx" src="./img/marca 1.png" />
-                    <img class="red" src="./img/Wallpaper Redragon - BL Grey.png" />
-                </section>
-            </main>
+
+            <!-- Div para comprar por marca -->
+            <div id="buy-brand-area">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="title-buy-brand">Compre por marcas</h3>
+                        </div>
+                        <!-- os card`s par as marcas -->
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-product-home-pag">
+                            <div class="card img-car-buy-brand">
+                                <a href="./brand-detail-amd">
+                                    <img class="img-buy-brand" src="./img/buy-brand/01.1-cpu-ryzen.jpg" alt="AMD">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-product-home-pag">
+                            <div class="card img-car-buy-brand">
+                                <a href="./brand-detail-asus">
+                                    <img class="img-buy-brand" src="./img/buy-brand/02.1-asus-logo.jpg" alt="Asus">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-product-home-pag">
+                            <div class="card img-car-buy-brand">
+                                <a href="./brand-detail-geil">
+                                    <img class="img-buy-brand" src="./img/buy-brand/03-geil-memoria.jpg" alt="Geil">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-product-home-pag">
+                            <div class="card img-car-buy-brand">
+                                <a href="./brand-detail-intel">
+                                    <img class="img-buy-brand" src="./img/buy-brand/04-intel-cpu.jpg" alt="Intel">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Final da div de compras por marcas -->
+            </div>
+
             <!-- Conteúdo de área dos produtos -->
             <div class="area-product-home col-xs-12 col-sm-12 col-md-12">
                 <!-- Div responsável pelos card-deck dos produtos -->
                 <div class="card-deck">
+                    <div class="col-12">
+                        <h3>Mais vendidos</h3>
+                    </div>
                     <!-- Dividindo o conteúdo em 3 colunas -->
                     <div class="product-card-listing col-xs-12 col-sm-6 col-md-3">
                         <div class="card card-home">

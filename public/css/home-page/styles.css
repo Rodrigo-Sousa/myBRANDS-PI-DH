@@ -1,137 +1,5 @@
-/* Reset */
-/* * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-} */
-
-/*header {
- float: left;
-    width: 100%;
-    height: 60px;
-    position: fixed;
-    z-index: 99999;
-    top: 0px;
-    border-top: 1px solid #000; 
-}*/
-.logoPequeno {
-    width: 100%;
-    background-color: #333;
-    height: 60px;
-    margin: 0;
-    border-bottom: 2px solid #000;
-}
-
-#logoMyBrand {
-    margin: 5px 0 0 120px;
-}
-
-#logoMyBrand {
-    width: 120px;
-    height: 50;
-}
-
-.inputPesquisar {
-    float: left;
-    top: 0;
-    left: 60px;
-    bottom: 0;
-    border: 0;
-    padding: 0;
-    margin: 0 1px;
-    text-indent: 15px;
-    font-size: 12px;
-    height: 36px;
-    z-index: 2;
-    outline: 0;
-    color: #000;
-    font-size: 16px;
-    background-color: #fff;
-    border-radius: 5px 0 0 5px;
-}
-
-.botaoPesquisar {
-    top: 0px;
-    /* margin: 10px 0px; */
-    bottom: 0px;
-    width: 60px;
-    height: 36px;
-    /* line-height: 30px; */
-    cursor: pointer;
-    color: #fff;
-    z-index: 1000;
-    background-color: #fff;
-    border: none;
-    border-radius: 0 5px 5px 0;
-}
-
-.comprasDepartamento::after {
-    right: 17px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-}
-
-.comprasDepartamento::before {
-    right: 10px;
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg)
-}
-
-.comprasDepartamento::after,
-.comprasDepartamento::before {
-    border: 1px solid #fff;
-    content: "";
-    position: absolute;
-    top: 58%;
-    transition: .1s ease all;
-    -webkit-transition: .1s ease all;
-    width: 10px;
-}
-
-.menuNavegacao {
-    list-style: none;
-    /* border: 1px solid #f00; */
-    float: right;
-    margin-top: 15px;
-}
-
-.menuNavegacao li {
-    position: relative;
-    float: left;
-    /* border-right: 1px solid #f00; */
-}
-
-.menuNavegacao a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-    display: block;
-    margin: 0 20px;
-}
-
-.menuNavegacao li ul {
-    position: absolute;
-    top: 25px;
-    left: 0;
-    background-color: #333;
-    display: none;
-    border-radius: 5px;
-    border: 2px solid #000;
-}
-
-.menuNavegacao li:hover ul,
-.menuNavegacao li.over ul {
-    display: block;
-}
-
-.menuNavegacao li ul li {
-    /* border:1px solid #f00; */
-    display: block;
-    width: 150px;
-}
-
 .container {
-    max-width: 1100px;
+    max-width: 100%;
 }
 
 .meuPC {
@@ -151,7 +19,23 @@
     background-color: black;
     color: white;
 }
-
+.title-buy-brand{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.image-banner{
+    position:static;
+}
+.img-buy-brand, .img-car-buy-brand{
+    border-radius: 8px;
+    max-width: 235px;
+    max-height: 141px;
+    margin-bottom: 15px;
+}
+.img-car-buy-brand:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
 #banner {
     margin: 5% 3% 3% 3%;
     justify-content: space-between;
@@ -200,4 +84,7 @@
 .card-home {
     min-height: 100%;
     border-radius: 15px;
+}
+.col-product-home-pag{
+    margin-right: -5%;
 }

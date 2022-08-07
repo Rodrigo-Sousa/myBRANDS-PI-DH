@@ -1,0 +1,43 @@
+.image-user-adm {
+    max-width: 50px;
+    min-height: 50px;
+    top: 0px;
+    right: 0px;
+    margin-top: -10px;
+    border-radius: 15px;
+}
+#headerAdm{
+    background-color: #42506b;
+    position: fixed;
+    min-width: 100%;
+    z-index: 9999;
+}
+.containerAdm {
+    margin-top: 8% !important;
+}
+.title-welcome-home-adm{    
+    margin-top: 12%;
+    margin-left: 25%;
+}
+.link-adm{
+    color: #fff;
+}
+.link-adm:hover {
+    color: #d4d3d3;
+    text-decoration: none;
+}
+.title-adm {
+    font-size: 24px;
+    padding-right: 20px;
+}
+.alert-error-product-adm{
+    color: #ff0000;
+}
+main{
+    margin-top: 150px !important;
+}
+.alert-success-product-adm{
+    color: #0ae40a;
+    margin-top: 10%;
+    margin-left: 35%;
+}
