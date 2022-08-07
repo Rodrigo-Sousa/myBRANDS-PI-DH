@@ -30,7 +30,6 @@
               <th>Categoria</th>
               <th>Estoque</th>
               <th>Ação</th>
-              <th><a class="new-product-adm" href="/product-adm/product-create">Novo Produto</a></th>
             </tr>
           </thead>
           <tbody>
@@ -59,6 +58,7 @@
                       href="/product-adm/product-edit/<%= product.id %> ">Editar</a></button>
                   <button type="button" class="btn btn-danger"><a class="link-product-adm"
                       href="/product-adm/product-delete/<%= product.id %> ">Excluir</a></button>
+                  <button type="button" class="btn btn-success"> <a class="link-product-adm" href="/product-adm/product-create">Novo Produto</a> </button>
                 </td>
               </tr>
               <% } %>

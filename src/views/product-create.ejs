@@ -1,18 +1,20 @@
 <%- include("./partials/head") %>
 <%- include("./partials/header-adm") %>
 
-<main>
-  <h1>Adicionar produto</h1>
-  <% if(locals.error) { %>
-    <h2><%= error.message %> </h2>
-  <% } %>
-  <form action="/product-adm/product-create" method="POST">
-    <input type="text" name="modelo" placeholder="Modelo">
-    <input type="text" name="marca" placeholder="Marca">
-    <input type="text" name="categoria" placeholder="Categoria">
-    <input type="number" name="estoque" placeholder="Estoque">
-    <button type="submit">Adicionar</button>
-  </form>
+<main id="main-product-adm-edit">
+  <div class="container">
+    <h1 class="update-title-product-adm">Adicionar produto</h1>
+    <% if(locals.error) { %>
+      <h2 class="alert-error-product-adm"><%= error.message %> </h2>
+    <% } %>
+    <form action="/product-adm/product-create" method="POST">
+      <input type="text" name="modelo" placeholder="Modelo" class="form-control">
+      <input type="text" name="marca" placeholder="Marca" class="form-control">
+      <input type="text" name="categoria" placeholder="Categoria" class="form-control">
+      <input type="number" name="estoque" placeholder="Estoque" class="form-control">
+      <button type="submit" class="btn btn-success button-update-product-adm">Adicionar</button>
+    </form>
+  </div>
 </main>
 
 <%- include("./partials/footer") %>

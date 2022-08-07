@@ -38,6 +38,7 @@ body{
 }
 /* Estilizando a imagem do produto */
 .product-image{
+    margin-left: 20%;
     height: 100%;
     position: relative;
     top: 0px;
