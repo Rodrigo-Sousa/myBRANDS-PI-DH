@@ -24,17 +24,19 @@ app.use(express.json());
 // Converte requisição para formado que o json aceita
 app.use(express.urlencoded({ extended: false }));
 
-// aplicação de rotas
+// Middleware global
+app.use((req, res, next) => {
+    console.log("Entrou no middleware global");
+    next();
+});
+
+// Aplicação de rotas
 app.use("/", homePageRoute);
 app.use("/", admRoute);
 app.use("/", userRoute);
 app.use("/", productRoute);
 
 // Error not found
-app.use( (req, res) => {
-    return res.status(404).render('not-found');
-});
+app.use( (req, res) => { return res.status(404).render('not-found') });
 
-app.listen(port, ()=>{
-    console.log("Estamos rodando na porta " + port)
-});
+app.listen(port, ()=>{ console.log("Estamos rodando na porta " + port)});
