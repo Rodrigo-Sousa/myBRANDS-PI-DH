@@ -30,3 +30,14 @@
     font-size: 24px;
     padding-right: 20px;
 }
+.alert-error-product-adm{
+    color: #ff0000;
+}
+main{
+    margin-top: 150px !important;
+}
+.alert-success-product-adm{
+    color: #0ae40a;
+    margin-top: 10%;
+    margin-left: 35%;
+}
