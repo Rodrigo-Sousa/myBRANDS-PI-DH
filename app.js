@@ -25,10 +25,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Middleware global
-app.use((req, res, next) => {
-    console.log("Entrou no middleware global");
-    next();
-});
+app.use((req, res, next) => { next(); });
 
 // Aplicação de rotas
 app.use("/", homePageRoute);
