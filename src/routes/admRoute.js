@@ -3,17 +3,19 @@ const router = express.Router();
 const AdmController = require("../controllers/AdmController");
 const AuthController = require("../controllers/AuthController");
 const productValidator = require("../validators/ProductValidator");
+const isAuth = require("../middlewares/auth");
+const isGuest = require("../middlewares/guest");
 
 // Rotas para visualizar views adm e login
 router.get("/home-adm", AdmController.homeAdm);
 router.get("/product-adm", AdmController.adm);
-router.get("/login-adm", AuthController.login);
-router.get("/registration-adm", AuthController.register);
+router.get("/login-adm", isGuest, AuthController.login);
+router.get("/registration-adm", isGuest, AuthController.register);
 
 // Rotas para autenticação usuário adm
-router.post("/login-adm", AuthController.auth);
-router.post("/registration-adm", AuthController.create);
-router.post("/logout", AuthController.logout);
+router.post("/login-adm", isGuest, AuthController.auth);
+router.post("/registration-adm", isGuest, AuthController.create);
+router.post("/logout", isAuth, AuthController.logout);
 
 // Inicio CRUD dos produtos adm
 // Rota para criar um produto
