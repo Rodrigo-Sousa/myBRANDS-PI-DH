@@ -1,12 +1,21 @@
 const express = require("express");
 const router = express.Router();
 const AdmController = require("../controllers/AdmController");
+const AuthController = require("../controllers/AuthController");
 const productValidator = require("../validators/ProductValidator");
 
+// Rotas para visualizar views adm e login
 router.get("/home-adm", AdmController.homeAdm);
-router.get("/login-adm", AdmController.login);
 router.get("/product-adm", AdmController.adm);
+router.get("/login-adm", AuthController.login);
+router.get("/registration-adm", AuthController.register);
 
+// Rotas para autenticação usuário adm
+router.post("/login-adm", AuthController.auth);
+router.post("/registration-adm", AuthController.create);
+router.post("/logout", AuthController.logout);
+
+// Inicio CRUD dos produtos adm
 // Rota para criar um produto
 router.get("/product-adm/product-create", AdmController.createProduct);
 // Rota para armazenar criação de um produto
@@ -24,5 +33,7 @@ router.put("/product-adm/product-edit/:id", AdmController.update);
 router.get("/product-adm/product-delete/:id", AdmController.delete);
 // Rota para excluir um produto
 router.delete("/product-adm/product-delete/:id", AdmController.destroy);
+// Fim do CRUD dos produtos adm
+
 
 module.exports = router;
