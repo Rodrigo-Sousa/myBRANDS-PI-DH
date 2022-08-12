@@ -88,3 +88,7 @@
 .col-product-home-pag{
     margin-right: -5%;
 }
+.carousel-inner > .carousel-item > img {
+    width: 700px;
+    height: 400px; 
+  }
