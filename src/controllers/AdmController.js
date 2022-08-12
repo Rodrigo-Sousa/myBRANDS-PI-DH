@@ -27,7 +27,7 @@ const AdmController = {
     return res.render("home-adm", { title: "Painel-Adm", user: req.cookies.user, admin: req.cookies.admin});
   },
   adm: (req, res) => {
-    return res.render("product-adm", { title: "Produtos-Adm", products });
+    return res.render("product-adm", { title: "Produtos-Adm", products, user: req.cookies.user, admin: req.cookies.admin });
   },
   viewProduct: (req, res) => {
     const { id } = req.params;

@@ -1,5 +1,7 @@
 const fs = require("fs");
 const path = require("path");
+const bcrypt = require("../helpers/bcrypt");
+
 const authController = {
   // Tela para realizar login
   login: (req, res) => {
@@ -26,7 +28,7 @@ const authController = {
       id: newId,
       nome,
       email,
-      senha,
+      senha: bcrypt.generateHash(senha),
       admin: false,
       criadoEm: new Date(),
       modificadoEm: new Date(),
@@ -45,8 +47,8 @@ const authController = {
     const users = JSON.parse(usersJson);
     const { email, senha } = req.body;
     const userAuth = users.find(user =>{
-      if(user.email===email){
-        if(user.senha===senha){
+      if(user.email === email){
+        if(bcrypt.compareHash(senha, user.senha)){
           return true;
         }
       }

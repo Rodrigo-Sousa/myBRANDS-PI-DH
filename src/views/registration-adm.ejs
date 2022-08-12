@@ -9,6 +9,9 @@
     <div class="right-login">
       <div class="card-login">
         <h1 class="title-2">Cadastro Administrador</h1>
+        <% if (locals.error) { %>
+          <h2><%= error.message %> </h2>
+        <% } %>
         <form action="/registration-adm" method="post">
           <div class="textfield">
             <label class="label-1" for="nome">Nome Completo</label>

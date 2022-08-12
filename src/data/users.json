@@ -1,56 +1,20 @@
 [
-  {
-    "id": 1,
-    "nome": "Joaquim Souza",
-    "email": "joaquim.souza@email.com",
-    "senha": "123",
-    "admin": true,
-    "criadoEm": "2021-09-13T00:55:49.130Z",
-    "modificadoEm": "2021-09-30T00:40:53.344Z"
-  },
-  {
-    "id": 2,
-    "nome": "Renata Pereira",
-    "email": "renata@email.com",
-    "senha": "123",
-    "admin": false,
-    "criadoEm": "2021-09-13T00:55:49.130Z",
-    "modificadoEm": "2021-09-30T00:40:53.344Z"
-  },
-  {
-    "id": 3,
-    "nome": "Roberto Oliveira",
-    "email": "roberto@email.com",
-    "senha": "123",
-    "admin": false,
-    "criadoEm": "2021-09-13T00:55:49.130Z",
-    "modificadoEm": "2021-09-30T00:40:53.344Z"
-  },
-  {
-    "id": 4,
-    "nome": "Luiz Santiago",
-    "email": "luiz@email.com",
-    "senha": "123",
-    "admin": false,
-    "criadoEm": "2021-09-13T00:55:49.130Z",
-    "modificadoEm": "2021-09-30T00:40:53.344Z"
-  },
-  {
-    "nome": "LUCAS ROCHA DE ARAUJO",
-    "email": "lluc.rocha90@gmail.com",
-    "senha": "123",
-    "criadoEm": "2022-08-10T18:31:55.351Z",
-    "modificadoEm": "2022-08-10T18:31:55.351Z",
-    "admin": false,
-    "id": 5
-  },
-  {
-    "id": 6,
-    "nome": "LUCAS ROCHA DE ARAUJO",
-    "email": "lluc.rocha90@gmail.com",
-    "senha": "123",
-    "admin": false,
-    "criadoEm": "2022-08-10T18:41:01.762Z",
-    "modificadoEm": "2022-08-10T18:41:01.762Z"
-  }
+    {
+        "id": 1,
+        "nome": "Joaquim Souza",
+        "email": "joaquim.souza@email.com",
+        "senha": "$2b$10$zjQFesrnEPd7v4TDi75JLu9bPRZ29/qy/SJog0aygiacb0jW43TCG",
+        "admin": true,
+        "criadoEm": "2022-08-11T22:06:58.352Z",
+        "modificadoEm": "2022-08-11T22:06:58.352Z"
+    },
+    {
+        "id": 2,
+        "nome": "Renata Pereira",
+        "email": "renata@email.com",
+        "senha": "$2b$10$yUHH1p9XcYl0vyIQ6lZ6iu0IfumhKrTN2XLrb.FmuKAA6Q4DS.0Zi",
+        "admin": false,
+        "criadoEm": "2022-08-11T22:08:09.284Z",
+        "modificadoEm": "2022-08-11T22:08:09.284Z"
+    }
 ]
