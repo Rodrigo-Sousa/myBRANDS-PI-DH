@@ -24,13 +24,10 @@ const products = [
 
 const AdmController = {
   homeAdm: (req, res) => {
-    return res.render("home-adm", { title: "Painel-Adm" });
-  },
-  login: (req, res) => {
-    return res.render("login-adm", { title: "Login" });
+    return res.render("home-adm", { title: "Painel-Adm", user: req.cookies.user, admin: req.cookies.admin});
   },
   adm: (req, res) => {
-    return res.render("product-adm", { title: "Produtos-Adm", products });
+    return res.render("product-adm", { title: "Produtos-Adm", products, user: req.cookies.user, admin: req.cookies.admin });
   },
   viewProduct: (req, res) => {
     const { id } = req.params;
@@ -45,9 +42,6 @@ const AdmController = {
   },
   store: (req, res) => {
     const { modelo, marca, categoria, estoque } = req.body;
-    if (!modelo || !marca || !categoria || !estoque) {
-      return res.render("product-create", { title: "Cadastrar produto", error: { message: "Preencha todos os campos!" } });
-    }
     const newProduct = { id: products.length + 1, modelo, marca, categoria, estoque, };
     products.push(newProduct)
     return res.render("success", { title: "Sucesso!", message: "Produto criado com sucesso!" });

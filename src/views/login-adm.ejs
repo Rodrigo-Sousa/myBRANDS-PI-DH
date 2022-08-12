@@ -1,27 +1,31 @@
 <%- include("./partials/head") %>
-    <%- include("./partials/header") %>
+<%- include("./partials/header") %>
 
-        <div class="main-login">
-            <div class="left-login">
-                <h1 class="title-1">Faça o login para acessar<br>o painel como Administrador</h1>
-                <img src="/img/adm-code.svg" class="left-login-img" alt="Administrador Codando">
-            </div>
-            <div class="right-login">
-                <div class="card-login">
-                    <h1 class="title-2">LOGIN</h1>
-                    <div class="textfield">
-                        <label class="label-1" for="usuario">Usuário</label>
-                        <input class="input-1" type="text" name="usuario" placeholder="Digite seu Usuário...">
-                    </div>
-                    <div class="textfield">
-                        <label class="label-2" for="senha">Senha</label>
-                        <input class="input-2" type="password" name="senha" placeholder="Digite sua Senha...">
-                    </div>
+  <div class="main-login">
+    <div class="left-login">
+      <h1 class="title-1">Faça o login para acessar<br>o painel como Administrador</h1>
+      <img src="/img/adm-code.svg" class="left-login-img" alt="Administrador Codando">
+    </div>
+    <div class="right-login">
+      <div class="card-login">
+        <h1 class="title-2">LOGIN</h1>
+        <% if (locals.error) { %>
+          <h2><%= error.message %> </h2>
+        <% } %>
+        <form action="/login-adm" method="post">
+          <div class="textfield">
+            <label class="label-1" for="email">E-mail</label>
+            <input class="input-1" type="email" name="email" placeholder="Digite seu e-mail...">
+          </div>
+          <div class="textfield">
+            <label class="label-2" for="senha">Senha</label>
+            <input class="input-2" type="password" name="senha" placeholder="Digite sua Senha...">
+          </div>
+          <button class="button-login" type="submit">Fazer Login</button>
+          <a class=link href="/registration-adm">Precisa de uma conta? Cadastre-se!</a>
+        </form>
+      </div>
+    </div>
+  </div>
 
-                    <button class="button-login"><a href="./home-adm">Fazer Login</a></button>
-
-                </div>
-            </div>
-        </div>
-
-        <%- include("./partials/footer") %>
+<%- include("./partials/footer") %>

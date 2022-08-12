@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "nome": "Joaquim Souza",
+        "email": "joaquim.souza@email.com",
+        "senha": "$2b$10$zjQFesrnEPd7v4TDi75JLu9bPRZ29/qy/SJog0aygiacb0jW43TCG",
+        "admin": true,
+        "criadoEm": "2022-08-11T22:06:58.352Z",
+        "modificadoEm": "2022-08-11T22:06:58.352Z"
+    },
+    {
+        "id": 2,
+        "nome": "Renata Pereira",
+        "email": "renata@email.com",
+        "senha": "$2b$10$yUHH1p9XcYl0vyIQ6lZ6iu0IfumhKrTN2XLrb.FmuKAA6Q4DS.0Zi",
+        "admin": false,
+        "criadoEm": "2022-08-11T22:08:09.284Z",
+        "modificadoEm": "2022-08-11T22:08:09.284Z"
+    }
+]
