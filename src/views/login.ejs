@@ -1,33 +1,36 @@
 <%- include("./partials/head") %>
-    <%- include("./partials/header") %>
+  <%- include("./partials/header") %>
 
-
-        <div class="main-user-login">
-            <div class="left-user-login">
-                <img src="img/myBrands-logov3-tipo-2.png" class="logo-user-login" alt="logo oficial">
-            </div>
-            <div class="right-user-login">
-                <div class="card-user-login">
-                    <h1 class="title-2">Login</h1>
-                    <form action="#" method="POST">
-                        <div class="textfield">
-                            <label class="label-1" for="usuario">E-mail</label>
-                            <input class="input-1" type="email" name="usuario" placeholder="Digite seu e-mail...">
-                        </div>
-                        <div class="textfield">
-                            <label class="label-2" for="senha">Senha</label>
-                            <input class="input-2" type="password" name="senha" placeholder="Digite sua Senha...">
-                        </div>
-                        <button class="button-user-login"><a href="./user-data">Realizar Login</a></button>
-                        <a class=link href="./registration">Precisa de uma conta? Cadastre-se!</a>
-                        <div class="checkbox-container">
-                            <input id="checkbox" name="checkbox" type="checkbox" class="checkbox">
-                            <label id="lembrar" for="checkbox" class="label-2">Lembrar-me</label>
-                        </div>
-                    </form>
+    <div class="main-user-login">
+      <div class="left-user-login">
+        <img src="img/myBrands-logov3-tipo-2.png" class="logo-user-login" alt="logo oficial">
+      </div>
+      <div class="right-user-login">
+        <div class="card-user-login">
+          <h1 class="title-2">Login</h1>
+          <% if (locals.error) { %>
+            <h2>
+              <%= error.message %>
+            </h2>
+            <% } %>
+              <form action="/login" method="POST">
+                <div class="textfield">
+                  <label class="label-1" for="email">E-mail</label>
+                  <input class="input-1" type="email" name="email" placeholder="Digite seu e-mail...">
                 </div>
-            </div>
+                <div class="textfield">
+                  <label class="label-2" for="senha">Senha</label>
+                  <input class="input-2" type="password" name="senha" placeholder="Digite sua Senha...">
+                </div>
+                <button class="button-user-login" type="submit">Realizar Login</button>
+                <a class=link href="/registration">Precisa de uma conta? Cadastre-se!</a>
+                <div class="checkbox-container">
+                  <input id="checkbox" name="checkbox" type="checkbox" class="checkbox">
+                  <label id="lembrar" for="checkbox" class="label-2">Lembrar-me</label>
+                </div>
+              </form>
         </div>
+      </div>
+    </div>
 
-
-        <%- include("./partials/footer") %>
+<%- include("./partials/footer") %>

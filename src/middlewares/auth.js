@@ -7,7 +7,7 @@ const authMiddleware = (req, res, next) => {
         req.session.destroy();
         res.clearCookie("user");
         res.clearCookie("admin");
-        res.redirect("/home-adm");
+        res.redirect("/");
     }
 };
 
