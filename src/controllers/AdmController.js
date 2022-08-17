@@ -1,3 +1,6 @@
+const fs = require("fs");
+const path = require("path");
+const bcrypt = require("../helpers/bcrypt");
 const products = [
   {
     id: 1,
@@ -23,6 +26,9 @@ const products = [
 ];
 
 const AdmController = {
+  login: (req, res) => {
+    return res.render("login-adm", { title: "Login" });
+  },
   homeAdm: (req, res) => {
     return res.render("home-adm", { title: "Painel-Adm", user: req.cookies.user, admin: req.cookies.admin});
   },

@@ -4,7 +4,7 @@ const guestMiddleware = (req, res, next) => {
   if(!isGuest) {
       next();
   } else {
-      res.redirect("/home-adm");
+      res.redirect("/");
   }
 };
 
