@@ -49,10 +49,28 @@
                 <input class="form-control mr-sm-2" type="search" placeholder="Encontre o seu produto"
                     aria-label="Pesquisar">
                 <button class="btn btn-outline-success my-2 my-sm-0 btn-search" type="submit">Pesquisar</button>
-            </form> 
-            <li class="nav-item">
-                <a class="nav-link header-login" href="../login">Login</a>
-            </li>
+            </form>
+            <% if (locals.user) { %>  
+                <!-- Menu dropdown - Página com detalhes da conta logada -->
+                <form action="/logout" method="post">
+                  <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <!-- Imagem de logo do site -->
+                      <img class="image-user-adm" src="https://i.pravatar.cc/300?img=9" width="50" height="50"
+                        alt="MyBrand's Logo">
+                    </a>
+                    <div class="dropdown-menu dropdown-departament" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item item-departamento" href="#">Editar perfil</a>
+                      <button type="submit">Sair</button>
+                    </div>
+                  </li>
+                </form>
+            <% }else {%>
+                <li class="nav-item">
+                    <a class="nav-link header-login" href="/login">Login</a>
+                </li>
+            <% }%>
         </ul>
     </div>
 </nav>
