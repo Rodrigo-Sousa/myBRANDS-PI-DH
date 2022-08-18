@@ -1,7 +1,9 @@
 .container {
     max-width: 100%;
 }
-
+.carousel-inner > .carousel-item > img {
+    height: 450px; 
+  }
 .meuPC {
     margin: -12px 0 20px 20px;
 }
