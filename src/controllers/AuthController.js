@@ -80,7 +80,7 @@ const authController = {
     res.cookie("user", user);
     res.cookie("admin", user.admin);
 
-    res.redirect("/");
+    res.redirect("/user-data");
   },
   // Processamento do deslogar
   logout: (req, res) => {
