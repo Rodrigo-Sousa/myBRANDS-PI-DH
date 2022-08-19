@@ -28,6 +28,10 @@
 .image-banner{
     position:static;
 }
+.card-img-car-buy-brand{
+    display: flex;
+    justify-content: flex-end;
+}
 .img-buy-brand, .img-car-buy-brand{
     border-radius: 8px;
     max-width: 235px;
