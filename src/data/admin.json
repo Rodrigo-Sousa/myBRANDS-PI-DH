@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "nome": "Joaquim Souza",
+        "usuario": "Jsouza",
+        "email": "joaquim.souza@email.com",
+        "senha": "$2b$10$zjQFesrnEPd7v4TDi75JLu9bPRZ29/qy/SJog0aygiacb0jW43TCG",
+        "admin": true,
+        "criadoEm": "2022-08-11T22:06:58.352Z",
+        "modificadoEm": "2022-08-11T22:06:58.352Z"
+    }
+]

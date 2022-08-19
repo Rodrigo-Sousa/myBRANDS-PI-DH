@@ -1,28 +1,23 @@
 {
-  "name": "mybrands-pi-dh",
+  "name": "sequelize-raw-queries-001",
   "version": "1.0.0",
-  "description": "O presente repositório contém o nosso projeto integrador que foi desenvolvido um e-commerce de _hardwares_ contendo as mais diversas marcas e seus respectivos produtos. Aplicando os conhecimentos de front-end (HTML, CSS, JavaScript, Responsividade, etc.), juntamente com os conehcimento back-end (NodeJs, MySQL, etc.) com a metodologia Ágil Scrum.",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon app"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Rodrigo-Sousa/myBRANDS-PI-DH.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Rodrigo-Sousa/myBRANDS-PI-DH/issues"
-  },
-  "homepage": "https://github.com/Rodrigo-Sousa/myBRANDS-PI-DH#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
+    "express-session": "^1.17.3",
     "method-override": "^3.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.18"
+    "nodemon": "^2.0.19"
   }
 }

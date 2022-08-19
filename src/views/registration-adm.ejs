@@ -1,0 +1,38 @@
+<%- include("./partials/head") %>
+<%- include("./partials/header") %>
+
+  <div class="main-login">
+    <div class="left-login">
+      <h1 class="title-1">Faça o cadastro para acessar<br>o painel como Administrador</h1>
+      <img src="/img/adm-code.svg" class="left-login-img" alt="Administrador Codando">
+    </div>
+    <div class="right-login">
+      <div class="card-login">
+        <h1 class="title-2">Cadastro Administrador</h1>
+        <% if (locals.error) { %>
+          <h2><%= error.message %> </h2>
+        <% } %>
+        <form action="/registration-adm" method="post">
+          <div class="textfield">
+            <label class="label-1" for="nome">Nome Completo</label>
+            <input class="input-1" type="text" name="nome" placeholder="Digite seu nome completo...">
+          </div>
+          <div class="textfield">
+            <label class="label-2" for="email">E-mail</label>
+            <input class="input-2" type="email" name="email" placeholder="Digite seu email...">
+          </div>
+          <div class="textfield">
+            <label class="label-2" for="senha">Senha</label>
+            <input class="input-2" type="password" name="senha" placeholder="Digite sua senha...">
+          </div>
+          <div class="textfield">
+            <label class="label-2" for="confirmar_senha">Confirmar senha</label>
+            <input class="input-2" type="password" name="confirmar_senha" placeholder="Digite sua senha novamente...">
+          </div>
+          <button class="button-login" type="submit">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<%- include("./partials/footer") %>
