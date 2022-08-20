@@ -1,0 +1,25 @@
+[
+    {
+        "id": 1,
+        "modelo": "AMD Radeon RX 550, 4GB, Preto",
+        "marca": "AMD",
+        "categoria": "Placa de vídeo",
+        "estoque": 12
+      },
+      {
+        "id": 2,
+        "modelo": "Redragon Cobra, Chroma RGB, 12400DPI, 7 Botões, Preto",
+        "marca": "Redragon",
+        "categoria": "Mouse Gamer",
+        "estoque": 15
+      },
+      {
+        "id": 3,
+        "modelo": "Cloud Stinger, Drivers 50mm, Múltiplas Plataformas, P2 e P3",
+        "marca": "HyperX",
+        "categoria": "Headset Gamer",
+        "estoque": 18
+      }
+    ]
+
+    
