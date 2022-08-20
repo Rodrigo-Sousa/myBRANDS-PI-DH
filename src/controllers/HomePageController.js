@@ -13,7 +13,7 @@ const HomePageController = {
         const {id} = req.params
         for (let i = 0; i < products.length; i++) {
             if (products[i].id === parseInt(id)) {
-                return res.send(products[i])
+                return res.render('brand-detail-asus-detail')
             }
             else {
                 res.status(404).json({message:"não encontrado"})
