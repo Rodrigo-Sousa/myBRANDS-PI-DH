@@ -15,6 +15,9 @@ const HomePageController = {
             if (products[i].id === parseInt(id)) {
                 return res.JSON()
             }
+            else {
+                res.status(404).json({message:"não encontrado"})
+            }
 
 
 
