@@ -9,11 +9,11 @@ const HomePageController = {
     },
     show: (req,res) => {
         const productsJson = fs.readFileSync(path.join(__dirname, "..", "data", "products.json"), "utf-8")
-        const products = JSON.parse(productJson);
+        const products = JSON.parse(productsJson);
         const {id} = req.params
-        for (let i = 0; i<products.length; i++) {
+        for (let i = 0; i < products.length; i++) {
             if (products[i].id === parseInt(id)) {
-                return res.JSON()
+                return res.send(products[i])
             }
             else {
                 res.status(404).json({message:"não encontrado"})
