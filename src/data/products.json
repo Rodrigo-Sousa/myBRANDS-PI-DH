@@ -5,7 +5,7 @@
         "marca": "AMD",
         "categoria": "Placa de vídeo",
         "estoque": 12,
-        "url-img": ""
+        "url-img": "https://img.terabyteshop.com.br/produto/g/placa-mae-gigabyte-b450-aorus-pro-chipset-b450-amd-am4-atx-ddr4_91015.png"
       },
       {
         "id": 2,
@@ -13,7 +13,7 @@
         "marca": "Redragon",
         "categoria": "Mouse Gamer",
         "estoque": 15,
-        "url-img":""
+        "url-img":"https://img.terabyteshop.com.br/produto/g/upgrade1277_142961.jpg"
       },
       {
         "id": 3,
@@ -21,7 +21,7 @@
         "marca": "HyperX",
         "categoria": "Headset Gamer",
         "estoque": 18,
-        "url-img": ""
+        "url-img": "https://img.terabyteshop.com.br/produto/g/placa-mae-asus-tuf-gaming-x570-plus-chipset-x570-amd-am4-atx-ddr4_124480.png"
       }
     ]
 
