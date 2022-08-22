@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "modelo": "B450 AORUS PRO",
+        "marca": "Gigabyte",
+        "categoria": "Placa de vídeo",
+        "estoque": 12,
+        "url-img": "https://img.terabyteshop.com.br/produto/g/placa-mae-gigabyte-b450-aorus-pro-chipset-b450-amd-am4-atx-ddr4_91015.png"
+      },
+      {
+        "id": 2,
+        "modelo": "Kit Upgrade AMD Ryzen 5 4600G + Placa Mãe B450 + 8GB DDR4",
+        "marca": "AMD",
+        "categoria": "KIT UPGRADE PLACA MÃE B450 AMD AM4",
+        "estoque": 15,
+        "url-img":"https://img.terabyteshop.com.br/produto/g/upgrade1277_142961.jpg"
+      },
+      {
+        "id": 3,
+        "modelo": "90MB13T0-C1BAY0",
+        "marca": "Asus",
+        "categoria": "Placa mãe",
+        "estoque": 18,
+        "url-img": "https://img.terabyteshop.com.br/produto/g/placa-mae-asus-tuf-gaming-x570-plus-chipset-x570-amd-am4-atx-ddr4_124480.png"
+      }
+    ]
+
+    
