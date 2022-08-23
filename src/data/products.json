@@ -1,30 +1,35 @@
 
 [
-    {
-        "id": 1,
-        "modelo": "AMD Radeon RX 550, 4GB, Preto",
-        "marca": "AMD",
-        "categoria": "Placa de vídeo",
-        "estoque": 12,
-        "preco": 1.769,
-        "urlImg": "https://img.terabyteshop.com.br/produto/g/placa-mae-gigabyte-b450-aorus-pro-chipset-b450-amd-am4-atx-ddr4_91015.png"
-      },
-      {
-        "id": 2,
-        "modelo": "Redragon Cobra, Chroma RGB, 12400DPI, 7 Botões, Preto",
-        "marca": "Redragon",
-        "categoria": "Mouse Gamer",
-        "estoque": 15,
-        "urlImg":"https://img.terabyteshop.com.br/produto/g/upgrade1277_142961.jpg"
-      },
-      {
-        "id": 3,
-        "modelo": "Cloud Stinger, Drivers 50mm, Múltiplas Plataformas, P2 e P3",
-        "marca": "HyperX",
-        "categoria": "Headset Gamer",
-        "estoque": 18,
-        "urlImg": "https://img.terabyteshop.com.br/produto/g/placa-mae-asus-tuf-gaming-x570-plus-chipset-x570-amd-am4-atx-ddr4_124480.png"
-      },
+  {
+    "id": 1,
+    "modelo": "AMD Radeon RX 550, 4GB, Preto",
+    "marca": "AMD",
+    "categoria": "Placa de vídeo",
+    "estoque": 12,
+    "preco": "1.769,00",
+    "codigo": "B450 AORUS M - Rev 1.0",
+    "urlImg": "https://img.terabyteshop.com.br/produto/g/placa-mae-gigabyte-b450-aorus-pro-chipset-b450-amd-am4-atx-ddr4_91015.png"
+  },
+  {
+    "id": 2,
+    "modelo": "Redragon Cobra, Chroma RGB, 12400DPI, 7 Botões, Preto",
+    "marca": "Redragon",
+    "categoria": "Mouse Gamer",
+    "estoque": 15,
+    "preco": "1.540,30",
+    "codigo": "Upgrade1277",
+    "urlImg":"https://img.terabyteshop.com.br/produto/g/upgrade1277_142961.jpg"
+  },
+  {
+    "id": 3,
+    "modelo": "Cloud Stinger, Drivers 50mm, Múltiplas Plataformas, P2 e P3",
+    "marca": "HyperX",
+    "categoria": "Headset Gamer",
+    "estoque": 18,
+    "preco": "1.399,00",
+    "codigo": "90MB14A0-C1BAY0",
+    "urlImg": "https://img.terabyteshop.com.br/produto/g/placa-mae-asus-tuf-gaming-x570-plus-chipset-x570-amd-am4-atx-ddr4_124480.png"
+  },
 
       {
         "id": 4,
