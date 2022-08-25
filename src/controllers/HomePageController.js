@@ -10,11 +10,10 @@ const HomePageController = {
         return res.render("home-page", {title: "Home", user: req.cookies.user, admin: req.cookies.admin, products:products});
     },
     show: (req,res) => {
-      
         const {id} = req.params
         for (let i = 0; i < products.length; i++) {
             if (products[i].id === parseInt(id)) {
-                // return res.render("products[i].url-img")
+                 return res.render("product-detail", {title: "amd"})
             }
             else {
                 res.status(404).json({message:"não encontrado"})
