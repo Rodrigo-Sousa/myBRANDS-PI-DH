@@ -7,7 +7,7 @@ const products = JSON.parse(productsJson);
 
 const HomePageController = {
     index: (req, res) => {
-        return res.render("home-page","product-detail-redragon", {title: "Home", user: req.cookies.user, admin: req.cookies.admin, products:products});
+        return res.render("home-page", {title: "Home", user: req.cookies.user, admin: req.cookies.admin, products:products});
     },
     show: (req,res) => {
         const {id} = req.params
@@ -16,9 +16,7 @@ const HomePageController = {
                 return res.render("product-detail", {title: "amd"})
             }
 
-            else if (products[i].id === parseInt(id)) {
-                return res.render("products-detail-rededragon", {title: "rededragon"}) 
-            }
+
             else {
                 res.status(404).json({message:"não encontrado"})
             }
