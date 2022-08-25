@@ -3,7 +3,7 @@ const router = express.Router();
 const HomePageController = require("../controllers/HomePageController");
 
 router.get("/", HomePageController.index);
-router.get("/product-detail/:id",HomePageController.show)
+router.get("/:id",HomePageController.show)
 
 
 module.exports = router;
