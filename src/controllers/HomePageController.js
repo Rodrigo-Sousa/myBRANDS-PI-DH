@@ -18,7 +18,7 @@ const HomePageController = {
 
 
             else {
-                res.status(404).json({message:"não encontrado"})
+                res.status(404).render("not-found")
             }
 
 
