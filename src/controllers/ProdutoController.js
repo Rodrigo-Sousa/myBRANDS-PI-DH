@@ -1,3 +1,9 @@
+
+const fs = require("fs");
+const path = require("path");
+const productsJson = fs.readFileSync(path.join(__dirname, "..", "data", "products.json"), "utf-8")
+const products = JSON.parse(productsJson);
+
 const ProdutoController = {
     cart: (req, res) => {
         return res.render("cart-shopping", {title: "Carrinho de compras"});
@@ -6,8 +12,25 @@ const ProdutoController = {
         return res.render("product-listing", {title: "Lista de produtos"});
     },
     detail: (req, res) => {
-        return res.render("product-detail", {title: "Detalhe do produto"});
-    },
+       const { id } = req.params
+        let produtoEncontrado = null
+        for (let i = 0; i < products.length; i++) {
+            if (products[i].id === parseInt(id)) {
+                produtoEncontrado = products[i]
+
+            }
+
+        }
+        if (produtoEncontrado) {
+            return res.render("product-detail", { title: "amd",produto:produtoEncontrado })
+        }
+        else {
+           return res.status(404).render("not-found")
+
+        }
+    }
+        
+    ,
     detailAmd: (req,res) => {
         return res.render("brand-detail-amd", {title: "AMD | MyBrand's"})
     },
