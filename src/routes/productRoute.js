@@ -9,5 +9,6 @@ router.get("/brand-detail-amd", ProdutoController.detailAmd);
 router.get("/brand-detail-asus", ProdutoController.detailAsus);
 router.get("/brand-detail-geil", ProdutoController.detailGeil);
 router.get("/brand-detail-intel", ProdutoController.detailIntel);
+router.get("/checkout-page", ProdutoController.checkout);
 
 module.exports = router;

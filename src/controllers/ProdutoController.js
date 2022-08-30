@@ -42,6 +42,9 @@ const ProdutoController = {
     },
     detailIntel: (req,res) => {
         return res.render("brand-detail-intel", {title: "Intel | MyBrand's"})
+    },
+    checkout: (req,res) => {
+        return res.render("sucess", {title: "test", message: "testando"})
     }
 };
 
