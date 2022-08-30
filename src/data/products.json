@@ -1,4 +1,3 @@
-
 [
   {
     "id": 1,
@@ -18,7 +17,7 @@
     "estoque": 15,
     "preco": "1.540,30",
     "codigo": "Upgrade1277",
-    "urlImg":"https://img.terabyteshop.com.br/produto/g/upgrade1277_142961.jpg"
+    "urlImg": "https://img.terabyteshop.com.br/produto/g/upgrade1277_142961.jpg"
   },
   {
     "id": 3,
@@ -30,55 +29,54 @@
     "codigo": "90MB14A0-C1BAY0",
     "urlImg": "https://img.terabyteshop.com.br/produto/g/placa-mae-asus-tuf-gaming-x570-plus-chipset-x570-amd-am4-atx-ddr4_124480.png"
   },
-
-      {
-        "id": 4,
-        "modelo": "SSD Kingston A400, 120GB, Sata III, Leitura 500MBs Gravação 320MBs, SA400S37/120G",
-        "marca": "Kingston",
-        "categoria": "SSD",
-        "estoque": 100,
-        "preco": "1390,00",
-        "codigo": "SA400S37/120G",
-        "urlImg": "https://img.terabyteshop.com.br/produto/g/ssd-kingston-a400-120gb-sa400s37120g-sata-iii-leitura-500mbs-gravacao-320mbs_58311.jpg"
-      },
-      {
-        "id": 5,
-        "modelo": "Placa de Vídeo Gigabyte GeForce RTX 3060 EAGLE OC 12G, LHR, 12GB, GDDR6, DLSS, Ray Tracing, GV-N3060EAGLE OC-12GD",
-        "marca": "Gigabyte",
-        "categoria": "GeForce RTX 3060 ",
-        "estoque": 40,
-        "preco": "2.599,00",
-        "codigo": "Gigabyte 3060",
-        "urlImg": "https://img.terabyteshop.com.br/produto/g/placa-de-video-gigabyte-geforce-rtx-3060-eagle-oc-12g-lhr-12gb-gddr6-dlss-ray-tracing-gv-n3060eagle-oc-12gd_142662.png"
-      },
-      {
-        "id": 6,
-        "modelo": "Placa de Vídeo PowerColor AMD Radeon RX 6400 ITX, 4GB, GDDR6, FSR, Ray Tracing, AXRX 6400 4GBD6-DH",
-        "marca": "PowerColor",
-        "categoria": "AXRX 6400 4GBD6-DH",
-        "estoque": 4,
-        "preco": "1.099,00",
-        "codigo": "AXRX 6400 4GBD6-DH",
-        "urlImg": "https://img.terabyteshop.com.br/produto/g/placa-de-video-powercolor-amd-radeon-rx-6400-itx-4gb-gddr6-fsr-ray-tracing-axrx-6400-4gbd6-dh_146452.png"
-      },
-      {
-        "id": 7,
-        "modelo": "SSD Geil Zenith Z3, 256GB, Sata III, Leitura 520MBs e Gravação 470MBs, GZ25Z3-256GP",
-        "marca": "Geil",
-        "categoria": "Zenith Z3 256GB",
-        "estoque": 14,
-        "preco": "279,90",
-        "codigo": "GZ25Z3-256GP",
-        "urlImg": "https://img.terabyteshop.com.br/produto/g/ssd-geil-zenith-z3-256gb-sata-iii-leitura-520mbs-e-gravacao-470mbs-gz25z3-256gp_122765.png"
-      },
-      {
-        "id": 8,
-        "modelo": "Placa de Vídeo Inno3D GeForce GTX 1650 Twin X2, 4GB GDDR6, 128Bit, N16502K-04D6",
-        "marca": "Inno3d",
-        "categoria": "GTX 1650 Twin X2 4GB - N16502K-04D6",
-        "estoque": 12,
-        "preco": "1.769,00",
-        "codigo": "B450 AORUS M - Rev 1.0",
-        "urlImg": "https://img.terabyteshop.com.br/produto/g/placa-mae-gigabyte-b450-aorus-pro-chipset-b450-amd-am4-atx-ddr4_91015.png"
-      }
-    ]
+  {
+    "id": 4,
+    "modelo": "SSD Kingston A400, 120GB, Sata III, Leitura 500MBs Gravação 320MBs, SA400S37/120G",
+    "marca": "Kingston",
+    "categoria": "SSD",
+    "estoque": 100,
+    "preco": "1390,00",
+    "codigo": "SA400S37/120G",
+    "urlImg": "https://img.terabyteshop.com.br/produto/g/ssd-kingston-a400-120gb-sa400s37120g-sata-iii-leitura-500mbs-gravacao-320mbs_58311.jpg"
+  },
+  {
+    "id": 5,
+    "modelo": "Placa de Vídeo Gigabyte GeForce RTX 3060 EAGLE OC 12G, LHR, 12GB, GDDR6, DLSS, Ray Tracing, GV-N3060EAGLE OC-12GD",
+    "marca": "Gigabyte",
+    "categoria": "GeForce RTX 3060 ",
+    "estoque": 40,
+    "preco": "2.599,00",
+    "codigo": "Gigabyte 3060",
+    "urlImg": "https://img.terabyteshop.com.br/produto/g/placa-de-video-gigabyte-geforce-rtx-3060-eagle-oc-12g-lhr-12gb-gddr6-dlss-ray-tracing-gv-n3060eagle-oc-12gd_142662.png"
+  },
+  {
+    "id": 6,
+    "modelo": "Placa de Vídeo PowerColor AMD Radeon RX 6400 ITX, 4GB, GDDR6, FSR, Ray Tracing, AXRX 6400 4GBD6-DH",
+    "marca": "PowerColor",
+    "categoria": "AXRX 6400 4GBD6-DH",
+    "estoque": 4,
+    "preco": "1.099,00",
+    "codigo": "AXRX 6400 4GBD6-DH",
+    "urlImg": "https://img.terabyteshop.com.br/produto/g/placa-de-video-powercolor-amd-radeon-rx-6400-itx-4gb-gddr6-fsr-ray-tracing-axrx-6400-4gbd6-dh_146452.png"
+  },
+  {
+    "id": 7,
+    "modelo": "SSD Geil Zenith Z3, 256GB, Sata III, Leitura 520MBs e Gravação 470MBs, GZ25Z3-256GP",
+    "marca": "Geil",
+    "categoria": "Zenith Z3 256GB",
+    "estoque": 14,
+    "preco": "279,90",
+    "codigo": "GZ25Z3-256GP",
+    "urlImg": "https://img.terabyteshop.com.br/produto/g/ssd-geil-zenith-z3-256gb-sata-iii-leitura-520mbs-e-gravacao-470mbs-gz25z3-256gp_122765.png"
+  },
+  {
+    "id": 8,
+    "modelo": "Placa de Vídeo Inno3D GeForce GTX 1650 Twin X2, 4GB GDDR6, 128Bit, N16502K-04D6",
+    "marca": "Inno3d",
+    "categoria": "GTX 1650 Twin X2 4GB - N16502K-04D6",
+    "estoque": 12,
+    "preco": "1.769,00",
+    "codigo": "B450 AORUS M - Rev 1.0",
+    "urlImg": "https://img.terabyteshop.com.br/produto/g/placa-mae-gigabyte-b450-aorus-pro-chipset-b450-amd-am4-atx-ddr4_91015.png"
+  }
+]
