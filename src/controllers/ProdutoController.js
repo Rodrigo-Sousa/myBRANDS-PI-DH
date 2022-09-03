@@ -8,7 +8,13 @@ const ProdutoController = {
     cart: (req, res) => {
         return res.render("cart-shopping", {title: "Carrinho de compras"});
     },
-    listing: (req, res) => {
+    index: (req, res) => {
+        const {marca} = req.query
+        console.log(marca)
+        var produtos = products.filter((value)=> {
+            if(value.marca === marca) { 
+            return True}
+        }) 
         return res.render("product-listing", {title: "Lista de produtos"});
     },
     detail: (req, res) => {
@@ -29,8 +35,7 @@ const ProdutoController = {
 
         }
     }
-        
-    ,
+        ,
     detailAmd: (req,res) => {
         return res.render("brand-detail-amd", {title: "AMD | MyBrand's"})
     },
