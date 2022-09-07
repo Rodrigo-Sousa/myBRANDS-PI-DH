@@ -80,3 +80,21 @@ VALUES
     "https://img.terabyteshop.com.br/produto/g/ssd-geil-zenith-z3-256gb-sata-iii-leitura-520mbs-e-gravacao-470mbs-gz25z3-256gp_122765.png"),
     ("Placa de Vídeo Inno3D GeForce GTX 1650 Twin X2, 4GB GDDR6, 128Bit, N16502K-04D6", "motherboard", "Inno3d", 1769.00, 12,1,
     "https://img.terabyteshop.com.br/produto/g/placa-mae-gigabyte-b450-aorus-pro-chipset-b450-amd-am4-atx-ddr4_91015.png");
+
+    -- Tabela para pedidos
+CREATE TABLE requests(
+  id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+  create_at DATETIME NOT NULL,
+  status ENUM("processando", "a caminho", "entregue", "cancelado") DEFAULT "processando",
+  user_id INT UNSIGNED,
+  FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+-- Tabela intermediária de pedidos e produtos
+CREATE TABLE requests_products(
+  id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+  requests_id INT UNSIGNED,
+  product_id INT UNSIGNED,
+  FOREIGN KEY (requests_id) REFERENCES requests(id),
+  FOREIGN KEY (product_id) REFERENCES products(id)
+);
