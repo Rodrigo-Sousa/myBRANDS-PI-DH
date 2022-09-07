@@ -37,3 +37,26 @@ VALUES
 
 -- Lista todos os usuários
 SELECT * FROM users;
+
+-- Limita quantidade de linhas
+SELECT * FROM users
+ORDER BY name
+LIMIT 5 OFFSET 5;
+
+SELECT * FROM users
+WHERE id >= 3 AND id <= 10;
+
+SELECT * FROM users
+WHERE id BETWEEN 3 AND 10;
+
+-- Tabela para produtos
+CREATE TABLE products (
+  id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(100) NOT NULL,
+  category VARCHAR (50) NOT NULL,
+  description VARCHAR(200),
+  price DECIMAL(10,2) NOT NULL,
+  inventory INT (250) NOT NULL,
+  available INT UNSIGNED DEFAULT 0,
+  urlImage VARCHAR (250) NOT NULL
+);
