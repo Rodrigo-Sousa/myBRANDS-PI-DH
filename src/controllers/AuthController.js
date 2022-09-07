@@ -55,7 +55,7 @@ const authController = {
     res.cookie("user", user);
     res.cookie("admin", user.admin);
 
-    res.redirect("/home-adm");
+    res.redirect("/product-adm");
   },
   // Processamento do login usuário
   authUser: (req, res) => {

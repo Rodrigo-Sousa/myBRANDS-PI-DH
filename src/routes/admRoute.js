@@ -7,7 +7,6 @@ const isAuth = require("../middlewares/auth");
 const isGuest = require("../middlewares/guest");
 
 // Rotas para visualizar views adm e login
-router.get("/home-adm", AdmController.homeAdm);
 router.get("/product-adm", AdmController.adm);
 router.get("/login-adm", isGuest, AdmController.login);
 

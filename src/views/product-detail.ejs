@@ -28,7 +28,7 @@
                 <!-- inserindo a imagem com a tag produto, ocupando 7 colunas -->
                 <figure class="col-md-7">
                     <!-- adicionando a imagem. **Inserindo o tamanho proisório na imagem aqui no HTML** -->
-                    <img class="product-image" src="/img/01-placaMaeAourusB550M/03-placaMaeGigabyte-b450main.jpg" alt="Imagem da placa mãe Aourus B550M" width="484px" height="484px">
+                    <img class="product-image" src="<%=produto.urlImg%>" alt="Imagem da placa mãe Aourus B550M" width="484px" height="484px">
                 </figure>
 
                 <!-- Sessões do nosso artigo. Aqui, a nossa coluna irá ocupar 5 -->
@@ -36,15 +36,15 @@
                     <!-- Artigo que iremos separar o preço, maiores detalhes, etc -->
                     <article class="content-product">
                         <!-- Título do produto -->
-                        <h1>Placa Mãe Gigabyte B450 AORUS M, Chipset B450, AMD AM4, mATX, DDR4</h1>
-                        <p id="code-product">CÓD: B450 AORUS M - Rev 1.0</p>
+                        <h1><%= produto.modelo %> </h1>
+                        <p id="code-product"><%=produto.codigo%></p>
                     </article>
                     <!-- Artigo com o preço do produto -->
                     <article class="price-product">
 
                         <!-- Preço em destaque -->
                         <strong>
-                            R$ 649,00.
+                            R$ <%= 649,00 %>.
                             <!-- Deixando a informação em uma linha, quebrando ela de forma blocante -->
                             <span class="d-block">à vista com 15% de desconto no boleto ou pix</span>
                         </strong>
@@ -52,14 +52,8 @@
                         <form action="#" method="post">
                             <!-- Selecionando a quantidade -->
                             <div class="form-group">
-                                <label for="product-quantity-item">Quantidade</label>
-                                <select class="form-control" id="product-quantity-item">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
+                                <label for="product-quantity-item">Quantidade:</label>
+                                <input class="form-control" type="number" name="quantity-item" id="product-quantity-item">
                             </div>
                             <!-- Enviando o formulário -->
                             <button type="submit" class="btn btn-success col-md-12">Comprar</button>
