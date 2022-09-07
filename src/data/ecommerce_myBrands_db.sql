@@ -85,7 +85,7 @@ VALUES
 CREATE TABLE requests(
   id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
   create_at DATETIME NOT NULL,
-  status ENUM("processando", "a caminho", "entregue", "cancelado") DEFAULT "processando",
+  status ENUM("processando", "a caminho", "entregue") DEFAULT "processando",
   user_id INT UNSIGNED,
   FOREIGN KEY (user_id) REFERENCES users(id)
 );
@@ -98,3 +98,57 @@ CREATE TABLE requests_products(
   FOREIGN KEY (requests_id) REFERENCES requests(id),
   FOREIGN KEY (product_id) REFERENCES products(id)
 );
+
+
+-- Lista produtos
+SELECT * FROM products;
+
+-- Insere um ou mais pedidos por produtos
+INSERT INTO requests (create_at, status, user_id)
+VALUES 
+	("2022-08-20 12:22:00", "entregue", 2),
+    ("2022-02-18 20:49:00", "entregue", 3),
+    ("2022-04-20 21:29:00", "processando", 1),
+    ("2022-05-28 22:59:00", "processando", 4);
+    
+-- Lista pedidos
+SELECT * FROM  requests;
+
+-- Insere um ou mais produtos
+INSERT INTO requests_products (requests_id, product_id)
+VALUES 
+	(6, 5),
+    (6, 2),
+    (7, 1),
+    (8, 5),
+    (8, 6);
+    
+-- Lista pedidos-produtos
+SELECT * FROM requests_products;
+
+-- Lista pedidos concatenado com pedidos-produtos e produtos
+SELECT * FROM requests 
+INNER JOIN requests_products ON requests.id = requests_products.requests_id
+INNER JOIN products ON products.id = requests_products.product_id;
+
+-- Lista pedidos concatenado com pedidos-produtos e produtos
+-- aplicado com alias
+SELECT * FROM requests AS r
+INNER JOIN requests_products AS rp ON r.id = rp.requests_id
+INNER JOIN products AS p ON p.id = rp.product_id;
+
+-- Lista usuarios concatenado com pedidos
+SELECT * FROM users
+INNER JOIN requests ON users.id = requests.user_id;
+
+-- Lista usuarios concatenado com pedidos
+-- aplicado com alias
+SELECT * FROM users AS u
+INNER JOIN requests AS r ON u.id = r.user_id;
+
+SELECT * FROM users AS u
+LEFT JOIN requests AS r ON u.id = r.user_id;
+
+SELECT * FROM requests AS r
+INNER JOIN requests_products AS rp ON r.id = rp.requests_id
+RIGHT JOIN products AS p ON p.id = rp.product_id;
