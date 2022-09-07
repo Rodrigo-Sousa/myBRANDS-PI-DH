@@ -7,11 +7,11 @@ const isAuth = require("../middlewares/auth");
 const isGuest = require("../middlewares/guest");
 
 router.get("/registration", UserController.registration);
-router.get("/login", UserController.login);
+router.get("/login-user", UserController.loginUser);
 router.get("/user-data", UserController.personal);
 router.get("/registration", isGuest, UserController.register);
 
-router.post("/login", isGuest, AuthController.authUser);
+router.post("/login-user", isGuest, AuthController.authUser);
 router.post("/registration", isGuest, AuthController.create);
 
 
