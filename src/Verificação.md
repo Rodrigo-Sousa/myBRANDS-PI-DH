@@ -40,5 +40,5 @@ E o usuário não pode ver a parte do administradoro.
 
 `npm install mysql2`
 
-`npm install sequelize`
+`npm install sequelize` = ORM _object-Relational Mapping(ORM)_.
 
