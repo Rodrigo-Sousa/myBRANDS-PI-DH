@@ -32,3 +32,13 @@ E o usuário não pode ver a parte do administradoro.
 10. Levar o administrador diretamente para o painel de produtos
 11. Refatorar os formulários de gerenciamento de produto com base do DER
 12. Arrumar o navbar conforme a sessão do usuário
+
+
+- Instalar os pacotes:
+
+`npm install dotenv`
+
+`npm install mysql2`
+
+`npm install sequelize`
+
