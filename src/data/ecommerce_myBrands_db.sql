@@ -152,3 +152,45 @@ LEFT JOIN requests AS r ON u.id = r.user_id;
 SELECT * FROM requests AS r
 INNER JOIN requests_products AS rp ON r.id = rp.requests_id
 RIGHT JOIN products AS p ON p.id = rp.product_id;
+
+-- Criando tabela para armazenar as imagens dos protutos. 
+CREATE TABLE image_products (
+  id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+  urlImage VARCHAR(250) NOT NULL
+);
+
+-- Tabela intermediária de imagens e produtos
+CREATE TABLE imagnes_products(
+  id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+  image_products_id INT UNSIGNED,
+  product_id INT UNSIGNED,
+  FOREIGN KEY (image_products_id) REFERENCES image_products(id),
+  FOREIGN KEY (product_id) REFERENCES products(id)
+);
+-- Inserindo dados na tabela de image_products
+INSERT INTO image_products (urlImage) VALUES
+	("https://img.terabyteshop.com.br/produto/g/placa-mae-gigabyte-b450-aorus-pro-chipset-b450-amd-am4-atx-ddr4_91015.png"),
+    ("https://img.terabyteshop.com.br/produto/g/upgrade1277_142961.jpg"),
+    ("https://img.terabyteshop.com.br/produto/g/placa-mae-asus-tuf-gaming-x570-plus-chipset-x570-amd-am4-atx-ddr4_124480.png"),
+    ("https://img.terabyteshop.com.br/produto/g/ssd-kingston-a400-120gb-sa400s37120g-sata-iii-leitura-500mbs-gravacao-320mbs_58311.jpg"),
+    ("https://img.terabyteshop.com.br/produto/g/placa-de-video-gigabyte-geforce-rtx-3060-eagle-oc-12g-lhr-12gb-gddr6-dlss-ray-tracing-gv-n3060eagle-oc-12gd_142662.png"),
+    ("https://img.terabyteshop.com.br/produto/g/placa-de-video-powercolor-amd-radeon-rx-6400-itx-4gb-gddr6-fsr-ray-tracing-axrx-6400-4gbd6-dh_146452.png"),
+    ("https://img.terabyteshop.com.br/produto/g/ssd-geil-zenith-z3-256gb-sata-iii-leitura-520mbs-e-gravacao-470mbs-gz25z3-256gp_122765.png"),
+    ("https://img.terabyteshop.com.br/produto/g/placa-mae-gigabyte-b450-aorus-pro-chipset-b450-amd-am4-atx-ddr4_91015.png");
+
+-- Fazendo o vínculo entre as tabelas de imagens e a de produtos
+INSERT INTO imagnes_products (image_products_id, product_id)
+VALUES 
+	(1, 1),
+    (2, 2),
+    (3, 3),
+    (4, 4),
+    (5, 5),
+    (6,6),
+    (7,7),
+    (8,8);
+    
+SELECT * FROM imagnes_products;
+
+
+
