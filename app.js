@@ -40,6 +40,7 @@ app.use("/", admRoute);
 app.use("/", userRoute);
 app.use("/", productRoute);
 
+app.use("/user", userRoute);
 // Error not found
 app.use( (req, res) => { return res.status(404).render('not-found') });
 
