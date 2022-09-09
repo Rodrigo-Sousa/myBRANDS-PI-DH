@@ -62,39 +62,37 @@ const userController = {
             res.status(400).json({ message: "Erro ao criar usuário" });
         }
     },
-    // update: async (req, res) => {
-    //     const { name, email, birthdate } = req.body;
-    //     const { id } = req.params;
-    //     try {
-    //         const users = await User.update(
-    //             {
-    //                 name,
-    //                 email,
-    //                 birthdate,
-    //             },
-    //             {
-    //                 where: { id },
-    //             }
-    //         );
-    //         console.log(users);
-    //         res.status(200).json({ message: "Usuário atualizado com sucesso" });
-    //     } catch (error) {
-    //         console.log(error);
-    //         res.status(400).json({ message: "Erro ao atualizar usuário" });
-    //     }
-    // },
-    // destroy: async (req, res) => {
-    //     const { id } = req.params;
-    //     try {
-    //         // const users = await User.update({ is_active: 0 }, { where: { id } });
-    //         const users = await User.destroy({ where: { id } });
-    //         console.log(users);
-    //         res.status(200).json({ message: "Usuário deletado com sucesso!" });
-    //     } catch (error) {
-    //         console.log(error);
-    //         res.status(400).json({ message: "Erro ao deletar usuário" });
-    //     }
-    // },
+    update: async (req, res) => {
+        const {  name, email, senha, birthdate, cpf, picture, phone, celphone, bredIn, changedIn} = req.body;
+        const { id } = req.params;
+        try {
+            const users = await db.query("UPDATE users SET name = :name, email = :email, senha = :senha, birthdate = :birthdate, cpf = :cpf, picture = :picture, phone = :phone, celphone = :celphone, bredIn = :bredIn, changedIn = :changedIn WHERE id = :id",
+                {
+                    type: sequelize.QueryTypes.UPDATE,
+                },
+                {
+                    where: { id },
+                }
+            );
+            console.log(users);
+            res.status(200).json({ message: "Usuário atualizado com sucesso" });
+        } catch (error) {
+            console.log(error);
+            res.status(400).json({ message: "Erro ao atualizar usuário" });
+        }
+    },
+    destroy: async (req, res) => {
+        const { id } = req.params;
+        try {
+            // const users = await User.update({ is_active: 0 }, { where: { id } });
+            const users = await User.destroy({ where: { id } });
+            console.log(users);
+            res.status(200).json({ message: "Usuário deletado com sucesso!" });
+        } catch (error) {
+            console.log(error);
+            res.status(400).json({ message: "Erro ao deletar usuário" });
+        }
+    },
     // Tela para cadastro do usuário
     register: (req, res) => {
         return res.render("registration", { title: "Cadastro", });
