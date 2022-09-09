@@ -41,6 +41,7 @@ app.use("/", userRoute);
 app.use("/", productRoute);
 
 app.use("/user", userRoute);
+app.use("/product", productRoute)
 // Error not found
 app.use( (req, res) => { return res.status(404).render('not-found') });
 

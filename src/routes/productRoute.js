@@ -2,6 +2,9 @@ const express = require("express");
 const router = express.Router();
 const ProdutoController = require("../controllers/ProdutoController");
 
+// rota para acessar os produtos, direto pelo controller
+router.get("/", ProdutoController.index);
+
 router.get("/cart-shopping", ProdutoController.cart);
 router.get("/product-listing", ProdutoController.listing);
 router.get("/product-detail/:id", ProdutoController.detail);

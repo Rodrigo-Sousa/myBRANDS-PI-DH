@@ -4,7 +4,29 @@ const path = require("path");
 const productsJson = fs.readFileSync(path.join(__dirname, "..", "data", "products.json"), "utf-8")
 const products = JSON.parse(productsJson);
 
+const db = require("../config/sequelize");
+const { Op } = require("sequelize");
+const sequelize = require("sequelize");
 const ProdutoController = {
+
+     // Busca os pedidos que um usuário possui e listar os produtos desses pedidos
+  index: async (req, res) => {
+    // Lidaremos com promessas
+    try {
+      const products = await db.query(
+          // Recebe 2 parâmetros, uma string e o segundo um objeto
+          "SELECT * FROM products;",{
+              type: sequelize.QueryTypes.SELECT,
+
+          }
+      );
+      console.log(products);
+  } catch (error){
+      console.log(error)
+  }
+
+  },
+
     cart: (req, res) => {
         return res.render("cart-shopping", {title: "Carrinho de compras"});
     },
