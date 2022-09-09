@@ -15,7 +15,7 @@ router.get("/login-user", UserController.loginUser);
 router.get("/user-data", UserController.personal);
 router.get("/registration", isGuest, UserController.register);
 
-router.get("/:id", userController.show);
+// router.get("/:id", userController.show);
 // router.post("/", userController.store);
 // router.put("/:id", userController.update);
 // router.patch("/:id", userController.update);
