@@ -28,37 +28,6 @@ const userController = {
 
     },
     show: async (req, res) => {
-        // const { id } = req.params;
-        // try {
-        //     const user = await User.findOne({
-        //         where: {
-        //             id,
-        //         },
-        //         include: Order,
-        //     });
-        //     // const order = await Order.findAll({
-        //     //   include: User,
-        //     // });
-        //     // console.log(order);
-
-        //     const order = await Order.findAll({
-        //         include: Product,
-        //     });
-        //     console.log(order);
-        //     // const user = await User.findByPk(id);
-        //     // console.log(user.Orders);
-        //     if (!user) {
-        //         throw Error("USER_NOT_FOUND");
-        //     }
-        //     res.status(200).json({ data: user });
-        // } catch (error) {
-        //     console.log(error);
-        //     if (error.message === "USER_NOT_FOUND") {
-        //         res.status(400).json({ message: "Usuário não encontrado" });
-        //     } else {
-        //         res.status(400).json({ message: "Erro ao encontrar usuário" });
-        //     }
-        // }
 
         // Id o usuário que iremos buscar
         const {id} = req.params;
@@ -80,21 +49,19 @@ const userController = {
             res.status(400).json({message:"Erro ao encontrar o usuário!"});
         }
     },
-    // store: async (req, res) => {
-    //     const { name, email, birthdate } = req.body;
-    //     try {
-    //         const users = await User.create({
-    //             name,
-    //             email,
-    //             birthdate,
-    //         });
-    //         console.log(users);
-    //         res.status(201).json({ message: "Usuário cadastrado com sucesso!" });
-    //     } catch (error) {
-    //         console.log(error);
-    //         res.status(400).json({ message: "Erro ao criar usuário" });
-    //     }
-    // },
+    store: async (req, res) => {
+        const {  name, email, senha, birthdate, cpf, picture, phone, celphone, bredIn, changedIn} = req.body;
+        try {
+            const users = await db.query("INSERT INTO users (name, email, senha, birthdate, cpf, picture, phone, celphone, bredIn, changedIn) VALUES (:name, :email, :senha, :birthdate, :cpf, :picture, :phone, :celphone, :bredIn, :changedIn)",{
+                type: sequelize.QueryTypes.INSERT,
+            });
+            console.log(users);
+            res.status(201).json({ message: "Usuário cadastrado com sucesso!" });
+        } catch (error) {
+            console.log(error);
+            res.status(400).json({ message: "Erro ao criar usuário" });
+        }
+    },
     // update: async (req, res) => {
     //     const { name, email, birthdate } = req.body;
     //     const { id } = req.params;
