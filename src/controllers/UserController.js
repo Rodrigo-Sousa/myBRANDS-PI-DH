@@ -27,41 +27,59 @@ const userController = {
         }
 
     },
-    // show: async (req, res) => {
-    //     const { id } = req.params;
-    //     try {
-    //         const user = await User.findOne({
-    //             where: {
-    //                 id,
-    //             },
-    //             include: Order,
-    //         });
-    //         // const order = await Order.findAll({
-    //         //   include: User,
-    //         // });
-    //         // console.log(order);
+    show: async (req, res) => {
+        // const { id } = req.params;
+        // try {
+        //     const user = await User.findOne({
+        //         where: {
+        //             id,
+        //         },
+        //         include: Order,
+        //     });
+        //     // const order = await Order.findAll({
+        //     //   include: User,
+        //     // });
+        //     // console.log(order);
 
-    //         const order = await Order.findAll({
-    //             include: Product,
-    //         });
-    //         console.log(order);
-    //         // const user = await User.findByPk(id);
-    //         // console.log(user.Orders);
-    //         if (!user) {
-    //             throw Error("USER_NOT_FOUND");
-    //         }
-    //         // Voltamos as 21h
-    //         res.status(200).json({ data: user });
-    //     } catch (error) {
-    //         console.log(error);
-    //         if (error.message === "USER_NOT_FOUND") {
-    //             res.status(400).json({ message: "Usuário não encontrado" });
-    //         } else {
-    //             res.status(400).json({ message: "Erro ao encontrar usuário" });
-    //         }
-    //     }
-    //     // Voltamos as 21h
-    // },
+        //     const order = await Order.findAll({
+        //         include: Product,
+        //     });
+        //     console.log(order);
+        //     // const user = await User.findByPk(id);
+        //     // console.log(user.Orders);
+        //     if (!user) {
+        //         throw Error("USER_NOT_FOUND");
+        //     }
+        //     res.status(200).json({ data: user });
+        // } catch (error) {
+        //     console.log(error);
+        //     if (error.message === "USER_NOT_FOUND") {
+        //         res.status(400).json({ message: "Usuário não encontrado" });
+        //     } else {
+        //         res.status(400).json({ message: "Erro ao encontrar usuário" });
+        //     }
+        // }
+
+        // Id o usuário que iremos buscar
+        const {id} = req.params;
+        try{
+
+            const users = await db.query(`SELECT * FROM users WHERE id = ${id}`,{
+                type: sequelize.QueryTypes.SELECT,
+            });
+            // Validando o retorno pro usuário
+            if(users.length >0 ){
+                // Mensagem de retorno
+                res.status(200).json({data: users[0]});
+            }else{
+                res.status(400).json({data:{}, message:"Nenhum usuário encontrado"});
+            }
+            
+        }catch(error){
+            console.log(error);
+            res.status(400).json({message:"Erro ao encontrar o usuário!"});
+        }
+    },
     // store: async (req, res) => {
     //     const { name, email, birthdate } = req.body;
     //     try {
