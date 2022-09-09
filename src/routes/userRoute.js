@@ -5,11 +5,13 @@ const AuthController = require("../controllers/AuthController");
 const UserController = require("../controllers/UserController");
 const productValidator = require("../validators/ProductValidator");
 const userController = require("../controllers/UserController");
+const produtoController = require("../controllers/ProdutoController")
 const isAuth = require("../middlewares/auth");
 const isGuest = require("../middlewares/guest");
 
 // Rota para renderizar com o usuário default.
 router.get("/", userController.index);
+router.get("/", produtoController.index);
 router.get("/registration", UserController.registration);
 router.get("/login-user", UserController.loginUser);
 router.get("/user-data", UserController.personal);

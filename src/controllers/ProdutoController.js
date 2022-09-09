@@ -21,6 +21,9 @@ const ProdutoController = {
           }
       );
       console.log(products);
+      // Retornando para a rota de index do produtos, com uma mensagem
+    //   res.status(200).JSON({data: products, menssage: "Listado todos os produtos"});
+
   } catch (error){
       console.log(error)
   }
