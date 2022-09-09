@@ -124,8 +124,9 @@ const userController = {
     destroy: async (req, res) => {
         const { id } = req.params;
         try {
-            // const users = await User.update({ is_active: 0 }, { where: { id } });
-            const users = await User.destroy({ where: { id } });
+            const users = await db.query(`DELETE FROM users WHERE id = ${id}`,{
+                typeof: sequelize.QueryTypes.DELETE,
+            });
             console.log(users);
             res.status(200).json({ message: "Usuário deletado com sucesso!" });
         } catch (error) {
