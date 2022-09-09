@@ -1,22 +1,3 @@
-
-// const UserController = {
-// Tela para cadastro do usuário
-// register: (req, res) => {
-//     return res.render("registration", { title: "Cadastro", });
-// },
-// registration: (req, res) => {
-//     return res.render("registration", {title: "Cadastro"});
-// },
-// loginUser: (req, res) => {
-//     return res.render("login-user", {title: "Login Usuário", user: req.cookies.user});
-// },
-// personal: (req, res) => {
-//     return res.render("user-data", {title: "Info usuário"});
-// },
-// };
-
-// module.exports = UserController;
-
 const db = require("../config/sequelize");
 // const User = require("../models/User");
 // const Order = require("../models/Order");
@@ -24,42 +5,8 @@ const db = require("../config/sequelize");
 const { Op } = require("sequelize");
 const sequelize = require("sequelize");
 const userController = {
-    // Busca os pedidos que um usuário possui e listar os produtos desses pedidos
+    // Busca todos os usuários no banco de dados
     index: async (req, res) => {
-        // const { search } = req.query;
-        // try {
-        //   let where = {};
-        //   if (search) {
-        //     where = {
-        //       [Op.or]: {
-        //         // name: "Paula2",
-        //         name: {
-        //           [Op.like]: `%${search}%`,
-        //         },
-        //         email: {
-        //           [Op.like]: `%${search}%`,
-        //         },
-        //       },
-        //     };
-        //   }
-
-        //   const users = await User.findAll({
-        //     where,
-        //     limit: 2,
-        //     offset: 1,
-        //     order: [
-        //       ["name", "ASC"],
-        //       ["email", "ASC"],
-        //     ],
-        //   });
-        //   // console.log(users);
-        //   res
-        //     .status(200)
-        //     .json({ data: users, message: "Busca realizada com sucesso" });
-        // } catch (error) {
-        //   console.log(error);
-        //   res.status(400).json({ message: "Erro na busca de usuários" });
-        // }
 
         // Lidaremos com promessas
         try {
@@ -70,9 +17,13 @@ const userController = {
 
             }
             );
-            console.log(users);
+
+            // Retornando para a rota de index do usuário, com uma mensagem
+            res.status(200).json({data: users, message: "Busca realizada com sucesso!"});
+
         } catch (error) {
-            console.log(error)
+            console.log(error);
+            res.status(400).json({message: "Erro na busca dos usuários!"});
         }
 
     },
