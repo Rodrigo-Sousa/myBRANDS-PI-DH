@@ -63,6 +63,46 @@ const userController = {
         }
     },
     update: async (req, res) => {
+        // Realizando a validação
+        if(!name && !email && !senha && !birthdate && !cpf && !picture && !phone && !celphone && !bredIn && !changedIn){
+            throw Error ("Nenhum dado para atualizar.");
+        }
+        let query = "UPDATE users SET "
+            if(name) query += "name = :name";
+            if(email) {
+                if(name) query += ", ";
+                query += "email = :email";
+            }
+            if(senha){
+                if(name || email) query += ", ";
+                query += "senha = :senha";
+            }
+            if(birthdate){
+                if(name || email || senha) query += ", ";
+                query += "birthdate = :birthdate";
+            } 
+            if(cpf){
+                if(name || email || senha || birthdate) query += ", ";
+                query += "cpf = :cpf";
+            } 
+            if(picture){
+                if(name || email || senha || birthdate || cpf) query += ", ";
+                query += "picture = :picture";
+            } 
+            if(celphone){
+                if(name || email || senha || birthdate || cpf || picture) query += ", ";
+                query += "celphone = :celphone";
+            } 
+            if(bredIn){
+                if(name || email || senha || birthdate || cpf || picture || celphone) query += ", ";
+                query += "bredIn = :bredIn";
+            } 
+            if(changedIn){
+                if(name || email || senha || birthdate || cpf || picture || celphone || bredIn) query += ", ";
+                query += "changedIn = :changedIn";
+            } 
+
+         query += " WHERE id = :id"
         const {  name, email, senha, birthdate, cpf, picture, phone, celphone, bredIn, changedIn} = req.body;
         const { id } = req.params;
         try {
