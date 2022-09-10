@@ -8,7 +8,7 @@ const product = database.define("Product", {
     // Estrutura do BD. O Modelo das nossas entidades no Back End
     id: {
         // Recebendo algumas chaves. Type: é o tipo do dado
-        type: Sequelize.DataTypes.INET.UNSIGNED,
+        type: Sequelize.DataTypes.INTEGER.UNSIGNED,
         // Auto incremento
         autoIncrement: true,
         // Chave primaria

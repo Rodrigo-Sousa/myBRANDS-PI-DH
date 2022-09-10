@@ -5,6 +5,9 @@ const productsJson = fs.readFileSync(path.join(__dirname, "..", "data", "product
 const products = JSON.parse(productsJson);
 // importando o sequelize para dentro do arquivo
 const db = require("../config/sequelize");
+// Chamando o modelo do product
+const Product = require("../models/Product");
+
 const { Op } = require("sequelize");
 const sequelize = require("sequelize");
 const ProdutoController = {
@@ -13,13 +16,18 @@ const ProdutoController = {
     index: async (req, res) => {
         // Lidaremos com promessas
         try {
-            const products = await db.query(
-                // Recebe 2 parâmetros, uma string e o segundo um objeto
-                "SELECT * FROM products;", {
-                type: sequelize.QueryTypes.SELECT,
+            // Não utilizaremos por enquanto esta parte{
+            // const products = await db.query(
+            //     // Recebe 2 parâmetros, uma string e o segundo um objeto
+            //     "SELECT * FROM products;", {
+            //     type: sequelize.QueryTypes.SELECT,
 
-            }
-            );
+            // }
+            // );
+        // } não utilizaremos
+
+        // Fazendo um index sem o filtro. Busca por todos os usuários
+        const products = await products.findAll();
             console.log(products);
             // Retornando para a rota de index do produtos, com uma mensagem
             res.status(200).json({ data: products, menssage: "Listado todos os produtos" });
