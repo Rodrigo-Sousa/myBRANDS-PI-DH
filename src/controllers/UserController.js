@@ -33,20 +33,28 @@ const userController = {
         const {id} = req.params;
         try{
 
-            const users = await db.query(`SELECT * FROM users WHERE id = ${id}`,{
+            const users = await db.query("SELECT * FROM users WHERE id = :id",{
+                replacements: {
+                    id,
+                  },
                 type: sequelize.QueryTypes.SELECT,
             });
-            // Validando o retorno pro usuário
-            if(users.length >0 ){
-                // Mensagem de retorno
+            console.log(users);
+            if (users.length === 0) {
+                //Faz o código parar nessa linha
+                //E cai no catch
+                throw Error("USER_NOT_FOUND");
+              }
+            // Mensagem de retorno
                 res.status(200).json({data: users[0]});
-            }else{
-                res.status(400).json({data:{}, message:"Nenhum usuário encontrado"});
-            }
             
         }catch(error){
             console.log(error);
-            res.status(400).json({message:"Erro ao encontrar o usuário!"});
+            if(error.message === "USER_NOT_FOUND"){
+                res.status(400).json({data:{}, message:"Nenhum usuário encontrado"});
+            }else{
+                res.status(400).json({message:"Erro ao encontrar o usuário!"});
+            }
         }
     },
     store: async (req, res) => {
