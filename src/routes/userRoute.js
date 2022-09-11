@@ -16,10 +16,11 @@ router.get("/user-data", UserController.personal);
 router.get("/registration", isGuest, UserController.register);
 
 router.get("/:id", userController.show);
-// router.post("/", userController.store);
-// router.put("/:id", userController.update);
-// router.patch("/:id", userController.update);
-// router.delete("/:id", userController.destroy);
+router.get("/:id", userController.show);
+router.post("/", userController.store);
+router.put("/:id", userController.update);
+router.patch("/:id", userController.update);
+router.delete("/:id", userController.destroy);
 
 
 router.post("/login-user", isGuest, AuthController.authUser);
