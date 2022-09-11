@@ -37,7 +37,7 @@ app.use((req, res, next) => { next(); });
 // Aplicação de rotas
 app.use("/", homePageRoute);
 app.use("/", admRoute);
-app.use("/", userRoute);
+// app.use("/", userRoute);
 // app.use("/", productRoute);
 
 app.use("/user", userRoute);
