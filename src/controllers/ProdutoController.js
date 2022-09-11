@@ -274,9 +274,7 @@ const ProdutoController = {
             return res.status(404).render("not-found")
 
         }
-    }
-
-    ,
+    },
     detailAmd: (req, res) => {
         return res.render("brand-detail-amd", { title: "AMD | MyBrand's" })
     },
