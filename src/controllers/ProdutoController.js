@@ -7,7 +7,7 @@ const products = JSON.parse(productsJson);
 const db = require("../config/sequelize");
 // Chamando o modelo do product
 const Product = require("../models/Product");
-
+// Utilizando o operador do sequelize like, <>,<=,>= etc
 const { Op } = require("sequelize");
 const sequelize = require("sequelize");
 const ProdutoController = {
@@ -16,18 +16,8 @@ const ProdutoController = {
     index: async (req, res) => {
         // Lidaremos com promessas
         try {
-            // Não utilizaremos por enquanto esta parte{
-            // const products = await db.query(
-            //     // Recebe 2 parâmetros, uma string e o segundo um objeto
-            //     "SELECT * FROM products;", {
-            //     type: sequelize.QueryTypes.SELECT,
-
-            // }
-            // );
-        // } não utilizaremos
-
         // Fazendo um index sem o filtro. Busca por todos os usuários
-        const products = await products.findAll();
+        const products = await Product.findAll();
             console.log(products);
             // Retornando para a rota de index do produtos, com uma mensagem
             res.status(200).json({ data: products, menssage: "Listado todos os produtos" });
@@ -43,13 +33,13 @@ const ProdutoController = {
         const { id } = req.params;
         try {
 
-            const users = await db.query(`SELECT * FROM products WHERE id = ${id}`, {
+            const product = await db.query(`SELECT * FROM products WHERE id = ${id}`, {
                 type: sequelize.QueryTypes.SELECT,
             });
             // Validando o retorno pro usuário
-            if (users.length > 0) {
+            if (product.length > 0) {
                 // Mensagem de retorno
-                res.status(200).json({ data: users[0] });
+                res.status(200).json({ data: products[0] });
             } else {
                 res.status(400).json({ data: {}, message: "Nenhum produto encontrado" });
             }
@@ -59,35 +49,6 @@ const ProdutoController = {
             res.status(400).json({ message: "Erro ao encontrar o produto!" });
         }
     },
-
-    //     // Id o usuário que iremos buscar
-    //     const { id } = req.params;
-    //     try {
-
-    //         const products = await db.query("SELECT * FROM products WHERE id = :id", {
-    //             replacements: {
-    //                 id,
-    //             },
-    //             type: sequelize.QueryTypes.SELECT,
-    //         });
-    //         console.log(products);
-    //         if (products.length === 0) {
-    //             //Faz o código parar nessa linha
-    //             //E cai no catch
-    //             throw Error("USER_NOT_FOUND");
-    //         }
-    //         // Mensagem de retorno
-    //         res.status(200).json({ data: users[0] });
-
-    //     } catch (error) {
-    //         console.log(error);
-    //         if (error.message === "USER_NOT_FOUND") {
-    //             res.status(400).json({ data: {}, message: "Nenhum produto encontrado" });
-    //         } else {
-    //             res.status(400).json({ message: "Erro ao encontrar o produto!" });
-    //         }
-    //     }
-    // },
     store: async (req, res) => {
         const { name, email, senha, birthdate, cpf, picture, phone, celphone, bredIn, changedIn } = req.body;
         try {

@@ -4,7 +4,7 @@ const database = require("../config/sequelize");
 const Sequelize = require("sequelize");
 
 // Criando a variável do produto, com a definição do que ele será
-const product = database.define("Product", {
+const product = database.define("product", {
     // Estrutura do BD. O Modelo das nossas entidades no Back End
     id: {
         // Recebendo algumas chaves. Type: é o tipo do dado
