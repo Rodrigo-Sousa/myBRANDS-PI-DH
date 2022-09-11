@@ -11,7 +11,7 @@ router.patch("/:id", ProdutoController.update);
 router.delete("/:id", ProdutoController.destroy);
 
 router.get("/cart-shopping", ProdutoController.cart);
-router.get("/product-listing", ProdutoController.listing);
+router.get("/product", ProdutoController.listing);
 router.get("/product-detail/:id", ProdutoController.detail);
 router.get("/brand-detail-amd", ProdutoController.detailAmd);
 router.get("/brand-detail-asus", ProdutoController.detailAsus);
