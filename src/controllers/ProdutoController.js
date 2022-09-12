@@ -13,9 +13,9 @@ const ProdutoController = {
         console.log(marca)
         var produtos = products.filter((value)=> {
             if(value.marca === marca) { 
-            return True}
+            return true}
         }) 
-        return res.render("product-listing", {title: "Lista de produtos"});
+        return res.render("product-listing", {title: "Lista de produtos",produtos:produtos});
     },
     detail: (req, res) => {
        const { id } = req.params
