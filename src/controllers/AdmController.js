@@ -137,23 +137,36 @@ const AdmController = {
       return res.render("error", { title: "Ops!", message: "Produto não encontrado" });
     }
   },
-  delete: (req, res) => {
+  delete: async (req, res) => {
     const { id } = req.params;
-    const productResult = products.find((product) => product.id === parseInt(id));
-    if (!productResult) {
+    // const { name, category, brand, price, inventory, available, urlImage } = req.body;
+    try {
+      const product = await Product.findOne({
+        // Buscando um parâmetro
+        where: {
+          id: id,
+        },
+      });
+      console.log(product);
+      return res.render("product-delete", { title: "Deletar produto", product: product});
+    } catch (error) {
+      console.log(error);
       return res.render("error", { title: "Ops!", message: "Produto não encontrado" });
     }
-    return res.render("product-delete", { title: "Deletar produto", product: productResult });
   },
-  destroy: (req, res) => {
+  destroy: async (req, res) => {
     const { id } = req.params;
-    const result = products.findIndex((product) => product.id === parseInt(id));
-    if (result === -1) {
+    try {
+      const product = await Product.destroy({ where: { id } });
+      console.log(product);
+      // res.status(200).json({ message: "Produto deletado com sucesso!" });
+      return res.render("success", { title: "Produto deletado", product: product, message: "Produto deletado com sucesso!" });
+    } catch (error) {
+      console.log(error);
+      // res.status(400).json({ message: "Erro ao deletar o produto" });
       return res.render("error", { title: "Ops!", message: "Produto não encontrado" });
     }
-    products.splice(result, 1)
-    return res.render("success", { title: "Produto deletado", message: "Produto deletado com sucesso!" });
-  },
+  }
 };
 
 module.exports = AdmController;

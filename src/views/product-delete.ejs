@@ -7,11 +7,11 @@
       <h1 class="title-delete-product-adm">Deletar Produto</h1>
       <% if(locals.product) { %> 
         <div>
-          <img src="../../img/03-details-product/01-gigabyte-radeon-rx-550-gaming-oc-2g244383_1_Normal_Extra-.jpg" alt="imagem do produto"><br>
-          <span>Modelo: <%= product.modelo %> </span><br>
-          <span>Marca: <%= product.marca %> </span><br>
-          <span>Categoria: <%= product.categoria %> </span><br>
-          <span>Estoque: <%= product.estoque %> </span>
+          <img src="<%= product.urlImage %>"><br>
+          <span>Modelo: <%= product.name %> </span><br>
+          <span>Marca: <%= product.brand %> </span><br>
+          <span>Categoria: <%= product.category %> </span><br>
+          <span>Estoque: <%= product.inventory %> </span>
         </div>
         <form action="/product-adm/product-delete/<%= product.id %>?_method=delete" method="post">
           <h2 class="question-delete-product-adm">Deseja deletar esse produto?</h2>
