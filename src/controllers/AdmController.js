@@ -79,11 +79,24 @@ const AdmController = {
   createProduct: (req, res) => {
     return res.render("product-create", { title: "Cadastrar produto" });
   },
-  store: (req, res) => {
-    const { modelo, marca, categoria, estoque } = req.body;
-    const newProduct = { id: products.length + 1, modelo, marca, categoria, estoque, };
-    products.push(newProduct)
-    return res.render("success", { title: "Sucesso!", message: "Produto criado com sucesso!" });
+  store: async (req, res) => {
+    const { name, category, brand, price, inventory, available, urlImage } = req.body;
+    try {
+      const product = await Product.create({
+        name,
+        category,
+        brand,
+        price,
+        inventory,
+        available,
+        urlImage
+      });
+      console.log(product);
+      return res.render("success", { title: "Sucesso!", newProduct: product, message: "Produto criado com sucesso!" });
+    } catch (error) {
+      console.log(error);
+      res.status(400).json({ message: "Erro ao cadastrar o produto" });
+    }
   },
   edit: async (req, res) => {
     const { id } = req.params;
@@ -148,7 +161,7 @@ const AdmController = {
         },
       });
       console.log(product);
-      return res.render("product-delete", { title: "Deletar produto", product: product});
+      return res.render("product-delete", { title: "Deletar produto", product: product });
     } catch (error) {
       console.log(error);
       return res.render("error", { title: "Ops!", message: "Produto não encontrado" });

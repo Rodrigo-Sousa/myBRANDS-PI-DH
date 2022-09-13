@@ -19,8 +19,10 @@
       <!-- <div class="div-search">
         <input type="text" id="txt-search" placeholder="Buscar Produto..." />
       </div> -->
-      <button type="button" class="btn btn-primary"> <a class="link-product-adm" href="./product-adm/product-create">Novo Produto</a> </button>
       <% if (products.length> 0) { %>
+        <button type="button" class="btn btn-primary"><a class="link-product-adm"
+          href="/product-adm/product-create/">Novo Produto</a></button>
+
         <table class="records">
           <thead>
             <tr>
@@ -90,4 +92,4 @@
             </div>
     </main>
 
-<%- include("./partials/footer") %>
+    <%- include("./partials/footer") %>
