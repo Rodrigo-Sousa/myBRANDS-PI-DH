@@ -11,6 +11,9 @@ const admRoute = require("./src/routes/admRoute");
 const userRoute = require("./src/routes/userRoute");
 const productRoute = require("./src/routes/productRoute");
 
+// Rota dos modelos
+// const Product = require("./src/models/Product");
+
 // Configura pasta estática para acesso externo
 app.use(express.static(__dirname + "/public"));
 
@@ -39,9 +42,17 @@ app.use((req, res, next) => { next(); });
 // Aplicação de rotas
 app.use("/", homePageRoute);
 app.use("/", admRoute);
-app.use("/", userRoute);
-app.use("/", productRoute);
+// app.use("/", userRoute);
+// app.use("/", productRoute);
 
+app.use("/user", userRoute);
+app.use("/product", productRoute);
+// app.use("/product", productRoute, function(req,res){
+//     Product.findAll().then(function(products){
+//         res.render('product-adm', {products: products});
+//     });
+    
+// });
 // Error not found
 app.use( (req, res) => { return res.status(404).render('not-found') });
 
