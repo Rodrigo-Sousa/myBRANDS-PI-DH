@@ -17,7 +17,6 @@ const product = database.define("product", {
     name: {
         type: Sequelize.DataTypes.STRING(250),
         allowNull: false,
-        allowNull: false,
     },
     category: {
         type: Sequelize.DataTypes.STRING(50),

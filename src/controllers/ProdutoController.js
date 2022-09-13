@@ -147,7 +147,8 @@ const ProdutoController = {
             const products = await Product.findAll();
             console.log(products);
             // Retornando para a rota de index do produtos, com uma mensagem
-            res.status(200).json({ data: products, menssage: "Listado todos os produtos" });
+            // res.status(200).json({ data: products, menssage: "Listado todos os produtos" });
+            res.render("home-page",{products: products, title: "home"});
         } catch (error) {
             console.log(error)
         }
@@ -156,19 +157,20 @@ const ProdutoController = {
     show: async (req, res) => {
         const { id } = req.params;
         try {
-            const products = await Product.findOne({
+            const product = await Product.findOne({
                 // Buscando um parâmetro
                 where: {
                     id: id,
                 },
                 // include: RequestsProducts,
             });
-            console.log(products);
+            // console.log(product);
             // if (users.length === 0) {
             //   // Faz o código parar
             //   throw Error("USER_NOT_FOUND");
             // }
-            res.status(200).json({ data: products });
+            // res.status(200).json({ data: products });
+            return res.render("product-detail", { title: product.name, produto: product });
 
         } catch (error) {
             console.log(error);
