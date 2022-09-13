@@ -2,7 +2,7 @@
 const fs = require("fs");
 const path = require("path");
 const productsJson = fs.readFileSync(path.join(__dirname, "..", "data", "products.json"), "utf-8")
-const products = JSON.parse(productsJson);
+const products = require('../models/Product');
 
 const ProdutoController = {
     cart: (req, res) => {
@@ -10,7 +10,6 @@ const ProdutoController = {
     },
     index: (req, res) => {
         const {marca} = req.query
-        console.log(marca)
         var produtos = products.filter((value)=> {
             if(value.marca === marca) { 
             return true}
