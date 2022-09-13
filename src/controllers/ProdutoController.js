@@ -1,8 +1,12 @@
 
 const fs = require("fs");
-const path = require("path");
-const productsJson = fs.readFileSync(path.join(__dirname, "..", "data", "products.json"), "utf-8")
 const products = require('../models/Product');
+
+// Chamando o modelo do product
+const products = require("../models/Product");
+// Utilizando o operador do sequelize like, <>,<=,>= etc
+const { Op } = require("sequelize");
+const sequelize = require("sequelize");
 
 const ProdutoController = {
     cart: (req, res) => {
