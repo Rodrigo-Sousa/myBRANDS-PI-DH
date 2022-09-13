@@ -2,7 +2,7 @@
   <!-- Tag de navegação -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <!-- link para voltar para a página home do site -->
-    <a class="navbar-brand" href="../">
+    <a class="navbar-brand" href="/product-adm">
       <!-- Imagem de logo do site -->
       <img class="brand-logo" src="/img/myBrands-logo.png" width="130" height="50" alt="MyBrand's Logo">
     </a>
@@ -15,11 +15,6 @@
     <!-- Div do menu de navegação -->
     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
       <ul class="navbar-nav table-header">
-        <li>
-          <a class="link-adm" href="./home-adm">
-            <h3 class="title-adm">Painel administrativo</h3>
-          </a>
-        </li>
         <% if (locals.user && locals.admin) { %>
           <li>
             <a class="link-adm" href="/product-adm">Adicionar Produtos</a>
@@ -37,7 +32,6 @@
                 alt="MyBrand's Logo">
             </a>
             <div class="dropdown-menu dropdown-departament" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item item-departamento" href="#">Editar perfil</a>
               <button class="btn btn-danger" type="submit">Sair</button>
             </div>
           </li>

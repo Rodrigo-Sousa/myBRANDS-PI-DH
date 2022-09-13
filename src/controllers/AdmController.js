@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const bcrypt = require("../helpers/bcrypt");
+const Product = require("../models/Product");
 const products = [
   {
     id: 1,
@@ -30,10 +31,27 @@ const AdmController = {
     return res.render("login-adm", { title: "Login" });
   },
   homeAdm: (req, res) => {
-    return res.render("home-adm", { title: "Painel-Adm", user: req.cookies.user, admin: req.cookies.admin});
+    return res.render("home-adm", { title: "Painel-Adm", user: req.cookies.user, admin: req.cookies.admin });
   },
-  adm: (req, res) => {
-    return res.render("product-adm", { title: "Produtos-Adm", products, user: req.cookies.user, admin: req.cookies.admin });
+  adm: async (req, res) => {
+    // Lidaremos com promessas
+    try {
+      // const products = await db.query(
+      //     // Recebe 2 parâmetros, uma string e o segundo um objeto
+      //     "SELECT * FROM products;",{
+      //         type: sequelize.QueryTypes.SELECT,
+
+      //     }
+      // );
+      const products = await Product.findAll();
+      console.log(products);
+      // Retornando para a rota de index do produtos, com uma mensagem
+      // res.status(200).json({ data: products, menssage: "Listado todos os produtos" });
+      return res.render("product-adm", { title: "Produtos-Adm", products: products, user: req.cookies.user, admin: req.cookies.admin });
+    } catch (error) {
+      console.log(error)
+    }
+
   },
   viewProduct: (req, res) => {
     const { id } = req.params;
@@ -69,14 +87,14 @@ const AdmController = {
     }
 
     const updateProduct = productResult;
-    if(modelo) updateProduct.modelo = modelo;
-    if(marca) updateProduct.marca = marca;
-    if(categoria) updateProduct.categoria = categoria;
-    if(estoque) updateProduct.estoque = estoque;
+    if (modelo) updateProduct.modelo = modelo;
+    if (marca) updateProduct.marca = marca;
+    if (categoria) updateProduct.categoria = categoria;
+    if (estoque) updateProduct.estoque = estoque;
 
-    return res.render("success", { title: "Produto atualizado", message: `Produto da marca ${updateProduct.marca} foi atualizado`,});
+    return res.render("success", { title: "Produto atualizado", message: `Produto da marca ${updateProduct.marca} foi atualizado`, });
   },
-  delete: (req,res) => {
+  delete: (req, res) => {
     const { id } = req.params;
     const productResult = products.find((product) => product.id === parseInt(id));
     if (!productResult) {
@@ -87,7 +105,7 @@ const AdmController = {
   destroy: (req, res) => {
     const { id } = req.params;
     const result = products.findIndex((product) => product.id === parseInt(id));
-    if(result === -1){
+    if (result === -1) {
       return res.render("error", { title: "Ops!", message: "Produto não encontrado" });
     }
     products.splice(result, 1)

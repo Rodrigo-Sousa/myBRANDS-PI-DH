@@ -28,7 +28,7 @@
                 <!-- inserindo a imagem com a tag produto, ocupando 7 colunas -->
                 <figure class="col-md-7">
                     <!-- adicionando a imagem. **Inserindo o tamanho proisório na imagem aqui no HTML** -->
-                    <img class="product-image" src="<%=produto.urlImg%>" alt="Imagem da placa mãe Aourus B550M" width="484px" height="484px">
+                    <img class="product-image" src="<%=produto.urlImage%>" alt="Imagem da placa mãe Aourus B550M" width="484px" height="484px">
                 </figure>
 
                 <!-- Sessões do nosso artigo. Aqui, a nossa coluna irá ocupar 5 -->
@@ -36,7 +36,7 @@
                     <!-- Artigo que iremos separar o preço, maiores detalhes, etc -->
                     <article class="content-product">
                         <!-- Título do produto -->
-                        <h1><%= produto.modelo %> </h1>
+                        <h1><%= produto.category %> </h1>
                         <p id="code-product"><%=produto.codigo%></p>
                     </article>
                     <!-- Artigo com o preço do produto -->
@@ -44,7 +44,7 @@
 
                         <!-- Preço em destaque -->
                         <strong>
-                            R$ <%= 649,00 %>.
+                            R$ <%= produto.price %>.
                             <!-- Deixando a informação em uma linha, quebrando ela de forma blocante -->
                             <span class="d-block">à vista com 15% de desconto no boleto ou pix</span>
                         </strong>

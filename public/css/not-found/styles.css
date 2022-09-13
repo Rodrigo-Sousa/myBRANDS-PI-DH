@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    
+    width: 100%;
 }
 
 
@@ -13,7 +13,7 @@ h1 {
     font-family: 'arial black';
 }
 
-.not-found{
+img{
     width:35%;
 }
 
