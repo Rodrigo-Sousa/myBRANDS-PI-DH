@@ -53,13 +53,35 @@ const AdmController = {
     }
 
   },
-  viewProduct: (req, res) => {
+  viewProduct: async (req, res) => {
+    // const { id } = req.params;
+    // const productResult = products.find((product) => product.id === parseInt(id));
+    // if (!productResult) {
+    //   return res.render("error", { title: "Ops!", message: "Produto não encontrado", });
+    // }
+    // return res.render("product-detail-adm", { title: "Visualizar produto", product: productResult });
+
     const { id } = req.params;
-    const productResult = products.find((product) => product.id === parseInt(id));
-    if (!productResult) {
-      return res.render("error", { title: "Ops!", message: "Produto não encontrado", });
+    try {
+      const product = await Product.findOne({
+        // Buscando um parâmetro
+        where: {
+          id: id,
+        },
+        // include: RequestsProducts,
+      });
+      return res.render("product-detail-adm", { title: "Visualizar produto", product: product });
+
+    } catch (error) {
+      console.log(error);
+      if (error.menssage === "PRODUCT_NOT_FOUND") {
+        return res.render("error", { title: "Ops!", message: "Produto não encontrado", });
+      } else {
+        res.status(400).json({ message: "Erro ao encontrar produto" });
+      }
+
     }
-    return res.render("product-detail-adm", { title: "Visualizar produto", product: productResult });
+
   },
   createProduct: (req, res) => {
     return res.render("product-create", { title: "Cadastrar produto" });
