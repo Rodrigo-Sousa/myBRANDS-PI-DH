@@ -296,8 +296,11 @@ const ProdutoController = {
     detailGeil: (req, res) => {
         return res.render("brand-detail-geil", { title: "GEIL | MyBrand's" })
     },
-    detailIntel: (req, res) => {
-        return res.render("brand-detail-intel", { title: "Intel | MyBrand's" })
+    detailIntel: (req,res) => {
+        return res.render("brand-detail-intel", {title: "Intel | MyBrand's"})
+    },
+    checkout: (req,res) => {
+        return res.render("Checkout-page", {title: "Página de pagamento"})
     }
 }; 
 
