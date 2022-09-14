@@ -256,15 +256,15 @@ const ProdutoController = {
     cart: (req, res) => {
         return res.render("cart-shopping", { title: "Carrinho de compras" });
     },
-    index: (req, res) => {
-        const {marca} = req.query
-        console.log(marca)
-        var produtos = products.filter((value)=> {
-            if(value.marca === marca) { 
-            return true}
-        }) 
-        return res.render("product-listing", {title: "Lista de produtos",produtos:produtos});
-    },
+    // index: (req, res) => {
+    //     const {marca} = req.query
+    //     console.log(marca)
+    //     var produtos = products.filter((value)=> {
+    //         if(value.marca === marca) { 
+    //         return true}
+    //     }) 
+    //     return res.render("product-listing", {title: "Lista de produtos", produtos:produtos});
+    // },
     detail: (req, res) => {
         const { id } = req.params
         let produtoEncontrado = null
@@ -296,8 +296,11 @@ const ProdutoController = {
     detailGeil: (req, res) => {
         return res.render("brand-detail-geil", { title: "GEIL | MyBrand's" })
     },
-    detailIntel: (req, res) => {
-        return res.render("brand-detail-intel", { title: "Intel | MyBrand's" })
+    detailIntel: (req,res) => {
+        return res.render("brand-detail-intel", {title: "Intel | MyBrand's"})
+    },
+    checkout: (req,res) => {
+        return res.render("Checkout-page", {title: "Página de pagamento"})
     }
 }; 
 
