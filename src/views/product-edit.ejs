@@ -10,10 +10,13 @@
     <h2><%= error.message %> </h2>
   <% } %>
     <form action="/product-adm/product-edit/<%= product.id %>?_method=put" method="POST">
-      <input value="<%= product.modelo %>" class="form-control" type="text" name="modelo" placeholder="Modelo">
-      <input value="<%= product.marca %>" class="form-control" type="text" name="marca" placeholder="Marca">
-      <input value="<%= product.categoria %>" class="form-control" type="text" name="categoria" placeholder="Categoria">
-      <input value="<%= product.estoque %>" class="form-control" type="number" name="estoque" placeholder="Estoque">
+      <input value="<%= product.name %>" class="form-control" type="text" name="name" placeholder="Name">
+      <input value="<%= product.category %>" class="form-control" type="text" name="category" placeholder="Categoria">
+      <input value="<%= product.brand %>" class="form-control" type="text" name="brand" placeholder="Marca">
+      <input value="<%= product.price %>" class="form-control" type="number" name="price" placeholder="Preço">
+      <input value="<%= product.inventory %>" class="form-control" type="number" name="inventory" placeholder="Estoque">
+      <input value="<%= product.available %>" class="form-control" type="number" name="available" placeholder="Disponível">
+      <input value="<%= product.urlImage %>" class="form-control" type="text" name="urlImage" placeholder="URL da imagem">
       <button type="submit" class="btn btn-success button-update-product-adm">Atualizar</button>
     </form>
 

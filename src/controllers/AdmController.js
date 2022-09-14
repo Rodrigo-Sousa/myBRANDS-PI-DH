@@ -2,29 +2,29 @@ const fs = require("fs");
 const path = require("path");
 const bcrypt = require("../helpers/bcrypt");
 const Product = require("../models/Product");
-const products = [
-  {
-    id: 1,
-    modelo: "AMD Radeon RX 550, 4GB, Preto",
-    marca: "AMD",
-    categoria: "Placa de vídeo",
-    estoque: 12,
-  },
-  {
-    id: 2,
-    modelo: "Redragon Cobra, Chroma RGB, 12400DPI, 7 Botões, Preto",
-    marca: "Redragon",
-    categoria: "Mouse Gamer",
-    estoque: 15,
-  },
-  {
-    id: 3,
-    modelo: "Cloud Stinger, Drivers 50mm, Múltiplas Plataformas, P2 e P3",
-    marca: "HyperX",
-    categoria: "Headset Gamer",
-    estoque: 18,
-  },
-];
+// const products = [
+//   {
+//     id: 1,
+//     modelo: "AMD Radeon RX 550, 4GB, Preto",
+//     marca: "AMD",
+//     categoria: "Placa de vídeo",
+//     estoque: 12,
+//   },
+//   {
+//     id: 2,
+//     modelo: "Redragon Cobra, Chroma RGB, 12400DPI, 7 Botões, Preto",
+//     marca: "Redragon",
+//     categoria: "Mouse Gamer",
+//     estoque: 15,
+//   },
+//   {
+//     id: 3,
+//     modelo: "Cloud Stinger, Drivers 50mm, Múltiplas Plataformas, P2 e P3",
+//     marca: "HyperX",
+//     categoria: "Headset Gamer",
+//     estoque: 18,
+//   },
+// ];
 
 const AdmController = {
   login: (req, res) => {
@@ -53,64 +53,133 @@ const AdmController = {
     }
 
   },
-  viewProduct: (req, res) => {
+  viewProduct: async (req, res) => {
     const { id } = req.params;
-    const productResult = products.find((product) => product.id === parseInt(id));
-    if (!productResult) {
-      return res.render("error", { title: "Ops!", message: "Produto não encontrado", });
+    try {
+      const product = await Product.findOne({
+        // Buscando um parâmetro
+        where: {
+          id: id,
+        },
+        // include: RequestsProducts,
+      });
+      return res.render("product-detail-adm", { title: "Visualizar produto", product: product });
+
+    } catch (error) {
+      console.log(error);
+      if (error.menssage === "PRODUCT_NOT_FOUND") {
+        return res.render("error", { title: "Ops!", message: "Produto não encontrado", });
+      } else {
+        res.status(400).json({ message: "Erro ao encontrar produto" });
+      }
+
     }
-    return res.render("product-detail-adm", { title: "Visualizar produto", product: productResult });
+
   },
   createProduct: (req, res) => {
     return res.render("product-create", { title: "Cadastrar produto" });
   },
-  store: (req, res) => {
-    const { modelo, marca, categoria, estoque } = req.body;
-    const newProduct = { id: products.length + 1, modelo, marca, categoria, estoque, };
-    products.push(newProduct)
-    return res.render("success", { title: "Sucesso!", message: "Produto criado com sucesso!" });
+  store: async (req, res) => {
+    const { name, category, brand, price, inventory, available, urlImage } = req.body;
+    try {
+      const product = await Product.create({
+        name,
+        category,
+        brand,
+        price,
+        inventory,
+        available,
+        urlImage
+      });
+      console.log(product);
+      return res.render("success", { title: "Sucesso!", newProduct: product, message: "Produto criado com sucesso!" });
+    } catch (error) {
+      console.log(error);
+      res.status(400).json({ message: "Erro ao cadastrar o produto" });
+    }
   },
-  edit: (req, res) => {
+  edit: async (req, res) => {
     const { id } = req.params;
-    const productResult = products.find((product) => product.id === parseInt(id));
-    if (!productResult) {
+    // const { name, category, brand, price, inventory, available, urlImage } = req.body;
+    try {
+      // Verificando os dados
+      // if (name && !category && !brand && !price && !inventory && !available && !urlImage) {
+      //   throw Error("Nenhum dado para atualizar");
+      // }
+      const product = await Product.findOne({
+        // Buscando um parâmetro
+        where: {
+          id: id,
+        },
+        // include: RequestsProducts,
+      });
+      console.log(product);
+      return res.render("product-edit", { title: "Editar produto", product: product });
+    } catch (error) {
+      console.log(error);
       return res.render("error", { title: "Ops!", message: "Produto não encontrado!" });
     }
-    return res.render("product-edit", { title: "Editar produto", product: productResult });
   },
-  update: (req, res) => {
-    const { id } = req.params;
-    const { modelo, marca, categoria, estoque } = req.body;
-    const productResult = products.find((product) => product.id === parseInt(id));
-    if (!productResult) {
-      return res.render("error", { title: "Ops!", message: "Produto não encontrado" });
-    }
+  update: async (req, res) => {
 
-    const updateProduct = productResult;
-    if (modelo) updateProduct.modelo = modelo;
-    if (marca) updateProduct.marca = marca;
-    if (categoria) updateProduct.categoria = categoria;
-    if (estoque) updateProduct.estoque = estoque;
-
-    return res.render("success", { title: "Produto atualizado", message: `Produto da marca ${updateProduct.marca} foi atualizado`, });
-  },
-  delete: (req, res) => {
+    const { name, category, brand, price, inventory, available, urlImage } = req.body;
     const { id } = req.params;
-    const productResult = products.find((product) => product.id === parseInt(id));
-    if (!productResult) {
+    try {
+      // Verificando os dados
+      if (name && !category && !brand && !price && !inventory && !available && !urlImage) {
+        throw Error("Nenhum dado para atualizar");
+      }
+      const product = await Product.update(
+        {
+          name,
+          category,
+          brand,
+          price,
+          inventory,
+          available,
+          urlImage
+        },
+        {
+          where: { id },
+        }
+      );
+      console.log(product);
+      return res.render("success", { title: "Produto atualizado", message: `Produto da marca ${name} foi atualizado`, });
+    } catch (error) {
+      console.log(error);
       return res.render("error", { title: "Ops!", message: "Produto não encontrado" });
     }
-    return res.render("product-delete", { title: "Deletar produto", product: productResult });
   },
-  destroy: (req, res) => {
+  delete: async (req, res) => {
     const { id } = req.params;
-    const result = products.findIndex((product) => product.id === parseInt(id));
-    if (result === -1) {
+    // const { name, category, brand, price, inventory, available, urlImage } = req.body;
+    try {
+      const product = await Product.findOne({
+        // Buscando um parâmetro
+        where: {
+          id: id,
+        },
+      });
+      console.log(product);
+      return res.render("product-delete", { title: "Deletar produto", product: product });
+    } catch (error) {
+      console.log(error);
       return res.render("error", { title: "Ops!", message: "Produto não encontrado" });
     }
-    products.splice(result, 1)
-    return res.render("success", { title: "Produto deletado", message: "Produto deletado com sucesso!" });
   },
+  destroy: async (req, res) => {
+    const { id } = req.params;
+    try {
+      const product = await Product.destroy({ where: { id } });
+      console.log(product);
+      // res.status(200).json({ message: "Produto deletado com sucesso!" });
+      return res.render("success", { title: "Produto deletado", product: product, message: "Produto deletado com sucesso!" });
+    } catch (error) {
+      console.log(error);
+      // res.status(400).json({ message: "Erro ao deletar o produto" });
+      return res.render("error", { title: "Ops!", message: "Produto não encontrado" });
+    }
+  }
 };
 
 module.exports = AdmController;
