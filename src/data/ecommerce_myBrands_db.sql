@@ -64,7 +64,7 @@ CREATE TABLE products (
 -- Insere um ou mais produtos
 INSERT INTO products (name, category, brand, price, inventory, available, urlImage)
 VALUES 
-	("AMD Radeon RX 550, 4GB, Preto", "motherboard", "AMD", 1769.00, 12, 1,
+	("AMD Radeon RX 550, 8GB, Preto", "motherboard", "AMD", 4769.00, 12, 1,
     "https://img.terabyteshop.com.br/produto/g/placa-mae-gigabyte-b450-aorus-pro-chipset-b450-amd-am4-atx-ddr4_91015.png"),
     ("Redragon Cobra, Chroma RGB, 12400DPI, 7 Botões, Preto", "mouse", "Redragon", 1540.30, 15 ,1,
     "https://img.terabyteshop.com.br/produto/g/upgrade1277_142961.jpg"),
@@ -167,18 +167,6 @@ CREATE TABLE imagnes_products(
   FOREIGN KEY (image_products_id) REFERENCES image_products(id),
   FOREIGN KEY (product_id) REFERENCES products(id)
 );
--- Inserindo dados na tabela de image_products
-INSERT INTO image_products (urlImage) VALUES
-	("https://img.terabyteshop.com.br/produto/g/placa-mae-gigabyte-b450-aorus-pro-chipset-b450-amd-am4-atx-ddr4_91015.png"),
-    ("https://img.terabyteshop.com.br/produto/g/upgrade1277_142961.jpg"),
-    ("https://img.terabyteshop.com.br/produto/g/placa-mae-asus-tuf-gaming-x570-plus-chipset-x570-amd-am4-atx-ddr4_124480.png"),
-    ("https://img.terabyteshop.com.br/produto/g/ssd-kingston-a400-120gb-sa400s37120g-sata-iii-leitura-500mbs-gravacao-320mbs_58311.jpg"),
-    ("https://img.terabyteshop.com.br/produto/g/placa-de-video-gigabyte-geforce-rtx-3060-eagle-oc-12g-lhr-12gb-gddr6-dlss-ray-tracing-gv-n3060eagle-oc-12gd_142662.png"),
-    ("https://img.terabyteshop.com.br/produto/g/placa-de-video-powercolor-amd-radeon-rx-6400-itx-4gb-gddr6-fsr-ray-tracing-axrx-6400-4gbd6-dh_146452.png"),
-    ("https://img.terabyteshop.com.br/produto/g/ssd-geil-zenith-z3-256gb-sata-iii-leitura-520mbs-e-gravacao-470mbs-gz25z3-256gp_122765.png"),
-    ("https://img.terabyteshop.com.br/produto/g/placa-mae-gigabyte-b450-aorus-pro-chipset-b450-amd-am4-atx-ddr4_91015.png");
-
--- Fazendo o vínculo entre as tabelas de imagens e a de produtos
 INSERT INTO imagnes_products (image_products_id, product_id)
 VALUES 
 	(1, 1),
@@ -192,5 +180,14 @@ VALUES
     
 SELECT * FROM imagnes_products;
 
+INSERT INTO image_products (urlImage) VALUES
+	("https://img.terabyteshop.com.br/produto/g/placa-mae-gigabyte-b450-aorus-pro-chipset-b450-amd-am4-atx-ddr4_91015.png"),
+    ("https://img.terabyteshop.com.br/produto/g/upgrade1277_142961.jpg"),
+    ("https://img.terabyteshop.com.br/produto/g/placa-mae-asus-tuf-gaming-x570-plus-chipset-x570-amd-am4-atx-ddr4_124480.png"),
+    ("https://img.terabyteshop.com.br/produto/g/ssd-kingston-a400-120gb-sa400s37120g-sata-iii-leitura-500mbs-gravacao-320mbs_58311.jpg"),
+    ("https://img.terabyteshop.com.br/produto/g/placa-de-video-gigabyte-geforce-rtx-3060-eagle-oc-12g-lhr-12gb-gddr6-dlss-ray-tracing-gv-n3060eagle-oc-12gd_142662.png"),
+    ("https://img.terabyteshop.com.br/produto/g/placa-de-video-powercolor-amd-radeon-rx-6400-itx-4gb-gddr6-fsr-ray-tracing-axrx-6400-4gbd6-dh_146452.png"),
+    ("https://img.terabyteshop.com.br/produto/g/ssd-geil-zenith-z3-256gb-sata-iii-leitura-520mbs-e-gravacao-470mbs-gz25z3-256gp_122765.png"),
+    ("https://img.terabyteshop.com.br/produto/g/placa-mae-gigabyte-b450-aorus-pro-chipset-b450-amd-am4-atx-ddr4_91015.png");
 
-
+SELECT * FROM PRODUCTS JOIN IMAGE_PRODUCTS ON image_products.id = products.id;

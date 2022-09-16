@@ -55,12 +55,12 @@ const authController = {
     res.cookie("user", user);
     res.cookie("admin", user.admin);
 
-    res.redirect("/home-adm");
+    res.redirect("/product-adm");
   },
   // Processamento do login usuário
   authUser: (req, res) => {
     res.clearCookie("user");
-    res.clearCookie("admin");
+    //res.clearCookie("admin");
 
     const usersJson = fs.readFileSync(path.join(__dirname, "..", "data", "users.json"), "utf-8");
     const users = JSON.parse(usersJson);
@@ -73,12 +73,12 @@ const authController = {
       }
     });
     if(!userAuth){
-      return res.render("login", { title: "Login", error: { message: "Email ou senha inválidos" }});
+      return res.render("login-user", { title: "Login-user", error: { message: "Email ou senha inválidos" }});
     }
-    const user = JSON.parse(JSON.stringify(userAuth, ["id", "nome", "admin"]));
-    req.session.email = userAuth.email
-    res.cookie("user", user);
-    res.cookie("admin", user.admin);
+    // const user = JSON.parse(JSON.stringify(userAuth, ["id", "nome", "admin"]));
+    // req.session.email = userAuth.email
+    // res.cookie("user", user);
+    // res.cookie("admin", user.admin);
 
     res.redirect("/user-data");
   },
