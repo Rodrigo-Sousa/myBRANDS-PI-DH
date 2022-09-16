@@ -164,12 +164,6 @@ const ProdutoController = {
                 },
                 // include: RequestsProducts,
             });
-            // console.log(product);
-            // if (users.length === 0) {
-            //   // Faz o código parar
-            //   throw Error("USER_NOT_FOUND");
-            // }
-            // res.status(200).json({ data: products });
             return res.render("product-detail", { title: product.name, produto: product });
 
         } catch (error) {
@@ -241,18 +235,6 @@ const ProdutoController = {
             res.status(400).json({ message: "Erro ao deletar o produto" });
         }
     },
-    // destroy: async (req, res) => {
-    //     const { id } = req.params;
-    //     try {
-    //         const products = await Product.update({ available: 1 }, { where: { id } });
-    //         console.log(products);
-    //         res.status(200).json({ message: "Produto desativado com sucesso!" });
-    //     } catch (error) {
-    //         console.log(error);
-    //         res.status(400).json({ message: "Erro ao desativar o produto" });
-    //     }
-    // },
-
     cart: (req, res) => {
         return res.render("cart-shopping", { title: "Carrinho de compras" });
     },
