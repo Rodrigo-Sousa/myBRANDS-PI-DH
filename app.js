@@ -26,6 +26,8 @@ app.use(methodOverride("_method"));
 
 // Converte requisição (body) em objeto literal
 app.use(express.json());
+
+// Converte requisição para formado que o json aceita
 app.use(express.urlencoded({ extended: false }));
 
 // Preenche a propriedade cookies do objeto request

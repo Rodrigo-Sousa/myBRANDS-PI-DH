@@ -10,7 +10,7 @@ const Product = require("../models/Product");
 // Utilizando o operador do sequelize like, <>,<=,>= etc
 const { Op } = require("sequelize");
 const sequelize = require("sequelize");
-const ProdutoController = {
+const ProdutoController = { 
 
     // Busca os pedidos que um usuário possui e listar os produtos desses pedidos
     index: async (req, res) => {
@@ -117,9 +117,15 @@ const ProdutoController = {
     cart: (req, res) => {
         return res.render("cart-shopping", { title: "Carrinho de compras" });
     },
-    listing: (req, res) => {
-        return res.render("product-listing", { title: "Lista de produtos" });
-    },
+    // index: (req, res) => {
+    //     const {marca} = req.query
+    //     console.log(marca)
+    //     var produtos = products.filter((value)=> {
+    //         if(value.marca === marca) { 
+    //         return true}
+    //     }) 
+    //     return res.render("product-listing", {title: "Lista de produtos", produtos:produtos});
+    // },
     detail: (req, res) => {
         const { id } = req.params
         let produtoEncontrado = null
@@ -137,6 +143,10 @@ const ProdutoController = {
             return res.status(404).render("not-found")
 
         }
+    }
+        ,
+    detailAmd: (req,res) => {
+        return res.render("brand-detail-amd", {title: "AMD | MyBrand's"})
     },
     detailAmd: (req, res) => {
         return res.render("brand-detail-amd", { title: "AMD | MyBrand's" })
@@ -147,9 +157,12 @@ const ProdutoController = {
     detailGeil: (req, res) => {
         return res.render("brand-detail-geil", { title: "GEIL | MyBrand's" })
     },
-    detailIntel: (req, res) => {
-        return res.render("brand-detail-intel", { title: "Intel | MyBrand's" })
+    detailIntel: (req,res) => {
+        return res.render("brand-detail-intel", {title: "Intel | MyBrand's"})
+    },
+    checkout: (req,res) => {
+        return res.render("Checkout-page", {title: "Página de pagamento"})
     }
-};
+}; 
 
 module.exports = ProdutoController;
