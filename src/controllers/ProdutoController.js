@@ -15,13 +15,7 @@ const ProdutoController = {
     index: async (req, res) => {
         // Lidaremos com promessas
         try {
-            // const products = await db.query(
-            //     // Recebe 2 parâmetros, uma string e o segundo um objeto
-            //     "SELECT * FROM products;",{
-            //         type: sequelize.QueryTypes.SELECT,
-
-            //     }
-            // );
+            
             const products = await Product.findAll();
             console.log(products);
             // Retornando para a rota de index do produtos, com uma mensagem
@@ -42,12 +36,12 @@ const ProdutoController = {
                 },
                 // include: RequestsProducts,
             });
-            // console.log(product);
-            // if (users.length === 0) {
-            //   // Faz o código parar
-            //   throw Error("USER_NOT_FOUND");
-            // }
-            // res.status(200).json({ data: products });
+        //     const {marca} = req.query
+            
+        //     var produtos = products.filter((value)=> {
+        //         if(value.marca === marca) { 
+        //  return true}
+        //         });
             return res.render("product-detail", { title: product.name, produto: product });
 
         } catch (error) {
@@ -134,15 +128,15 @@ const ProdutoController = {
     cart: (req, res) => {
         return res.render("cart-shopping", { title: "Carrinho de compras" });
     },
-    index: (req, res) => {
-        const {marca} = req.query
-        console.log(marca)
-        var produtos = products.filter((value)=> {
-            if(value.marca === marca) { 
-            return true}
-        }) 
-        return res.render("product-listing", {title: "Lista de produtos",produtos:produtos});
-    },
+    // index: (req, res) => {
+    //     const {marca} = req.query
+    //     console.log(marca)
+    //     var produtos = products.filter((value)=> {
+    //         if(value.marca === marca) { 
+    //         return true}
+    //     }) 
+    //     return res.render("product-listing", {title: "Lista de produtos",produtos:produtos});
+    
     detail: (req, res) => {
         const { id } = req.params
         let produtoEncontrado = null
