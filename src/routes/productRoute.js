@@ -20,5 +20,6 @@ router.get("/brand-detail-asus", ProdutoController.detailAsus);
 router.get("/brand-detail-geil", ProdutoController.detailGeil);
 router.get("/brand-detail-intel", ProdutoController.detailIntel);
 router.get("/checkout-page", ProdutoController.checkout);
+router.get("/",ProdutoController.index2)
 
 module.exports = router;
