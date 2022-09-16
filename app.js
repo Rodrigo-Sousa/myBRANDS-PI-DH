@@ -40,6 +40,9 @@ app.use((req, res, next) => { next(); });
 // Aplicação de rotas
 app.use("/", homePageRoute);
 app.use("/", admRoute);
+//Verificar estas rotas, pois estão apresentnado erro.
+app.use("/", userRoute);
+app.use("/", productRoute);
 
 app.use("/user", userRoute);
 app.use("/product", productRoute);

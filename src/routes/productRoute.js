@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const ProdutoController = require("../controllers/ProdutoController");
+const AuthController = require("../controllers/AuthController")
 
 // rota para acessar os produtos, direto pelo controller
 router.get("/", ProdutoController.index);
@@ -9,6 +10,7 @@ router.post("/", ProdutoController.store);
 router.put("/:id", ProdutoController.update);
 router.patch("/:id", ProdutoController.update);
 router.delete("/:id", ProdutoController.destroy);
+router.get("/login-user", AuthController.authUser)
 
 router.get("/cart-shopping", ProdutoController.cart);
 router.get("/product", ProdutoController.listing);
