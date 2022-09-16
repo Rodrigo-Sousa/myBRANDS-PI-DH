@@ -1,20 +1,30 @@
 <%- include("./partials/head") %>
-<%- include("./partials/header-adm") %>
+  <%- include("./partials/header-adm") %>
 
-<main id="main-product-adm-edit">
-  <div class="container">
-    <h1 class="update-title-product-adm">Adicionar produto</h1>
-    <% if(locals.error) { %>
-      <h2 class="alert-error-product-adm"><%= error.message %> </h2>
-    <% } %>
-    <form action="/product-adm/product-create" method="POST">
-      <input type="text" name="modelo" placeholder="Modelo" class="form-control">
-      <input type="text" name="marca" placeholder="Marca" class="form-control">
-      <input type="text" name="categoria" placeholder="Categoria" class="form-control">
-      <input type="number" name="estoque" placeholder="Estoque" class="form-control">
-      <button type="submit" class="btn btn-success button-update-product-adm">Adicionar</button>
-    </form>
-  </div>
-</main>
+    <main id="main-product-adm-edit">
+      <div class="container">
+        <h1 class="update-title-product-adm">Adicionar produto</h1>
+        <% if(locals.error) { %>
+          <h2 class="alert-error-product-adm">
+            <%= error.message %>
+          </h2>
+          <% } %>
+            <form action="/product-adm/product-create" method="POST">
+              <input class="form-control" type="text" name="name" placeholder="Name">
+              <input class="form-control" type="text" name="category"
+                placeholder="Categoria">
+              <input class="form-control" type="text" name="brand" placeholder="Marca">
+              <input class="form-control" type="number" name="price" placeholder="Preço">
+              <input class="form-control" type="number" name="inventory"
+                placeholder="Estoque">
+              <input class="form-control" type="number" name="available"
+                placeholder="Disponível">
+              <input class="form-control" type="text" name="urlImage"
+                placeholder="URL da imagem">
 
-<%- include("./partials/footer") %>
+              <button type="submit" class="btn btn-success button-update-product-adm">Adicionar</button>
+            </form>
+      </div>
+    </main>
+
+    <%- include("./partials/footer") %>

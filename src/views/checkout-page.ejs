@@ -1,0 +1,266 @@
+<%- include("./partials/head") %>
+    <%- include("./partials/header") %>
+
+    
+    <div class="container pt-5" >
+        <div class="pt-5">
+          <a class="text-decoration-underline " href="./">Home</a> <a> / </a><a class="text-decoration-underline" href="cart-shopping"> Carrinho</a>
+        </div>
+    
+        <p></p>
+        <button data-toggle="collapse" data-target="#carrinho-de-compras">Seu Carrinho</button>
+        <p></p>
+    
+    
+        <div class="" id="carrinho-de-compras">
+
+          <div class="container row " >
+            <div class="col ">
+              <img class="rounded" src="../../public/img/01-placaMaeGigabyteB450AorusMDdr4CrossfireAm458797.jpg" alt="">   
+            </div>
+    
+
+            <div class="container col pt-lg-5 ">
+              <h4 class="pt-4">Placa Mãe Gigabyte B450 AORUS M, Chipset B450, AMD AM4, mATX,
+                DDR4 </h4>
+            </div>
+          </div>
+    
+
+          <div class="container row border-top border-dark">
+            <div class="col">Sub total</div>
+            <p>R$ 60,00</p>
+          </div>
+      
+      
+          <div class="container row ">
+            <div class="col">Desconto</div>
+            <p>R$0,00</p>
+          </div>
+      
+      
+          <div class="container row ">
+            <div class="col">Frete</div>
+            <p>Grátis</p>
+          </div>
+      
+      
+          <div class="container row ">
+            <div class="col font-weight-bold font fs-1">TOTAL</div>
+            <p>R$60,00</p>
+          </div>
+        </div>
+    </div>
+    
+    <!-- começa daqui o formulario -->
+    
+    <div class="container pb-5">
+      <form class="row g-3 needs-validation" novalidate>
+        <div class="container row">
+
+          <div class="col-md">
+              <label for="Primeiro-Nome" class="form-label">Primeiro Nome</label>
+              <input type="text" class="form-control" id="Primeiro-Nome" name="Primeiro-Nome"  required="">
+              <div class="invalid-feedback">
+                Informe o seu primeiro nome.
+              </div>
+          </div>
+        
+        
+          <div class="col-md ">
+              <label for="Ultimo-nome" class="form-label">Ultimo Nome</label>
+              <input type="text" class="form-control" id="Ultimo-nome" name="Ultimo-Nome"  required="">
+              <div class="invalid-feedback">
+                Informe o seu Ultimo nome.
+              </div>
+          </div>
+
+        </div>
+      
+
+
+        <div class=" container row ">
+          
+            <div class="col-md">
+              <label for="Usuario" class="form-label">Usuario</label>
+              <input type="text" class="form-control" id="Usuario" name="Usuario" aria-describedby="inputGroupPrepend" required="">
+              <div class="invalid-feedback">
+                Informe o seu Usuario.
+              </div>
+            </div>
+            
+        </div>
+
+
+
+          <div class="container row">
+    
+              <div class="col-md">
+                <label for="Email" class="form label">Email</label>
+                <input type="email" class="form-control" id="Email" name="Email" required="">
+                <div class="invalid-feedback">
+                   Informe o seu Email
+                </div>
+              </div>
+
+          </div>
+
+
+    
+          <div class="container row ">
+
+            <div class="col">
+              <label for="Endereco">Endereço</label>
+              <input type="text" class="form-control" id="Endereco" name="Endereco" required="">
+              <div class="invalid-feedback">
+                Informe seu Endereço
+              </div>
+            </div>
+
+
+              <div class="col-2">
+                <label for="Numero">Número</label>
+                <input type="number" id="Numero" class="form-control" name="Numero" required="">
+                <div class="invalid-feedback">
+                  Informe o número do seu Endereço
+                </div>
+              </div>
+
+          </div>
+          
+
+
+          <div class="container row ">
+    
+            <div class="col-md pt-1">
+              <label for="Cidade" class="form-label">Cidade</label>
+              <input type="text" class="form-control" id="Cidade" name="Cidade" required="">
+              <div class="invalid-feedback">
+                Informe a sua Cidade.
+              </div>
+            </div>
+          
+          
+            <div class="col-md-3" id="estado">
+              <label for="Estado" class="col-form-label">Estado</label>
+              <input type="text" class="form-control" id="Estado" name="Estado" required="">
+              <div class="invalid-feedback">
+                Informe o seu Estado.
+              </div>
+            </div>
+          
+          
+            <div class="col-md-3 pt-1">
+              <label for="Cep" class="form-label">CEP</label>
+              <input type="number" class="form-control" id="Cep" name="Cep" required>
+              <div class="invalid-feedback">
+                Informe o seu Cep.
+              </div>
+            </div>
+          
+          </div>
+          
+
+
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="Lembrar">
+                <label class="form-check-label pt-1" for="Lembrar">
+                  Lembrar meus dados
+                </label>
+              </div>
+            </div>        
+        
+        <br>
+        <br>
+        
+        
+          <div class="container">
+              <hr class="my-4 border-dark">
+              <h1>Pagamento</h1>
+              <br>
+          </div>
+      
+
+            <div class="my-3 pl-3">
+
+              <div class="form-check">
+                <input id="credito" name="paymentMethod" type="radio" class="form-check-input" checked="" required="">
+                <label class="form-check-label pt-1" for="credito">Cartão de Credito </label>
+              </div>
+
+
+              <div class="form-check">
+                <input id="debito" name="paymentMethod" type="radio" class="form-check-input" required="">
+                <label class="form-check-label pt-1" for="debito">TED </label>
+              </div>
+
+
+              <div class="form-check">
+                <input id="Boleto" name="paymentMethod" type="radio" class="form-check-input" required="">
+                <label class="form-check-label pt-1" for="Boleto">Boleto</label>
+              </div>
+
+            </div>
+
+
+
+            <div class="container">
+              <div class="row gy-3">
+                
+                <div class="col-md-6">
+                  <label for="cc-nome" class="form-label">Nome no cartão</label>
+                  <input type="text" class="form-control" id="cc-nome" name="Nome-Cartao" required="">
+                  <small class="text-muted">Nome completo impresso no cartão</small>
+                  <div class="invalid-feedback">
+                    Nome do proprietario necessário
+                  </div>
+                </div>
+                
+
+                <div class="col-md-5">
+                  <label for="cc-num" class="form-label">Número do cartão de crédito</label>
+                  <input type="number" class="form-control" id="cc-num" name="num-Cartao" required="">
+                  <div class="invalid-feedback">
+                    Numero do cartão necessário
+                  </div>
+                </div>
+              
+
+                <div class="col-md-3">
+                  <label for="Data-venc" class="form-label">Data de vencimento</label>
+                  <input type="number" class="form-control" id="Data-venc" name="data-venc" required="">
+                  <div class="invalid-feedback">
+                    Data de vencimento necessário
+                  </div>
+                </div>
+
+          
+                <div class="col-sm-1">
+                  <label for="cc-cvv" class="form-label">CVV</label>
+                  <input type="number" class="form-control" id="cc-cvv" name="CVV" required="">
+                  <div class="invalid-feedback">
+                    Código de segurança necessário
+                  </div>
+                  <br>
+                </div>
+
+
+              </div>
+            </div>
+        
+    
+        <div class="container">
+          <div class="d-flex justify-content-center">
+            <button  class="btn btn-primary btn-lg btn-block" type="submit">Confirmar</button>
+          </div>
+        </div>
+
+
+        <br>
+
+      </form>
+
+    </div>
+      
+    <%- include("./partials/footer") %>

@@ -19,8 +19,8 @@ router.post("/logout", isAuth, AuthController.logout);
 // Inicio CRUD dos produtos adm
 // Rota para criar um produto
 router.get("/product-adm/product-create", AdmController.createProduct);
-// Rota para armazenar criação de um produto
-router.post("/product-adm/product-create", productValidator.storeValidator, AdmController.store);
+// Rota para armazenar criação de um produto - **QUAL ROTA É PARA DOTARMOS?**
+router.post("/product-adm/product-create", AdmController.store);
 
 // Rota para visualizar um produto
 router.get("/product-adm/:id", AdmController.viewProduct);
