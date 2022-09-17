@@ -1,6 +1,7 @@
 
 const fs = require("fs");
 const path = require("path");
+
 const productsJson = fs.readFileSync(path.join(__dirname, "..", "data", "products.json"), "utf-8")
 const products = JSON.parse(productsJson);
 // importando o sequelize para dentro do arquivo
