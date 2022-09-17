@@ -126,7 +126,7 @@ const ProdutoController = {
             } } )
 
         } catch (error) {
-            res.status(404).json({message:"Erro ao procurar produto"})
+            res.status(400).json({message:"Erro ao procurar produto"})
         }
     return res.render("product-listing", {title: "Lista de produtos",produtos:produtos}); }
     ,
