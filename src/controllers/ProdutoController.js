@@ -118,14 +118,20 @@ const ProdutoController = {
     cart: (req, res) => {
         return res.render("cart-shopping", { title: "Carrinho de compras" });
     },
-    // index: (req, res) => {
-    //     const {marca} = req.query
-    //     console.log(marca)
-    //     var produtos = products.filter((value)=> {
-    //         if(value.marca === marca) { 
-    //         return true}
-    //     }) 
-    //     return res.render("product-listing", {title: "Lista de produtos",produtos:produtos});
+    index2: async (req, res) => {
+            const {marca} = req.query
+        try {
+        var produtos = await Product.findAll({
+            where: {
+                brand: marca
+            } } )
+
+        } catch (error) {
+            res.status(400).json({message:"Erro ao procurar produto"})
+        }
+    return res.render("product-listing", {title: "Lista de produtos",produtos:produtos}); }
+    ,
+        
     
     detail: (req, res) => {
         const { id } = req.params
@@ -144,7 +150,7 @@ const ProdutoController = {
             return res.status(404).render("not-found")
 
         }
-    }
+    }  
         ,
     detailAmd: (req,res) => {
         return res.render("brand-detail-amd", {title: "AMD | MyBrand's"})

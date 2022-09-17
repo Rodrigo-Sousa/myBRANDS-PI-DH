@@ -153,12 +153,13 @@ SELECT * FROM requests AS r
 INNER JOIN requests_products AS rp ON r.id = rp.requests_id
 RIGHT JOIN products AS p ON p.id = rp.product_id;
 
+-- Criando tabela para armazenar as imagens dos protutos. 
 CREATE TABLE image_products (
   id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
   urlImage VARCHAR(250) NOT NULL
 );
 
--- Tabela intermediária de pedidos e produtos
+-- Tabela intermediária de imagens e produtos
 CREATE TABLE imagnes_products(
   id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
   image_products_id INT UNSIGNED,
