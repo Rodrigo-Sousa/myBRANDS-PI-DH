@@ -117,7 +117,7 @@ const ProdutoController = {
     cart: (req, res) => {
         return res.render("cart-shopping", { title: "Carrinho de compras" });
     },
-    index2: async (req, res) => {
+    search: async (req, res) => {
             const {marca} = req.query
         try {
         var produtos = await Product.findAll({
