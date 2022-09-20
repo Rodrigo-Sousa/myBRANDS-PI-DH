@@ -123,7 +123,9 @@ const ProdutoController = {
         var produtos = await Product.findAll({
             where: {
                 brand: marca
-            } } )
+            },
+         } )
+            
 
         } catch (error) {
             res.status(400).json({message:"Erro ao procurar produto"})
