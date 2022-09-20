@@ -16,7 +16,7 @@ router.get("/brand-detail-asus", ProdutoController.detailAsus);
 router.get("/brand-detail-geil", ProdutoController.detailGeil);
 router.get("/brand-detail-intel", ProdutoController.detailIntel);
 router.get("/checkout-page", ProdutoController.checkout);
-router.get("/product-listing",ProdutoController.index2)
+router.get("/product-listing",ProdutoController.search)
 router.get("/:id", ProdutoController.show)
 router.put("/:id", ProdutoController.update);
 router.patch("/:id", ProdutoController.update);
