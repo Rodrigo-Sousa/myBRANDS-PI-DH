@@ -182,7 +182,7 @@ const ProdutoController = {
                     );
                     console.log(check);
                     res.status(200).json({ message: "Compra realizada com Sucesso" });
-                    res.render("home-page")
+                    return res.redirect('/')
                 } catch (error) {
                 console.log(error);
                 res.status(400).json({ message: "Erro no Formulário" });
