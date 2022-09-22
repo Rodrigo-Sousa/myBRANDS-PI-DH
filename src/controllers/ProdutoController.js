@@ -159,7 +159,6 @@ const ProdutoController = {
             try {
                 // Verificando os dados
                 if (PrimeiroNome && !UltimoNome && !Usuario && !Email && !Endereco && !Numero && !Cidade && ! Estado && ! Cep && ! NomeCartao && ! numCartao && ! dataVenc && ! CVV) {
-                    res.redirect("/home-page")
                 }
                 const check = await check.checkout(
                     {
@@ -180,10 +179,11 @@ const ProdutoController = {
                     {
                         where: { id },
                     }
-                );
-                console.log(products);
-                res.status(200).json({ message: "Compra realizada com Sucesso" });
-            } catch (error) {
+                    );
+                    console.log(check);
+                    res.status(200).json({ message: "Compra realizada com Sucesso" });
+                    res.render("home-page")
+                } catch (error) {
                 console.log(error);
                 res.status(400).json({ message: "Erro no Formulário" });
             }
