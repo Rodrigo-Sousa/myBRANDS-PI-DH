@@ -18,7 +18,7 @@ router.get("/registration", isGuest, UserController.register);
 router.get("/:id", userController.show);
 router.post("/", userController.store);
 router.put("/:id", userController.update);
-router.patch("/:id", userController.update);
+//router.patch("/:id", userController.update);
 router.delete("/:id", userController.destroy);
 
 
