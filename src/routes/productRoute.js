@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const ProdutoController = require("../controllers/ProdutoController");
-const AuthController = require("../controllers/AuthController")
+const AuthController = require("../controllers/AuthController");
+const checkoutValidate = require("../validators/Checkout-Validator");
 
 // rota para acessar os produtos, direto pelo controller
 router.get("/", ProdutoController.index);
@@ -16,6 +17,7 @@ router.get("/brand-detail-asus", ProdutoController.detailAsus);
 router.get("/brand-detail-geil", ProdutoController.detailGeil);
 router.get("/brand-detail-intel", ProdutoController.detailIntel);
 router.get("/checkout-page", ProdutoController.checkout);
+router.post("/checkout-page", checkoutValidate.checkoutValidate, checkoutValidate.checkRules, ProdutoController.checkout);
 router.get("/product-listing",ProdutoController.index2)
 router.get("/:id", ProdutoController.show)
 router.put("/:id", ProdutoController.update);

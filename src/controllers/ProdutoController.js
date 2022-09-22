@@ -11,6 +11,7 @@ const Product = require("../models/Product");
 // Utilizando o operador do sequelize like, <>,<=,>= etc
 const { Op } = require("sequelize");
 const sequelize = require("sequelize");
+const { check } = require("express-validator");
 const ProdutoController = { 
 
     // Busca os pedidos que um usuário possui e listar os produtos desses pedidos
@@ -152,6 +153,41 @@ const ProdutoController = {
         }
     }  
         ,
+    checkout: async (req, res) => {
+            const { PrimeiroNome, UltimoNome, Usuario, Email, Endereco, Numero, Cidade, Estado, Cep, NomeCartao, numCartao, dataVenc, CVV } = req.body;
+            const { id } = req.params;
+            try {
+                // Verificando os dados
+                if (PrimeiroNome && !UltimoNome && !Usuario && !Email && !Endereco && !Numero && !Cidade && ! Estado && ! Cep && ! NomeCartao && ! numCartao && ! dataVenc && ! CVV) {
+                    res.redirect("/home-page")
+                }
+                const check = await check.checkout(
+                    {
+                        PrimeiroNome,
+                        UltimoNome,
+                        Usuario,
+                        Email,
+                        Endereco,
+                        Numero,
+                        Cidade,
+                        Estado,
+                        Cep,
+                        NomeCartao,
+                        numCartao,
+                        dataVenc,
+                        CVV
+                    },
+                    {
+                        where: { id },
+                    }
+                );
+                console.log(products);
+                res.status(200).json({ message: "Compra realizada com Sucesso" });
+            } catch (error) {
+                console.log(error);
+                res.status(400).json({ message: "Erro no Formulário" });
+            }
+        },
     detailAmd: (req,res) => {
         return res.render("brand-detail-amd", {title: "AMD | MyBrand's"})
     },
@@ -168,7 +204,7 @@ const ProdutoController = {
         return res.render("brand-detail-intel", {title: "Intel | MyBrand's"})
     },
     checkout: (req,res) => {
-        return res.render("Checkout-page", {title: "Página de pagamento"})
+        return res.render("checkout-page", {title: "Página de pagamento"})
     }
 }; 
 
