@@ -48,6 +48,7 @@ let checkRules = (req, res, next) => {
         return res.status(400).json({ errors: errors.array() });
     }
     next();
+    
 };
 
 module.exports= {checkoutValidate , checkRules};

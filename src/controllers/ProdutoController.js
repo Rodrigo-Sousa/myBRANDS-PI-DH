@@ -155,40 +155,26 @@ const ProdutoController = {
         }
     }  
         ,
-    checkout: async (req, res) => {
-            const { PrimeiroNome, UltimoNome, Usuario, Email, Endereco, Numero, Cidade, Estado, Cep, NomeCartao, numCartao, dataVenc, CVV } = req.body;
+    checking: async (req, res) => {
+            console.log("qualquer mensagem muito loka")
+        const { PrimeiroNome, UltimoNome, Usuario, Email, Endereco, Numero, Cidade, Estado, Cep, NomeCartao, numCartao, dataVenc, CVV } = req.body;
             const { id } = req.params;
-            try {
-                // Verificando os dados
-                if (PrimeiroNome && !UltimoNome && !Usuario && !Email && !Endereco && !Numero && !Cidade && ! Estado && ! Cep && ! NomeCartao && ! numCartao && ! dataVenc && ! CVV) {
-                }
-                const check = await check.checkout(
-                    {
-                        PrimeiroNome,
-                        UltimoNome,
-                        Usuario,
-                        Email,
-                        Endereco,
-                        Numero,
-                        Cidade,
-                        Estado,
-                        Cep,
-                        NomeCartao,
-                        numCartao,
-                        dataVenc,
-                        CVV
-                    },
-                    {
-                        where: { id },
-                    }
-                    );
-                    console.log(check);
-                    res.status(200).json({ message: "Compra realizada com Sucesso" });
+            // try {
+            //     // Verificando os dados
+            //     const compra = await Request.create(
+            //         {
+            //             Endereco,
+            //             Numero,
+            //             Cidade,
+            //             Estado,
+            //             Cep,
+            //         },
+                    // );
                     return res.redirect('/')
-                } catch (error) {
-                console.log(error);
-                res.status(400).json({ message: "Erro no Formulário" });
-            }
+            //     } catch (error) {
+            //     console.log(error);
+            //     res.status(400).json({ message: "Erro no Formulário" });
+            // }
         },
     detailAmd: (req,res) => {
         return res.render("brand-detail-amd", {title: "AMD | MyBrand's"})
