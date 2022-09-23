@@ -133,7 +133,7 @@ const ProdutoController = {
         } catch (error) {
             res.status(400).json({message:"Erro ao procurar produto"})
         }
-    return res.render("product-listing", {title: "Lista de produtos",produtos:produtos}); }
+    return res.render("product-listing", {title: "Lista de produtos", produtos:produtos}); }
     ,
         
     
@@ -177,8 +177,21 @@ const ProdutoController = {
             //     res.status(400).json({ message: "Erro no Formulário" });
             // }
         },
-    detailAmd: (req,res) => {
-        return res.render("brand-detail-amd", {title: "AMD | MyBrand's"})
+    detailAmd: async (req,res) => {
+        const AMD = req.body.AMD
+        try {
+        var produtosAMD = await Product.findAll({
+            where: {
+                brand: {[Op.like]:AMD}
+                
+            },
+         } ) ;
+            
+
+        } catch (error) {
+            res.status(400).json({message:"Produtos da AMD não encontrados"});
+        }
+        return res.render("brand-detail-amd", {title: "AMD | MyBrand's", produtosAMD:produtosAMD});
     },
     detailAsus: (req, res) => {
         return res.render("brand-detail-asus", { title: "ASUS | MyBrand's" })
