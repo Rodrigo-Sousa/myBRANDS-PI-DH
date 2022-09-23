@@ -191,3 +191,14 @@ INSERT INTO image_products (urlImage) VALUES
     ("https://img.terabyteshop.com.br/produto/g/placa-mae-gigabyte-b450-aorus-pro-chipset-b450-amd-am4-atx-ddr4_91015.png");
 
 SELECT * FROM PRODUCTS JOIN IMAGE_PRODUCTS ON image_products.id = products.id;
+
+-- Inserindo novos produtos (AMD):
+INSERT INTO products (name, category, brand, price, inventory, available, urlImage)
+VALUES 
+	("Processador AMD Ryzen 5 5600X 3.7GHz (4.6GHz Turbo), 6-Cores 12-Threads, Cooler Wraith Stealth, AM4, 100-100000065BOX", "processor", "AMD", 1259.90, 10, 1,
+    "https://img.terabyteshop.com.br/produto/g/processador-amd-ryzen-5-5600x-37ghz-46ghz-turbo-6-cores-12-threads-cooler-wraith-stealth-am4_139055.png"),
+    ("Placa Mãe Biostar B550MX/E PRO, Chipset B550, AMD AM4, mATX, DDR4", "motherboard", "AMD", 529.99, 6 ,1,
+    "https://img.terabyteshop.com.br/produto/g/placa-mae-biostar-b550mxe-pro-chipset-b550-amd-am4-matx-ddr4_138264.jpg"),
+    ("Placa de Vídeo AsRock Challenger AMD Radeon RX 6400, ITX, 4GB, GDDR6, FRS, Ray Tracing, RX6400 CLI 4G", "video card", "AMD", 999.00, 20,1,
+    "https://img.terabyteshop.com.br/produto/g/placa-de-video-asrock-challenger-itx-amd-radeon-rx-6400-4gb-gddr6-frs-ray-tracing-rx6400-cli-4g_141469.jpg"),
+    ("Placa Mãe Gigabyte A320M S2H, Chipset A320, AMD AM4, mATX, DDR4, GA-A320M-S2H","motherboard","AMD",365.00,2,1,"https://img.terabyteshop.com.br/produto/g/placa-mae-gigabyte-ga-a320m-s2h-ddr4-am4_53707.jpg");
