@@ -123,9 +123,10 @@ const ProdutoController = {
         try {
         var produtos = await Product.findAll({
             where: {
-                brand: marca
+                brand: {[Op.like]:marca}
+                
             },
-         } )
+         } ) ;
             
 
         } catch (error) {
