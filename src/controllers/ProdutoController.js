@@ -11,6 +11,7 @@ const Product = require("../models/Product");
 // Utilizando o operador do sequelize like, <>,<=,>= etc
 const { Op } = require("sequelize");
 const sequelize = require("sequelize");
+const { check } = require("express-validator");
 const ProdutoController = { 
 
     // Busca os pedidos que um usuário possui e listar os produtos desses pedidos
@@ -155,6 +156,27 @@ const ProdutoController = {
         }
     }  
         ,
+    checking: async (req, res) => {
+            console.log("qualquer mensagem muito loka")
+        const { PrimeiroNome, UltimoNome, Usuario, Email, Endereco, Numero, Cidade, Estado, Cep, NomeCartao, numCartao, dataVenc, CVV } = req.body;
+            const { id } = req.params;
+            // try {
+            //     // Verificando os dados
+            //     const compra = await Request.create(
+            //         {
+            //             Endereco,
+            //             Numero,
+            //             Cidade,
+            //             Estado,
+            //             Cep,
+            //         },
+                    // );
+                    return res.redirect('/')
+            //     } catch (error) {
+            //     console.log(error);
+            //     res.status(400).json({ message: "Erro no Formulário" });
+            // }
+        },
     detailAmd: (req,res) => {
         return res.render("brand-detail-amd", {title: "AMD | MyBrand's"})
     },
@@ -171,7 +193,7 @@ const ProdutoController = {
         return res.render("brand-detail-intel", {title: "Intel | MyBrand's"})
     },
     checkout: (req,res) => {
-        return res.render("Checkout-page", {title: "Página de pagamento"})
+        return res.render("checkout-page", {title: "Página de pagamento"})
     }
 }; 
 

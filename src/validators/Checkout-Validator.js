@@ -1,10 +1,10 @@
-const { check } = require ("express-validator");
+const { check, validationResult} = require ("express-validator");
 
 let checkoutValidate = [
-    check('Primeiro-Nome')
+    check('PrimeiroNome')
         .notEmpty(),
 
-    check('Ultimo-Nome')
+    check('UltimoNome')
         .notEmpty(),
 
     check('Usuario')
@@ -14,7 +14,7 @@ let checkoutValidate = [
         .notEmpty().isEmail(),
 
     check('Endereco')
-        .notEmpty().isText(),
+        .notEmpty(),
 
     check('Numero')
         .notEmpty().isNumeric(),
@@ -26,18 +26,29 @@ let checkoutValidate = [
         .notEmpty(),
 
     check('Cep')
-        .notEmpty().isNumeric().isAlphanumeric('.'),
-
-    check('Nome-Cartao')
         .notEmpty().isNumeric(),
 
-    check('num-Cartao')
-        .notEmpty().isNumeric().isCreditCard(),
+    check('NomeCartao')
+        .notEmpty(),
 
-    check('data-venc')
+    check('numCartao')
+        .notEmpty().isNumeric(),
+
+    check('dataVenc')
         .notEmpty().isNumeric(),
 
     check('CVV')
         .notEmpty().isNumeric(),
 
-]
+];
+
+let checkRules = (req, res, next) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() });
+    }
+    next();
+    
+};
+
+module.exports= {checkoutValidate , checkRules};
