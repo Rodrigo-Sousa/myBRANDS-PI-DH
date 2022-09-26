@@ -178,11 +178,12 @@ const ProdutoController = {
             // }
         },
     detailAmd: async (req,res) => {
-        const AMD = req.body.AMD
+        // const AMD = req.body.AMD
+        const amd = "AMD";
         try {
         var produtosAMD = await Product.findAll({
             where: {
-                brand: {[Op.like]:AMD}
+                brand: amd
                 
             },
          } ) ;
@@ -191,7 +192,7 @@ const ProdutoController = {
         } catch (error) {
             res.status(400).json({message:"Produtos da AMD não encontrados"});
         }
-        return res.render("brand-detail-amd", {title: "AMD | MyBrand's", produtosAMD:produtosAMD});
+        return res.render("brand-detail-amd", {title: "AMD | MyBrand's", produtosAMD});
     },
     detailAsus: (req, res) => {
         return res.render("brand-detail-asus", { title: "ASUS | MyBrand's" })
