@@ -38,25 +38,15 @@ const authController = {
     res.clearCookie("user");
     res.clearCookie("admin");
 
-    // const usersJson = fs.readFileSync(path.join(__dirname, "..", "data", "admin.json"), "utf-8");
-    // const users = JSON.parse(usersJson);
     const { email, senha } = req.body;
-    // const userAuth = users.find(user =>{
-    //   if(user.email === email){
-    //     if(bcrypt.compareHash(senha, user.senha)){
-    //       return true;
-    //     }
-    //   }
-    // });
     const userAuth = await User.findOne(
       {
         where:{
           email: email,
+          is_admin: 1
         }
       }
     )
-    console.log(userAuth);
-    ;
     if(!userAuth){
       return res.render("login-adm", { title: "Login", error: { message: "Email ou senha inválidos" }});
     }
