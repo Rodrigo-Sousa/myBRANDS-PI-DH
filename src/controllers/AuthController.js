@@ -61,27 +61,21 @@ const authController = {
     res.redirect("/product-adm");
   },
   // Processamento do login usuário
-  authUser: (req, res) => {
+  authUser: async (req, res) => {
     res.clearCookie("user");
-    //res.clearCookie("admin");
-
-    const usersJson = fs.readFileSync(path.join(__dirname, "..", "data", "users.json"), "utf-8");
-    const users = JSON.parse(usersJson);
+    res.clearCookie("admin");
     const { email, senha } = req.body;
-    const userAuth = users.find(user =>{
-      if(user.email === email){
-        if(bcrypt.compareHash(senha, user.senha)){
-          return true;
+    const userAuth = await User.findOne(
+      {
+        where:{
+          email: email,
+          is_admin: 0
         }
       }
-    });
+    )
     if(!userAuth){
       return res.render("login-user", { title: "Login-user", error: { message: "Email ou senha inválidos" }});
     }
-    // const user = JSON.parse(JSON.stringify(userAuth, ["id", "nome", "admin"]));
-    // req.session.email = userAuth.email
-    // res.cookie("user", user);
-    // res.cookie("admin", user.admin);
 
     res.redirect("/user-data");
   },
