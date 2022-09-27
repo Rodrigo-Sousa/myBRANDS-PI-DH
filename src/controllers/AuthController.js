@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const bcrypt = require("../helpers/bcrypt");
+const User = require("../models/User");
 
 const authController = {
   
@@ -33,22 +34,34 @@ const authController = {
   },
     
   // Processamento do login admin
-  authAdm: (req, res) => {
+  authAdm: async (req, res) => {
     res.clearCookie("user");
     res.clearCookie("admin");
 
-    const usersJson = fs.readFileSync(path.join(__dirname, "..", "data", "admin.json"), "utf-8");
-    const users = JSON.parse(usersJson);
+    // const usersJson = fs.readFileSync(path.join(__dirname, "..", "data", "admin.json"), "utf-8");
+    // const users = JSON.parse(usersJson);
     const { email, senha } = req.body;
-    const userAuth = users.find(user =>{
-      if(user.email === email){
-        if(bcrypt.compareHash(senha, user.senha)){
-          return true;
+    // const userAuth = users.find(user =>{
+    //   if(user.email === email){
+    //     if(bcrypt.compareHash(senha, user.senha)){
+    //       return true;
+    //     }
+    //   }
+    // });
+    const userAuth = await User.findOne(
+      {
+        where:{
+          email: email,
         }
       }
-    });
+    )
+    console.log(userAuth);
+    ;
     if(!userAuth){
       return res.render("login-adm", { title: "Login", error: { message: "Email ou senha inválidos" }});
+    }
+    if(!bcrypt.compareHash(senha, userAuth.senha)){
+            return res.render("login-adm", { title: "Login", error: { message: "Email ou senha inválidos" }});
     }
     const user = JSON.parse(JSON.stringify(userAuth, ["id", "nome", "admin"]));
     req.session.email = userAuth.email
