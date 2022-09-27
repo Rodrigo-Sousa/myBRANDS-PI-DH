@@ -116,9 +116,6 @@ const ProdutoController = {
             res.status(400).json({ message: "Erro ao deletar o produto" });
         }
     },
-    cart: (req, res) => {
-        return res.render("cart-shopping", { title: "Carrinho de compras" });
-    },
     search: async (req, res) => {
             const {marca} = req.query
         try {
@@ -133,10 +130,7 @@ const ProdutoController = {
         } catch (error) {
             res.status(400).json({message:"Erro ao procurar produto"})
         }
-    return res.render("product-listing", {title: "Lista de produtos", produtos:produtos}); }
-    ,
-        
-    
+    return res.render("product-listing", {title: "Lista de produtos", produtos:produtos}); },    
     detail: (req, res) => {
         const { id } = req.params
         let produtoEncontrado = null
@@ -154,8 +148,7 @@ const ProdutoController = {
             return res.status(404).render("not-found")
 
         }
-    }  
-        ,
+    },
     checking: async (req, res) => {
             console.log("qualquer mensagem muito loka")
         const { PrimeiroNome, UltimoNome, Usuario, Email, Endereco, Numero, Cidade, Estado, Cep, NomeCartao, numCartao, dataVenc, CVV } = req.body;
@@ -176,7 +169,7 @@ const ProdutoController = {
             //     console.log(error);
             //     res.status(400).json({ message: "Erro no Formulário" });
             // }
-        },
+},
     detailAmd: async (req,res) => {
         // const AMD = req.body.AMD
         const amd = "AMD";
@@ -202,6 +195,9 @@ const ProdutoController = {
     },
     detailIntel: (req,res) => {
         return res.render("brand-detail-intel", {title: "Intel | MyBrand's"})
+    },
+    cart: (req, res) => {
+        return res.render("cart-shopping", { title: "Carrinho de compras" });
     },
     checkout: (req,res) => {
         return res.render("checkout-page", {title: "Página de pagamento"})
