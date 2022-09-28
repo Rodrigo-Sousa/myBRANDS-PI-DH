@@ -76,6 +76,10 @@ const authController = {
     if(!userAuth){
       return res.render("login-user", { title: "Login-user", error: { message: "Email ou senha inválidos" }});
     }
+    const user = JSON.parse(JSON.stringify(userAuth, ["id", "nome", "admin"]));
+    req.session.email = userAuth.email
+    res.cookie("user", user);
+    res.cookie("admin", user.admin);
 
     res.redirect("/user-data");
   },
