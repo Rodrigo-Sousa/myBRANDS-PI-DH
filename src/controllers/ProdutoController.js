@@ -23,7 +23,7 @@ const ProdutoController = {
             console.log(products);
             // Retornando para a rota de index do produtos, com uma mensagem
             // res.status(200).json({ data: products, menssage: "Listado todos os produtos" });
-            res.render("home-page",{products: products, title: "home"});
+            res.render("home-page",{products: products, title: "home", user: req.cookies.user});
         } catch (error) {
             console.log(error)
         }
@@ -130,7 +130,7 @@ const ProdutoController = {
         } catch (error) {
             res.status(400).json({message:"Erro ao procurar produto"})
         }
-    return res.render("product-listing", {title: "Lista de produtos", produtos:produtos}); },    
+    return res.render("product-listing", {title: "Lista de produtos", produtos:produtos, user: req.cookies.user}); },    
     detail: (req, res) => {
         const { id } = req.params
         let produtoEncontrado = null
@@ -150,7 +150,6 @@ const ProdutoController = {
         }
     },
     checking: async (req, res) => {
-            console.log("qualquer mensagem muito loka")
         const { PrimeiroNome, UltimoNome, Usuario, Email, Endereco, Numero, Cidade, Estado, Cep, NomeCartao, numCartao, dataVenc, CVV } = req.body;
             const { id } = req.params;
             // try {
@@ -185,22 +184,22 @@ const ProdutoController = {
         } catch (error) {
             res.status(400).json({message:"Produtos da AMD não encontrados"});
         }
-        return res.render("brand-detail-amd", {title: "AMD | MyBrand's", produtosAMD});
+        return res.render("brand-detail-amd", {title: "AMD | MyBrand's", produtosAMD, user: req.cookies.user});
     },
     detailAsus: (req, res) => {
-        return res.render("brand-detail-asus", { title: "ASUS | MyBrand's" })
+        return res.render("brand-detail-asus", { title: "ASUS | MyBrand's", user: req.cookies.user })
     },
     detailGeil: (req, res) => {
-        return res.render("brand-detail-geil", { title: "GEIL | MyBrand's" })
+        return res.render("brand-detail-geil", { title: "GEIL | MyBrand's", user: req.cookies.user })
     },
     detailIntel: (req,res) => {
-        return res.render("brand-detail-intel", {title: "Intel | MyBrand's"})
+        return res.render("brand-detail-intel", {title: "Intel | MyBrand's", user: req.cookies.user})
     },
     cart: (req, res) => {
-        return res.render("cart-shopping", { title: "Carrinho de compras" });
+        return res.render("cart-shopping", { title: "Carrinho de compras", user: req.cookies.user });
     },
     checkout: (req,res) => {
-        return res.render("checkout-page", {title: "Página de pagamento"})
+        return res.render("checkout-page", {title: "Página de pagamento", user: req.cookies.user})
     }
 }; 
 
