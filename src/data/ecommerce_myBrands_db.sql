@@ -202,3 +202,10 @@ VALUES
     ("Placa de Vídeo AsRock Challenger AMD Radeon RX 6400, ITX, 4GB, GDDR6, FRS, Ray Tracing, RX6400 CLI 4G", "video card", "AMD", 999.00, 20,1,
     "https://img.terabyteshop.com.br/produto/g/placa-de-video-asrock-challenger-itx-amd-radeon-rx-6400-4gb-gddr6-frs-ray-tracing-rx6400-cli-4g_141469.jpg"),
     ("Placa Mãe Gigabyte A320M S2H, Chipset A320, AMD AM4, mATX, DDR4, GA-A320M-S2H","motherboard","AMD",365.00,2,1,"https://img.terabyteshop.com.br/produto/g/placa-mae-gigabyte-ga-a320m-s2h-ddr4-am4_53707.jpg");
+
+    UPDATE `ecommerce_mybrands_db`.`users` SET `senha` = '$2a$12$a0CWtXE6ZC6hOgZ5dso2uuHRfDpKHoIfSDsJJClfhqnp5q9MZe7ci' WHERE (`id` = '1');
+    UPDATE `ecommerce_mybrands_db`.`users` SET `senha` = '$2a$12$TDkHzZvN/HOBKTCh7g730ekHcrY/EM/O4N0R3ORLeTGfxclU8YnJ6' WHERE (`id` = '2');
+    UPDATE `ecommerce_mybrands_db`.`users` SET `senha` = '$2a$12$X1ZUDZN3O4f9MEdgx9l5GuEgvryxlic52dI2kUJZWQmXpQOZSWgUm' WHERE (`id` = '3');
+    UPDATE `ecommerce_mybrands_db`.`users` SET `senha` = '$2a$12$lw2SpPYY.mT2bhaNyPNJxuTKNDPdw8K67eZ7Lu6xF0BNE.SpiJCP6' WHERE (`id` = '4');
+    UPDATE `ecommerce_mybrands_db`.`users` SET `senha` = '$2a$12$uuNqug53ETwzc3g/raTox.SVsqGIJvM3EI0PwoFOSmpPDFJiiy50e' WHERE (`id` = '5');
+
