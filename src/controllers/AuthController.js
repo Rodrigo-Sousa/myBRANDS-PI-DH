@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const bcrypt = require("../helpers/bcrypt");
 const User = require("../models/User");
+const UserController = require("./UserController");
 
 const authController = {
 
@@ -57,7 +58,6 @@ const authController = {
     req.session.email = userAuth.email
     res.cookie("user", userAuth);
     res.cookie("admin", userAuth.is_admin);
-    console.log(userAuth);
     res.redirect("/product-adm");
   },
   // Processamento do login usuário
