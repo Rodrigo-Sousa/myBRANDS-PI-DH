@@ -73,6 +73,7 @@ const authController = {
         }
       }
     )
+    console.log(userAuth);
     if (!userAuth) {
       return res.render("login-user", { title: "Login-user", error: { message: "Email ou senha inválidos" } });
     }
@@ -83,7 +84,7 @@ const authController = {
     res.cookie("user", userAuth);
     res.cookie("admin", userAuth.admin);
 
-    res.redirect("/");
+    res.redirect("/", userAuth);
   },
   // Processamento do deslogar
   logout: (req, res) => {
