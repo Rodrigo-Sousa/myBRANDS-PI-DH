@@ -84,7 +84,7 @@ const authController = {
     res.cookie("user", userAuth);
     res.cookie("admin", userAuth.admin);
 
-    res.redirect("/", userAuth);
+    res.redirect("/");
   },
   // Processamento do deslogar
   logout: (req, res) => {
