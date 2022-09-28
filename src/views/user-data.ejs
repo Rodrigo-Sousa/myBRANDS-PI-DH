@@ -4,7 +4,7 @@
         <body id="user-data">
             <div class="container user-data-container">
                 <div class="container rounded mt-5 mb-5 background-container-user-data">
-                    <form>
+                    <form action="/user/<%= user.id %>?_method=put" method="POST">
                         <div class="row">
                             <div class="col-md-4 border-right">
                                 <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img
@@ -25,35 +25,33 @@
                                     </div>
                                     <div class="row mt-2">
                                         <div class="col-md-12"><label class="labels color-gray">Nome Completo</label>
-                                            <input type="text" class="form-control input-user" placeholder="Nome"
-                                                value="<%= user.name %>">
+                                            <input type="text" class="form-control input-user" placeholder="Nome" value="<%= user.name %>" name="name">
                                         </div>
                                     </div>
                                     <div class="row mt-3">
                                         <div class="col-md-12"><label class="labels color-gray">Número do
                                                 celular</label>
                                             <input type="tel" class="form-control input-user"
-                                                placeholder="Seu número de celular" value="<%= user.celphone %>">
+                                                placeholder="Seu número de celular" value="<%= user.celphone %>" name="celphone">
                                         </div>
                                         <div class="col-md-12"><label class="labels color-gray">E-mail:</label>
                                             <input type="email" class="form-control input-user"
-                                                placeholder="Seu número de celular" value="<%= user.email %>">
+                                                placeholder="Seu número de celular" value="<%= user.email %>" name="email">
                                         </div>
                                         <div class="col-md-12"><label class="labels color-gray">Data de
                                                 Nascimento:</label>
                                             <input type="date" class="form-control input-user"
-                                                placeholder="Informe o seu endereço" value="<%= user.birthdate %>">
+                                                placeholder="Informe o seu endereço" value="<%= user.birthdate %>" name="birthdate">
                                         </div>
                                     </div>
                                     <div class="row mt-3">
                                         <div class="col-md-12"><label class="labels color-gray">Alterar Foto de
                                                 perfil:</label>
                                             <input type="text" class="form-control input-user" placeholder="CEP"
-                                                value="<%= user.picture %>">
+                                                value="<%= user.picture %>" name="picture">
                                         </div>
                                     </div>
-                                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button"
-                                            type="submit">Salvar Perfil</button></div>
+                                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button"                                type="submit">Salvar Perfil</button></div>
                                 </div>
                             </div>
                         </div>
