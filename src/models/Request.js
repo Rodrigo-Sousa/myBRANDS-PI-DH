@@ -12,6 +12,26 @@ const Requests = db.define(
     },
     create_at: {
       type: DataTypes.DATE,
+      allowNull: true,
+    },
+    Endereco: {
+      type: DataTypes.STRING(250),
+      allowNull: false,
+    },
+    Numero: {
+      type: DataTypes.DECIMAL(10),
+      allowNull: false,
+    },
+    Cidade: {
+      type: DataTypes.STRING(250),
+      allowNull: false,
+    },
+    Estado: {
+      type: DataTypes.STRING(250),
+      allowNull: false,
+    },
+    Cep: {
+      type: DataTypes.DECIMAL(10),
       allowNull: false,
     },
     status: {
@@ -21,6 +41,7 @@ const Requests = db.define(
     },
     user_id: {
       type: DataTypes.INTEGER.UNSIGNED,
+    
     },
   },
   {

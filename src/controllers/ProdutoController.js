@@ -12,6 +12,7 @@ const Product = require("../models/Product");
 const { Op } = require("sequelize");
 const sequelize = require("sequelize");
 const { check } = require("express-validator");
+const Requests = require("../models/Request");
 const ProdutoController = { 
 
     // Busca os pedidos que um usuário possui e listar os produtos desses pedidos
@@ -116,9 +117,7 @@ const ProdutoController = {
             res.status(400).json({ message: "Erro ao deletar o produto" });
         }
     },
-    cart: (req, res) => {
-        return res.render("cart-shopping", { title: "Carrinho de compras" });
-    },
+    
     search: async (req, res) => {
             const {marca} = req.query
         try {
@@ -157,25 +156,24 @@ const ProdutoController = {
     }  
         ,
     checking: async (req, res) => {
-            console.log("qualquer mensagem muito loka")
-        const { PrimeiroNome, UltimoNome, Usuario, Email, Endereco, Numero, Cidade, Estado, Cep, NomeCartao, numCartao, dataVenc, CVV } = req.body;
+        const {Endereco, Numero, Cidade, Estado, Cep} = req.body;
             const { id } = req.params;
-            // try {
-            //     // Verificando os dados
-            //     const compra = await Request.create(
-            //         {
-            //             Endereco,
-            //             Numero,
-            //             Cidade,
-            //             Estado,
-            //             Cep,
-            //         },
-                    // );
+            try {
+                // criando um pedido
+                const compra = await Requests.create(
+                    {
+                        Endereco,
+                        Numero,
+                        Cidade,
+                        Estado,
+                        Cep,
+                    },
+                    );
                     return res.redirect('/')
-            //     } catch (error) {
-            //     console.log(error);
-            //     res.status(400).json({ message: "Erro no Formulário" });
-            // }
+                } catch (error) {
+                console.log(error);
+                res.status(400).json({ message: "Erro no Formulário" });
+            }
         },
     detailAmd: (req,res) => {
         return res.render("brand-detail-amd", {title: "AMD | MyBrand's"})
@@ -194,7 +192,10 @@ const ProdutoController = {
     },
     checkout: (req,res) => {
         return res.render("checkout-page", {title: "Página de pagamento"})
-    }
+    },
+    cart: (req, res) => {
+        return res.render("cart-shopping", { title: "Carrinho de compras" });
+    },
 }; 
 
 module.exports = ProdutoController;
