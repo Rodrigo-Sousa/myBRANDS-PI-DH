@@ -45,7 +45,7 @@ const ProdutoController = {
         //         if(value.marca === marca) { 
         //  return true}
         //         });
-            return res.render("product-detail", { title: product.name, produto: product });
+            return res.render("product-detail", { title: product.name, produto: product, user: req.cookies.user});
 
         } catch (error) {
             console.log(error);
