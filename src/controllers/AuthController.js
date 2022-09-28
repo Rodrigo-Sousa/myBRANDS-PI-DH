@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const bcrypt = require("../helpers/bcrypt");
+const User = require("../models/User");
 
 const authController = {
   
@@ -33,54 +34,54 @@ const authController = {
   },
     
   // Processamento do login admin
-  authAdm: (req, res) => {
+  authAdm: async (req, res) => {
     res.clearCookie("user");
     res.clearCookie("admin");
 
-    const usersJson = fs.readFileSync(path.join(__dirname, "..", "data", "admin.json"), "utf-8");
-    const users = JSON.parse(usersJson);
     const { email, senha } = req.body;
-    const userAuth = users.find(user =>{
-      if(user.email === email){
-        if(bcrypt.compareHash(senha, user.senha)){
-          return true;
+    const userAuth = await User.findOne(
+      {
+        where:{
+          email: email,
+          is_admin: 1
         }
       }
-    });
+    )
     if(!userAuth){
       return res.render("login-adm", { title: "Login", error: { message: "Email ou senha inválidos" }});
+    }
+    if(!bcrypt.compareHash(senha, userAuth.senha)){
+            return res.render("login-adm", { title: "Login", error: { message: "Email ou senha inválidos" }});
+    }
+    // const user = JSON.parse(JSON.stringify(userAuth, ["id", "nome", "admin"]));
+    req.session.email = userAuth.email
+    res.cookie("user", userAuth);
+    res.cookie("admin", userAuth.is_admin);
+    console.log(userAuth);
+    res.redirect("/product-adm");
+  },
+  // Processamento do login usuário
+  authUser: async (req, res) => {
+    res.clearCookie("user");
+    res.clearCookie("admin");
+    const { email, senha } = req.body;
+    const userAuth = await User.findOne(
+      {
+        where:{
+          email: email,
+          is_admin: 0
+        }
+      }
+    )
+    if(!userAuth){
+      return res.render("login-user", { title: "Login-user", error: { message: "Email ou senha inválidos" }});
     }
     const user = JSON.parse(JSON.stringify(userAuth, ["id", "nome", "admin"]));
     req.session.email = userAuth.email
     res.cookie("user", user);
     res.cookie("admin", user.admin);
 
-    res.redirect("/product-adm");
-  },
-  // Processamento do login usuário
-  authUser: (req, res) => {
-    res.clearCookie("user");
-    //res.clearCookie("admin");
-
-    const usersJson = fs.readFileSync(path.join(__dirname, "..", "data", "users.json"), "utf-8");
-    const users = JSON.parse(usersJson);
-    const { email, senha } = req.body;
-    const userAuth = users.find(user =>{
-      if(user.email === email){
-        if(bcrypt.compareHash(senha, user.senha)){
-          return true;
-        }
-      }
-    });
-    if(!userAuth){
-      return res.render("login-user", { title: "Login-user", error: { message: "Email ou senha inválidos" }});
-    }
-    // const user = JSON.parse(JSON.stringify(userAuth, ["id", "nome", "admin"]));
-    // req.session.email = userAuth.email
-    // res.cookie("user", user);
-    // res.cookie("admin", user.admin);
-
-    res.redirect("/user-data");
+    res.redirect("/");
   },
   // Processamento do deslogar
   logout: (req, res) => {
