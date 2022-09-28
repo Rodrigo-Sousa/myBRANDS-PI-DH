@@ -1,53 +1,65 @@
 <%- include("./partials/head") %>
-<%- include("./partials/header") %>
+    <%- include("./partials/header") %>
 
-<body id="user-data">
-  <div class="container user-data-container">
-    <div class="container rounded mt-5 mb-5 background-container-user-data">
-        <div class="row">
-            <div class="col-md-4 border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img
-                        class="rounded-circle mt-5" width="150px"
-                        src="<%= user.picture %>"><span class="font-weight-bold color-gray"><%= user.name %></span>
-                            <span class="text-black-50 email-user-data"><%= user.email %></span>
-                    </span></div>
-            </div>
-            <div class="col-md-8">
-                <div class="p-3 py-5">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h4 class="text-right color-gray">Configurações do Perfil</h4>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col-md-12"><label class="labels color-gray">Nome Completo</label>
-                            <input type="text" class="form-control input-user" placeholder="Nome" value="<%= user.name %>">
+        <body id="user-data">
+            <div class="container user-data-container">
+                <div class="container rounded mt-5 mb-5 background-container-user-data">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-4 border-right">
+                                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img
+                                        class="rounded-circle mt-5" width="150px" src="<%= user.picture %>"><span
+                                        class="font-weight-bold color-gray">
+                                        <%= user.name %>
+                                    </span>
+                                    <span class="text-black-50 email-user-data">
+                                        <%= user.email %>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="p-3 py-5">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <h4 class="text-right color-gray">Configurações do Perfil</h4>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-md-12"><label class="labels color-gray">Nome Completo</label>
+                                            <input type="text" class="form-control input-user" placeholder="Nome"
+                                                value="<%= user.name %>">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-12"><label class="labels color-gray">Número do
+                                                celular</label>
+                                            <input type="tel" class="form-control input-user"
+                                                placeholder="Seu número de celular" value="<%= user.celphone %>">
+                                        </div>
+                                        <div class="col-md-12"><label class="labels color-gray">E-mail:</label>
+                                            <input type="email" class="form-control input-user"
+                                                placeholder="Seu número de celular" value="<%= user.email %>">
+                                        </div>
+                                        <div class="col-md-12"><label class="labels color-gray">Data de
+                                                Nascimento:</label>
+                                            <input type="date" class="form-control input-user"
+                                                placeholder="Informe o seu endereço" value="<%= user.birthdate %>">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-12"><label class="labels color-gray">Alterar Foto de
+                                                perfil:</label>
+                                            <input type="text" class="form-control input-user" placeholder="CEP"
+                                                value="<%= user.picture %>">
+                                        </div>
+                                    </div>
+                                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button"
+                                            type="submit">Salvar Perfil</button></div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-md-12"><label class="labels color-gray">Número do celular</label>
-                            <input type="tel" class="form-control input-user" placeholder="Seu número de celular"
-                                value="<%= user.celphone %>">
-                        </div>
-                        <div class="col-md-12"><label class="labels color-gray">E-mail:</label>
-                            <input type="email" class="form-control input-user" placeholder="Seu número de celular"
-                                value="<%= user.email %>">
-                        </div>
-                        <div class="col-md-12"><label class="labels color-gray">Data de Nascimento:</label>
-                            <input type="date" class="form-control input-user" placeholder="Informe o seu endereço"
-                                value="<%= user.birthdate %>">
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-md-12"><label class="labels color-gray">Alterar Foto de perfil:</label>
-                            <input type="text" class="form-control input-user" placeholder="CEP" value="<%= user.picture %>">
-                        </div>
-                    </div>
-                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button"
-                            type="button">Salvar Perfil</button></div>
+                    </form>
                 </div>
             </div>
-        </div>
-    </div>
-  </div>
-</body>
+        </body>
 
-<%- include("./partials/footer") %>
+        <%- include("./partials/footer") %>
