@@ -261,7 +261,7 @@ const userController = {
         return res.render("login-user", { title: "Login Usuário", user: req.cookies.user });
     },
     personal: (req, res) => {
-        return res.render("user-data", { title: "Info usuário" });
+        return res.render("user-data", { title: "Info usuário",  user: req.cookies.user});
     },
 };
 module.exports = userController;
