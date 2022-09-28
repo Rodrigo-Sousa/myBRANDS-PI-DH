@@ -8,9 +8,8 @@
             <div class="col-md-4 border-right">
                 <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img
                         class="rounded-circle mt-5" width="150px"
-                        src="https://i.pravatar.cc/300?img=49"><span class="font-weight-bold color-gray">Maria
-                        Eduarda</span>
-                            <span class="text-black-50 email-user-data">maria.eduaroda@email.com.br</span>
+                        src="<%= user.picture %>"><span class="font-weight-bold color-gray"><%= user.name %></span>
+                            <span class="text-black-50 email-user-data"><%= user.email %></span>
                     </span></div>
             </div>
             <div class="col-md-8">
@@ -19,40 +18,31 @@
                         <h4 class="text-right color-gray">Configurações do Perfil</h4>
                     </div>
                     <div class="row mt-2">
-                        <div class="col-md-6"><label class="labels color-gray">Nome</label>
-                            <input type="text" class="form-control input-user" placeholder="Nome" value="">
-                        </div>
-                        <div class="col-md-6"><label class="labels color-gray">Sobrenome</label>
-                            <input type="text" class="form-control input-user" value="" placeholder="Sobrenome">
+                        <div class="col-md-12"><label class="labels color-gray">Nome Completo</label>
+                            <input type="text" class="form-control input-user" placeholder="Nome" value="<%= user.name %>">
                         </div>
                     </div>
                     <div class="row mt-3">
                         <div class="col-md-12"><label class="labels color-gray">Número do celular</label>
-                            <input type="number" class="form-control input-user" placeholder="Seu número de celular"
-                                value="">
+                            <input type="tel" class="form-control input-user" placeholder="Seu número de celular"
+                                value="<%= user.celphone %>">
                         </div>
-                        <div class="col-md-12"><label class="labels color-gray">Endereço</label>
-                            <input type="text" class="form-control input-user" placeholder="Informe o seu endereço"
-                                value="">
+                        <div class="col-md-12"><label class="labels color-gray">E-mail:</label>
+                            <input type="email" class="form-control input-user" placeholder="Seu número de celular"
+                                value="<%= user.email %>">
                         </div>
-                        <div class="col-md-12"><label class="labels color-gray">Código Postal</label>
-                            <input type="number" class="form-control input-user" placeholder="CEP" value="">
-                        </div>
-                        <div class="col-md-12"><label class="labels color-gray">Estado</label>
-                            <input type="text" class="form-control input-user" placeholder="Ex. Salvador-BA" value="">
+                        <div class="col-md-12"><label class="labels color-gray">Data de Nascimento:</label>
+                            <input type="date" class="form-control input-user" placeholder="Informe o seu endereço"
+                                value="<%= user.birthdate %>">
                         </div>
                     </div>
                     <div class="row mt-3">
-                        <div class="col-md-6"><label class="labels color-gray">Cidade</label>
-                            <input type="text" class="form-control input-user" placeholder="Capim Grosso" value="">
-                        </div>
-                        <div class="col-md-6"><label class="labels color-gray">Estado/Região</label>
-                            <input type="text" class="form-control input-user" value="" placeholder="Bahia">
+                        <div class="col-md-12"><label class="labels color-gray">Alterar Foto de perfil:</label>
+                            <input type="text" class="form-control input-user" placeholder="CEP" value="<%= user.picture %>">
                         </div>
                     </div>
                     <div class="mt-5 text-center"><button class="btn btn-primary profile-button"
-                            type="button">Salvar
-                            Perfil</button></div>
+                            type="button">Salvar Perfil</button></div>
                 </div>
             </div>
         </div>
