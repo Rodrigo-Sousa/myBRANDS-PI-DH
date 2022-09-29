@@ -10,7 +10,7 @@
       <div class="card-login">
         <h1 class="title-2">LOGIN</h1>
         <% if (locals.error) { %>
-          <h2><%= error.message %> </h2>
+          <h2 class="text-danger"><%= error.message %> </h2>
         <% } %>
         <form action="/login-adm" method="post">
           <div class="textfield">

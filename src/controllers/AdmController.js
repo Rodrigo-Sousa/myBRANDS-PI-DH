@@ -2,29 +2,6 @@ const fs = require("fs");
 const path = require("path");
 const bcrypt = require("../helpers/bcrypt");
 const Product = require("../models/Product");
-// const products = [
-//   {
-//     id: 1,
-//     modelo: "AMD Radeon RX 550, 4GB, Preto",
-//     marca: "AMD",
-//     categoria: "Placa de vídeo",
-//     estoque: 12,
-//   },
-//   {
-//     id: 2,
-//     modelo: "Redragon Cobra, Chroma RGB, 12400DPI, 7 Botões, Preto",
-//     marca: "Redragon",
-//     categoria: "Mouse Gamer",
-//     estoque: 15,
-//   },
-//   {
-//     id: 3,
-//     modelo: "Cloud Stinger, Drivers 50mm, Múltiplas Plataformas, P2 e P3",
-//     marca: "HyperX",
-//     categoria: "Headset Gamer",
-//     estoque: 18,
-//   },
-// ];
 
 const AdmController = {
   login: (req, res) => {
@@ -36,17 +13,9 @@ const AdmController = {
   adm: async (req, res) => {
     // Lidaremos com promessas
     try {
-      // const products = await db.query(
-      //     // Recebe 2 parâmetros, uma string e o segundo um objeto
-      //     "SELECT * FROM products;",{
-      //         type: sequelize.QueryTypes.SELECT,
-
-      //     }
-      // );
       const products = await Product.findAll();
       console.log(products);
-      // Retornando para a rota de index do produtos, com uma mensagem
-      // res.status(200).json({ data: products, menssage: "Listado todos os produtos" });
+
       return res.render("product-adm", { title: "Produtos-Adm", products: products, user: req.cookies.user, admin: req.cookies.admin });
     } catch (error) {
       console.log(error)
@@ -63,7 +32,7 @@ const AdmController = {
         },
         // include: RequestsProducts,
       });
-      return res.render("product-detail-adm", { title: "Visualizar produto", product: product });
+      return res.render("product-detail-adm", { title: "Visualizar produto", product: product,user: req.cookies.user, admin: req.cookies.admin });
 
     } catch (error) {
       console.log(error);
@@ -92,7 +61,7 @@ const AdmController = {
         urlImage
       });
       console.log(product);
-      return res.render("success", { title: "Sucesso!", newProduct: product, message: "Produto criado com sucesso!" });
+      return res.render("success", { title: "Sucesso!", newProduct: product, user: req.cookies.user, admin: req.cookies.admin, message: "Produto criado com sucesso!" });
     } catch (error) {
       console.log(error);
       res.status(400).json({ message: "Erro ao cadastrar o produto" });
@@ -100,12 +69,9 @@ const AdmController = {
   },
   edit: async (req, res) => {
     const { id } = req.params;
-    // const { name, category, brand, price, inventory, available, urlImage } = req.body;
+
     try {
-      // Verificando os dados
-      // if (name && !category && !brand && !price && !inventory && !available && !urlImage) {
-      //   throw Error("Nenhum dado para atualizar");
-      // }
+
       const product = await Product.findOne({
         // Buscando um parâmetro
         where: {
@@ -114,7 +80,7 @@ const AdmController = {
         // include: RequestsProducts,
       });
       console.log(product);
-      return res.render("product-edit", { title: "Editar produto", product: product });
+      return res.render("product-edit", { title: "Editar produto", product: product, user: req.cookies.user, admin: req.cookies.admin});
     } catch (error) {
       console.log(error);
       return res.render("error", { title: "Ops!", message: "Produto não encontrado!" });
@@ -144,7 +110,7 @@ const AdmController = {
         }
       );
       console.log(product);
-      return res.render("success", { title: "Produto atualizado", message: `Produto da marca ${name} foi atualizado`, });
+      return res.render("success", { title: "Produto atualizado", user: req.cookies.user, admin: req.cookies.admin, message: `Produto da marca ${name} foi atualizado`, });
     } catch (error) {
       console.log(error);
       return res.render("error", { title: "Ops!", message: "Produto não encontrado" });
@@ -161,7 +127,7 @@ const AdmController = {
         },
       });
       console.log(product);
-      return res.render("product-delete", { title: "Deletar produto", product: product });
+      return res.render("product-delete", { title: "Deletar produto", product: product, user: req.cookies.user, admin: req.cookies.admin });
     } catch (error) {
       console.log(error);
       return res.render("error", { title: "Ops!", message: "Produto não encontrado" });
@@ -173,7 +139,7 @@ const AdmController = {
       const product = await Product.destroy({ where: { id } });
       console.log(product);
       // res.status(200).json({ message: "Produto deletado com sucesso!" });
-      return res.render("success", { title: "Produto deletado", product: product, message: "Produto deletado com sucesso!" });
+      return res.render("success", { title: "Produto deletado", product: product, user: req.cookies.user, admin: req.cookies.admin, message: "Produto deletado com sucesso!" });
     } catch (error) {
       console.log(error);
       // res.status(400).json({ message: "Erro ao deletar o produto" });

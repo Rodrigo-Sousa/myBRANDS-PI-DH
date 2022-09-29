@@ -22,7 +22,7 @@
             <!-- formulário para incluir a busca na página -->
             <form class="form-inline my-2 my-lg-0" action="/product/product-listing" >
                 
-                <input class="form-control mr-sm-2" type="search" placeholder="Encontre o seu produto"
+                <input class="form-control mr-sm-2" type="search" placeholder="Busque por marca"
                     aria-label="Pesquisar" name="marca" >
                 <button class="btn btn-outline-success my-2 my-sm-0 btn-search" type="submit">Pesquisar</button>
             </form>
@@ -33,8 +33,8 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
                       aria-haspopup="true" aria-expanded="false">
                       <!-- Imagem de logo do site -->
-                      <img class="image-user-adm" src="https://i.pravatar.cc/300?img=49" width="50" height="50"
-                        alt="MyBrand's Logo">
+                      <img class="image-user-adm" src="<%= user.picture %>" width="50" height="50"
+                        alt="Login do usuário">
                     </a>
                     <div class="dropdown-menu dropdown-departament" aria-labelledby="navbarDropdownMenuLink">
                       <a class="dropdown-item item-departamento" href="user-data">Editar perfil</a>
