@@ -65,33 +65,29 @@ const userController = {
         }
     },
     update: async (req, res) => {
-        const { name, email, senha, birthdate, cpf, picture, phone, celphone, is_admin, bredIn, changedIn } = req.body;
+        console.log(req.body);
+        const { name, celphone, email, birthdate, picture } = req.body;
         const { id } = req.params;
         try {
             // Verificando os dados
-            if (name && !email && !senha && !birthdate && !cpf && !picture && !phone && !celphone && !is_admin && !bredIn && !changedIn) {
+            if (name && !celphone && !email && !birthdate && !picture) {
                 throw Error("Nenhum dado para atualizar");
             }
             const users = await User.update(
                 {
                     name,
-                    email,
-                    senha,
-                    birthdate,
-                    cpf,
-                    picture,
-                    phone,
                     celphone,
-                    is_admin,
-                    bredIn,
-                    changedIn
+                    email,
+                    birthdate,
+                    picture
                 },
                 {
                     where: { id },
                 }
             );
             console.log(users);
-            res.status(200).json({ message: "Usuário atualizado com sucesso" });
+            res.redirect("/");
+            
         } catch (error) {
             console.log(error);
             res.status(400).json({ message: "Erro ao atualizar usuário" });
