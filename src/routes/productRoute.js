@@ -9,7 +9,7 @@ router.get("/", ProdutoController.index);
 router.post("/", ProdutoController.store);
 router.get("/login-user", AuthController.authUser)
 
-router.get("/cart-shopping", ProdutoController.cart);
+// router.get("/cart-shopping", ProdutoController.cart);
 // router.get("/product-listing", ProdutoController.index);
 router.get("/product-detail/:id", ProdutoController.detail);
 router.get("/brand-detail-amd", ProdutoController.detailAmd);
@@ -19,7 +19,8 @@ router.get("/brand-detail-intel", ProdutoController.detailIntel);
 router.get("/checkout-page", ProdutoController.checkout);
 router.post("/checkout-page", checkoutValidate.checkoutValidate,checkoutValidate.checkRules, ProdutoController.checking);
 router.get("/product-listing",ProdutoController.search)
-router.get("/:id", ProdutoController.show)
+router.post("/:id", ProdutoController.cart);
+router.get("/:id", ProdutoController.show);
 router.put("/:id", ProdutoController.update);
 router.patch("/:id", ProdutoController.update);
 router.delete("/:id", ProdutoController.destroy);

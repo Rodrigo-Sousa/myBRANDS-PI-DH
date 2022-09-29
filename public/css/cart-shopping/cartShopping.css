@@ -42,8 +42,13 @@
     background-color: #3E619B;
 }
 .total-td-cart-shopping {
-    text-align: center;
+    position: relative;
+    height: 100%;
     background-color: #3E619B;
+}
+.item-td-cart-shoopping{
+    position: relative;
+    left: 380px;
 }
 .title-remove {
     text-align: center;
@@ -61,6 +66,7 @@
 }
 .buying {
     text-align: center;
+    background-color: green;
 }
 .finished-buying {
     color: #fff;

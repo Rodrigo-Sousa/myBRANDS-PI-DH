@@ -22,6 +22,7 @@
             </ol>
         </nav>
         <!-- Contendo o embrulho do produto -->
+        <form method="post">
         <div class="wrap-product">
             <!-- Imagem do produto a ser comprado -->
             <article class="row buy-product">
@@ -36,33 +37,33 @@
                     <!-- Artigo que iremos separar o preço, maiores detalhes, etc -->
                     <article class="content-product">
                         <!-- Título do produto -->
+                        <h2 name="product_name"><%=produto.name %></h2>
                         <h1><%= produto.category %> </h1>
                         <p id="code-product"><%=produto.codigo%></p>
                     </article>
                     <!-- Artigo com o preço do produto -->
-                    <article class="price-product">
+                    <article class="price-product" >
 
                         <!-- Preço em destaque -->
                         <strong>
-                            R$ <%= produto.price %>.
+                           <span name="product_price"> R$ <%= produto.price %>.</span>
                             <!-- Deixando a informação em uma linha, quebrando ela de forma blocante -->
                             <span class="d-block">à vista com 15% de desconto no boleto ou pix</span>
                         </strong>
                         <!-- Formulário para a finalização da compra -->
-                        <form action="" method="post">
                             <!-- Selecionando a quantidade -->
                             <div class="form-group">
                                 <label for="product-quantity-item">Quantidade:</label>
-                                <input class="form-control" type="number" name="quantity-item" id="product-quantity-item">
+                                <input class="form-control" type="number" name="quantity_item" id="product-quantity-item">
                             </div>
                             <!-- Enviando o formulário -->
-                        </form>
-                        <a href="cart-shopping"><button type="submit" class="btn btn-success col-md-12">Comprar</button></a>
-                    </article>
-                </section>
-            </article>
-            <!-- Fim da classe wrap-produto -->
-        </div>
+                            <button type="submit" class="btn btn-success col-md-12">Comprar</button>
+                        </article>
+                    </section>
+                </article>
+                <!-- Fim da classe wrap-produto -->
+            </div>
+        </form>
 
         <!-- Características do produto - detalhes -->
         <div class="product-features">

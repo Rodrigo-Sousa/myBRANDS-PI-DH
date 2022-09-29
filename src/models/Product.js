@@ -2,6 +2,7 @@
 const database = require("../config/sequelize");
 // Variável do Sequelize
 const Sequelize = require("sequelize");
+const compras = require("./compras")
 
 // Criando a variável do produto, com a definição do que ele será
 const product = database.define("product", {
@@ -50,6 +51,8 @@ const product = database.define("product", {
         // Por não termos essas duas colunas (de criação e última atualização), desativamos esse timestamps
         timestamps: false,
     });
-
+product.hasMany(compras,{
+    foreignKey: "idCompras"
+})
 // Exportando
 module.exports = product;
