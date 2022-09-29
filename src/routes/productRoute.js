@@ -9,7 +9,7 @@ router.get("/", ProdutoController.index);
 router.post("/", ProdutoController.store);
 router.get("/login-user", AuthController.authUser)
 
-// router.get("/cart-shopping", ProdutoController.cart);
+router.get("/cart-shopping", ProdutoController.cart);
 // router.get("/product-listing", ProdutoController.index);
 router.get("/product-detail/:id", ProdutoController.detail);
 router.get("/brand-detail-amd", ProdutoController.detailAmd);

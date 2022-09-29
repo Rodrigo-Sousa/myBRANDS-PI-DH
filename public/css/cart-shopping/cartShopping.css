@@ -82,3 +82,25 @@
     color: #fff;
     text-decoration: none;
 }
+
+.container_amd_escrito{
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.umx{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.remove_checkout{
+    position:relative;
+    left: 700px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;   
+}
