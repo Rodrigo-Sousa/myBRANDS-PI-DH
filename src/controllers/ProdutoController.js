@@ -13,6 +13,7 @@ const { Op } = require("sequelize");
 const sequelize = require("sequelize");
 const { check } = require("express-validator");
 const Requests = require("../models/Request");
+const compras = require("../models/compras");
 const ProdutoController = { 
 
     // Busca os pedidos que um usuário possui e listar os produtos desses pedidos
@@ -138,7 +139,6 @@ const ProdutoController = {
         for (let i = 0; i < products.length; i++) {
             if (products[i].id === parseInt(id)) {
                 produtoEncontrado = products[i]
-
             }
 
         }
@@ -191,9 +191,29 @@ const ProdutoController = {
     checkout: (req,res) => {
         return res.render("checkout-page", {title: "Página de pagamento"})
     },
-    cart: (req, res) => {
-        return res.render("cart-shopping", { title: "Carrinho de compras" });
-    },
-}; 
+    cart:  async (req, res) => {
+        const { id } = req.params;
+        try {
+            const product = await Product.findOne({
+                // Buscando um parâmetro
+                where: {
+                    id: id,
+                },
+                // include: RequestsProducts,
+            });
+        
+            return res.render("cart-shopping", { title: product.name, produto: product });
+
+        } catch (error) {
+            console.log(error);
+            if (error.menssage === "PRODUCT_NOT_FOUND") {
+                res.status(400).json({ message: "Produto não encontrado" });
+            } else {
+                res.status(400).json({ message: "Erro ao encontrar produto" });
+            }
+
+        }
+    }
+}
 
 module.exports = ProdutoController;
