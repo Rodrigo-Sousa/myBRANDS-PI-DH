@@ -46,7 +46,7 @@ const AdmController = {
 
   },
   createProduct: (req, res) => {
-    return res.render("product-create", { title: "Cadastrar produto" });
+    return res.render("product-create", { title: "Cadastrar produto", user: req.cookies.user, admin: req.cookies.admin});
   },
   store: async (req, res) => {
     const { name, category, brand, price, inventory, available, urlImage } = req.body;
