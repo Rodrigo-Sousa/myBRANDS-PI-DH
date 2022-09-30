@@ -12,3 +12,9 @@ Foi desenvolvido por:
 * [Rodrigo da Silva Sousa](https://github.com/Rodrigo-Sousa)
 
 - Inspirações: [Terabyte](https://www.terabyteshop.com.br/) | [Level UP](https://levelupgames.com.br/levelup/)
+
+# Quais passos seguir para rodar o projeto
+
+1. Ter instalado o MySQL em vossa estação máquina.
+1.1. Instalar o nosso [Banco de Dados.](../myBRANDS-PI-DH/src/data/ecommerce_myBrands_db.sql)
+2. Ter um servidor instalado, ou um software que possua estes recursos. (Ex. software [_XAMPP_](https://www.apachefriends.org/pt_br/index.html))

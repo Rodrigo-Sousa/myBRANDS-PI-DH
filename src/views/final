@@ -1,3 +1,0 @@
-<form action="<%= product.id %>?_method=delete" class="remove" method="post">
-                                <span aria-hidden="true">&times;</span>
-                            </form>
