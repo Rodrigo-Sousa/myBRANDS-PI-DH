@@ -8,29 +8,40 @@
           <% if (locals.error) { %>
             <h2><%= error.message %> </h2>
           <% } %>
-          <form action="/registration" method="POST">
+          <form action="/user/?_method=store" method="POST">
             <div class="textfield">
-              <label class="label-1" for="nome">Nome completo</label>
-              <input class="input-1" type="text" name="nome" placeholder="Nome completo..."
+              <label class="label-1" for="nome">Nome completo:</label>
+              <input class="input-1" type="text" name="name" placeholder="Nome completo..."
                 required />
             </div>
             <div class="textfield">
-              <label class="label-1" for="usuario">Usuário</label>
-              <input class="input-1" type="text" name="usuario" placeholder="Nome de usuário..."
-                required />
-            </div>
-            <div class="textfield">
-              <label class="label-1" for="email">E-mail</label>
+              <label class="label-1" for="email">E-mail:</label>
               <input class="input-1" type="email" name="email" placeholder="seu@email.com"
                 required />
             </div>
             <div class="textfield">
-              <label class="label-2" for="senha">Senha</label>
+              <label class="label-2" for="senha">Senha:</label>
               <input class="input-2" type="password" name="senha" placeholder="Digite a senha...">
             </div>
             <div class="textfield">
-              <label class="label-2" for="confirmar_senha">Confirmar senha</label>
-              <input class="input-2" type="password" name="confirmar_senha" placeholder="Digite sua senha novamente...">
+              <label class="label-2" for="senha">Data de nascimento:</label>
+              <input class="input-2" type="date" name="birthdate" placeholder="Data de nascimento">
+            </div>
+            <div class="textfield">
+              <label class="label-2" for="senha">CPF:</label>
+              <input class="input-2" type="number" name="cpf" placeholder="000.000.000-00">
+            </div>
+            <div class="textfield">
+              <label class="label-2" for="senha">Foto de perfil:</label>
+              <input class="input-2" type="text" name="picture" placeholder="URL da Foto">
+            </div>
+            <div class="textfield">
+              <label class="label-2" for="senha">Número de telefone:</label>
+              <input class="input-2" type="tel" name="phone" placeholder="(00)00000000">
+            </div>
+            <div class="textfield">
+              <label class="label-2" for="senha">Número de Celular:</label>
+              <input class="input-2" type="tel" name="celphone" placeholder="(00)0000000000">
             </div>
 
             <input name="checkbox" type="checkbox" class="checkbox" required>

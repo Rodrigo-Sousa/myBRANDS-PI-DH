@@ -1,4 +1,5 @@
 const db = require("../config/sequelize");
+const bcrypt = require("../helpers/bcrypt");
 const User = require("../models/User");
 const Request = require("../models/Request");
 // const Product = require("../models/Product");
@@ -42,23 +43,22 @@ const userController = {
         }
     },
     store: async (req, res) => {
-        const { name, email, senha, birthdate, cpf, picture, phone, celphone, is_admin, bredIn, changedIn } = req.body;
+        const { name, email, senha, birthdate, cpf, picture, phone, celphone, is_admin} = req.body;
+        console.log(req.body)
         try {
-            const users = await User.create({
+            const user = await User.create({
                 name,
                 email,
-                senha,
+                senha: bcrypt.generateHash(senha),
                 birthdate,
                 cpf,
                 picture,
                 phone,
                 celphone,
-                is_admin,
-                bredIn,
-                changedIn
+                is_admin
             });
-            console.log(users);
-            res.status(201).json({ message: "Usuário cadastrado com sucesso!" });
+            console.log(user);
+            return res.redirect("/login-user");
         } catch (error) {
             console.log(error);
             res.status(400).json({ message: "Erro ao criar usuário" });
