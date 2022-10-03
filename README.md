@@ -13,7 +13,7 @@ Foi desenvolvido por:
 
 - Inspirações: [Terabyte](https://www.terabyteshop.com.br/) | [Level UP](https://levelupgames.com.br/levelup/)
 
-# Quais passos seguir para rodar o projeto
+# Quais passos para rodar o projeto?
 
 1. Ter instalado o MySQL em vossa estação máquina.
 1.1. Instalar o nosso [Banco de Dados.](../myBRANDS-PI-DH/src/data/ecommerce_myBrands_db.sql)
