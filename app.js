@@ -33,8 +33,12 @@ app.use(express.urlencoded({ extended: false }));
 // Preenche a propriedade cookies do objeto request
 app.use(cookieParser());
 
-// Usado para calcular o hash
-app.use(session({ secret: "senha" }));
+// Usado para calcular o hash. Resave -> false: Sessão só será salva caso tenha sido modificado ou se não tiver sido inicializada. saveUninitialized -> false: Não salvando a sessão no armazenamento se ela não foi modificada e continua no seu estado inicial.
+app.use(session(
+    { secret: "senha", 
+    resave: false, 
+    saveUninitialized: false }
+));
 
 // Middleware global
 app.use((req, res, next) => { next(); });

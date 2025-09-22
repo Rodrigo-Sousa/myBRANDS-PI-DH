@@ -15,6 +15,14 @@ Foi desenvolvido por:
 
 # Quais passos para rodar o projeto?
 
-1. Ter instalado o MySQL em vossa estação máquina.
-1.1. Instalar o nosso [Banco de Dados.](/src/data/ecommerce_myBrands_db.sql)
-2. Ter um servidor instalado, ou um software que possua estes recursos. (Ex. software [_XAMPP_](https://www.apachefriends.org/pt_br/index.html))
+1. Ter instalado o MySQL em vossa estação máquina. (Ex. software [_XAMPP_](https://www.apachefriends.org/pt_br/index.html))
+
+   1.1. Instalar o nosso [Banco de Dados.](/src/data/ecommerce_myBrands_db.sql)
+
+2. Com o Banco de daddos _Importado_ no seu projeto. Acessar a pasta que contém os arquivos (Após clonar este repositório), e modificar as credênciais no arquivo **_.env_** com as informações de acesso ao banco de dados.
+
+3. Ter instalado o Node na vossa estação.
+
+4. No diretório do repositório, abrir o terminal e digitar: `npm install`, aguardar até que a instalação seja concluída.
+
+5. Com a instalação concluída, basta digitar no mesmo terminal o comando: `npm start`. Com a mensagem: **_Estamos rodando em: http://localhost:3000_**. Basta acessar este caminho no navegador e poder utilizar o site.
